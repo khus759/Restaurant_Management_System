@@ -1,5 +1,7 @@
 
-from src.manage.auth import run_auth_system
+from Src.Dashboard.manage_dashboard import main
 
 if __name__ == "__main__":
-    run_auth_system()
+    main()
+
+
