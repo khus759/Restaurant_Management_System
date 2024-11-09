@@ -1,9 +1,14 @@
 
-from src.authentication.file_handler import load_users, save_users
-from src.authentication.user_validation import validate_name, validate_username, validate_password, validate_role
+import uuid
+from Src.Authentication.file_operation import load_users, save_users
+from Src.Utility.validation import (
+    validate_name, validate_email, validate_password,
+    validate_phone_number, validate_role, validate_date_of_birth
+)
+from Src.Utility.user_input import get_valid_input
 
 class AuthSystem:
-    def __init__(self, users_file='src/database/users.json'):
+    def __init__(self, users_file='Src/Database/users.json'):
         self.users_file = users_file
         self.current_user = None
 
@@ -11,58 +16,38 @@ class AuthSystem:
         users = load_users(self.users_file)
 
         while True:
-            while True:
-                name = input("Enter your name: ").strip()
-                name_error = validate_name(name)
-                if name_error:
-                    print(name_error)
-                    continue
-                break
+            name = get_valid_input("Enter your name: ", validate_name)
+            email = get_valid_input("Enter your email: ", validate_email).lower()
+            password = get_valid_input("Enter a password (6+ characters): ", validate_password)
+            phone = get_valid_input("Enter your phone number (10 digits): ", validate_phone_number)
+            role = get_valid_input("Enter your role (Owner/Staff): ", validate_role)
+            dob = get_valid_input("Enter your date of birth (YYYY-MM-DD): ", validate_date_of_birth)
 
-            while True:
-                username = input("Enter a username (6+ characters): ").strip()
-                username_error = validate_username(username)
-                if username_error:
-                    print(username_error)
-                    continue
-                break
-
-            while True:
-                password = input("Enter a password (6+ characters): ").strip()
-                password_error = validate_password(password)
-                if password_error:
-                    print(password_error)
-                    continue
-                break
-
-            while True:
-                role = input("Enter your role (Owner/Staff): ").strip().upper()
-                role_error = validate_role(role)
-                if role_error:
-                    print(role_error)
-                    continue
-
-                owner_count = sum(1 for user in users if user['role'].upper() == 'OWNER')
-                if role == 'OWNER' and owner_count >= 1:
-                    print("An owner already exists! You cannot create another owner.")
-                    return
-
-                staff_count = sum(1 for user in users if user['role'].upper() == 'STAFF')
-                if role == 'STAFF' and staff_count >= 5:
-                    print("Staff limit reached! You cannot create more than 5 staff members.")
-                    return
-                break
-
-            if any(user['username'] == username for user in users):
-                print("Username already taken! Try again.")
+            if any(user['email'] == email for user in users):
+                print("Email already taken! Try again.")
                 continue
 
+            owner_count = sum(1 for user in users if user['role'].upper() == 'OWNER')
+            if role.upper() == 'OWNER' and owner_count >= 1:
+                print("An owner already exists! You cannot create another owner.")
+                return
+            
+            # staff_count = self.count_roles(users, 'Staff')
+            # if role.upper() == 'STAFF' and staff_count >= 10:
+            #     print("Staff limit reached! You cannot create more than 10 staff members.")
+            #     return
 
+
+            name_prefix = name[::2].upper()  
+            user_id = f"{name_prefix}-{str(uuid.uuid4())[:4]}"
             new_user = {
+                'id': user_id,
                 'name': name,
-                'username': username,
+                'email': email,
                 'password': password,
-                'role': role.capitalize()
+                'phone': phone,
+                'role': role.capitalize(),
+                'date_of_birth': dob
             }
 
             users.append(new_user)
@@ -73,15 +58,22 @@ class AuthSystem:
     def login(self):
         users = load_users(self.users_file)
         while True:
-            username = input("Enter your username: ").strip()
-            password = input("Enter your password: ").strip()
+            email = get_valid_input("Enter your email: ", validate_email).lower()
+            password = get_valid_input("Enter your password: ", validate_password)
 
-            user = next((user for user in users if user['username'] == username and user['password'] == password), None)
-
+            user = next((user for user in users if user['email'] == email and user['password'] == password), None)
             if user:
                 self.current_user = user
                 print(f"Login successful! Welcome {user['role']} {user['name']}.")
-                break
+                return self.current_user
+            
             else:
-                print("Invalid username or password. Try again.")
+                print("Invalid email or password. Try again.")
 
+    def is_logged_in(self):
+        return self.current_user is not None
+
+    def get_current_user_role(self):
+        if self.current_user:
+            return self.current_user['role']
+        return None

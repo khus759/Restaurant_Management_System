@@ -1,0 +1,252 @@
+[
+  {
+    "Veg": [
+      {
+        "item id": "VG01",
+        "item name": "Paneer Butter Masala",
+        "price": 180
+      },
+      {
+        "item id": "VG02",
+        "item name": "Aloo Gobi",
+        "price": 80
+      },
+      {
+        "item id": "VG03",
+        "item name": "Palak Paneer",
+        "price": 150
+      },
+      {
+        "item id": "VG04",
+        "item name": "Vegetable Biryani",
+        "price": 120
+      },
+      {
+        "item id": "VG05",
+        "item name": "Chana Masala",
+        "price": 90
+      }
+    ],
+    "Non-Veg": [
+      {
+        "item id": "NV01",
+        "item name": "Chicken Biryani",
+        "price": 200
+      },
+      {
+        "item id": "NV02",
+        "item name": "Mutton Rogan Josh",
+        "price": 250
+      },
+      {
+        "item id": "NV03",
+        "item name": "Butter Chicken",
+        "price": 180
+      },
+      {
+        "item id": "NV04",
+        "item name": "Fish Curry",
+        "price": 220
+      },
+      {
+        "item id": "NV05",
+        "item name": "Chicken Lolipop",
+        "price": 240
+      }
+    ],
+    "Starter": [
+      {
+        "item id": "ST01",
+        "item name": "Veg Spring Rolls",
+        "price": 100
+      },
+      {
+        "item id": "ST02",
+        "item name": "Chicken Tikka",
+        "price": 150
+      },
+      {
+        "item id": "ST03",
+        "item name": "Paneer Tikka",
+        "price": 130
+      },
+      {
+        "item id": "ST04",
+        "item name": "Paneer Samosa",
+        "price": 180
+      },
+      {
+        "item id": "ST05",
+        "item name": "Hara Bhara Kebab",
+        "price": 120
+      }
+    ],
+    "Drink": [
+      {
+        "item id": "DR01",
+        "item name": "Mango Lassi",
+        "price": 70
+      },
+      {
+        "item id": "DR02",
+        "item name": "Lemonade",
+        "price": 50
+      },
+      {
+        "item id": "DR03",
+        "item name": "Masala Chai",
+        "price": 30
+      },
+      {
+        "item id": "DR04",
+        "item name": "Cold Coffee",
+        "price": 90
+      },
+      {
+        "item id": "DR05",
+        "item name": "Virgin Mojito",
+        "price": 100
+      },
+      {
+        "item id": "DR06",
+        "item name": "Plain Water",
+        "price": 20.0
+      }
+    ],
+    "Ice Cream": [
+      {
+        "item id": "IC01",
+        "item name": "Vanilla Ice Cream",
+        "price": 60
+      },
+      {
+        "item id": "IC02",
+        "item name": "Chocolate Fudge Ice Cream",
+        "price": 80
+      },
+      {
+        "item id": "IC03",
+        "item name": "Mango Ice Cream",
+        "price": 70
+      },
+      {
+        "item id": "IC04",
+        "item name": "Pistachio Ice Cream",
+        "price": 90
+      },
+      {
+        "item id": "IC05",
+        "item name": "Strawberry Ice Cream",
+        "price": 70
+      }
+    ],
+    "Sweet": [
+      {
+        "item id": "SW01",
+        "item name": "Gulab Jamun",
+        "price": 50
+      },
+      {
+        "item id": "SW02",
+        "item name": "Rasgulla",
+        "price": 50
+      },
+      {
+        "item id": "SW03",
+        "item name": "Jalebi",
+        "price": 60
+      },
+      {
+        "item id": "SW04",
+        "item name": "Kheer",
+        "price": 70
+      },
+      {
+        "item id": "SW05",
+        "item name": "Barfi",
+        "price": 80
+      }
+    ],
+    "Roti": [
+      {
+        "item id": "RT01",
+        "item name": "Plain Roti",
+        "price": 10
+      },
+      {
+        "item id": "RT02",
+        "item name": "Butter Roti",
+        "price": 15
+      },
+      {
+        "item id": "RT03",
+        "item name": "Garlic Roti",
+        "price": 20
+      },
+      {
+        "item id": "RT04",
+        "item name": "Missi Roti",
+        "price": 25
+      },
+      {
+        "item id": "RT05",
+        "item name": "Roomali Roti",
+        "price": 30
+      }
+    ],
+    "Rice": [
+      {
+        "item id": "RI01",
+        "item name": "Steamed Rice",
+        "price": 60
+      },
+      {
+        "item id": "RI02",
+        "item name": "Jeera Rice",
+        "price": 70
+      },
+      {
+        "item id": "RI03",
+        "item name": "Curd Rice",
+        "price": 80
+      },
+      {
+        "item id": "RI04",
+        "item name": "Fried Rice",
+        "price": 90
+      },
+      {
+        "item id": "RI05",
+        "item name": "Pulao",
+        "price": 100
+      }
+    ],
+    "Paratha": [
+      {
+        "item id": "PR01",
+        "item name": "Plain Paratha",
+        "price": 20
+      },
+      {
+        "item id": "PR02",
+        "item name": "Aloo Paratha",
+        "price": 30
+      },
+      {
+        "item id": "PR03",
+        "item name": "Paneer Paratha",
+        "price": 40
+      },
+      {
+        "item id": "PR04",
+        "item name": "Onion Paratha",
+        "price": 35
+      },
+      {
+        "item id": "PR05",
+        "item name": "Methi Paratha",
+        "price": 30
+      }
+    ]
+  }
+]

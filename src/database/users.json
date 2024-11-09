@@ -1,20 +1,83 @@
 [
     {
+        "id": "KUH-8aab",
         "name": "khushi",
-        "username": "khus@123",
+        "email": "khus123@gmail.com",
+        "password": "888999",
+        "phone": "8541067761",
+        "role": "Owner",
+        "date_of_birth": "2006-2-25"
+    },
+    {
+        "id": "AAD-e505",
+        "name": "anand",
+        "email": "and123@gmail.com",
+        "password": "777888",
+        "phone": "8541067731",
+        "role": "Staff",
+        "date_of_birth": "2005-1-15"
+    },
+    {
+        "id": "FZ-df5c",
+        "name": "fiza",
+        "email": "fiz123@gmail.com",
         "password": "666777",
-        "role": "Owner"
+        "phone": "8541067751",
+        "role": "Staff",
+        "date_of_birth": "2000-2-1"
     },
     {
+        "id": "MSA-b6c7",
+        "name": "muskan",
+        "email": "mus123@gmail.com",
+        "password": "555666",
+        "phone": "8541067751",
+        "role": "Staff",
+        "date_of_birth": "2001-3-4"
+    },
+    {
+        "id": "AJL-77f1",
+        "name": "anjali",
+        "email": "anj123@gmail.com",
+        "password": "8541067741",
+        "phone": "8541067741",
+        "role": "Staff",
+        "date_of_birth": "2003-3-6"
+    },
+    {
+        "id": "NSA-4877",
+        "name": "nisha",
+        "email": "nish123@gmail.com",
+        "password": "444777",
+        "phone": "9199007754",
+        "role": "Staff",
+        "date_of_birth": "2002-2-5"
+    },
+    {
+        "id": "IHN-3e9f",
+        "name": "ishana",
+        "email": "ish123@gmail.com",
+        "password": "222299",
+        "phone": "8765678892",
+        "role": "Staff",
+        "date_of_birth": "2000-5-7"
+    },
+    {
+        "id": "SNY-ce14",
         "name": "saniya",
-        "username": "sani@123",
-        "password": "222333",
-        "role": "Staff"
+        "email": "sani123@gmail.com",
+        "password": "666888",
+        "phone": "9188667769",
+        "role": "Staff",
+        "date_of_birth": "2000-5-19"
     },
     {
-        "name": "riya",
-        "username": "riya@123",
-        "password": "222333",
-        "role": "Staff"
+        "id": "RSN-153e",
+        "name": "roshni",
+        "email": "rosh123@gmail.com",
+        "password": "222999",
+        "phone": "9876785542",
+        "role": "Staff",
+        "date_of_birth": "2002-5-3"
     }
 ]
