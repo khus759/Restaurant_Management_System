@@ -5,8 +5,8 @@
                 "item id": "VE01",
                 "item name": "Paneer Butter Masala",
                 "prices": {
-                    "half": 90.0,
-                    "full": 180.0
+                    "half": 90,
+                    "full": 180
                 },
                 "ingredients": [
                     "paneer",
@@ -23,8 +23,8 @@
                 "item id": "VE02",
                 "item name": "Aloo Gobi",
                 "prices": {
-                    "half": 40.0,
-                    "full": 80.0
+                    "half": 40,
+                    "full": 80
                 },
                 "ingredients": [
                     "potato",
@@ -41,8 +41,8 @@
                 "item id": "VE03",
                 "item name": "Palak Paneer",
                 "prices": {
-                    "half": 75.0,
-                    "full": 150.0
+                    "half": 75,
+                    "full": 150
                 },
                 "ingredients": [
                     "spinach",
@@ -59,8 +59,8 @@
                 "item id": "VE04",
                 "item name": "Vegetable Biryani",
                 "prices": {
-                    "half": 60.0,
-                    "full": 120.0
+                    "half": 60,
+                    "full": 120
                 },
                 "ingredients": [
                     "rice",
@@ -77,8 +77,8 @@
                 "item id": "VE05",
                 "item name": "Chana Masala",
                 "prices": {
-                    "half": 45.0,
-                    "full": 90.0
+                    "half": 45,
+                    "full": 90
                 },
                 "ingredients": [
                     "chickpeas",
@@ -99,8 +99,8 @@
                 "item id": "NO01",
                 "item name": "Chicken Biryani",
                 "prices": {
-                    "half": 100.0,
-                    "full": 200.0
+                    "half": 100,
+                    "full": 200
                 },
                 "ingredients": [
                     "chicken",
@@ -117,8 +117,8 @@
                 "item id": "NO02",
                 "item name": "Mutton Rogan Josh",
                 "prices": {
-                    "half": 125.0,
-                    "full": 250.0
+                    "half": 125,
+                    "full": 250
                 },
                 "ingredients": [
                     "mutton",
@@ -135,8 +135,8 @@
                 "item id": "NO03",
                 "item name": "Butter Chicken",
                 "prices": {
-                    "half": 90.0,
-                    "full": 180.0
+                    "half": 90,
+                    "full": 180
                 },
                 "ingredients": [
                     "chicken",
@@ -155,8 +155,8 @@
                 "item id": "NO04",
                 "item name": "Fish Curry",
                 "prices": {
-                    "half": 110.0,
-                    "full": 220.0
+                    "half": 110,
+                    "full": 220
                 },
                 "ingredients": [
                     "fish",
@@ -173,8 +173,8 @@
                 "item id": "NO05",
                 "item name": "Chicken Lolipop",
                 "prices": {
-                    "half": 120.0,
-                    "full": 240.0
+                    "half": 120,
+                    "full": 240
                 },
                 "ingredients": [
                     "chicken",
@@ -193,7 +193,7 @@
                 "item id": "ST01",
                 "item name": "Veg Spring Rolls",
                 "prices": {
-                    "Price": 100.0
+                    "Price": 100
                 },
                 "ingredients": [
                     "vegetables",
@@ -210,7 +210,7 @@
                 "item id": "ST02",
                 "item name": "Chicken Tikka",
                 "prices": {
-                    "Price": 150.0
+                    "Price": 150
                 },
                 "ingredients": [
                     "chicken",
@@ -227,7 +227,7 @@
                 "item id": "ST03",
                 "item name": "Paneer Tikka",
                 "prices": {
-                    "Price": 130.0
+                    "Price": 130
                 },
                 "ingredients": [
                     "paneer",
@@ -244,7 +244,7 @@
                 "item id": "ST04",
                 "item name": "Paneer Samosa",
                 "prices": {
-                    "Price": 180.0
+                    "Price": 180
                 },
                 "ingredients": [
                     "paneer",
@@ -261,7 +261,7 @@
                 "item id": "ST05",
                 "item name": "Hara Bhara Kebab",
                 "prices": {
-                    "Price": 120.0
+                    "Price": 120
                 },
                 "ingredients": [
                     "spinach",
@@ -280,7 +280,7 @@
                 "item id": "DR01",
                 "item name": "Mango Lassi",
                 "prices": {
-                    "Price": 70.0
+                    "Price": 70
                 },
                 "ingredients": [
                     "mango",
@@ -297,7 +297,7 @@
                 "item id": "DR02",
                 "item name": "Lemonade",
                 "prices": {
-                    "Price": 50.0
+                    "Price": 50
                 },
                 "ingredients": [
                     "lemon",
@@ -314,7 +314,7 @@
                 "item id": "DR03",
                 "item name": "Masala Chai",
                 "prices": {
-                    "Price": 30.0
+                    "Price": 30
                 },
                 "ingredients": [
                     "tea",
@@ -331,7 +331,7 @@
                 "item id": "DR04",
                 "item name": "Ice Tea",
                 "prices": {
-                    "Price": 60.0
+                    "Price": 60
                 },
                 "ingredients": [
                     "tea",
@@ -358,8 +358,8 @@
                 "item id": "RI01",
                 "item name": "Steamed Rice",
                 "prices": {
-                    "half": 50.0,
-                    "full": 100.0
+                    "half": 50,
+                    "full": 100
                 },
                 "ingredients": [
                     "rice"
@@ -372,8 +372,8 @@
                 "item id": "RI02",
                 "item name": "Jeera Rice",
                 "prices": {
-                    "half": 55.0,
-                    "full": 110.0
+                    "half": 55,
+                    "full": 110
                 },
                 "ingredients": [
                     "rice",
@@ -388,8 +388,8 @@
                 "item id": "RI03",
                 "item name": "Pulao",
                 "prices": {
-                    "half": 60.0,
-                    "full": 120.0
+                    "half": 60,
+                    "full": 120
                 },
                 "ingredients": [
                     "rice",
@@ -406,8 +406,8 @@
                 "item id": "RI04",
                 "item name": "Fried Rice",
                 "prices": {
-                    "half": 65.0,
-                    "full": 130.0
+                    "half": 65,
+                    "full": 130
                 },
                 "ingredients": [
                     "rice",
@@ -424,8 +424,8 @@
                 "item id": "RI05",
                 "item name": "Biryani",
                 "prices": {
-                    "half": 80.0,
-                    "full": 160.0
+                    "half": 80,
+                    "full": 160
                 },
                 "ingredients": [
                     "rice",
@@ -453,7 +453,7 @@
                 "item id": "RO01",
                 "item name": "Tandoori Roti",
                 "prices": {
-                    "Price": 20.0
+                    "Price": 20
                 },
                 "ingredients": [
                     "flour",
@@ -470,7 +470,7 @@
                 "item id": "RO02",
                 "item name": "Butter Roti",
                 "prices": {
-                    "Price": 30.0
+                    "Price": 30
                 },
                 "ingredients": [
                     "flour",
@@ -487,7 +487,7 @@
                 "item id": "RO03",
                 "item name": "Garlic Roti",
                 "prices": {
-                    "Price": 35.0
+                    "Price": 35
                 },
                 "ingredients": [
                     "flour",
@@ -504,7 +504,7 @@
                 "item id": "RO04",
                 "item name": "Lachha Paratha",
                 "prices": {
-                    "Price": 40.0
+                    "Price": 40
                 },
                 "ingredients": [
                     "flour",
@@ -519,7 +519,7 @@
                 "item id": "RO05",
                 "item name": "Cheese Roti",
                 "prices": {
-                    "Price": 45.0
+                    "Price": 45
                 },
                 "ingredients": [
                     "flour",
@@ -538,7 +538,7 @@
                 "item id": "PA01",
                 "item name": "Aloo Paratha",
                 "prices": {
-                    "Price": 40.0
+                    "Price": 40
                 },
                 "ingredients": [
                     "potato",
@@ -555,7 +555,7 @@
                 "item id": "PA02",
                 "item name": "Paneer Paratha",
                 "prices": {
-                    "Price": 50.0
+                    "Price": 50
                 },
                 "ingredients": [
                     "paneer",
@@ -572,7 +572,7 @@
                 "item id": "PA03",
                 "item name": "Gobi Paratha",
                 "prices": {
-                    "Price": 45.0
+                    "Price": 45
                 },
                 "ingredients": [
                     "cauliflower",
@@ -589,7 +589,7 @@
                 "item id": "PA04",
                 "item name": "Methi Paratha",
                 "prices": {
-                    "Price": 50.0
+                    "Price": 50
                 },
                 "ingredients": [
                     "fenugreek",
@@ -606,7 +606,7 @@
                 "item id": "PA05",
                 "item name": "Cheese Paratha",
                 "prices": {
-                    "Price": 55.0
+                    "Price": 55
                 },
                 "ingredients": [
                     "cheese",
@@ -625,7 +625,7 @@
                 "item id": "CO01",
                 "item name": "Espresso",
                 "prices": {
-                    "Price": 50.0
+                    "Price": 50
                 },
                 "ingredients": [
                     "coffee beans",
@@ -640,7 +640,7 @@
                 "item id": "CO02",
                 "item name": "Cappuccino",
                 "prices": {
-                    "Price": 70.0
+                    "Price": 70
                 },
                 "ingredients": [
                     "coffee beans",
@@ -657,7 +657,7 @@
                 "item id": "CO03",
                 "item name": "Latte",
                 "prices": {
-                    "Price": 75.0
+                    "Price": 75
                 },
                 "ingredients": [
                     "coffee beans",
@@ -676,7 +676,7 @@
                 "item id": "TE01",
                 "item name": "Masala Tea",
                 "prices": {
-                    "Price": 30.0
+                    "Price": 30
                 },
                 "ingredients": [
                     "tea leaves",
@@ -693,7 +693,7 @@
                 "item id": "TE02",
                 "item name": "Green Tea",
                 "prices": {
-                    "Price": 40.0
+                    "Price": 40
                 },
                 "ingredients": [
                     "green tea leaves",
@@ -708,7 +708,7 @@
                 "item id": "TE03",
                 "item name": "Lemon Tea",
                 "prices": {
-                    "Price": 35.0
+                    "Price": 35
                 },
                 "ingredients": [
                     "tea leaves",
