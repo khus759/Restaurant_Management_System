@@ -1,46 +1,79 @@
-
 from Src.Menu_management.menu_feature import MenuManagement
+from Src.Booking_Table.table_booking_system import TableBookingSystem
 from Src.Utility.ask_dashboard import ask_for_dashboard
+from Src.Utility.dashboard_functions import (
+    display_order_management,
+    display_invoice_management,
+    display_table_booking_management,
+    display_staff_menu   
+)
+from Src.Order_management.order_features import OrderManagementSystem
+
 
 class StaffDashboard:
     def __init__(self):
         self.menu_management = MenuManagement()
-
+        self.booking_system = TableBookingSystem()
+        self.order_management = OrderManagementSystem()
+    
     def display_dashboard(self):
         while True:
-            print("\n********* Staff Dashboard *********")
-            print("1. Show Menu")
-            print("2. Take New Order")
-            print("3. Update Order")
-            print("4. Cancel Order")
-            print("5. Invoice")
-            print("6. Search Invoice")
-            print("7. Show Invoice")
-            print("8. Booking")
-            print("9. Cancel Reservation")
-            print("10.View Availablity")
-            #print("11. ")
-            print("12. Logout")
+            display_staff_menu()
+            main_choice = input("Choose a category: ")
 
-            try:
-                action = input("Choose an action: ")
-            except:
-                print("please choose valid input")
-                continue
-
-            if action == "1":
-                self.menu_management.show_menu()
-            elif action == "2":
-                print("Taking new order...")  
-            elif action == "3":
-                print("Updating order...")
-            elif action == "4":
-                print("Cancelling order...")
-            elif action == "12":
+            if main_choice == "1":
+                self.handle_order_management()
+            elif main_choice == "3":
+                self.handle_invoice_management()
+            elif main_choice == "4":
+                self.handle_table_booking_management()
+            elif main_choice == "5":
                 print("Logging out...")
                 break
             else:
-                print("Invalid choice.")
-            
+                print("Invalid choice. Please try again.")
+
             if not ask_for_dashboard():
                 break
+        
+    def handle_order_management(self):
+        display_order_management()
+        choice = input("Choose an action in Order Management: ")
+
+        if choice == "1":
+            self.order_management.show_menu()
+        elif choice == "2":
+            self.order_management.take_order()
+        elif choice == "3":
+            self.order_management.update_order()
+        elif choice == "4":
+            self.order_management.cancel_order()
+        elif choice == "5":
+            self.order_management.check_order()
+        elif choice == "6":
+            self.order_management.show_all_orders()
+        else:
+            print("Invalid choice in Order Management.")
+
+    def handle_invoice_management(self):
+        display_invoice_management()
+        print("Invoice Management features are under development.")
+
+    def handle_table_booking_management(self):
+        display_table_booking_management()
+        choice = input("Choose an action in Table Booking Management: ")
+
+        if choice == "1":
+            self.booking_system.reserve_table()
+        elif choice == "2":
+            self.booking_system.cancel_reservation()
+        elif choice == "3":
+            self.booking_system.update_reservation()
+        elif choice == "4":
+            self.booking_system.view_availability()
+        elif choice == "5":
+            self.booking_system.view_all_reservations()
+        elif choice == "6":
+            self.booking_system.search_reservation_by_id()
+        else:
+            print("Invalid choice in Table Booking Management.")

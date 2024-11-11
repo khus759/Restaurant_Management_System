@@ -39,19 +39,22 @@ def validate_price(price):
     if any(not char.isdigit() and char != '.' for char in price):
         return "Price cannot contain special characters."
     try:
-        float(price)
+        price_value = float(price)
+        if price_value < 0:
+            return "Price cannot be negative."
     except ValueError:
         return "Price must be a valid number."
     return None
 
-# def validate_item_id(item_id):
-#     if not item_id.strip():
-#         return "Item ID cannot be blank."
-#     if any(char.isalpha() for char in item_id):
-#         return "Item ID cannot contain letters."
-#     if any(not char.isdigit() for char in item_id):
-#         return "Item ID must be numeric."
-#     return None  
+
+def validate_item_id(item_id):
+    if not item_id.strip():
+        return "Item ID cannot be blank."
+    # if any(char.isalpha() for char in item_id):
+    #     return "Item ID cannot contain letters."
+    # if any(not char.isdigit() for char in item_id):
+    #     return "Item ID must be numeric."
+    return None  
 
 
 def validate_phone_number(phone_number):
@@ -137,6 +140,71 @@ def validate_seats(seats):
 
 def validate_booking_id(booking_id):
     """Validate that the booking ID is not blank."""
-    if not booking_id.strip():  # Check if the string is empty or just whitespace
+    if not booking_id.strip():  
         return "Booking ID cannot be blank."
-    return None  # Return None if the input is valid
+    return None  
+
+
+def validate_category(value, menu_data):
+    # Convert input to title case to match expected category format in menu_data
+    value = value.title()
+
+    if not value:
+        return "Category cannot be blank"
+    if not value.isalpha():
+        return "Category cannot contain special characters or numbers."
+
+    if value not in menu_data[0]:
+        return "Category does not exist in menu. Please enter a valid category."
+
+    return None  # No error
+
+
+def validate_item_id(item_id, menu_data, category):
+    if not item_id:
+        return "Item ID cannot be blank."
+
+    if not item_id.isalnum():
+        return "Item ID cannot contain special characters."
+    
+    category_items = menu_data[0].get(category.title(), [])
+
+    if not any(item['item id'].upper() == item_id.upper() for item in category_items):
+        return f"Invalid item ID: '{item_id}' not found in '{category}' category."
+    return None 
+
+import re
+
+def validate_ingredient_input(value):
+    """Validate the ingredients input."""
+    # Ensure the ingredients are not blank and contain no special characters
+    if not value.strip():
+        raise ValueError("Ingredient input cannot be blank.")
+    
+    # Split the ingredients by commas and strip spaces
+    ingredients = [ingredient.strip() for ingredient in value.split(',')]
+
+    for ingredient in ingredients:
+        # Check if each ingredient is alphabetic and doesn't contain special characters
+        if not ingredient.isalpha():
+            raise ValueError(f"Invalid ingredient: '{ingredient}'. Ingredients should only contain letters.")
+    
+    return ingredients
+
+def validate_has_portion_sizes(value):
+    """Validate if the input for portion sizes is 'yes' or 'no' and reject blank or special characters."""
+    value = value.strip().lower()
+
+    # Check for blank input
+    if not value:
+        raise ValueError("Input cannot be blank.")
+
+    # Check for special characters using regex
+    if not re.match("^[a-zA-Z]+$", value):
+        raise ValueError("Input must not contain special characters.")
+
+    # Check if the input is either 'yes' or 'no'
+    if value not in ['yes', 'no']:
+        raise ValueError("Input must be 'yes' or 'no' for portion sizes.")
+    
+    return value

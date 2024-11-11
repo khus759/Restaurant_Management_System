@@ -1,252 +1,726 @@
 [
-  {
-    "Veg": [
-      {
-        "item id": "VG01",
-        "item name": "Paneer Butter Masala",
-        "price": 180
-      },
-      {
-        "item id": "VG02",
-        "item name": "Aloo Gobi",
-        "price": 80
-      },
-      {
-        "item id": "VG03",
-        "item name": "Palak Paneer",
-        "price": 150
-      },
-      {
-        "item id": "VG04",
-        "item name": "Vegetable Biryani",
-        "price": 120
-      },
-      {
-        "item id": "VG05",
-        "item name": "Chana Masala",
-        "price": 90
-      }
-    ],
-    "Non-Veg": [
-      {
-        "item id": "NV01",
-        "item name": "Chicken Biryani",
-        "price": 200
-      },
-      {
-        "item id": "NV02",
-        "item name": "Mutton Rogan Josh",
-        "price": 250
-      },
-      {
-        "item id": "NV03",
-        "item name": "Butter Chicken",
-        "price": 180
-      },
-      {
-        "item id": "NV04",
-        "item name": "Fish Curry",
-        "price": 220
-      },
-      {
-        "item id": "NV05",
-        "item name": "Chicken Lolipop",
-        "price": 240
-      }
-    ],
-    "Starter": [
-      {
-        "item id": "ST01",
-        "item name": "Veg Spring Rolls",
-        "price": 100
-      },
-      {
-        "item id": "ST02",
-        "item name": "Chicken Tikka",
-        "price": 150
-      },
-      {
-        "item id": "ST03",
-        "item name": "Paneer Tikka",
-        "price": 130
-      },
-      {
-        "item id": "ST04",
-        "item name": "Paneer Samosa",
-        "price": 180
-      },
-      {
-        "item id": "ST05",
-        "item name": "Hara Bhara Kebab",
-        "price": 120
-      }
-    ],
-    "Drink": [
-      {
-        "item id": "DR01",
-        "item name": "Mango Lassi",
-        "price": 70
-      },
-      {
-        "item id": "DR02",
-        "item name": "Lemonade",
-        "price": 50
-      },
-      {
-        "item id": "DR03",
-        "item name": "Masala Chai",
-        "price": 30
-      },
-      {
-        "item id": "DR04",
-        "item name": "Cold Coffee",
-        "price": 90
-      },
-      {
-        "item id": "DR05",
-        "item name": "Virgin Mojito",
-        "price": 100
-      },
-      {
-        "item id": "DR06",
-        "item name": "Plain Water",
-        "price": 20.0
-      }
-    ],
-    "Ice Cream": [
-      {
-        "item id": "IC01",
-        "item name": "Vanilla Ice Cream",
-        "price": 60
-      },
-      {
-        "item id": "IC02",
-        "item name": "Chocolate Fudge Ice Cream",
-        "price": 80
-      },
-      {
-        "item id": "IC03",
-        "item name": "Mango Ice Cream",
-        "price": 70
-      },
-      {
-        "item id": "IC04",
-        "item name": "Pistachio Ice Cream",
-        "price": 90
-      },
-      {
-        "item id": "IC05",
-        "item name": "Strawberry Ice Cream",
-        "price": 70
-      }
-    ],
-    "Sweet": [
-      {
-        "item id": "SW01",
-        "item name": "Gulab Jamun",
-        "price": 50
-      },
-      {
-        "item id": "SW02",
-        "item name": "Rasgulla",
-        "price": 50
-      },
-      {
-        "item id": "SW03",
-        "item name": "Jalebi",
-        "price": 60
-      },
-      {
-        "item id": "SW04",
-        "item name": "Kheer",
-        "price": 70
-      },
-      {
-        "item id": "SW05",
-        "item name": "Barfi",
-        "price": 80
-      }
-    ],
-    "Roti": [
-      {
-        "item id": "RT01",
-        "item name": "Plain Roti",
-        "price": 10
-      },
-      {
-        "item id": "RT02",
-        "item name": "Butter Roti",
-        "price": 15
-      },
-      {
-        "item id": "RT03",
-        "item name": "Garlic Roti",
-        "price": 20
-      },
-      {
-        "item id": "RT04",
-        "item name": "Missi Roti",
-        "price": 25
-      },
-      {
-        "item id": "RT05",
-        "item name": "Roomali Roti",
-        "price": 30
-      }
-    ],
-    "Rice": [
-      {
-        "item id": "RI01",
-        "item name": "Steamed Rice",
-        "price": 60
-      },
-      {
-        "item id": "RI02",
-        "item name": "Jeera Rice",
-        "price": 70
-      },
-      {
-        "item id": "RI03",
-        "item name": "Curd Rice",
-        "price": 80
-      },
-      {
-        "item id": "RI04",
-        "item name": "Fried Rice",
-        "price": 90
-      },
-      {
-        "item id": "RI05",
-        "item name": "Pulao",
-        "price": 100
-      }
-    ],
-    "Paratha": [
-      {
-        "item id": "PR01",
-        "item name": "Plain Paratha",
-        "price": 20
-      },
-      {
-        "item id": "PR02",
-        "item name": "Aloo Paratha",
-        "price": 30
-      },
-      {
-        "item id": "PR03",
-        "item name": "Paneer Paratha",
-        "price": 40
-      },
-      {
-        "item id": "PR04",
-        "item name": "Onion Paratha",
-        "price": 35
-      },
-      {
-        "item id": "PR05",
-        "item name": "Methi Paratha",
-        "price": 30
-      }
-    ]
-  }
+    {
+        "Veg": [
+            {
+                "item id": "VE01",
+                "item name": "Paneer Butter Masala",
+                "prices": {
+                    "half": 90.0,
+                    "full": 180.0
+                },
+                "ingredients": [
+                    "paneer",
+                    "butter",
+                    "masala"
+                ],
+                "stock_ingredients": {
+                    "paneer": "2024-11-14",
+                    "butter": "2024-11-15",
+                    "masala": "2024-11-13"
+                }
+            },
+            {
+                "item id": "VE02",
+                "item name": "Aloo Gobi",
+                "prices": {
+                    "half": 40.0,
+                    "full": 80.0
+                },
+                "ingredients": [
+                    "potato",
+                    "cauliflower",
+                    "spices"
+                ],
+                "stock_ingredients": {
+                    "potato": "2024-11-14",
+                    "cauliflower": "2024-11-12",
+                    "spices": "2024-11-20"
+                }
+            },
+            {
+                "item id": "VE03",
+                "item name": "Palak Paneer",
+                "prices": {
+                    "half": 75.0,
+                    "full": 150.0
+                },
+                "ingredients": [
+                    "spinach",
+                    "paneer",
+                    "spices"
+                ],
+                "stock_ingredients": {
+                    "spinach": "2024-11-15",
+                    "paneer": "2024-11-14",
+                    "spices": "2024-11-18"
+                }
+            },
+            {
+                "item id": "VE04",
+                "item name": "Vegetable Biryani",
+                "prices": {
+                    "half": 60.0,
+                    "full": 120.0
+                },
+                "ingredients": [
+                    "rice",
+                    "vegetables",
+                    "spices"
+                ],
+                "stock_ingredients": {
+                    "rice": "2024-12-01",
+                    "vegetables": "2024-11-16",
+                    "spices": "2024-11-20"
+                }
+            },
+            {
+                "item id": "VE05",
+                "item name": "Chana Masala",
+                "prices": {
+                    "half": 45.0,
+                    "full": 90.0
+                },
+                "ingredients": [
+                    "chickpeas",
+                    "onion",
+                    "tomato",
+                    "spices"
+                ],
+                "stock_ingredients": {
+                    "chickpeas": "2024-11-18",
+                    "onion": "2024-11-16",
+                    "tomato": "2024-11-15",
+                    "spices": "2024-11-22"
+                }
+            }
+        ],
+        "Non-Veg": [
+            {
+                "item id": "NO01",
+                "item name": "Chicken Biryani",
+                "prices": {
+                    "half": 100.0,
+                    "full": 200.0
+                },
+                "ingredients": [
+                    "chicken",
+                    "rice",
+                    "spices"
+                ],
+                "stock_ingredients": {
+                    "chicken": "2024-11-10",
+                    "rice": "2024-12-01",
+                    "spices": "2024-11-20"
+                }
+            },
+            {
+                "item id": "NO02",
+                "item name": "Mutton Rogan Josh",
+                "prices": {
+                    "half": 125.0,
+                    "full": 250.0
+                },
+                "ingredients": [
+                    "mutton",
+                    "onions",
+                    "spices"
+                ],
+                "stock_ingredients": {
+                    "mutton": "2024-11-14",
+                    "onions": "2024-11-12",
+                    "spices": "2024-11-18"
+                }
+            },
+            {
+                "item id": "NO03",
+                "item name": "Butter Chicken",
+                "prices": {
+                    "half": 90.0,
+                    "full": 180.0
+                },
+                "ingredients": [
+                    "chicken",
+                    "butter",
+                    "tomato",
+                    "spices"
+                ],
+                "stock_ingredients": {
+                    "chicken": "2024-11-10",
+                    "butter": "2024-11-15",
+                    "tomato": "2024-11-14",
+                    "spices": "2024-11-22"
+                }
+            },
+            {
+                "item id": "NO04",
+                "item name": "Fish Curry",
+                "prices": {
+                    "half": 110.0,
+                    "full": 220.0
+                },
+                "ingredients": [
+                    "fish",
+                    "tomato",
+                    "spices"
+                ],
+                "stock_ingredients": {
+                    "fish": "2024-11-11",
+                    "tomato": "2024-11-14",
+                    "spices": "2024-11-20"
+                }
+            },
+            {
+                "item id": "NO05",
+                "item name": "Chicken Lolipop",
+                "prices": {
+                    "half": 120.0,
+                    "full": 240.0
+                },
+                "ingredients": [
+                    "chicken",
+                    "spices",
+                    "oil"
+                ],
+                "stock_ingredients": {
+                    "chicken": "2024-11-10",
+                    "spices": "2024-11-18",
+                    "oil": "2024-12-01"
+                }
+            }
+        ],
+        "Starter": [
+            {
+                "item id": "ST01",
+                "item name": "Veg Spring Rolls",
+                "prices": {
+                    "Price": 100.0
+                },
+                "ingredients": [
+                    "vegetables",
+                    "flour",
+                    "spices"
+                ],
+                "stock_ingredients": {
+                    "vegetables": "2024-11-18",
+                    "flour": "2024-11-15",
+                    "spices": "2024-11-20"
+                }
+            },
+            {
+                "item id": "ST02",
+                "item name": "Chicken Tikka",
+                "prices": {
+                    "Price": 150.0
+                },
+                "ingredients": [
+                    "chicken",
+                    "spices",
+                    "yogurt"
+                ],
+                "stock_ingredients": {
+                    "chicken": "2024-11-10",
+                    "spices": "2024-11-18",
+                    "yogurt": "2024-11-14"
+                }
+            },
+            {
+                "item id": "ST03",
+                "item name": "Paneer Tikka",
+                "prices": {
+                    "Price": 130.0
+                },
+                "ingredients": [
+                    "paneer",
+                    "spices",
+                    "yogurt"
+                ],
+                "stock_ingredients": {
+                    "paneer": "2024-11-14",
+                    "spices": "2024-11-18",
+                    "yogurt": "2024-11-14"
+                }
+            },
+            {
+                "item id": "ST04",
+                "item name": "Paneer Samosa",
+                "prices": {
+                    "Price": 180.0
+                },
+                "ingredients": [
+                    "paneer",
+                    "flour",
+                    "spices"
+                ],
+                "stock_ingredients": {
+                    "paneer": "2024-11-14",
+                    "flour": "2024-11-16",
+                    "spices": "2024-11-20"
+                }
+            },
+            {
+                "item id": "ST05",
+                "item name": "Hara Bhara Kebab",
+                "prices": {
+                    "Price": 120.0
+                },
+                "ingredients": [
+                    "spinach",
+                    "peas",
+                    "spices"
+                ],
+                "stock_ingredients": {
+                    "spinach": "2024-11-15",
+                    "peas": "2024-11-16",
+                    "spices": "2024-11-18"
+                }
+            }
+        ],
+        "Drink": [
+            {
+                "item id": "DR01",
+                "item name": "Mango Lassi",
+                "prices": {
+                    "Price": 70.0
+                },
+                "ingredients": [
+                    "mango",
+                    "yogurt",
+                    "sugar"
+                ],
+                "stock_ingredients": {
+                    "mango": "2024-11-15",
+                    "yogurt": "2024-11-14",
+                    "sugar": "2024-11-20"
+                }
+            },
+            {
+                "item id": "DR02",
+                "item name": "Lemonade",
+                "prices": {
+                    "Price": 50.0
+                },
+                "ingredients": [
+                    "lemon",
+                    "sugar",
+                    "water"
+                ],
+                "stock_ingredients": {
+                    "lemon": "2024-11-17",
+                    "sugar": "2024-11-20",
+                    "water": "2024-11-14"
+                }
+            },
+            {
+                "item id": "DR03",
+                "item name": "Masala Chai",
+                "prices": {
+                    "Price": 30.0
+                },
+                "ingredients": [
+                    "tea",
+                    "milk",
+                    "spices"
+                ],
+                "stock_ingredients": {
+                    "tea": "2024-11-18",
+                    "milk": "2024-11-14",
+                    "spices": "2024-11-20"
+                }
+            },
+            {
+                "item id": "DR04",
+                "item name": "Ice Tea",
+                "prices": {
+                    "Price": 60.0
+                },
+                "ingredients": [
+                    "tea",
+                    "lemon",
+                    "sugar"
+                ],
+                "stock_ingredients": {
+                    "tea": "2024-11-18",
+                    "lemon": "2024-11-17",
+                    "sugar": "2024-11-20"
+                }
+            },
+            {
+                "item id": "DR05",
+                "item name": "Plain Water",
+                "prices": {
+                    "price": "20"
+                },
+                "ingredients": []
+            }
+        ],
+        "Rice": [
+            {
+                "item id": "RI01",
+                "item name": "Steamed Rice",
+                "prices": {
+                    "half": 50.0,
+                    "full": 100.0
+                },
+                "ingredients": [
+                    "rice"
+                ],
+                "stock_ingredients": {
+                    "rice": "2024-12-01"
+                }
+            },
+            {
+                "item id": "RI02",
+                "item name": "Jeera Rice",
+                "prices": {
+                    "half": 55.0,
+                    "full": 110.0
+                },
+                "ingredients": [
+                    "rice",
+                    "cumin"
+                ],
+                "stock_ingredients": {
+                    "rice": "2024-12-01",
+                    "cumin": "2024-11-20"
+                }
+            },
+            {
+                "item id": "RI03",
+                "item name": "Pulao",
+                "prices": {
+                    "half": 60.0,
+                    "full": 120.0
+                },
+                "ingredients": [
+                    "rice",
+                    "vegetables",
+                    "spices"
+                ],
+                "stock_ingredients": {
+                    "rice": "2024-12-01",
+                    "vegetables": "2024-11-16",
+                    "spices": "2024-11-20"
+                }
+            },
+            {
+                "item id": "RI04",
+                "item name": "Fried Rice",
+                "prices": {
+                    "half": 65.0,
+                    "full": 130.0
+                },
+                "ingredients": [
+                    "rice",
+                    "vegetables",
+                    "soya sauce"
+                ],
+                "stock_ingredients": {
+                    "rice": "2024-12-01",
+                    "vegetables": "2024-11-16",
+                    "soya sauce": "2024-11-22"
+                }
+            },
+            {
+                "item id": "RI05",
+                "item name": "Biryani",
+                "prices": {
+                    "half": 80.0,
+                    "full": 160.0
+                },
+                "ingredients": [
+                    "rice",
+                    "chicken",
+                    "spices"
+                ],
+                "stock_ingredients": {
+                    "rice": "2024-12-01",
+                    "chicken": "2024-11-10",
+                    "spices": "2024-11-20"
+                }
+            },
+            {
+                "item id": "RI06",
+                "item name": "Carrot Rice",
+                "prices": {
+                    "half": "60",
+                    "full": "100"
+                },
+                "ingredients": []
+            }
+        ],
+        "Roti": [
+            {
+                "item id": "RO01",
+                "item name": "Tandoori Roti",
+                "prices": {
+                    "Price": 20.0
+                },
+                "ingredients": [
+                    "flour",
+                    "yeast",
+                    "water"
+                ],
+                "stock_ingredients": {
+                    "flour": "2024-11-16",
+                    "yeast": "2024-11-14",
+                    "water": "2024-11-14"
+                }
+            },
+            {
+                "item id": "RO02",
+                "item name": "Butter Roti",
+                "prices": {
+                    "Price": 30.0
+                },
+                "ingredients": [
+                    "flour",
+                    "butter",
+                    "yeast"
+                ],
+                "stock_ingredients": {
+                    "flour": "2024-11-16",
+                    "butter": "2024-11-15",
+                    "yeast": "2024-11-14"
+                }
+            },
+            {
+                "item id": "RO03",
+                "item name": "Garlic Roti",
+                "prices": {
+                    "Price": 35.0
+                },
+                "ingredients": [
+                    "flour",
+                    "garlic",
+                    "yeast"
+                ],
+                "stock_ingredients": {
+                    "flour": "2024-11-16",
+                    "garlic": "2024-11-15",
+                    "yeast": "2024-11-14"
+                }
+            },
+            {
+                "item id": "RO04",
+                "item name": "Lachha Paratha",
+                "prices": {
+                    "Price": 40.0
+                },
+                "ingredients": [
+                    "flour",
+                    "ghee"
+                ],
+                "stock_ingredients": {
+                    "flour": "2024-11-16",
+                    "ghee": "2024-11-15"
+                }
+            },
+            {
+                "item id": "RO05",
+                "item name": "Cheese Roti",
+                "prices": {
+                    "Price": 45.0
+                },
+                "ingredients": [
+                    "flour",
+                    "cheese",
+                    "yeast"
+                ],
+                "stock_ingredients": {
+                    "flour": "2024-11-16",
+                    "cheese": "2024-11-14",
+                    "yeast": "2024-11-14"
+                }
+            }
+        ],
+        "Paratha": [
+            {
+                "item id": "PA01",
+                "item name": "Aloo Paratha",
+                "prices": {
+                    "Price": 40.0
+                },
+                "ingredients": [
+                    "potato",
+                    "flour",
+                    "spices"
+                ],
+                "stock_ingredients": {
+                    "potato": "2024-11-14",
+                    "flour": "2024-11-15",
+                    "spices": "2024-11-20"
+                }
+            },
+            {
+                "item id": "PA02",
+                "item name": "Paneer Paratha",
+                "prices": {
+                    "Price": 50.0
+                },
+                "ingredients": [
+                    "paneer",
+                    "flour",
+                    "spices"
+                ],
+                "stock_ingredients": {
+                    "paneer": "2024-11-14",
+                    "flour": "2024-11-15",
+                    "spices": "2024-11-20"
+                }
+            },
+            {
+                "item id": "PA03",
+                "item name": "Gobi Paratha",
+                "prices": {
+                    "Price": 45.0
+                },
+                "ingredients": [
+                    "cauliflower",
+                    "flour",
+                    "spices"
+                ],
+                "stock_ingredients": {
+                    "cauliflower": "2024-11-12",
+                    "flour": "2024-11-15",
+                    "spices": "2024-11-20"
+                }
+            },
+            {
+                "item id": "PA04",
+                "item name": "Methi Paratha",
+                "prices": {
+                    "Price": 50.0
+                },
+                "ingredients": [
+                    "fenugreek",
+                    "flour",
+                    "spices"
+                ],
+                "stock_ingredients": {
+                    "fenugreek": "2024-11-14",
+                    "flour": "2024-11-15",
+                    "spices": "2024-11-20"
+                }
+            },
+            {
+                "item id": "PA05",
+                "item name": "Cheese Paratha",
+                "prices": {
+                    "Price": 55.0
+                },
+                "ingredients": [
+                    "cheese",
+                    "flour",
+                    "spices"
+                ],
+                "stock_ingredients": {
+                    "cheese": "2024-11-14",
+                    "flour": "2024-11-15",
+                    "spices": "2024-11-20"
+                }
+            }
+        ],
+        "Coffee": [
+            {
+                "item id": "CO01",
+                "item name": "Espresso",
+                "prices": {
+                    "Price": 50.0
+                },
+                "ingredients": [
+                    "coffee beans",
+                    "water"
+                ],
+                "stock_ingredients": {
+                    "coffee beans": "2024-11-30",
+                    "water": "2024-11-15"
+                }
+            },
+            {
+                "item id": "CO02",
+                "item name": "Cappuccino",
+                "prices": {
+                    "Price": 70.0
+                },
+                "ingredients": [
+                    "coffee beans",
+                    "milk",
+                    "water"
+                ],
+                "stock_ingredients": {
+                    "coffee beans": "2024-11-30",
+                    "milk": "2024-11-14",
+                    "water": "2024-11-15"
+                }
+            },
+            {
+                "item id": "CO03",
+                "item name": "Latte",
+                "prices": {
+                    "Price": 75.0
+                },
+                "ingredients": [
+                    "coffee beans",
+                    "milk",
+                    "water"
+                ],
+                "stock_ingredients": {
+                    "coffee beans": "2024-11-30",
+                    "milk": "2024-11-14",
+                    "water": "2024-11-15"
+                }
+            }
+        ],
+        "Tea": [
+            {
+                "item id": "TE01",
+                "item name": "Masala Tea",
+                "prices": {
+                    "Price": 30.0
+                },
+                "ingredients": [
+                    "tea leaves",
+                    "milk",
+                    "spices"
+                ],
+                "stock_ingredients": {
+                    "tea leaves": "2024-11-18",
+                    "milk": "2024-11-14",
+                    "spices": "2024-11-20"
+                }
+            },
+            {
+                "item id": "TE02",
+                "item name": "Green Tea",
+                "prices": {
+                    "Price": 40.0
+                },
+                "ingredients": [
+                    "green tea leaves",
+                    "water"
+                ],
+                "stock_ingredients": {
+                    "green tea leaves": "2024-11-18",
+                    "water": "2024-11-15"
+                }
+            },
+            {
+                "item id": "TE03",
+                "item name": "Lemon Tea",
+                "prices": {
+                    "Price": 35.0
+                },
+                "ingredients": [
+                    "tea leaves",
+                    "lemon",
+                    "water"
+                ],
+                "stock_ingredients": {
+                    "tea leaves": "2024-11-18",
+                    "lemon": "2024-11-17",
+                    "water": "2024-11-15"
+                }
+            }
+        ]
+    }
 ]

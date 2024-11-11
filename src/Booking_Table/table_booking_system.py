@@ -4,10 +4,10 @@ from Src.Booking_Table.table import Table
 from Src.Booking_Table.reservation_model import Reservation
 from Src.Utility.user_input import get_valid_input
 from Src.Utility.validation import (validate_name, validate_phone_number, validate_booking_date_time, parse_date_time, validate_seats, validate_booking_id)
-
+from Src.Utility.path_manager import reservations_file,table_file
 
 class TableBookingSystem:
-    def __init__(self, reservations_file='Src/Database/reservations.json', table_file='Src/Database/table.json'):
+    def __init__(self):
         self.reservations_file = reservations_file
         self.table_file = table_file
         self.load_tables()
@@ -83,7 +83,9 @@ class TableBookingSystem:
             self.reservations.append(reservation)
             self.save_reservations()
             print(f"Reservation successful! Booking ID: {reservation.reservation_id}")
-            return
+            continue_prompt = input("Would you like to make another reservation? (yes/no): ").strip().lower()
+            if continue_prompt != 'yes':
+                break
 
     def cancel_reservation(self):
         """Cancel a reservation based on booking ID."""
@@ -121,12 +123,61 @@ class TableBookingSystem:
         """Check if tables are available for a specific date, time, and group size."""
         while True:
             date_time = get_valid_input("Enter the date and time to check availability (YYYY-MM-DD HH:MM AM/PM): ", validate_booking_date_time)
-            seats = int(get_valid_input("Enter number of seats required: ", validate_seats))
+            seats = get_valid_input("Enter number of seats required: ", validate_seats)
+            seats = int(seats)
 
             available_tables = self.find_available_table(seats, date_time)
             if available_tables:
                 print(f"Available tables for {seats} seats at {date_time}:")
                 for table in available_tables:
                     print(table)
+                    
             else:
                 print(f"No available tables for {seats} seats at {date_time}.")
+            continue_prompt = input("Would you like to check availability for another reservation? (yes/no): ").strip().lower()
+            if continue_prompt != 'yes':
+                break
+                    
+    def view_all_reservations(self):
+        """Display all reservations in a readable format."""
+        if not self.reservations:
+            print("No reservations found.")
+            return
+
+        print("All Reservations:")
+        for reservation in self.reservations:
+            
+            print(f"Booking ID: {reservation.reservation_id}")
+            print(f"-"*40)
+            print(f"Name: {reservation.name}")
+            print(f"Phone: {reservation.phone}")
+            print(f"Date and Time: {reservation.date_time}")
+            print(f"Seats: {reservation.seats}")
+            print(f"Table ID: {reservation.table_id}")
+            print(f"Status: {reservation.status}")
+            print("=" * 40)  
+
+    def search_reservation_by_id(self):
+        """Search for a reservation by booking ID."""
+        booking_id = get_valid_input("Enter the booking ID to search: ", validate_booking_id)
+        found_reservation = next((reservation for reservation in self.reservations if reservation.reservation_id == booking_id), None)
+        
+        if found_reservation:
+            print(f"="*40)
+            print("Reservation found:")
+            print(f"Booking ID: {found_reservation.reservation_id}")
+            print(f"-"*40)
+            print(f"Name: {found_reservation.name}")
+            print(f"Phone: {found_reservation.phone}")
+            print(f"Date and Time: {found_reservation.date_time}")
+            print(f"Seats: {found_reservation.seats}")
+            print(f"Table ID: {found_reservation.table_id}")
+            print(f"Status: {found_reservation.status}")
+            print("=" * 40) 
+        else:
+            print("No reservation found with the specified booking ID.")
+                
+
+
+
+    

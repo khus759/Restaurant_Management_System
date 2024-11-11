@@ -1,0 +1,17 @@
+[
+    {
+        "order_id": "2e5919",
+        "customer_name": "saniya",
+        "mobile_number": "8765432234",
+        "order_items": [
+            {
+                "item_id": "TE01",
+                "item_name": "Masala Tea",
+                "quantity": 2,
+                "total_price": 60.0
+            }
+        ],
+        "order_date": "11-Nov-2024 03:51:PM",
+        "status": "Processing"
+    }
+]

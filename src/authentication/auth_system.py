@@ -6,9 +6,10 @@ from Src.Utility.validation import (
     validate_phone_number, validate_role, validate_date_of_birth
 )
 from Src.Utility.user_input import get_valid_input
+from Src.Utility.path_manager import users_file
 
 class AuthSystem:
-    def __init__(self, users_file='Src/Database/users.json'):
+    def __init__(self):
         self.users_file = users_file
         self.current_user = None
 
@@ -32,10 +33,10 @@ class AuthSystem:
                 print("An owner already exists! You cannot create another owner.")
                 return
             
-            # staff_count = self.count_roles(users, 'Staff')
-            # if role.upper() == 'STAFF' and staff_count >= 10:
-            #     print("Staff limit reached! You cannot create more than 10 staff members.")
-            #     return
+            staff_count = self.count_roles(users, 'Staff')
+            if role.upper() == 'STAFF' and staff_count >= 10:
+                print("Staff limit reached! You cannot create more than 10 staff members.")
+                return
 
 
             name_prefix = name[::2].upper()  

@@ -43,5 +43,86 @@
         "seats": 2,
         "table_id": "T1",
         "status": "Reserved"
+    },
+    {
+        "reservation_id": "87653d50",
+        "name": "roshni",
+        "phone": "8765456671",
+        "date_time": "2024-11-23 2:00 pm",
+        "seats": 2,
+        "table_id": "T1",
+        "status": "Reserved"
+    },
+    {
+        "reservation_id": "9876bc72",
+        "name": "riya",
+        "phone": "9876543345",
+        "date_time": "2024-12-4 6:00 pm",
+        "seats": 2,
+        "table_id": "T1",
+        "status": "Reserved"
+    },
+    {
+        "reservation_id": "987630c8",
+        "name": "saurabh",
+        "phone": "9876567783",
+        "date_time": "2024-12-4 6:00 pm",
+        "seats": 2,
+        "table_id": "T2",
+        "status": "Reserved"
+    },
+    {
+        "reservation_id": "4532f1b9",
+        "name": "gaurav",
+        "phone": "4532123345",
+        "date_time": "2024-12-4 6:00 pm",
+        "seats": 2,
+        "table_id": "T3",
+        "status": "Reserved"
+    },
+    {
+        "reservation_id": "7654f885",
+        "name": "sweety",
+        "phone": "7654321145",
+        "date_time": "2024-12-4 6:00 pm",
+        "seats": 2,
+        "table_id": "T4",
+        "status": "Reserved"
+    },
+    {
+        "reservation_id": "453248d3",
+        "name": "anand",
+        "phone": "4532123345",
+        "date_time": "2024-11-15 9:00 pm",
+        "seats": 8,
+        "table_id": "T14",
+        "status": "Reserved"
+    },
+    {
+        "reservation_id": "8765fa65",
+        "name": "sachin",
+        "phone": "8765456678",
+        "date_time": "2024-11-15 9:00 pm",
+        "seats": 8,
+        "table_id": "T15",
+        "status": "Reserved"
+    },
+    {
+        "reservation_id": "87654284",
+        "name": "anand",
+        "phone": "8765457753",
+        "date_time": "2024-11-11 6:00 pm",
+        "seats": 4,
+        "table_id": "T5",
+        "status": "Reserved"
+    },
+    {
+        "reservation_id": "9876686d",
+        "name": "amit",
+        "phone": "9876543321",
+        "date_time": "2024-11-13 8:00 pm",
+        "seats": 2,
+        "table_id": "T1",
+        "status": "Reserved"
     }
 ]
