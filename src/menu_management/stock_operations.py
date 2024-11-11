@@ -1,5 +1,7 @@
 import json
 from datetime import datetime, timedelta
+from Src.Utility.user_input import get_valid_input
+from Src.Utility.validation import *
 
 class StockOperations:
     def __init__(self, menu_data, json_file):
@@ -7,8 +9,8 @@ class StockOperations:
         self.json_file = json_file
 
     def add_stock_ingredient(self):
-        category = input("Enter category: ")
-        item_id = input("Enter item ID: ")
+        category = get_valid_input("Enter category: ",validate_category)
+        item_id = get_valid_input("Enter item ID: ",validate_item_id)
         ingredient = input("Enter ingredient name: ")
 
         for item in self.menu_data[0].get(category, []):
@@ -40,8 +42,8 @@ class StockOperations:
         print(f"Item '{item_id}' not found in '{category}' category.")
 
     def check_stock_ingredients(self):
-        category = input("Enter category: ")
-        item_id = input("Enter item ID: ")
+        category = get_valid_input("Enter category: ",validate_category)
+        item_id = get_valid_input("Enter item ID: ",validate_item_id)
 
         current_date = datetime.now().date()
         for item in self.menu_data[0].get(category, []):
