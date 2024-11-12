@@ -24,9 +24,9 @@ class ItemOperations:
                 try:
                     has_portion_sizes = input("Does this item have half and full portions? (yes/no): ").strip().lower()
                     valid_response = validate_has_portion_sizes(has_portion_sizes)  # This will validate the input
-                    break  # Exit loop when input is valid
+                    break  
                 except ValueError as e:
-                    print(e)  # Display error message and prompt again
+                    print(e)  
 
             prices = {}
             if valid_response == 'yes':

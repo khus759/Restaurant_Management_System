@@ -14,7 +14,7 @@ class ReservationReport:
             return json.load(file)
 
     def show_reservations_by_date(self):
-        # Taking user input for date or month
+        
         date_input = input("Enter date (YYYY-MM-DD) or month (YYYY-MM): ")
         is_specific_date = len(date_input) == 10  # Checking if the input is for a specific date
 
@@ -26,7 +26,6 @@ class ReservationReport:
             formatted_date = reservation_date.strftime('%Y-%m-%d')
             formatted_month = reservation_date.strftime('%Y-%m')
 
-            # Check if the reservation date or month matches the input
             if (is_specific_date and formatted_date == date_input) or (not is_specific_date and formatted_month == date_input):
                 reservations_on_date.append({
                     "name": reservation["name"],
@@ -36,11 +35,9 @@ class ReservationReport:
                     "status": reservation["status"]
                 })
 
-        # Display results using PrintHandler
         self.booking_handler.display_reservations_on_date(date_input, reservations_on_date)
 
     def show_canceled_reservations(self):
-        # Taking user input for date or month (optional)
         date_input = input("Enter date (YYYY-MM-DD) or month (YYYY-MM) to filter, or leave empty to show all: ").strip()
         is_specific_date = len(date_input) == 10
 
@@ -52,7 +49,6 @@ class ReservationReport:
                 formatted_date = reservation_date.strftime('%Y-%m-%d')
                 formatted_month = reservation_date.strftime('%Y-%m')
 
-                # Check if reservation matches the date/month filter or if no filter is applied
                 if not date_input or (is_specific_date and formatted_date == date_input) or (not is_specific_date and formatted_month == date_input):
                     canceled_reservations.append({
                         "name": reservation["name"],
@@ -62,5 +58,5 @@ class ReservationReport:
                         "date": formatted_date
                     })
 
-        # Display results using PrintHandler
+        
         self.booking_handler.display_canceled_reservations(canceled_reservations)
