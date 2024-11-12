@@ -12,6 +12,7 @@ from Src.Order_management.order_features import OrderManagementSystem
 from Src.Reports.soon_stock_out import ExpirationReport
 from Src.Reports.booking import ReservationReport
 from Src.Reports.order_report import OrderReport
+from Src.Invoice.bill_system import BillingSystem
 
 class StaffDashboard:
     def __init__(self):
@@ -21,7 +22,9 @@ class StaffDashboard:
         self.soon_expire_ingredients = ExpirationReport()
         self.reserve_table = ReservationReport()
         self.order_reports = OrderReport()
+        self.bill_system = BillingSystem()
     
+
     def display_dashboard(self):
         while True:
             display_staff_menu()
@@ -62,7 +65,19 @@ class StaffDashboard:
 
     def handle_invoice_management(self):
         display_invoice_management()
-        print("Invoice Management features are under development.")
+        choice = input("Choose an action in Invoice system : ")
+        if choice == "1":
+            self.bill_system.generate_bill()
+        elif choice == "2":
+            self.bill_system.check_bill()
+        elif choice == "3":
+            self.bill_system.show_all_bills()
+        elif choice == "4":
+            self.bill_system.mark_as_paid()
+        elif choice == "5":
+            self.bill_system.show_all_paid_bills()
+        else: 
+            print("Invalid choice in Invoice Management.")
 
     def handle_table_booking_management(self):
         display_table_booking_management()

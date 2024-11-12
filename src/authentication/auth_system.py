@@ -1,4 +1,5 @@
 import uuid
+import getpass
 from Src.Authentication.file_operation import load_users, save_users
 from Src.Utility.validation import (
     validate_name, validate_email, validate_password,
@@ -60,7 +61,7 @@ class AuthSystem:
         users = load_users(self.users_file)
         while True:
             email = get_valid_input("Enter your email: ", validate_email).lower()
-            password = get_valid_input("Enter your password: ", validate_password)
+            password = getpass.getpass("Enter your password: ")
 
             user = next((user for user in users if user['email'] == email and user['password'] == password), None)
             if user:

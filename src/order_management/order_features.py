@@ -2,64 +2,71 @@ from datetime import datetime
 from Src.Order_management.order_data import load_menu, load_orders, save_orders, generate_order_id
 from Src.Utility.validation import *
 from Src.Utility.user_input import get_valid_input
-
+from Src.Messages.order import OrderOutputHandler  
 
 class OrderManagementSystem:
     def __init__(self):
         self.menu = load_menu()
         self.orders = load_orders()
+        self.output_handler = OrderOutputHandler()  
 
     def take_order(self):
-        customer_name = get_valid_input("Enter customer name: ",validate_name)
-        mobile_number = get_valid_input("Enter mobile number: ",validate_phone_number)
+        customer_name = get_valid_input("Enter customer name: ", validate_name)
+        mobile_number = get_valid_input("Enter mobile number: ", validate_phone_number)
         order_id = generate_order_id()
 
         order_items = []
+        total_order_price = 0
+
         while True:
-            item_id = input("Enter item ID (or 'done' to finish): ")
-            if item_id.lower() == 'done':
+            item_id = input("Enter item ID (or 'done' to finish): ").upper()
+            if item_id == 'DONE':
                 break
 
             item = self.find_item_by_id(item_id)
             if not item:
-                print("Item not found.")
+                self.output_handler.item_not_found()
                 continue
 
+            size = 'single'
             if 'half' in item['prices'] or 'full' in item['prices']:
                 size = input("Enter size (half/full): ").lower()
                 if size not in item['prices']:
-                    print("Invalid size.")
+                    self.output_handler.invalid_size()
                     continue
                 price = item['prices'][size]
             else:
-                price = item['prices']['Price']
+                price = item['prices']['single']
 
             quantity = int(input("Enter quantity: "))
             total_price = price * quantity
 
             if not self.check_stock(item, quantity):
-                print("Insufficient stock.")
+                self.output_handler.insufficient_stock()
                 continue
 
             order_items.append({
                 'item_id': item_id,
                 'item_name': item['item name'],
+                'size': size,
                 'quantity': quantity,
                 'total_price': total_price
             })
+            total_order_price += total_price
 
         order = {
             'order_id': order_id,
             'customer_name': customer_name,
             'mobile_number': mobile_number,
             'order_items': order_items,
+            'total_order_price': total_order_price,
             'order_date': datetime.now().strftime('%d-%b-%Y %I:%M:%p'),
             'status': 'Processing'
         }
 
         self.orders.append(order)
         save_orders(self.orders)
-        print(f"Order placed successfully with ID: {order_id}")
+        self.output_handler.show_order_placed(order_id, total_order_price)
 
     def find_item_by_id(self, item_id):
         for category, items in self.menu.items():
@@ -76,97 +83,121 @@ class OrderManagementSystem:
                 return False
         return True
 
+    def check_order(self):
+        identifier = input("Enter order ID or mobile number to check: ")
+        order = self.find_order_by_id_or_mobile(identifier)
+        if not order:
+            self.output_handler.item_not_found()
+            return
+
+        self.output_handler.show_order_details(order)
+
+    def show_all_orders(self):
+        if not self.orders:
+            self.output_handler.item_not_found()
+            return
+
+        for order in self.orders:
+            self.output_handler.show_order_details(order)
+
     def update_order(self):
         identifier = input("Enter order ID or mobile number to update: ")
         order = self.find_order_by_id_or_mobile(identifier)
+
         if not order:
-            print("Order not found.")
+            self.output_handler.item_not_found()
             return
-    
+
+        if order['status'] != 'Processing':
+            print("Only orders with status 'Processing' can be updated.")
+            return
+
         while True:
             print("\n1. Update Item Quantity")
             print("2. Add New Item")
             print("3. Remove Item")
-            print("4. Update Status")
-            print("5. Finish Update")
+            print("4. Finish Update")
             choice = input("Enter your choice: ")
-    
+
             if choice == '1':
-                item_id = get_valid_input("Enter item ID to update quantity: ",validate_item_id).upper()
+                item_id = input("Enter item ID to update quantity: ").upper()
                 for item in order['order_items']:
                     if item['item_id'] == item_id:
                         new_quantity = int(input("Enter new quantity: "))
                         item['quantity'] = new_quantity
-                        item['total_price'] = new_quantity * self.find_item_by_id(item_id)['prices']['pieces']
+                        if 'half' in self.find_item_by_id(item_id)['prices'] or 'full' in self.find_item_by_id(item_id)['prices']:
+                            size = item.get('size')
+                            price = self.find_item_by_id(item_id)['prices'][size]
+                        else:
+                            price = self.find_item_by_id(item_id)['prices']['single']
+                        item['total_price'] = new_quantity * price
                         print("Item quantity updated.")
                         break
                 else:
-                    print("Item not found in order.")
-    
+                    self.output_handler.item_not_found()
+
             elif choice == '2':
-                item_id = get_valid_input("Enter new item ID to add: ",validate_item_id)
+                item_id = input("Enter item ID to add: ").upper()
                 item = self.find_item_by_id(item_id)
                 if not item:
-                    print("Item not found.")
+                    self.output_handler.item_not_found()
                     continue
-                
+
+                size = 'single'
                 if 'half' in item['prices'] or 'full' in item['prices']:
                     size = input("Enter size (half/full): ").lower()
                     if size not in item['prices']:
-                        print("Invalid size.")
+                        self.output_handler.invalid_size()
                         continue
                     price = item['prices'][size]
                 else:
-                    price = item['prices']['pieces']
-    
+                    price = item['prices']['single']
+
                 quantity = int(input("Enter quantity: "))
                 total_price = price * quantity
-    
+
                 if not self.check_stock(item, quantity):
-                    print("Insufficient stock.")
+                    self.output_handler.insufficient_stock()
                     continue
-                
+
                 order['order_items'].append({
                     'item_id': item_id,
                     'item_name': item['item name'],
+                    'size': size,
                     'quantity': quantity,
                     'total_price': total_price
                 })
                 print("New item added to order.")
-    
+
             elif choice == '3':
-                item_id = get_valid_input("Enter item ID to remove: ",validate_item_id)
+                item_id = input("Enter item ID to remove: ").upper()
                 for item in order['order_items']:
                     if item['item_id'] == item_id:
                         order['order_items'].remove(item)
                         print("Item removed from order.")
                         break
                 else:
-                    print("Item not found in order.")
-    
+                    self.output_handler.item_not_found()
+
             elif choice == '4':
-                new_status = input("Enter new status (e.g., Processing, Completed, Cancelled): ")
-                order['status'] = new_status
-                print("Order status updated.")
-    
-            elif choice == '5':
+                order['total_order_price'] = sum(item['total_price'] for item in order['order_items'])
                 break
-            
+
             else:
                 print("Invalid choice. Please try again.")
-    
-        self.save_orders()
+
+        save_orders(self.orders)
         print("Order updated successfully.")
 
     def cancel_order(self):
         identifier = input("Enter order ID or mobile number to cancel: ")
         order = self.find_order_by_id_or_mobile(identifier)
         if not order:
-            print("Order not found.")
+            self.output_handler.item_not_found()
             return
 
         self.orders.remove(order)
-        self.save_orders()
+        save_orders(self.orders)
         print("Order cancelled successfully.")
 
     def find_order_by_id_or_mobile(self, identifier):
@@ -175,62 +206,10 @@ class OrderManagementSystem:
                 return order
         return None
 
-    def check_order(self):
-        identifier = input("Enter order ID or mobile number to check: ")
-        order = self.find_order_by_id_or_mobile(identifier)
-        if not order:
-            print("Order not found.")
-            return
-
-        print("\nOrder Details")
-        print("=" * 50)
-        print(f"Order ID      : {order['order_id']}")
-        print(f"Customer Name : {order['customer_name']}")
-        print(f"Mobile Number : {order['mobile_number']}")
-        print(f"Order Date    : {order['order_date']}")
-        print(f"Status        : {order['status']}")
-        print("Order Items:")
-        print("-" * 50)
-        for item in order['order_items']:
-            print(f"  - {item['item_name']} (ID: {item['item_id']})")
-            print(f"    Quantity: {item['quantity']}")
-            print(f"    Total Price: {item['total_price']}")
-            print("-" * 50)
-        print("=" * 50)
-        print("")
-
-    def show_all_orders(self):
-        if not self.orders:
-            print("No orders found.")
-            return
-
-        for order in self.orders:
-            status = order.get('status', 'Unknown')
-            print("\nOrder Details")
-            print("=" * 60)
-            print(f"{'Order ID':<15}: {order['order_id']}")
-            print(f"{'Customer Name':<15}: {order['customer_name']}")
-            print(f"{'Mobile Number':<15}: {order['mobile_number']}")
-            print(f"{'Order Date':<15}: {order['order_date']}")
-            print(f"{'Status':<15}: {status}")
-            print("\nOrder Items:")
-            print("-" * 60)
-            for item in order['order_items']:
-                print(f"  - {item['item_name']} (ID: {item['item_id']})")
-                print(f"    {'Quantity':<10}: {item['quantity']}")
-                print(f"    {'Total Price':<10}: {item['total_price']}")
-                print("-" * 60)
-            print("=" * 60)
-            print("")
-
     def show_menu(self):
-        print("\nMenu:")
-        header = f"{'ID':<10}{'Name':<30}{'Prices':<40}{'Ingredients':<50}"
-        print(header)
-        print("=" * 130)
+        self.output_handler.show_menu_header()
         for category, items in self.menu.items():
             print(f"\nCategory: {category}")
-            print("-" * 130)
             for item in items:
                 item_id = item['item id']
                 item_name = item['item name']
@@ -239,5 +218,4 @@ class OrderManagementSystem:
                 ingredients = item.get('ingredients', 'No ingredients listed')
                 if isinstance(ingredients, list):
                     ingredients = ', '.join(ingredients)
-                print(f"{item_id:<10}{item_name:<30}{price_details:<40}{ingredients:<50}")
-            print("=" * 130)
+                self.output_handler.show_menu_item(item_id, item_name, price_details, ingredients)

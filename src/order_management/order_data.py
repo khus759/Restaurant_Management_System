@@ -1,6 +1,8 @@
 import json
 import uuid
 from Src.Utility.path_manager import menu_file, order_file
+from Src.Messages.order import OrderOutputHandler  
+handle = OrderOutputHandler()
 
 def load_menu():
     with open(menu_file, 'r') as file:
@@ -19,4 +21,9 @@ def save_orders(orders):
         json.dump(orders, file, indent=4)
 
 def generate_order_id():
-    return f"{str(uuid.uuid4().hex[:6])}"
+    try:
+        return f"{str(uuid.uuid4().hex[:6])}"
+    except Exception as e:
+        handle.generate_message()
+        # print("Error generating order ID:", e)
+        return None

@@ -1,6 +1,6 @@
 
 
-class AuthHandler:
+class AuthHandler():
     
     def email_already_taken(self):
         print("Email already taken! Try again.")

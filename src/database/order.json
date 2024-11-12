@@ -1,38 +1,160 @@
 [
     {
-        "order_id": "2e5919",
-        "customer_name": "saniya",
-        "mobile_number": "8765432234",
+        "order_id": "8ccc7b",
+        "customer_name": "aman",
+        "mobile_number": "9988776644",
         "order_items": [
+            {
+                "item_id": "VE01",
+                "item_name": "Paneer Butter Masala",
+                "size": "full",
+                "quantity": 2,
+                "total_price": 360.0
+            },
+            {
+                "item_id": "VE01",
+                "item_name": "Paneer Butter Masala",
+                "size": "half",
+                "quantity": 1,
+                "total_price": 90.0
+            }
+        ],
+        "total_order_price": 450.0,
+        "order_date": "11-Nov-2024 10:27:PM",
+        "status": "Billed"
+    },
+    {
+        "order_id": "8824ff",
+        "customer_name": "khushi",
+        "mobile_number": "8541067731",
+        "order_items": [
+            {
+                "item_id": "VE01",
+                "item_name": "Paneer Butter Masala",
+                "size": "half",
+                "quantity": 2,
+                "total_price": 180.0
+            },
+            {
+                "item_id": "CO01",
+                "item_name": "Espresso",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 100.0
+            },
             {
                 "item_id": "TE01",
                 "item_name": "Masala Tea",
+                "size": "single",
                 "quantity": 2,
                 "total_price": 60.0
+            },
+            {
+                "item_id": "RI02",
+                "item_name": "Jeera Rice",
+                "size": "half",
+                "quantity": 2,
+                "total_price": 110.0
             }
         ],
-        "order_date": "11-Nov-2024 03:51:PM",
+        "total_order_price": 450.0,
+        "order_date": "12-Nov-2024 12:03:PM",
+        "status": "Billed"
+    },
+    {
+        "order_id": "7a0140",
+        "customer_name": "rajan",
+        "mobile_number": "2233445566",
+        "order_items": [
+            {
+                "item_id": "RI02",
+                "item_name": "Jeera Rice",
+                "size": "full",
+                "quantity": 2,
+                "total_price": 220.0
+            }
+        ],
+        "total_order_price": 220.0,
+        "order_date": "12-Nov-2024 04:08:PM",
         "status": "Processing"
     },
     {
-        "order_id": "06b651",
-        "customer_name": "amit",
-        "mobile_number": "8765456678",
+        "order_id": "da6852",
+        "customer_name": "mani",
+        "mobile_number": "8456786474",
         "order_items": [
             {
                 "item_id": "VE03",
                 "item_name": "Palak Paneer",
-                "quantity": 2,
-                "total_price": 300.0
+                "size": "half",
+                "quantity": 3,
+                "total_price": 225.0
             },
             {
-                "item_id": "CO02",
-                "item_name": "Cappuccino",
+                "item_id": "TE02",
+                "item_name": "Green Tea",
+                "size": "single",
                 "quantity": 2,
-                "total_price": 140.0
+                "total_price": 80.0
             }
         ],
-        "order_date": "11-Nov-2024 05:05:PM",
+        "total_order_price": 305.0,
+        "order_date": "12-Nov-2024 04:13:PM",
+        "status": "Processing"
+    },
+    {
+        "order_id": "628add",
+        "customer_name": "rishu",
+        "mobile_number": "7645345675",
+        "order_items": [
+            {
+                "item_id": "CO03",
+                "item_name": "Latte",
+                "size": "single",
+                "quantity": 3,
+                "total_price": 225.0
+            },
+            {
+                "item_id": "RI03",
+                "item_name": "Pulao",
+                "size": "full",
+                "quantity": 3,
+                "total_price": 360.0
+            }
+        ],
+        "total_order_price": 585.0,
+        "order_date": "12-Nov-2024 04:16:PM",
+        "status": "Billed"
+    },
+    {
+        "order_id": "eddc56",
+        "customer_name": "baja",
+        "mobile_number": "5657870976",
+        "order_items": [
+            {
+                "item_id": "ST04",
+                "item_name": "Paneer Samosa",
+                "size": "single",
+                "quantity": 3,
+                "total_price": 540.0
+            },
+            {
+                "item_id": "ST03",
+                "item_name": "Paneer Tikka",
+                "size": "single",
+                "quantity": 1,
+                "total_price": 130.0
+            },
+            {
+                "item_id": "RO03",
+                "item_name": "Garlic Roti",
+                "size": "single",
+                "quantity": 3,
+                "total_price": 105.0
+            }
+        ],
+        "total_order_price": 775.0,
+        "order_date": "12-Nov-2024 04:17:PM",
         "status": "Processing"
     }
 ]

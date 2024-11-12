@@ -47,9 +47,12 @@ def display_invoice_management():
     print("-"*40)
     print(f"\t{'*'*5}INVOICE MANAGEMENT{'*'*5}")
     print("-"*40)
-    print("\n1. Generate Invoice")
-    print("2. Search Invoice")
-    print("3. Show All Invoices")
+    print("1. Generate Bill")
+    print("2. Check Bill")
+    print("3. Show All Bills")
+    print("4. Mark Bill as Paid")
+    print("5. Show All Paid Bills")
+        
 
 def display_table_booking_management():
     print("-"*40)

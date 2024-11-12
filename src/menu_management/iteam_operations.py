@@ -1,11 +1,13 @@
 import json
 from Src.Utility.user_input import get_valid_input
 from Src.Utility.validation import validate_category, validate_name, validate_price, validate_ingredient_input, validate_has_portion_sizes, validate_item_id
+from Src.Messages.menu import Menu_Message
 
 class ItemOperations:
     def __init__(self, menu_data, json_file):
         self.menu_data = menu_data
         self.json_file = json_file
+        self.menu_handle = Menu_Message()
 
     def generate_item_id(self, category):
         prefix = category[:2].upper()
@@ -19,7 +21,7 @@ class ItemOperations:
         name = get_valid_input("Enter item name: ", validate_name).title()
 
         try:
-            # Loop until a valid portion size response is entered (yes or no)
+            
             while True:
                 try:
                     has_portion_sizes = input("Does this item have half and full portions? (yes/no): ").strip().lower()
@@ -33,14 +35,14 @@ class ItemOperations:
                 prices["half"] = get_valid_input("Enter half portion price: ", validate_price)
                 prices["full"] = get_valid_input("Enter full portion price: ", validate_price)
             else:
-                prices["price"] = get_valid_input("Enter item price: ", validate_price)
+                prices["single"] = get_valid_input("Enter item price: ", validate_price)
 
         except ValueError as e:
             print(f"Error in price input: {e}")
             return
 
         try:
-            # Loop until a valid ingredient response is entered (yes/no)
+            
             while True:
                 add_ingredients = input("Would you like to add ingredients? (yes/no): ").strip().lower()
                 if add_ingredients in ['yes', 'no']:
@@ -72,8 +74,9 @@ class ItemOperations:
 
         with open(self.json_file, 'w') as file:
             json.dump(self.menu_data, file, indent=4)
-
-        print(f"Item '{name}' added successfully under '{category}' category with ID '{item_id}'.")
+        
+        self.menu_handle.print_item_added(name,item_id,category)
+        
 
     def update_item(self):
         category = get_valid_input("Enter category: ", lambda value: validate_category(value, self.menu_data)).title()
@@ -81,11 +84,11 @@ class ItemOperations:
 
         for item in self.menu_data[0].get(category, []):
             if item['item id'] == item_id:
-                name = get_valid_input("Enter new item name (leave blank to keep current): ", validate_name)
+                name = input("Enter new item name (leave blank to keep current): ")
                 if name:
                     item['item name'] = name
 
-                price = get_valid_input("Enter new price (leave blank to keep current): ", validate_price)
+                price = input("Enter new price (leave blank to keep current): ")
                 if price is not None:
                     item['prices'] = {"price": price}
 
@@ -95,12 +98,10 @@ class ItemOperations:
 
                 with open(self.json_file, 'w') as file:
                     json.dump(self.menu_data, file, indent=4)
-
-                print(f"Item '{item_id}' updated successfully.")
+                self.menu_handle.print_item_updated()
                 return
-
-        print(f"Item '{item_id}' not found in '{category}' category.")
-
+        self.menu_handle.print_item_not_found(item_id,category)
+        
     def delete_item(self):
         category = get_valid_input("Enter category: ", lambda value: validate_category(value, self.menu_data)).title()
         item_id = get_valid_input("Enter item ID to delete: ", lambda value: validate_item_id(value, self.menu_data, category)).title()
@@ -111,10 +112,11 @@ class ItemOperations:
                 items.remove(item)
                 with open(self.json_file, 'w') as file:
                     json.dump(self.menu_data, file, indent=4)
-                print(f"Item '{item_id}' deleted successfully from '{category}' category.")
+
+                self.menu_handle.print_item_deleted(item_id,category)   
                 return
 
-        print(f"Item '{item_id}' not found in '{category}' category.")
+        self.menu_handle.print_item_not_found(item_id,category)
 
     def show_menu(self):
         print("\nMenu:")
@@ -122,8 +124,7 @@ class ItemOperations:
         print(header)
         print("=" * 130)  # Adjust the length of the separator as needed
         for category, items in self.menu_data[0].items():
-            print(f"\nCategory: {category}")
-            print("-" * 130)
+            self.menu_handle.print_category_header(category)
             for item in items:
                 item_id = item['item id']
                 item_name = item['item name']

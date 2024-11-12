@@ -1,0 +1,100 @@
+[
+    {
+        "billing_id": "c58626",
+        "order_id": "8ccc7b",
+        "customer_name": "aman",
+        "billing_date": "12-Nov-2024 04:38:PM",
+        "items": [
+            {
+                "item_id": "VE01",
+                "item_name": "Paneer Butter Masala",
+                "size": "full",
+                "quantity": 2,
+                "total_price": 360.0
+            },
+            {
+                "item_id": "VE01",
+                "item_name": "Paneer Butter Masala",
+                "size": "half",
+                "quantity": 1,
+                "total_price": 90.0
+            }
+        ],
+        "subtotal": 450.0,
+        "gst": 81.0,
+        "total": 531.0,
+        "status": "Billed",
+        "payment_type": null,
+        "payment_date": null
+    },
+    {
+        "billing_id": "1e8d82",
+        "order_id": "8824ff",
+        "customer_name": "khushi",
+        "billing_date": "12-Nov-2024 04:39:PM",
+        "items": [
+            {
+                "item_id": "VE01",
+                "item_name": "Paneer Butter Masala",
+                "size": "half",
+                "quantity": 2,
+                "total_price": 180.0
+            },
+            {
+                "item_id": "CO01",
+                "item_name": "Espresso",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 100.0
+            },
+            {
+                "item_id": "TE01",
+                "item_name": "Masala Tea",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 60.0
+            },
+            {
+                "item_id": "RI02",
+                "item_name": "Jeera Rice",
+                "size": "half",
+                "quantity": 2,
+                "total_price": 110.0
+            }
+        ],
+        "subtotal": 450.0,
+        "gst": 81.0,
+        "total": 531.0,
+        "status": "Billed",
+        "payment_type": null,
+        "payment_date": null
+    },
+    {
+        "billing_id": "74353b",
+        "order_id": "628add",
+        "customer_name": "rishu",
+        "billing_date": "12-Nov-2024 06:06:PM",
+        "items": [
+            {
+                "item_id": "CO03",
+                "item_name": "Latte",
+                "size": "single",
+                "quantity": 3,
+                "total_price": 225.0
+            },
+            {
+                "item_id": "RI03",
+                "item_name": "Pulao",
+                "size": "full",
+                "quantity": 3,
+                "total_price": 360.0
+            }
+        ],
+        "subtotal": 585.0,
+        "gst": 105.3,
+        "total": 690.3,
+        "status": "Billed",
+        "payment_type": null,
+        "payment_date": null
+    }
+]
