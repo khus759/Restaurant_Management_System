@@ -171,9 +171,7 @@ def validate_item_id(item_id, menu_data, category):
 
     if not any(item['item id'].upper() == item_id.upper() for item in category_items):
         return f"Invalid item ID: '{item_id}' not found in '{category}' category."
-    return None 
-
-import re
+    return None
 
 def validate_ingredient_input(value):
     """Validate the ingredients input."""
@@ -195,15 +193,12 @@ def validate_has_portion_sizes(value):
     """Validate if the input for portion sizes is 'yes' or 'no' and reject blank or special characters."""
     value = value.strip().lower()
 
-    # Check for blank input
     if not value:
         raise ValueError("Input cannot be blank.")
 
-    # Check for special characters using regex
-    if not re.match("^[a-zA-Z]+$", value):
+    if not value.isalpha():    
         raise ValueError("Input must not contain special characters.")
 
-    # Check if the input is either 'yes' or 'no'
     if value not in ['yes', 'no']:
         raise ValueError("Input must be 'yes' or 'no' for portion sizes.")
     

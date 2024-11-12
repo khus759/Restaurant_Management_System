@@ -51,7 +51,7 @@ class ItemOperations:
             ingredients = []
             if add_ingredients == 'yes':
                 # Prompt for ingredients only if 'yes' was answered
-                ingredients_input = input("Enter ingredients (comma-separated): ").strip()
+                ingredients_input = get_valid_input("Enter ingredients (comma-separated): ",validate_ingredient_input).strip()
                 ingredients = [ingredient.strip() for ingredient in ingredients_input.split(',')]
 
         except Exception as e:
@@ -89,7 +89,7 @@ class ItemOperations:
                 if price is not None:
                     item['prices'] = {"price": price}
 
-                ingredients = input("Enter new ingredients (comma-separated, leave blank to keep current): ")
+                ingredients = get_valid_input("Enter new ingredients (comma-separated, leave blank to keep current): ",validate_ingredient_input)
                 if ingredients:
                     item['ingredients'] = [ingredient.strip() for ingredient in ingredients.split(',')]
 

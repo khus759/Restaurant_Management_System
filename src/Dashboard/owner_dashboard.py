@@ -6,9 +6,13 @@ from Src.Utility.dashboard_functions import (
     display_menu_management,
     display_order_management,
     display_invoice_management,
-    display_table_booking_management   
+    display_table_booking_management,
+    display_stock_management   
 )
 from Src.Order_management.order_features import OrderManagementSystem
+from Src.Reports.soon_stock_out import ExpirationReport
+from Src.Reports.booking import ReservationReport
+from Src.Reports.order_report import OrderReport
 
 
 class OwnerDashboard:
@@ -16,6 +20,9 @@ class OwnerDashboard:
         self.menu_management = MenuManagement()
         self.booking_system = TableBookingSystem()
         self.order_management = OrderManagementSystem()
+        self.soon_expire_ingredients = ExpirationReport()
+        self.reserve_table = ReservationReport()
+        self.order_reports = OrderReport()
     
     def display_dashboard(self):
         while True:
@@ -31,6 +38,8 @@ class OwnerDashboard:
             elif main_choice == "4":
                 self.handle_table_booking_management()
             elif main_choice == "5":
+                self.handle_stock_management()
+            elif main_choice == "6":
                 print("Logging out...")
                 break
             else:
@@ -41,6 +50,7 @@ class OwnerDashboard:
 
     def handle_menu_management(self):
         display_menu_management()
+
         choice = input("Choose an action in Menu Management: ")
 
         if choice == "1":
@@ -60,6 +70,7 @@ class OwnerDashboard:
         
     def handle_order_management(self):
         display_order_management()
+
         choice = input("Choose an action in Order Management: ")
 
         if choice == "1":
@@ -83,6 +94,7 @@ class OwnerDashboard:
 
     def handle_table_booking_management(self):
         display_table_booking_management()
+
         choice = input("Choose an action in Table Booking Management: ")
 
         if choice == "1":
@@ -99,3 +111,20 @@ class OwnerDashboard:
             self.booking_system.search_reservation_by_id()
         else:
             print("Invalid choice in Table Booking Management.")
+    
+    def handle_stock_management(self):
+        display_stock_management()
+
+        choice = input("Choose an action in Table Booking Management: ")
+
+        if choice == "1":
+            self.soon_expire_ingredients.display_report()
+        elif choice == "2":
+            self.reserve_table.show_reservations_by_date()
+        elif choice == "3":
+            self.reserve_table.show_canceled_reservations()
+        elif choice == "4":
+            self.order_reports.show_ordered_items_summary()
+        else:
+            print("Invalid choice in Table Booking Management.")
+    

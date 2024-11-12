@@ -61,9 +61,6 @@ class OrderManagementSystem:
         save_orders(self.orders)
         print(f"Order placed successfully with ID: {order_id}")
 
-
-
-
     def find_item_by_id(self, item_id):
         for category, items in self.menu.items():
             for item in items:

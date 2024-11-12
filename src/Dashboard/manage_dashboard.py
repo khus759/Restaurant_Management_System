@@ -16,7 +16,9 @@ def show_dashboard(user_role):
 def main():
     auth_system = AuthSystem()
     while True:
-        print("\n********* Welcome to the Restaurant Management System *********")
+        print("-"*64)
+        print("********* Welcome to the Taste of Tradition Restaurant *********")
+        print("-"*64)
         print("1. Signup")
         print("2. Login")
         print("3. Exit")

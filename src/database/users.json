@@ -79,5 +79,14 @@
         "phone": "9876785542",
         "role": "Staff",
         "date_of_birth": "2002-5-3"
+    },
+    {
+        "id": "PET-a363",
+        "name": "preety",
+        "email": "preet123@gmail.com",
+        "password": "888555",
+        "phone": "9876543345",
+        "role": "Staff",
+        "date_of_birth": "2000-12-10"
     }
 ]

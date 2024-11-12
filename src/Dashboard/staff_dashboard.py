@@ -5,16 +5,22 @@ from Src.Utility.dashboard_functions import (
     display_order_management,
     display_invoice_management,
     display_table_booking_management,
-    display_staff_menu   
+    display_staff_menu,
+    display_stock_management  
 )
 from Src.Order_management.order_features import OrderManagementSystem
-
+from Src.Reports.soon_stock_out import ExpirationReport
+from Src.Reports.booking import ReservationReport
+from Src.Reports.order_report import OrderReport
 
 class StaffDashboard:
     def __init__(self):
         self.menu_management = MenuManagement()
         self.booking_system = TableBookingSystem()
         self.order_management = OrderManagementSystem()
+        self.soon_expire_ingredients = ExpirationReport()
+        self.reserve_table = ReservationReport()
+        self.order_reports = OrderReport()
     
     def display_dashboard(self):
         while True:
@@ -23,16 +29,15 @@ class StaffDashboard:
 
             if main_choice == "1":
                 self.handle_order_management()
-            elif main_choice == "3":
+            elif main_choice == "2":
                 self.handle_invoice_management()
-            elif main_choice == "4":
+            elif main_choice == "3":
                 self.handle_table_booking_management()
-            elif main_choice == "5":
+            elif main_choice == "4":
                 print("Logging out...")
                 break
             else:
                 print("Invalid choice. Please try again.")
-
             if not ask_for_dashboard():
                 break
         
@@ -77,3 +82,20 @@ class StaffDashboard:
             self.booking_system.search_reservation_by_id()
         else:
             print("Invalid choice in Table Booking Management.")
+
+    def handle_stock_management(self):
+        display_stock_management()
+
+        choice = input("Choose an action in Reports: ")
+
+        if choice == "1":
+            self.soon_expire_ingredients.display_report()
+        elif choice == "2":
+            self.reserve_table.show_reservations_by_date()
+        elif choice == "3":
+            self.reserve_table.show_canceled_reservations()
+        elif choice == "4":
+            self.order_reports.show_ordered_items_summary()
+        else:
+            print("Invalid choice in Table Booking Management.")
+    

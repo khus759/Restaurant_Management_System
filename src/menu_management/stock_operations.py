@@ -11,7 +11,7 @@ class StockOperations:
     def add_stock_ingredient(self):
         category = get_valid_input("Enter category: ",validate_category)
         item_id = get_valid_input("Enter item ID: ",validate_item_id)
-        ingredient = input("Enter ingredient name: ")
+        ingredient = get_valid_input("Enter ingredient name: ",validate_ingredient_input)
 
         for item in self.menu_data[0].get(category, []):
             if item['item id'] == item_id:
