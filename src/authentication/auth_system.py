@@ -35,13 +35,14 @@ class AuthSystem:
                 self.message_handler.owner_exists()
                 return
 
-            staff_count = self.count_roles(users, 'Staff')
-            if role.upper() == 'STAFF' and staff_count >= 10:
-                self.message_handler.staff_limit_reached()
-                return
+            # staff_count = self.count_roles(users, 'Staff')
+            # if role.upper() == 'STAFF' and staff_count >= 10:
+            #     self.message_handler.staff_limit_reached()
+            #     return
 
-            name_prefix = name[::2].upper()  
-            user_id = f"{name_prefix}-{str(uuid.uuid4())[:4]}"
+            #name_prefix = name[::2].upper()  
+            # user_id = f"{name_prefix}-{str(uuid.uuid4())[:4]}"
+            user_id = str(uuid.uuid4()).replace("-", "")[:8].upper()
             new_user = {
                 'id': user_id,
                 'name': name,
@@ -78,3 +79,25 @@ class AuthSystem:
         if self.current_user:
             return self.current_user['role']
         return None
+    
+    def show_all_staff(self):
+        users = load_users(self.users_file)
+        owner_exists = any(user['role'].capitalize() == "Owner" for user in users)
+
+        if owner_exists:
+            staff_members = [user for user in users if user['role'].capitalize() == "Staff"]
+            
+            if staff_members:
+                print("\n" + "*" * 60)
+                print("**** List of All Staff Members ****".center(60))
+                print("*" * 60)
+                print("-" * 115)
+                print(f"{'No.':<5} | {'ID':<15} | {'Name':<20} | {'Email':<25} | {'Phone':<15} | {'Date of Birth':<15} |")
+                print("-" * 115)
+                for i, staff in enumerate(staff_members, start=1):
+                    print(f"{i:<5} | {staff['id']:<15} | {staff['name']:<20} | {staff['email']:<25} | {staff['phone']:<15} | {staff['date_of_birth']:<15} |")
+                print("-" * 115)
+            else:
+                print("No staff members found.")
+        else:
+            print("No owner exists in the system. Only an owner can add staff members.")

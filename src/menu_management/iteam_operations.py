@@ -92,19 +92,19 @@ class ItemOperations:
                 if price is not None:
                     item['prices'] = {"price": price}
 
-                ingredients = get_valid_input("Enter new ingredients (comma-separated, leave blank to keep current): ",validate_ingredient_input)
+                ingredients = input("Enter new ingredients (comma-separated, leave blank to keep current): ")
                 if ingredients:
                     item['ingredients'] = [ingredient.strip() for ingredient in ingredients.split(',')]
 
                 with open(self.json_file, 'w') as file:
                     json.dump(self.menu_data, file, indent=4)
-                self.menu_handle.print_item_updated()
+                self.menu_handle.print_item_updated(item_id)
                 return
         self.menu_handle.print_item_not_found(item_id,category)
         
     def delete_item(self):
         category = get_valid_input("Enter category: ", lambda value: validate_category(value, self.menu_data)).title()
-        item_id = get_valid_input("Enter item ID to delete: ", lambda value: validate_item_id(value, self.menu_data, category)).title()
+        item_id = get_valid_input("Enter item ID to delete: ", lambda value: validate_item_id(value, self.menu_data, category)).upper()
 
         items = self.menu_data[0].get(category, [])
         for item in items:

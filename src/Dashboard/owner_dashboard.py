@@ -14,6 +14,7 @@ from Src.Reports.soon_stock_out import ExpirationReport
 from Src.Reports.booking import ReservationReport
 from Src.Reports.order_report import OrderReport
 from Src.Invoice.bill_system import BillingSystem
+from Src.Authentication.auth_system import AuthSystem
 
 
 class OwnerDashboard:
@@ -25,6 +26,7 @@ class OwnerDashboard:
         self.reserve_table = ReservationReport()
         self.order_reports = OrderReport()
         self.bill_system = BillingSystem()
+        self.auth = AuthSystem()
     
     def display_dashboard(self):
         while True:
@@ -42,6 +44,8 @@ class OwnerDashboard:
             elif main_choice == "5":
                 self.handle_stock_management()
             elif main_choice == "6":
+                self.auth.show_all_staff()
+            elif main_choice == "7":
                 print("Logging out...")
                 break
             else:

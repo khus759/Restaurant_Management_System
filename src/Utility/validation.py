@@ -151,9 +151,6 @@ def validate_category(value, menu_data):
 
     if not value:
         return "Category cannot be blank"
-    if not value.isalpha():
-        return "Category cannot contain special characters or numbers."
-
     if value not in menu_data[0]:
         return "Category does not exist in menu. Please enter a valid category."
 

@@ -23,8 +23,7 @@
                 "item id": "VE02",
                 "item name": "Aloo Gobi",
                 "prices": {
-                    "half": 40,
-                    "full": 80
+                    "price": ""
                 },
                 "ingredients": [
                     "potato",
@@ -280,7 +279,7 @@
                 "item id": "DR01",
                 "item name": "Mango Lassi",
                 "prices": {
-                    "single": 70
+                    "price": ""
                 },
                 "ingredients": [
                     "mango",
@@ -480,7 +479,7 @@
                 "item id": "RO02",
                 "item name": "Butter Roti",
                 "prices": {
-                    "single": 30.0
+                    "single": 30
                 },
                 "ingredients": [
                     "flour",
@@ -497,7 +496,7 @@
                 "item id": "RO03",
                 "item name": "Garlic Roti",
                 "prices": {
-                    "single": 35.0
+                    "single": 35
                 },
                 "ingredients": [
                     "flour",
@@ -514,7 +513,7 @@
                 "item id": "RO04",
                 "item name": "Lachha Paratha",
                 "prices": {
-                    "single": 40.0
+                    "single": 40
                 },
                 "ingredients": [
                     "flour",
@@ -529,7 +528,7 @@
                 "item id": "RO05",
                 "item name": "Cheese Roti",
                 "prices": {
-                    "single": 45.0
+                    "single": 45
                 },
                 "ingredients": [
                     "flour",
@@ -548,7 +547,7 @@
                 "item id": "PA01",
                 "item name": "Aloo Paratha",
                 "prices": {
-                    "single": 40.0
+                    "single": 40
                 },
                 "ingredients": [
                     "potato",
@@ -565,7 +564,7 @@
                 "item id": "PA02",
                 "item name": "Paneer Paratha",
                 "prices": {
-                    "single": 50.0
+                    "single": 50
                 },
                 "ingredients": [
                     "paneer",
@@ -582,7 +581,7 @@
                 "item id": "PA03",
                 "item name": "Gobi Paratha",
                 "prices": {
-                    "single": 45.0
+                    "single": 45
                 },
                 "ingredients": [
                     "cauliflower",
@@ -599,7 +598,7 @@
                 "item id": "PA04",
                 "item name": "Methi Paratha",
                 "prices": {
-                    "single": 50.0
+                    "single": 50
                 },
                 "ingredients": [
                     "fenugreek",
@@ -616,7 +615,7 @@
                 "item id": "PA05",
                 "item name": "Cheese Paratha",
                 "prices": {
-                    "single": 55.0
+                    "single": 55
                 },
                 "ingredients": [
                     "cheese",
@@ -635,7 +634,7 @@
                 "item id": "CO01",
                 "item name": "Espresso",
                 "prices": {
-                    "single": 50.0
+                    "single": 50
                 },
                 "ingredients": [
                     "coffee beans",
@@ -650,7 +649,7 @@
                 "item id": "CO02",
                 "item name": "Cappuccino",
                 "prices": {
-                    "single": 70.0
+                    "single": 70
                 },
                 "ingredients": [
                     "coffee beans",
@@ -667,7 +666,7 @@
                 "item id": "CO03",
                 "item name": "Latte",
                 "prices": {
-                    "single": 75.0
+                    "single": 75
                 },
                 "ingredients": [
                     "coffee beans",
@@ -686,7 +685,7 @@
                 "item id": "TE01",
                 "item name": "Masala Tea",
                 "prices": {
-                    "single": 30.0
+                    "single": 30
                 },
                 "ingredients": [
                     "tea leaves",
@@ -703,7 +702,7 @@
                 "item id": "TE02",
                 "item name": "Green Tea",
                 "prices": {
-                    "single": 40.0
+                    "single": 40
                 },
                 "ingredients": [
                     "green tea leaves",
@@ -718,7 +717,7 @@
                 "item id": "TE03",
                 "item name": "Lemon Tea",
                 "prices": {
-                    "single": 35.0
+                    "single": 35
                 },
                 "ingredients": [
                     "tea leaves",

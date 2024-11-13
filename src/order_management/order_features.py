@@ -207,7 +207,6 @@ class OrderManagementSystem:
         return None
 
     def show_menu(self):
-        self.output_handler.show_menu_header()
         for category, items in self.menu.items():
             print(f"\nCategory: {category}")
             for item in items:
@@ -219,3 +218,18 @@ class OrderManagementSystem:
                 if isinstance(ingredients, list):
                     ingredients = ', '.join(ingredients)
                 self.output_handler.show_menu_item(item_id, item_name, price_details, ingredients)
+
+    # def show_menu(self):
+    #     self.output_handler.show_menu_item( item_id, item_name, price_details, ingredients)
+    #     for category, items in self.menu.items():
+    #         print(f"\nCategory: {category}")
+    #         for item in items:
+    #             item_id = item['item id']
+    #             item_name = item['item name']
+    #             prices = item['prices']
+    #             price_details = ', '.join([f"{size}: {price}" for size, price in prices.items()])
+    #             ingredients = item.get('ingredients', 'No ingredients listed')
+    #             if isinstance(ingredients, list):
+    #                 ingredients = ', '.join(ingredients)
+    #             self.output_handler.show_menu_item(item_id, item_name, price_details, ingredients)
+    

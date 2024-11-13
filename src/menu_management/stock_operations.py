@@ -9,8 +9,11 @@ class StockOperations:
         self.json_file = json_file
 
     def add_stock_ingredient(self):
-        category = get_valid_input("Enter category: ",validate_category)
-        item_id = get_valid_input("Enter item ID: ",validate_item_id)
+
+        category = get_valid_input("Enter category: ", lambda value: validate_category(value, self.menu_data))
+        item_id = get_valid_input("Enter item ID : ", lambda value: validate_item_id(value, self.menu_data, category)).upper()
+
+        
         ingredient = get_valid_input("Enter ingredient name: ",validate_ingredient_input)
 
         for item in self.menu_data[0].get(category, []):
@@ -42,9 +45,11 @@ class StockOperations:
         print(f"Item '{item_id}' not found in '{category}' category.")
 
     def check_stock_ingredients(self):
-        category = get_valid_input("Enter category: ",validate_category)
-        item_id = get_valid_input("Enter item ID: ",validate_item_id)
+        
+        category = get_valid_input("Enter category: ", lambda value: validate_category(value, self.menu_data)).title()
+        item_id = get_valid_input("Enter item ID : ", lambda value: validate_item_id(value, self.menu_data, category)).upper()
 
+       
         current_date = datetime.now().date()
         for item in self.menu_data[0].get(category, []):
             if item['item id'] == item_id:

@@ -96,5 +96,68 @@
         "status": "Billed",
         "payment_type": null,
         "payment_date": null
+    },
+    {
+        "billing_id": "22d33e",
+        "order_id": "da6852",
+        "customer_name": "mani",
+        "billing_date": "13-Nov-2024 04:49:PM",
+        "items": [
+            {
+                "item_id": "VE03",
+                "item_name": "Palak Paneer",
+                "size": "half",
+                "quantity": 3,
+                "total_price": 225.0
+            },
+            {
+                "item_id": "TE02",
+                "item_name": "Green Tea",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 80.0
+            }
+        ],
+        "subtotal": 305.0,
+        "gst": 54.9,
+        "total": 359.9,
+        "status": "Billed",
+        "payment_type": null,
+        "payment_date": null
+    },
+    {
+        "billing_id": "af4d05",
+        "order_id": "eddc56",
+        "customer_name": "baja",
+        "billing_date": "13-Nov-2024 07:37:PM",
+        "items": [
+            {
+                "item_id": "ST04",
+                "item_name": "Paneer Samosa",
+                "size": "single",
+                "quantity": 3,
+                "total_price": 540.0
+            },
+            {
+                "item_id": "ST03",
+                "item_name": "Paneer Tikka",
+                "size": "single",
+                "quantity": 1,
+                "total_price": 130.0
+            },
+            {
+                "item_id": "RO03",
+                "item_name": "Garlic Roti",
+                "size": "single",
+                "quantity": 3,
+                "total_price": 105.0
+            }
+        ],
+        "subtotal": 775.0,
+        "gst": 139.5,
+        "total": 914.5,
+        "status": "Billed",
+        "payment_type": null,
+        "payment_date": null
     }
 ]
