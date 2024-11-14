@@ -150,12 +150,12 @@ class OwnerDashboard:
         elif choice == "4":
             self.order_reports.show_ordered_items_summary()
         else:
-            print("Invalid choice in Table Booking Management.")
+            print("Invalid choice in Reports Management.")
     
     def handle_staff_management(self):
         display_staff_management()
 
-        choice = input("Choose an action in Reports Management: ")
+        choice = input("Choose an action in Staff Management: ")
 
         if choice == "1":
             self.staff.add_employee()
@@ -168,5 +168,5 @@ class OwnerDashboard:
         elif choice == "5":
             self.staff.display_all_profiles()
         else:
-            print("Invalid choice in Table Booking Management.")
+            print("Invalid choice in Staff Management.")
     

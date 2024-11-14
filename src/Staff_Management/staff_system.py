@@ -2,6 +2,16 @@ from datetime import datetime
 from Src.Staff_Management.employee import Employee
 from Src.Staff_Management.utils import load_data, save_data, users_file, employee_file
 
+# Define color constants for text formatting
+BRIGHT_RED = "\033[91m"
+BRIGHT_GREEN = "\033[92m"
+BRIGHT_YELLOW = "\033[93m"
+BRIGHT_BLUE = "\033[94m"
+BRIGHT_MAGENTA = "\033[95m"
+BRIGHT_CYAN = "\033[96m"
+BRIGHT_WHITE = "\033[97m"
+RESET = "\033[0m"
+
 class StaffManagementSystem:
     def authenticate_user(self):
         email = input("Enter email: ").strip()
@@ -51,37 +61,6 @@ class StaffManagementSystem:
         employees = load_data(employee_file)
         for emp in employees:
             if emp['email'] == user['email']:
-                self._print_profile(emp)
-                return
-        
-        print("Employee not found.")
-
-    # def _print_profile(self, emp):
-    #     print("\n=== Employee Profile ===")
-    #     print(f"Name           : {emp.get('name', 'N/A')}")
-    #     print(f"Gender         : {emp.get('gender', 'N/A')}")
-    #     print(f"Date of Birth  : {emp.get('date_of_birth', 'N/A')}")
-    #     print(f"Email          : {emp.get('email', 'N/A')}")
-    #     print(f"Phone          : {emp.get('phone', 'N/A')}")
-    #     print(f"Role           : {emp.get('role', 'N/A')}")
-    #     print(f"Designation    : {emp.get('designation', 'N/A')}")
-    #     print(f"Joining Date   : {emp.get('joining_date', 'N/A')}")
-    #     print(f"Salary         : {emp.get('salary', 'N/A')}")
-    #     print(f"Status         : {emp.get('status', 'N/A')}")
-    #     if emp.get('status') == 'inactive':
-    #         print(f"Resign Date    : {emp.get('resign_date', 'N/A')}")
-    #     print(f"Address        : {emp.get('country', 'N/A')}, {emp.get('state', 'N/A')}, {emp.get('city_village', 'N/A')}, {emp.get('pincode', 'N/A')}")
-    #     print("------------------------")
-
-
-    def display_profile(self):
-        user = self.authenticate_user()
-        if not user:
-            return
-        
-        employees = self.load_data(employee_file)
-        for emp in employees:
-            if emp['email'] == user['email']:
                 print("\n=== Employee Profile ===")
                 print("--------------------------------")
                 print("   Personal Information")
@@ -91,7 +70,7 @@ class StaffManagementSystem:
                 print(f"   Date of Birth  : {emp.get('date_of_birth', 'N/A')}")
                 print(f"   Email          : {emp.get('email', 'N/A')}")
                 print(f"   Phone          : {emp.get('phone', 'N/A')}")
-
+                
                 print("\n   Job Information")
                 print("   --------------------")
                 print(f"   Role           : {emp.get('role', 'N/A')}")
@@ -99,7 +78,7 @@ class StaffManagementSystem:
                 print(f"   Joining Date   : {emp.get('joining_date', 'N/A')}")
                 print(f"   Salary         : {emp.get('salary', 'N/A')}")
                 print(f"   Status         : {emp.get('status', 'N/A')}")
-                if emp.get('status', 'active') == 'unactive':
+                if emp.get('status') == 'inactive':
                     print(f"   Resign Date    : {emp.get('resign_date', 'N/A')}")
 
                 print("\n   Address Information")
@@ -113,7 +92,6 @@ class StaffManagementSystem:
                 return
         
         print("Employee not found.")
-
 
     def update_profile(self):
         email = input("Enter the email of the employee to update: ")
@@ -138,49 +116,40 @@ class StaffManagementSystem:
         save_data(employee_file, employees)
         print("Employee deleted successfully.")
 
-    # def display_all_profiles(self):
-    #     employees = load_data(employee_file)
-    #     if not employees:
-    #         print("No employees found.")
-    #     for emp in employees:
-    #         self._print_profile(emp)
-
-
-
     def display_all_profiles(self):
-            employees = self.load_data(employee_file)
-            if not employees:
-                print("No employees found.")
-                return
+        employees = load_data(employee_file)
+        if not employees:
+            print("No employees found.")
+            return
 
-            print("\n=== All Employee Profiles ===")
-            for i, emp in enumerate(employees, start=1):
-                print("\n--------------------------------")
-                print(f"       Employee {i}")
-                print("--------------------------------")
-                print("   Personal Information")
-                print("   --------------------")
-                print(f"   Name           : {emp.get('name', 'N/A')}")
-                print(f"   Gender         : {emp.get('gender', 'N/A')}")
-                print(f"   Date of Birth  : {emp.get('date_of_birth', 'N/A')}")
-                print(f"   Email          : {emp.get('email', 'N/A')}")
-                print(f"   Phone          : {emp.get('phone', 'N/A')}")
+        print("\n=== All Employee Profiles ===")
+        for i, emp in enumerate(employees, start=1):
+            print("\n--------------------------------")
+            print(f"       Employee {i}")
+            print("--------------------------------")
+            print("   Personal Information")
+            print("   --------------------")
+            print(f"   Name           : {emp.get('name', 'N/A')}")
+            print(f"   Gender         : {emp.get('gender', 'N/A')}")
+            print(f"   Date of Birth  : {emp.get('date_of_birth', 'N/A')}")
+            print(f"   Email          : {emp.get('email', 'N/A')}")
+            print(f"   Phone          : {emp.get('phone', 'N/A')}")
 
-                print("\n   Job Information")
-                print("   --------------------")
-                print(f"   Role           : {emp.get('role', 'N/A')}")
-                print(f"   Designation    : {emp.get('designation', 'N/A')}")
-                print(f"   Joining Date   : {emp.get('joining_date', 'N/A')}")
-                print(f"   Salary         : {emp.get('salary', 'N/A')}")
-                print(f"   Status         : {emp.get('status', 'N/A')}")
-                if emp.get('status', 'active') == 'unactive':
-                    print(f"   Resign Date    : {emp.get('resign_date', 'N/A')}")
+            print("\n   Job Information")
+            print("   --------------------")
+            print(f"   Role           : {emp.get('role', 'N/A')}")
+            print(f"   Designation    : {emp.get('designation', 'N/A')}")
+            print(f"   Joining Date   : {emp.get('joining_date', 'N/A')}")
+            print(f"   Salary         : {emp.get('salary', 'N/A')}")
+            print(f"   Status         : {emp.get('status', 'N/A')}")
+            if emp.get('status', 'active') == 'inactive':
+                print(f"   Resign Date    : {emp.get('resign_date', 'N/A')}")
 
-                print("\n   Address Information")
-                print("   --------------------")
-                print(f"   Country        : {emp.get('country', 'N/A')}")
-                print(f"   State          : {emp.get('state', 'N/A')}")
-                print(f"   District       : {emp.get('district', 'N/A')}")
-                print(f"   City/Village   : {emp.get('city_village', 'N/A')}")
-                print(f"   Pincode        : {emp.get('pincode', 'N/A')}")
-                print("--------------------------------\n")
+            print("\n   Address Information")
+            print("   --------------------")
+            print(f"   Country        : {emp.get('country', 'N/A')}")
+            print(f"   State          : {emp.get('state', 'N/A')}")
+            print(f"   District       : {emp.get('district', 'N/A')}")
+            print(f"   City/Village   : {emp.get('city_village', 'N/A')}")
+            print(f"   Pincode        : {emp.get('pincode', 'N/A')}")
+            print("--------------------------------\n")
