@@ -33,7 +33,7 @@ def main():
         print("3. Exit{Colors.RESET}")
 
         try:
-            option = input(f"{Colors.GREEN}Choose an option: {Colors.RESET}")
+            option = input(f"{Colors.CYAN}Choose an option: {Colors.RESET}")
         except ValueError:
             print(f"{Colors.RED}Please enter valid input{Colors.RESET}")
             continue

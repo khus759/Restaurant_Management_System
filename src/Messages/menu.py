@@ -32,7 +32,7 @@ class Menu_Message:
         print(f"{self.YELLOW}{'-' * 130}{self.RESET}")
 
     def print_item_details(self, item_id, item_name, price_details, ingredients):
-        print(f"{item_id:<10}{item_name:<30}{price_details:<40}{ingredients:<50}")
+        print(f"{self.YELLOW}{item_id:<10}{item_name:<30}{price_details:<40}{ingredients:<50}{self.RESET}")
 
     def print_invalid_input_error(self, error_message):
         print(f"{self.RED}Error: {error_message}{self.RESET}")

@@ -13,6 +13,7 @@ from Src.Reports.soon_stock_out import ExpirationReport
 from Src.Reports.booking import ReservationReport
 from Src.Reports.order_report import OrderReport
 from Src.Invoice.bill_system import BillingSystem
+from Src.Staff_Management.staff_system import StaffManagementSystem
 
 class StaffDashboard:
     def __init__(self):
@@ -23,12 +24,13 @@ class StaffDashboard:
         self.reserve_table = ReservationReport()
         self.order_reports = OrderReport()
         self.bill_system = BillingSystem()
+        self.staff = StaffManagementSystem()
     
 
     def display_dashboard(self):
         while True:
             display_staff_menu()
-            main_choice = input("Choose a category: ")
+            main_choice = input("Choose a Option: ")
 
             if main_choice == "1":
                 self.handle_order_management()
@@ -37,6 +39,10 @@ class StaffDashboard:
             elif main_choice == "3":
                 self.handle_table_booking_management()
             elif main_choice == "4":
+                self.handle_stock_management()
+            elif main_choice == "5":
+                self.staff.display_profile()
+            elif main_choice == "6":
                 print("Logging out...")
                 break
             else:

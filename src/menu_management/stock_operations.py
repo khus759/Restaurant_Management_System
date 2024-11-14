@@ -10,11 +10,11 @@ class StockOperations:
 
     def add_stock_ingredient(self):
 
-        category = get_valid_input("Enter category: ", lambda value: validate_category(value, self.menu_data))
+        category = get_valid_input("Enter category: ", lambda value: validate_category(value, self.menu_data)).title()
         item_id = get_valid_input("Enter item ID : ", lambda value: validate_item_id(value, self.menu_data, category)).upper()
 
         
-        ingredient = get_valid_input("Enter ingredient name: ",validate_ingredient_input)
+        ingredient = get_valid_input("Enter ingredient name: ",validate_ingredient_input).title()
 
         for item in self.menu_data[0].get(category, []):
             if item['item id'] == item_id:

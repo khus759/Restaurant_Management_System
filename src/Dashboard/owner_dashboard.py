@@ -7,7 +7,8 @@ from Src.Utility.dashboard_functions import (
     display_order_management,
     display_invoice_management,
     display_table_booking_management,
-    display_stock_management   
+    display_stock_management,
+    display_staff_management   
 )
 from Src.Order_management.order_features import OrderManagementSystem
 from Src.Reports.soon_stock_out import ExpirationReport
@@ -15,6 +16,7 @@ from Src.Reports.booking import ReservationReport
 from Src.Reports.order_report import OrderReport
 from Src.Invoice.bill_system import BillingSystem
 from Src.Authentication.auth_system import AuthSystem
+from Src.Staff_Management.staff_system import StaffManagementSystem
 
 
 class OwnerDashboard:
@@ -27,11 +29,12 @@ class OwnerDashboard:
         self.order_reports = OrderReport()
         self.bill_system = BillingSystem()
         self.auth = AuthSystem()
+        self.staff = StaffManagementSystem()
     
     def display_dashboard(self):
         while True:
             display_main_menu()
-            main_choice = input("Choose a category: ")
+            main_choice = input("Choose a Option: ")
 
             if main_choice == "1":
                 self.handle_menu_management()
@@ -42,10 +45,12 @@ class OwnerDashboard:
             elif main_choice == "4":
                 self.handle_table_booking_management()
             elif main_choice == "5":
-                self.handle_stock_management()
+                self.handle_staff_management()
             elif main_choice == "6":
-                self.auth.show_all_staff()
+                self.handle_stock_management()
             elif main_choice == "7":
+                self.auth.show_all_staff()
+            elif main_choice == "8":
                 print("Logging out...")
                 break
             else:
@@ -134,7 +139,7 @@ class OwnerDashboard:
     def handle_stock_management(self):
         display_stock_management()
 
-        choice = input("Choose an action in Table Booking Management: ")
+        choice = input("Choose an action in Reports Management: ")
 
         if choice == "1":
             self.soon_expire_ingredients.display_report()
@@ -144,6 +149,24 @@ class OwnerDashboard:
             self.reserve_table.show_canceled_reservations()
         elif choice == "4":
             self.order_reports.show_ordered_items_summary()
+        else:
+            print("Invalid choice in Table Booking Management.")
+    
+    def handle_staff_management(self):
+        display_staff_management()
+
+        choice = input("Choose an action in Reports Management: ")
+
+        if choice == "1":
+            self.staff.add_employee()
+        elif choice == "2":
+            self.staff.display_profile()
+        elif choice == "3":
+            self.staff.update_profile()
+        elif choice == "4":
+            self.staff.delete_employee()
+        elif choice == "5":
+            self.staff.display_all_profiles()
         else:
             print("Invalid choice in Table Booking Management.")
     

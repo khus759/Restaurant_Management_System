@@ -5,6 +5,8 @@ class OrderOutputHandler:
     BLUE = "\033[94m"
     YELLOW = "\033[93m"
     RESET = "\033[0m"
+    BRIGHT_MAGENTA = "\033[95m"
+    BRIGHT_CYAN = "\033[96m"
 
     def show_order_placed(self, order_id, total_order_price):
         print(f"{self.GREEN}✔️ Order placed successfully with ID: {order_id} and Total Price: ₹{total_order_price}{self.RESET}")
@@ -36,7 +38,7 @@ class OrderOutputHandler:
         print("=" * 50)
 
     def show_menu_item(self, item_id, item_name, price_details, ingredients):
-        print(f"{item_id:<10}{item_name:<30}{price_details:<40}{ingredients:<50}")
+        print(f"{self.BRIGHT_MAGENTA}{item_id:<10}{item_name:<30}{price_details:<40}{ingredients:<50}{self.RESET}")
 
     def order_update_success(self, order_id):
         print(f"{self.GREEN}✔️ Order with ID {order_id} has been successfully updated.{self.RESET}")

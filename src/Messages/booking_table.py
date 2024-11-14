@@ -5,6 +5,7 @@ class BookingHandler:
     YELLOW = "\033[93m"
     BLUE = "\033[94m"
     RESET = "\033[0m"
+    BRIGHT_BLUE = "\033[94m"
 
     def display_no_tables_found(self):
         print(f"{self.RED}Table data file not found or corrupted. No tables loaded.{self.RESET}")
@@ -49,7 +50,7 @@ class BookingHandler:
     def display_reservation_found(self, reservation):
         print(f"{self.BLUE}Reservation found:{self.RESET}")
         print("=" * 40)
-        print(f"Booking ID: {reservation.reservation_id}")
+        print(f"{self.YELLOW}Booking ID: {reservation.reservation_id}{self.RESET}")
         print(f"Name: {reservation.name}")
         print(f"Phone: {reservation.phone}")
         print(f"Date and Time: {reservation.date_time}")
