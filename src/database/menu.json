@@ -294,23 +294,6 @@
                 }
             },
             {
-                "item id": "DR02",
-                "item name": "Lemonade",
-                "prices": {
-                    "single": 50
-                },
-                "ingredients": [
-                    "lemon",
-                    "sugar",
-                    "water"
-                ],
-                "stock_ingredients": {
-                    "lemon": "2024-11-17",
-                    "sugar": "2024-11-20",
-                    "water": "2024-11-14"
-                }
-            },
-            {
                 "item id": "DR03",
                 "item name": "Masala Chai",
                 "prices": {
@@ -371,8 +354,8 @@
                 "item id": "RI01",
                 "item name": "Steamed Rice",
                 "prices": {
-                    "half": 50.0,
-                    "full": 100.0
+                    "half": 50,
+                    "full": 100
                 },
                 "ingredients": [
                     "rice"
@@ -385,8 +368,8 @@
                 "item id": "RI02",
                 "item name": "Jeera Rice",
                 "prices": {
-                    "half": 55.0,
-                    "full": 110.0
+                    "half": 55,
+                    "full": 110
                 },
                 "ingredients": [
                     "rice",
@@ -401,8 +384,8 @@
                 "item id": "RI03",
                 "item name": "Pulao",
                 "prices": {
-                    "half": 60.0,
-                    "full": 120.0
+                    "half": 60,
+                    "full": 120
                 },
                 "ingredients": [
                     "rice",
@@ -419,8 +402,8 @@
                 "item id": "RI04",
                 "item name": "Fried Rice",
                 "prices": {
-                    "half": 65.0,
-                    "full": 130.0
+                    "half": 65,
+                    "full": 130
                 },
                 "ingredients": [
                     "rice",
@@ -437,8 +420,8 @@
                 "item id": "RI05",
                 "item name": "Biryani",
                 "prices": {
-                    "half": 80.0,
-                    "full": 160.0
+                    "half": 80,
+                    "full": 160
                 },
                 "ingredients": [
                     "rice",
@@ -466,7 +449,7 @@
                 "item id": "RO01",
                 "item name": "Tandoori Roti",
                 "prices": {
-                    "single": 20.0
+                    "single": 20
                 },
                 "ingredients": [
                     "flour",
@@ -483,7 +466,7 @@
                 "item id": "RO02",
                 "item name": "Butter Roti",
                 "prices": {
-                    "single": 30.0
+                    "single": 30
                 },
                 "ingredients": [
                     "flour",
@@ -500,7 +483,7 @@
                 "item id": "RO03",
                 "item name": "Garlic Roti",
                 "prices": {
-                    "single": 35.0
+                    "single": 35
                 },
                 "ingredients": [
                     "flour",
@@ -517,7 +500,7 @@
                 "item id": "RO04",
                 "item name": "Lachha Paratha",
                 "prices": {
-                    "single": 40.0
+                    "single": 40
                 },
                 "ingredients": [
                     "flour",
@@ -532,7 +515,7 @@
                 "item id": "RO05",
                 "item name": "Cheese Roti",
                 "prices": {
-                    "single": 45.0
+                    "single": 45
                 },
                 "ingredients": [
                     "flour",
@@ -544,6 +527,14 @@
                     "cheese": "2024-11-14",
                     "yeast": "2024-11-14"
                 }
+            },
+            {
+                "item id": "RO06",
+                "item name": "Rumali Roti",
+                "prices": {
+                    "price": ""
+                },
+                "ingredients": []
             }
         ],
         "Paratha": [
@@ -551,7 +542,7 @@
                 "item id": "PA01",
                 "item name": "Aloo Paratha",
                 "prices": {
-                    "single": 40.0
+                    "single": 40
                 },
                 "ingredients": [
                     "potato",
@@ -568,7 +559,7 @@
                 "item id": "PA02",
                 "item name": "Paneer Paratha",
                 "prices": {
-                    "single": 50.0
+                    "single": 50
                 },
                 "ingredients": [
                     "paneer",
@@ -585,7 +576,7 @@
                 "item id": "PA03",
                 "item name": "Gobi Paratha",
                 "prices": {
-                    "single": 45.0
+                    "single": 45
                 },
                 "ingredients": [
                     "cauliflower",
@@ -602,7 +593,7 @@
                 "item id": "PA04",
                 "item name": "Methi Paratha",
                 "prices": {
-                    "single": 50.0
+                    "single": 50
                 },
                 "ingredients": [
                     "fenugreek",
@@ -619,7 +610,7 @@
                 "item id": "PA05",
                 "item name": "Cheese Paratha",
                 "prices": {
-                    "single": 55.0
+                    "single": 55
                 },
                 "ingredients": [
                     "cheese",
@@ -638,7 +629,7 @@
                 "item id": "CO01",
                 "item name": "Espresso",
                 "prices": {
-                    "single": 50.0
+                    "single": 50
                 },
                 "ingredients": [
                     "coffee beans",
@@ -653,7 +644,7 @@
                 "item id": "CO02",
                 "item name": "Cappuccino",
                 "prices": {
-                    "single": 70.0
+                    "single": 70
                 },
                 "ingredients": [
                     "coffee beans",
@@ -670,7 +661,7 @@
                 "item id": "CO03",
                 "item name": "Latte",
                 "prices": {
-                    "single": 75.0
+                    "single": 75
                 },
                 "ingredients": [
                     "coffee beans",
@@ -689,7 +680,7 @@
                 "item id": "TE01",
                 "item name": "Masala Tea",
                 "prices": {
-                    "single": 30.0
+                    "single": 30
                 },
                 "ingredients": [
                     "tea leaves",
@@ -706,7 +697,7 @@
                 "item id": "TE02",
                 "item name": "Green Tea",
                 "prices": {
-                    "single": 40.0
+                    "single": 40
                 },
                 "ingredients": [
                     "green tea leaves",
@@ -721,7 +712,7 @@
                 "item id": "TE03",
                 "item name": "Lemon Tea",
                 "prices": {
-                    "single": 35.0
+                    "single": 35
                 },
                 "ingredients": [
                     "tea leaves",

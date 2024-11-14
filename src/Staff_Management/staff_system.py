@@ -1,18 +1,28 @@
 from datetime import datetime
 from Src.Staff_Management.employee import Employee
 from Src.Staff_Management.utils import load_data, save_data, users_file, employee_file
+from Src.Utility.validation import validate_date_of_birth
+from Src.Utility.user_input import get_valid_input
 
-# Define color constants for text formatting
-BRIGHT_RED = "\033[91m"
-BRIGHT_GREEN = "\033[92m"
-BRIGHT_YELLOW = "\033[93m"
-BRIGHT_BLUE = "\033[94m"
-BRIGHT_MAGENTA = "\033[95m"
-BRIGHT_CYAN = "\033[96m"
-BRIGHT_WHITE = "\033[97m"
-RESET = "\033[0m"
+# BRIGHT_RED = "\033[91m"
+# BRIGHT_GREEN = "\033[92m"
+# BRIGHT_YELLOW = "\033[93m"
+# BRIGHT_BLUE = "\033[94m"
+# BRIGHT_MAGENTA = "\033[95m"
+# BRIGHT_CYAN = "\033[96m"
+# BRIGHT_WHITE = "\033[97m"
+# RESET = "\033[0m"
 
 class StaffManagementSystem:
+    BRIGHT_RED = "\033[91m"
+    BRIGHT_GREEN = "\033[92m"
+    BRIGHT_YELLOW = "\033[93m"
+    BRIGHT_BLUE = "\033[94m"
+    BRIGHT_MAGENTA = "\033[95m"
+    BRIGHT_CYAN = "\033[96m"
+    BRIGHT_WHITE = "\033[97m"
+    RESET = "\033[0m"
+
     def authenticate_user(self):
         email = input("Enter email: ").strip()
         password = input("Enter password: ").strip()
@@ -45,7 +55,7 @@ class StaffManagementSystem:
         employee.district = input("Enter district: ").title()
         employee.city_village = input("Enter city/village: ").title()
         employee.pincode = input("Enter pincode: ")
-        employee.joining_date = input("Enter joining date (YYYY-MM-DD): ")
+        employee.joining_date = get_valid_input("Enter joining date (YYYY-MM-DD): ",validate_date_of_birth)
         employee.salary = input("Enter salary: ")
 
         employees = load_data(employee_file)
@@ -61,9 +71,9 @@ class StaffManagementSystem:
         employees = load_data(employee_file)
         for emp in employees:
             if emp['email'] == user['email']:
-                print("\n=== Employee Profile ===")
+                print(f"\n{self.BRIGHT_CYAN}=== Employee Profile ==={self.RESET}")
                 print("--------------------------------")
-                print("   Personal Information")
+                print(f"{self.BRIGHT_MAGENTA}   Personal Information {self.RESET}")
                 print("   --------------------")
                 print(f"   Name           : {emp.get('name', 'N/A')}")
                 print(f"   Gender         : {emp.get('gender', 'N/A')}")
@@ -71,7 +81,7 @@ class StaffManagementSystem:
                 print(f"   Email          : {emp.get('email', 'N/A')}")
                 print(f"   Phone          : {emp.get('phone', 'N/A')}")
                 
-                print("\n   Job Information")
+                print(f"\n {self.BRIGHT_MAGENTA}  Job Information{self.RESET}")
                 print("   --------------------")
                 print(f"   Role           : {emp.get('role', 'N/A')}")
                 print(f"   Designation    : {emp.get('designation', 'N/A')}")
@@ -81,7 +91,7 @@ class StaffManagementSystem:
                 if emp.get('status') == 'inactive':
                     print(f"   Resign Date    : {emp.get('resign_date', 'N/A')}")
 
-                print("\n   Address Information")
+                print(f"\n{self.BRIGHT_MAGENTA}   Address Information {self.RESET}")
                 print("   --------------------")
                 print(f"   Country        : {emp.get('country', 'N/A')}")
                 print(f"   State          : {emp.get('state', 'N/A')}")
@@ -122,12 +132,12 @@ class StaffManagementSystem:
             print("No employees found.")
             return
 
-        print("\n=== All Employee Profiles ===")
+        print(f"\n{self.BRIGHT_CYAN}=== All Employee Profiles ==={self.RESET}")
         for i, emp in enumerate(employees, start=1):
             print("\n--------------------------------")
-            print(f"       Employee {i}")
+            print(f"{self.BRIGHT_YELLOW}       Employee {i}{self.RESET}")
             print("--------------------------------")
-            print("   Personal Information")
+            print(f"{self.BRIGHT_MAGENTA}   Personal Information{self.RESET}")
             print("   --------------------")
             print(f"   Name           : {emp.get('name', 'N/A')}")
             print(f"   Gender         : {emp.get('gender', 'N/A')}")
@@ -135,7 +145,7 @@ class StaffManagementSystem:
             print(f"   Email          : {emp.get('email', 'N/A')}")
             print(f"   Phone          : {emp.get('phone', 'N/A')}")
 
-            print("\n   Job Information")
+            print(f"\n{self.BRIGHT_MAGENTA}   Job Information {self.RESET}")
             print("   --------------------")
             print(f"   Role           : {emp.get('role', 'N/A')}")
             print(f"   Designation    : {emp.get('designation', 'N/A')}")
@@ -145,7 +155,7 @@ class StaffManagementSystem:
             if emp.get('status', 'active') == 'inactive':
                 print(f"   Resign Date    : {emp.get('resign_date', 'N/A')}")
 
-            print("\n   Address Information")
+            print(f"\n{self.BRIGHT_MAGENTA}   Address Information {self.RESET}")
             print("   --------------------")
             print(f"   Country        : {emp.get('country', 'N/A')}")
             print(f"   State          : {emp.get('state', 'N/A')}")

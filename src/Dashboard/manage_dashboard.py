@@ -30,7 +30,7 @@ def main():
         print(f"{Colors.CYAN}{'-'*64}{Colors.RESET}")
         print(f"\n{Colors.GREEN}1. Signup")
         print("2. Login")
-        print("3. Exit{Colors.RESET}")
+        print(f"3. Exit{Colors.RESET}")
 
         try:
             option = input(f"{Colors.CYAN}Choose an option: {Colors.RESET}")

@@ -97,5 +97,14 @@
         "phone": "8923273908",
         "role": "Staff",
         "date_of_birth": "2000-08-14"
+    },
+    {
+        "id": "1327782C",
+        "name": "Aastha",
+        "email": "aashtha123@gmail.com",
+        "password": "202020",
+        "phone": "9876543321",
+        "role": "Staff",
+        "date_of_birth": "2000-2-2"
     }
 ]
