@@ -14,9 +14,9 @@
                     "masala"
                 ],
                 "stock_ingredients": {
-                    "paneer": "2024-11-14",
-                    "butter": "2024-11-15",
-                    "masala": "2024-11-13"
+                    "paneer": "2024-11-24",
+                    "butter": "2024-11-24",
+                    "masala": "2024-11-27"
                 }
             },
             {
@@ -32,9 +32,9 @@
                     "spices"
                 ],
                 "stock_ingredients": {
-                    "potato": "2024-11-14",
-                    "cauliflower": "2024-11-12",
-                    "spices": "2024-11-20"
+                    "potato": "2024-12-25",
+                    "cauliflower": "2024-11-25",
+                    "spices": "2024-12-26"
                 }
             },
             {
@@ -50,9 +50,9 @@
                     "spices"
                 ],
                 "stock_ingredients": {
-                    "spinach": "2024-11-15",
-                    "paneer": "2024-11-14",
-                    "spices": "2024-11-18"
+                    "spinach": "2024-11-25",
+                    "paneer": "2024-11-25",
+                    "spices": "2024-12-27"
                 }
             },
             {
@@ -69,8 +69,8 @@
                 ],
                 "stock_ingredients": {
                     "rice": "2024-12-01",
-                    "vegetables": "2024-11-16",
-                    "spices": "2024-11-20"
+                    "vegetables": "2024-11-27",
+                    "spices": "2024-12-26"
                 }
             },
             {
@@ -88,9 +88,9 @@
                 ],
                 "stock_ingredients": {
                     "chickpeas": "2024-11-18",
-                    "onion": "2024-11-16",
-                    "tomato": "2024-11-15",
-                    "spices": "2024-11-22"
+                    "onion": "2024-12-15",
+                    "tomato": "2024-11-26",
+                    "spices": "2024-12-22"
                 }
             }
         ],
@@ -126,9 +126,9 @@
                     "spices"
                 ],
                 "stock_ingredients": {
-                    "mutton": "2024-11-14",
-                    "onions": "2024-11-12",
-                    "spices": "2024-11-18"
+                    "mutton": "2024-11-24",
+                    "onions": "2024-12-27",
+                    "spices": "2024-12-25"
                 }
             },
             {
@@ -145,10 +145,10 @@
                     "spices"
                 ],
                 "stock_ingredients": {
-                    "chicken": "2024-11-10",
-                    "butter": "2024-11-15",
-                    "tomato": "2024-11-14",
-                    "spices": "2024-11-22"
+                    "chicken": "2024-11-16",
+                    "butter": "2024-11-25",
+                    "tomato": "2024-11-25",
+                    "spices": "2024-12-22"
                 }
             },
             {
@@ -164,9 +164,9 @@
                     "spices"
                 ],
                 "stock_ingredients": {
-                    "fish": "2024-11-11",
-                    "tomato": "2024-11-14",
-                    "spices": "2024-11-20"
+                    "fish": "2024-11-26",
+                    "tomato": "2024-11-25",
+                    "spices": "2024-12-20"
                 }
             },
             {
@@ -182,9 +182,9 @@
                     "oil"
                 ],
                 "stock_ingredients": {
-                    "chicken": "2024-11-10",
-                    "spices": "2024-11-18",
-                    "oil": "2024-12-01"
+                    "chicken": "2024-11-25",
+                    "spices": "2024-11-26",
+                    "oil": "2024-12-20"
                 }
             }
         ],
@@ -201,9 +201,9 @@
                     "spices"
                 ],
                 "stock_ingredients": {
-                    "vegetables": "2024-11-18",
-                    "flour": "2024-11-15",
-                    "spices": "2024-11-20"
+                    "vegetables": "2024-11-26",
+                    "flour": "2024-11-25",
+                    "spices": "2024-11-27"
                 }
             },
             {
@@ -218,9 +218,9 @@
                     "yogurt"
                 ],
                 "stock_ingredients": {
-                    "chicken": "2024-11-10",
-                    "spices": "2024-11-18",
-                    "yogurt": "2024-11-14"
+                    "chicken": "2024-11-26",
+                    "spices": "2024-11-26",
+                    "yogurt": "2024-11-27"
                 }
             },
             {
@@ -235,9 +235,9 @@
                     "yogurt"
                 ],
                 "stock_ingredients": {
-                    "paneer": "2024-11-14",
-                    "spices": "2024-11-18",
-                    "yogurt": "2024-11-14"
+                    "paneer": "2024-11-26",
+                    "spices": "2024-11-27",
+                    "yogurt": "2024-11-26"
                 }
             },
             {
@@ -252,8 +252,8 @@
                     "spices"
                 ],
                 "stock_ingredients": {
-                    "paneer": "2024-11-14",
-                    "flour": "2024-11-16",
+                    "paneer": "2024-11-24",
+                    "flour": "2024-12-16",
                     "spices": "2024-11-20"
                 }
             },
@@ -269,9 +269,9 @@
                     "spices"
                 ],
                 "stock_ingredients": {
-                    "spinach": "2024-11-15",
-                    "peas": "2024-11-16",
-                    "spices": "2024-11-18"
+                    "spinach": "2024-11-25",
+                    "peas": "2024-11-26",
+                    "spices": "2024-12-18"
                 }
             }
         ],
@@ -288,9 +288,9 @@
                     "sugar"
                 ],
                 "stock_ingredients": {
-                    "mango": "2024-11-15",
-                    "yogurt": "2024-11-14",
-                    "sugar": "2024-11-20"
+                    "mango": "2024-11-25",
+                    "yogurt": "2024-11-24",
+                    "sugar": "2024-12-20"
                 }
             },
             {
@@ -305,9 +305,9 @@
                     "spices"
                 ],
                 "stock_ingredients": {
-                    "tea": "2024-11-18",
-                    "milk": "2024-11-14",
-                    "spices": "2024-11-20"
+                    "tea": "2024-11-28",
+                    "milk": "2024-11-24",
+                    "spices": "2024-12-20"
                 }
             },
             {
@@ -322,9 +322,9 @@
                     "sugar"
                 ],
                 "stock_ingredients": {
-                    "tea": "2024-11-18",
-                    "lemon": "2024-11-17",
-                    "sugar": "2024-11-20"
+                    "tea": "2024-12-18",
+                    "lemon": "2024-11-27",
+                    "sugar": "2024-12-12"
                 }
             },
             {
@@ -345,7 +345,7 @@
                     "Orange"
                 ],
                 "stock_ingredients": {
-                    "Orange": "2025-01-23"
+                    "Orange": "2024-11-25"
                 }
             }
         ],
@@ -377,7 +377,7 @@
                 ],
                 "stock_ingredients": {
                     "rice": "2024-12-01",
-                    "cumin": "2024-11-20"
+                    "cumin": "2024-12-20"
                 }
             },
             {
@@ -394,8 +394,8 @@
                 ],
                 "stock_ingredients": {
                     "rice": "2024-12-01",
-                    "vegetables": "2024-11-16",
-                    "spices": "2024-11-20"
+                    "vegetables": "2024-11-26",
+                    "spices": "2024-12-20"
                 }
             },
             {
@@ -412,8 +412,8 @@
                 ],
                 "stock_ingredients": {
                     "rice": "2024-12-01",
-                    "vegetables": "2024-11-16",
-                    "soya sauce": "2024-11-22"
+                    "vegetables": "2024-11-26",
+                    "soya sauce": "2024-12-22"
                 }
             },
             {
@@ -430,8 +430,8 @@
                 ],
                 "stock_ingredients": {
                     "rice": "2024-12-01",
-                    "chicken": "2024-11-10",
-                    "spices": "2024-11-20"
+                    "chicken": "2024-11-24",
+                    "spices": "2024-12-20"
                 }
             },
             {
@@ -457,9 +457,9 @@
                     "water"
                 ],
                 "stock_ingredients": {
-                    "flour": "2024-11-16",
-                    "yeast": "2024-11-14",
-                    "water": "2024-11-14"
+                    "flour": "2024-12-16",
+                    "yeast": "2024-12-14",
+                    "water": "2024-12-14"
                 }
             },
             {
@@ -474,9 +474,9 @@
                     "yeast"
                 ],
                 "stock_ingredients": {
-                    "flour": "2024-11-16",
-                    "butter": "2024-11-15",
-                    "yeast": "2024-11-14"
+                    "flour": "2024-12-16",
+                    "butter": "2024-12-15",
+                    "yeast": "2024-12-14"
                 }
             },
             {
@@ -491,9 +491,9 @@
                     "yeast"
                 ],
                 "stock_ingredients": {
-                    "flour": "2024-11-16",
-                    "garlic": "2024-11-15",
-                    "yeast": "2024-11-14"
+                    "flour": "2024-12-16",
+                    "garlic": "2024-11-25",
+                    "yeast": "2024-12-14"
                 }
             },
             {
@@ -507,8 +507,8 @@
                     "ghee"
                 ],
                 "stock_ingredients": {
-                    "flour": "2024-11-16",
-                    "ghee": "2024-11-15"
+                    "flour": "2024-12-16",
+                    "ghee": "2024-12-15"
                 }
             },
             {
@@ -523,9 +523,9 @@
                     "yeast"
                 ],
                 "stock_ingredients": {
-                    "flour": "2024-11-16",
-                    "cheese": "2024-11-14",
-                    "yeast": "2024-11-14"
+                    "flour": "2024-12-16",
+                    "cheese": "2024-11-24",
+                    "yeast": "2024-12-14"
                 }
             },
             {
@@ -550,9 +550,9 @@
                     "spices"
                 ],
                 "stock_ingredients": {
-                    "potato": "2024-11-14",
-                    "flour": "2024-11-15",
-                    "spices": "2024-11-20"
+                    "potato": "2024-12-14",
+                    "flour": "2024-12-15",
+                    "spices": "2024-12-20"
                 }
             },
             {
@@ -567,9 +567,9 @@
                     "spices"
                 ],
                 "stock_ingredients": {
-                    "paneer": "2024-11-14",
-                    "flour": "2024-11-15",
-                    "spices": "2024-11-20"
+                    "paneer": "2024-11-24",
+                    "flour": "2024-12-15",
+                    "spices": "2024-12-20"
                 }
             },
             {
@@ -584,9 +584,9 @@
                     "spices"
                 ],
                 "stock_ingredients": {
-                    "cauliflower": "2024-11-12",
-                    "flour": "2024-11-15",
-                    "spices": "2024-11-20"
+                    "cauliflower": "2024-11-25",
+                    "flour": "2024-12-15",
+                    "spices": "2024-12-20"
                 }
             },
             {
@@ -602,8 +602,8 @@
                 ],
                 "stock_ingredients": {
                     "fenugreek": "2024-11-14",
-                    "flour": "2024-11-15",
-                    "spices": "2024-11-20"
+                    "flour": "2024-12-15",
+                    "spices": "2024-12-20"
                 }
             },
             {
@@ -618,9 +618,9 @@
                     "spices"
                 ],
                 "stock_ingredients": {
-                    "cheese": "2024-11-14",
-                    "flour": "2024-11-15",
-                    "spices": "2024-11-20"
+                    "cheese": "2024-11-24",
+                    "flour": "2024-12-15",
+                    "spices": "2024-12-20"
                 }
             }
         ],
@@ -636,8 +636,8 @@
                     "water"
                 ],
                 "stock_ingredients": {
-                    "coffee beans": "2024-11-30",
-                    "water": "2024-11-15"
+                    "coffee beans": "2024-12-30",
+                    "water": "2024-12-15"
                 }
             },
             {
@@ -653,8 +653,8 @@
                 ],
                 "stock_ingredients": {
                     "coffee beans": "2024-11-30",
-                    "milk": "2024-11-14",
-                    "water": "2024-11-15"
+                    "milk": "2024-11-24",
+                    "water": "2024-12-15"
                 }
             },
             {
@@ -670,8 +670,8 @@
                 ],
                 "stock_ingredients": {
                     "coffee beans": "2024-11-30",
-                    "milk": "2024-11-14",
-                    "water": "2024-11-15"
+                    "milk": "2024-11-24",
+                    "water": "2024-12-15"
                 }
             }
         ],
@@ -688,9 +688,9 @@
                     "spices"
                 ],
                 "stock_ingredients": {
-                    "tea leaves": "2024-11-18",
-                    "milk": "2024-11-14",
-                    "spices": "2024-11-20"
+                    "tea leaves": "2024-12-18",
+                    "milk": "2024-11-24",
+                    "spices": "2024-12-20"
                 }
             },
             {
@@ -704,8 +704,8 @@
                     "water"
                 ],
                 "stock_ingredients": {
-                    "green tea leaves": "2024-11-18",
-                    "water": "2024-11-15"
+                    "green tea leaves": "2024-12-18",
+                    "water": "2024-12-15"
                 }
             },
             {
@@ -720,9 +720,9 @@
                     "water"
                 ],
                 "stock_ingredients": {
-                    "tea leaves": "2024-11-18",
-                    "lemon": "2024-11-17",
-                    "water": "2024-11-15"
+                    "tea leaves": "2024-12-18",
+                    "lemon": "2024-12-17",
+                    "water": "2024-12-15"
                 }
             }
         ]

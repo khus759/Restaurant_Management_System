@@ -106,5 +106,13 @@
         "phone": "9876543321",
         "role": "Staff",
         "date_of_birth": "2000-2-2"
+    },
+    {
+        "id": "D5FFD3C5",
+        "name": "sita",
+        "email": "sita123@gmail.com",
+        "password": "9990000",
+        "phone": "8765432215",
+        "date_of_birth": "2000-2-4"
     }
 ]

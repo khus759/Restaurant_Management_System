@@ -5,6 +5,7 @@ class BillingHandler:
     YELLOW = "\033[93m"
     BLUE = "\033[94m"
     RESET = "\033[0m"
+    BRIGHT_MAGENTA = "\033[95m"
 
     def display_warning_invalid_format(self):
         print(f"{self.YELLOW}⚠️ Warning: 'billing.json' is empty or has invalid format. Initializing with an empty list.{self.RESET}")
@@ -51,7 +52,7 @@ class BillingHandler:
             print(f"{self.RED}❌ No bills found.{self.RESET}")
 
     def display_single_bill(self, bill):
-        print("=" * 40)
+        
         print(f"{self.BLUE}Billing ID: {bill['billing_id']}{self.RESET}")
         print(f"Order ID: {bill['order_id']}")
         print(f"Customer Name: {bill['customer_name']}")
@@ -62,21 +63,21 @@ class BillingHandler:
         print(f"Status: {bill['status']}")
         print(f"Payment Type: {bill['payment_type']}")
         print(f"Payment Date: {bill['payment_date']}")
-        print("=" * 40)
+        print(f"{self.GREEN}={self.RESET}" * 40)
     
     def print_bill(self, bill):
-        print("\n" + "-" * 40)
-        print(f"{self.BLUE}                BILL DETAILS                {self.RESET}")
-        print("-" * 40)
-        print(f"{self.BLUE}Billing ID: {bill['billing_id']}{self.RESET}")
+        print("\n" )
+        print(f"{self.BRIGHT_MAGENTA}               BILL DETAILS                {self.RESET}")
+        print(f"{self.YELLOW}={self.RESET}" * 50)
+        print(f"{self.GREEN}Billing ID: {bill['billing_id']}{self.RESET}")
         print(f"Order ID: {bill['order_id']}")
         print(f"Customer Name: {bill['customer_name']}")
         print(f"Billing Date: {bill['billing_date']}")
-        print("-" * 40)
+        print(f"{self.YELLOW}-{self.RESET}" * 50)
         print("\nItems Purchased:")
         for i, item in enumerate(bill['items'], start=1):
             print(f"  {i}. {item['item_name']} (Size: {item['size']}) x{item['quantity']} = ₹{item['total_price']:.2f}")
-        print("-" * 40)
+        print(f"{self.YELLOW}-{self.YELLOW}" * 50)
         print(f"\nSubtotal: ₹{bill['subtotal']:.2f}")
         print(f"GST (18%): ₹{bill['gst']:.2f}")
         print(f"Total: ₹{bill['total']:.2f}")
@@ -84,4 +85,4 @@ class BillingHandler:
         if bill["status"] == "Paid":
             print(f"Payment Type: {bill['payment_type']}")
             print(f"Payment Date: {bill['payment_date']}")
-        print("-" * 40)
+        print(f"{self.YELLOW}-{self.RESET}" * 50)

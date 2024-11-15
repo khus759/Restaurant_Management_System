@@ -21,7 +21,7 @@ class AuthSystem:
         while True:
             name = get_valid_input("Enter your name: ", validate_name)
             email = get_valid_input("Enter your email: ", validate_email).lower()
-            password = get_valid_input("Enter a password (6+ characters): ", validate_password)
+            password = getpass.getpass("Enter a password (6+ characters): ", validate_password)
             phone = get_valid_input("Enter your phone number (10 digits): ", validate_phone_number)
             role = get_valid_input("Enter your role (Owner/Staff): ", validate_role)
             dob = get_valid_input("Enter your date of birth (YYYY-MM-DD): ", validate_date_of_birth)
@@ -49,7 +49,7 @@ class AuthSystem:
                 'email': email,
                 'password': password,
                 'phone': phone,
-                'role': role.capitalize(),
+                 'role': role.capitalize(),
                 'date_of_birth': dob
             }
 
