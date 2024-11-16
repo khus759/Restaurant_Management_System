@@ -9,7 +9,7 @@ class OrderOutputHandler:
     BRIGHT_CYAN = "\033[96m"
 
     def show_order_placed(self, order_id, total_order_price):
-        print(f"{self.GREEN}✔️ Order placed successfully with ID: {order_id} and Total Price: ₹{total_order_price}{self.RESET}")
+        print(f"{self.GREEN}✔️ Order placed successfully with ID: {order_id} and Total Price: ₹{total_order_price} 😊 {self.RESET}")
 
     def item_not_found(self):
         print(f"{self.RED}❌ Item not found.{self.RESET}")
@@ -75,10 +75,16 @@ class OrderOutputHandler:
         print(f"{self.RED}❌ Invalid quantity entered. Please enter a valid number.{self.RESET}")
 
     def welcome_message(self):
-        print(f"{self.BLUE}Welcome to the Order Management System! Please follow the prompts to continue.{self.RESET}")
+        print(f"{self.BLUE} 😀 Welcome to the Order Management System! Please follow the prompts to continue.😜{self.RESET}")
 
     def exit_message(self):
-        print(f"{self.BLUE}Thank you for using the Order Management System. Goodbye!{self.RESET}")
+        print(f"{self.BLUE} 😀 Thank you for using the Order Management System. Goodbye!{self.RESET}")
 
     def generate_message(self, e):
         print(f"{self.RED}❌ Error generating order ID: {e}{self.RESET}")
+    
+    def no_items_in_order(self):
+        print(f"{self.RED} ❌ No items were added to the order. Order cannot be placed.{self.RESET}")
+
+    
+    

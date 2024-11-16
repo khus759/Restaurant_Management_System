@@ -101,3 +101,9 @@ class BillingSystem:
             return
         for bill in paid_bills:
             self.bill_handler.print_bill(bill)
+    
+    def exit_system(self):
+        self.bill_handler.exit_message()
+    
+    def welcome_system(self):
+        self.bill_handler.welcome_message()

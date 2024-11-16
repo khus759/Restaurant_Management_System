@@ -11,6 +11,8 @@ class Colors:
     RED = "\033[91m"
     BLUE = "\033[94m"
     RESET = "\033[0m"
+    BRIGHT_MAGENTA = "\033[95m"
+    BG_CYAN = "\033[46m"
 
 def show_dashboard(user_role):
     if user_role == "Owner":
@@ -24,10 +26,12 @@ def show_dashboard(user_role):
 
 def main():
     auth_system = AuthSystem()
+    
     while True:
-        print(f"{Colors.CYAN}{'-'*64}")
-        print(f"{Colors.YELLOW}********* Welcome to the Taste of Tradition Restaurant *********{Colors.RESET}")
-        print(f"{Colors.CYAN}{'-'*64}{Colors.RESET}")
+        print(f"{Colors.BRIGHT_MAGENTA}{'-'*80}")
+        print(f"🍕☕👩‍🍳 {Colors.YELLOW}********* Welcome to the Taste of Tradition Restaurant *********{Colors.RESET}🍽️ 🍔🍲🍝")
+        print(f"{Colors.BRIGHT_MAGENTA}{'-'*80}{Colors.RESET}")
+        auth_system.welcome_system()
         print(f"\n{Colors.GREEN}1. Signup")
         print("2. Login")
         print(f"3. Exit{Colors.RESET}")

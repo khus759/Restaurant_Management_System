@@ -13,7 +13,7 @@ class Colors:
 
 def display_main_menu():
     print(f"{Colors.CYAN}{'-'*50}")
-    print("============ Owner Dashboard ============")
+    print("============ 🗂️  Owner Dashboard ⚙️  ============")
     print(f"{'-'*50}{Colors.RESET}")
     print(f"\n{Colors.YELLOW}1. Menu Management")
     print("2. Order Management")
@@ -26,7 +26,7 @@ def display_main_menu():
 
 def display_staff_menu():
     print(f"{Colors.CYAN}{'-'*50}")
-    print("============ Staff Dashboard ============")
+    print("============ 🔍 Staff Dashboard 📋 ============")
     print(f"{'-'*50}{Colors.RESET}")
     print(f"\n{Colors.YELLOW}1. Order Management")
     print("2. Invoice Management")
@@ -37,50 +37,55 @@ def display_staff_menu():
 
 def display_menu_management():
     print(f"{Colors.BRIGHT_BLUE}{'-'*40}")
-    print(f"\t{'*'*5}MENU MANAGEMENT{'*'*5}")
+    print(f"{'*'*5}🍜 🥂MENU MANAGEMENT🍟 🥘{'*'*5}")
     print(f"{'-'*40}{Colors.RESET}")
     print(f"\n{Colors.BRIGHT_CYAN}1. Add Item")
     print("2. Update Item")
     print("3. Delete Item")
     print("4. Add Stock Ingredient")
     print("5. Check Stock Ingredients")
-    print(f"6. Show Menu{Colors.RESET}")
+    print("6. Show Menu")
+    print(f"7. EXIT{Colors.RESET}")
 
 def display_order_management():
-    print(f"{Colors.CYAN}{'-'*40}")
-    print(f"\t{'*'*5}ORDER MANAGEMENT{'*'*5}")
+    print(f"{Colors.BRIGHT_MAGENTA}{'-'*40}")
+    print(f"{'*'*5}🌭 🌮 ORDER MANAGEMENT{'*'*5}🍱 🍹")
     print(f"{'-'*40}{Colors.RESET}")
-    print(f"\n{Colors.BRIGHT_MAGENTA}1. Show Menu")
+    print(f"\n{Colors.CYAN}1. Show Menu")
     print("2. Take New Order")
     print("3. Update Order")
     print("4. Cancel Order")
     print("5. Search Order")
-    print(f"6. See All Orders{Colors.RESET}")
+    print("6. See All Orders")
+    print(f"7. EXIT{Colors.RESET}")
+    
 
 def display_invoice_management():
     print(f"{Colors.BRIGHT_BLUE}{'-'*40}")
-    print(f"\t{'*'*5}INVOICE MANAGEMENT{'*'*5}")
+    print(f"{'*'*5}💳 💵INVOICE MANAGEMENT🎫 🧾{'*'*5}")
     print(f"{'-'*40}{Colors.RESET}")
     print(f"\n{Colors.CYAN}1. Generate Bill")
     print("2. Check Bill")
     print("3. Show All Bills")
     print("4. Mark Bill as Paid")
-    print(f"5. Show All Paid Bills{Colors.RESET}")
+    print("5. Show All Paid Bills")
+    print(f"6. EXIT{Colors.RESET}")
 
 def display_table_booking_management():
-    print(f"{Colors.CYAN}{'-'*40}")
-    print(f"{'*'*5}TABLE BOOKING MANAGEMENT{'*'*5}")
-    print(f"{'-'*40}{Colors.RESET}")
+    print(f"{Colors.CYAN}{'-'*45}")
+    print(f"{'*'*5}🪑📅TABLE BOOKING MANAGEMENT 🍽️ 🕒{'*'*5}")
+    print(f"{'-'*45}{Colors.RESET}")
     print(f"\n{Colors.GREEN}1. Reserve a Table")
     print("2. Cancel a Reservation")
     print("3. Update a Reservation")
     print("4. View Table Availability")
     print("5. View Table Reservations")
-    print(f"6. Search Reservation{Colors.RESET}")
+    print("6. Search Reservation")
+    print(f"7. EXIT{Colors.RESET}")
 
 def display_stock_management():
     print(f"{Colors.CYAN}{'-'*40}")
-    print(f"\t{'*'*5} Reports {'*'*5}")
+    print(f"{'*'*5}🍅 🥦 📊 Reports 🌽🥕 {'*'*5}")
     print(f"{'-'*40}{Colors.RESET}")
     print(f"\n{Colors.BRIGHT_MAGENTA}1. Soon_Stockout_Ingredients")
     print("2. Show Reservation By Date")
@@ -89,7 +94,7 @@ def display_stock_management():
 
 def display_staff_management():
     print(f"{Colors.BRIGHT_BLUE}{'-'*40}")
-    print(f"\t{'*'*5} Staff Management {'*'*5}")
+    print(f"{'*'*5}👨‍🍳 🛎️ Staff Management 👩‍🍳 🍽️ {'*'*5}")
     print(f"{'-'*40}{Colors.RESET}")
     print(f"\n{Colors.BRIGHT_CYAN}1. Add Employee  ")
     print("2. Display Profile")

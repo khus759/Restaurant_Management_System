@@ -280,7 +280,7 @@
                 "item id": "DR01",
                 "item name": "Mango Lassi",
                 "prices": {
-                    "single": 70
+                    "price": ""
                 },
                 "ingredients": [
                     "mango",
@@ -347,6 +347,14 @@
                 "stock_ingredients": {
                     "Orange": "2024-11-25"
                 }
+            },
+            {
+                "item id": "DR06",
+                "item name": "Mixed Fruit Juice",
+                "prices": {
+                    "single": "70"
+                },
+                "ingredients": []
             }
         ],
         "Rice": [
@@ -354,8 +362,7 @@
                 "item id": "RI01",
                 "item name": "Steamed Rice",
                 "prices": {
-                    "half": 50,
-                    "full": 100
+                    "price": ""
                 },
                 "ingredients": [
                     "rice"

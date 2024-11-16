@@ -165,5 +165,31 @@
         "total_order_price": 0,
         "order_date": "14-Nov-2024 04:25:PM",
         "status": "Processing"
+    },
+    {
+        "order_id": "ee5ca2",
+        "customer_name": "khushi",
+        "mobile_number": "9876543321",
+        "order_items": [],
+        "total_order_price": 0,
+        "order_date": "15-Nov-2024 07:30:PM",
+        "status": "Processing"
+    },
+    {
+        "order_id": "e3a1b0",
+        "customer_name": "khushi",
+        "mobile_number": "9876543321",
+        "order_items": [
+            {
+                "item_id": "DR06",
+                "item_name": "Orange Juice",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 120
+            }
+        ],
+        "total_order_price": 120,
+        "order_date": "16-Nov-2024 09:06:AM",
+        "status": "Processing"
     }
 ]

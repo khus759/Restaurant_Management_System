@@ -19,6 +19,7 @@ from Src.Authentication.auth_system import AuthSystem
 from Src.Staff_Management.staff_system import StaffManagementSystem
 
 
+
 class OwnerDashboard:
     def __init__(self):
         self.menu_management = MenuManagement()
@@ -30,6 +31,7 @@ class OwnerDashboard:
         self.bill_system = BillingSystem()
         self.auth = AuthSystem()
         self.staff = StaffManagementSystem()
+        
     
     def display_dashboard(self):
         while True:
@@ -60,8 +62,9 @@ class OwnerDashboard:
                 break
 
     def handle_menu_management(self):
+        self.menu_management.welcome()
         display_menu_management()
-
+        
         choice = input("Choose an action in Menu Management: ")
 
         if choice == "1":
@@ -76,12 +79,15 @@ class OwnerDashboard:
             self.menu_management.check_stock_ingredients()
         elif choice == "6":
             self.menu_management.show_menu()
+        elif choice == "7":
+            self.menu_management.exit()
         else:
             print("Invalid choice in Menu Management.")
         
     def handle_order_management(self):
+        self.order_management.welcome_system()
         display_order_management()
-
+        
         choice = input("Choose an action in Order Management: ")
 
         if choice == "1":
@@ -96,11 +102,15 @@ class OwnerDashboard:
             self.order_management.check_order()
         elif choice == "6":
             self.order_management.show_all_orders()
+        elif choice == "7":
+            self.order_management.exit_system()
         else:
             print("Invalid choice in Order Management.")
 
     def handle_invoice_management(self):
+        self.bill_system.welcome_system()
         display_invoice_management()
+        
         choice = input("Choose an action in Invoice system : ")
         if choice == "1":
             self.bill_system.generate_bill()
@@ -112,13 +122,17 @@ class OwnerDashboard:
             self.bill_system.mark_as_paid()
         elif choice == "5":
             self.bill_system.show_all_paid_bills()
+        elif choice == "6": 
+            self.bill_system.exit_system() 
         else: 
             print("Invalid choice in Invoice Management.")
 
 
     def handle_table_booking_management(self):
+        self.booking_system.welcome_system()
         display_table_booking_management()
-
+        
+        
         choice = input("Choose an action in Table Booking Management: ")
 
         if choice == "1":
@@ -133,6 +147,8 @@ class OwnerDashboard:
             self.booking_system.view_all_reservations()
         elif choice == "6":
             self.booking_system.search_reservation_by_id()
+        elif choice == "7":
+            self.booking_system.exit_system()
         else:
             print("Invalid choice in Table Booking Management.")
     

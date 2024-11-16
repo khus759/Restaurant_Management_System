@@ -77,3 +77,10 @@ class BookingHandler:
                 print(f"Date: {res['date']}, Name: {res['name']}, Phone: {res['phone']}, Time: {res['time']}, Table: {res['table_id']}")
         else:
             print(f"{self.YELLOW}No canceled reservations found for the specified date or month.{self.RESET}")
+    
+    def welcome_message(self):
+        print(f"{self.BLUE} 😀 Welcome to the Booking Management System! Please follow the prompts to continue.😜{self.RESET}")
+
+    def exit_message(self):
+        print(f"{self.BLUE} 😀 Thank you for using the Booking Management System. Goodbye!{self.RESET}")
+ 

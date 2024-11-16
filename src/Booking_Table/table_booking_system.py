@@ -135,3 +135,9 @@ class TableBookingSystem:
             self.messages.display_reservation_found(found_reservation)
         else:
             self.messages.display_no_reservation_found()
+    
+    def exit_system(self):
+        self.messages.exit_message()
+
+    def welcome_system(self):
+        self.messages.welcome_message()    

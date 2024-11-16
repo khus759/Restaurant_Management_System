@@ -86,3 +86,9 @@ class BillingHandler:
             print(f"Payment Type: {bill['payment_type']}")
             print(f"Payment Date: {bill['payment_date']}")
         print(f"{self.YELLOW}-{self.RESET}" * 50)
+    
+    def welcome_message(self):
+        print(f"{self.BLUE} 😀 Welcome to the Invoice System! Please follow the prompts to continue.{self.RESET}")
+
+    def exit_message(self):
+        print(f"{self.BLUE} 😀 Thank you for using the Invoice System. Goodbye!{self.RESET}")

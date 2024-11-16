@@ -135,3 +135,9 @@ class ItemOperations:
                     ingredients = ', '.join(ingredients)  # Convert list to string
                 print(f"{item_id:<10}{item_name:<30}{price_details:<40}{ingredients:<50}")
             print("=" * 130)
+
+    def exit_system(self):
+        self.menu_handle.exit_message()
+    
+    def welcome_system(self):
+        self.menu_handle.welcome_message()

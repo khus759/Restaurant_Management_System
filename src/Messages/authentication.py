@@ -4,6 +4,7 @@ class AuthHandler:
     GREEN = "\033[92m"
     YELLOW = "\033[93m"
     RESET = "\033[0m"
+    BLUE = "\033[94m"
 
     def email_already_taken(self):
         print(f"{self.YELLOW}Email already taken! Try again.{self.RESET}")
@@ -31,3 +32,6 @@ class AuthHandler:
 
     def user_save_error(self, exception):
         print(f"{self.RED}An error occurred while saving users: {exception}{self.RESET}")
+    
+    def welcome_message(self):
+        print(f"{self.BLUE} 😀 Welcome to the Authentication Management System! Please follow the prompts to continue.😜{self.RESET}")

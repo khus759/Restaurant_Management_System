@@ -4,15 +4,6 @@ from Src.Staff_Management.utils import load_data, save_data, users_file, employe
 from Src.Utility.validation import validate_date_of_birth
 from Src.Utility.user_input import get_valid_input
 
-# BRIGHT_RED = "\033[91m"
-# BRIGHT_GREEN = "\033[92m"
-# BRIGHT_YELLOW = "\033[93m"
-# BRIGHT_BLUE = "\033[94m"
-# BRIGHT_MAGENTA = "\033[95m"
-# BRIGHT_CYAN = "\033[96m"
-# BRIGHT_WHITE = "\033[97m"
-# RESET = "\033[0m"
-
 class StaffManagementSystem:
     BRIGHT_RED = "\033[91m"
     BRIGHT_GREEN = "\033[92m"
