@@ -8,20 +8,22 @@ from Src.Utility.validation import (
 from Src.Utility.user_input import get_valid_input
 from Src.Utility.path_manager import users_file
 from Src.Messages.authentication import AuthHandler
+from Src.Utility.color import Colors
 
 class AuthSystem:
     def __init__(self):
         self.users_file = users_file
         self.current_user = None
         self.message_handler = AuthHandler()
+        self.color = Colors()
 
     def signup(self):
         users = load_users(self.users_file)
 
         while True:
-            name = get_valid_input("Enter your name: ", validate_name)
+            name = get_valid_input(f"{Colors.CYAN}Enter your name: ", validate_name)
 
-            # Immediate email check for uniqueness
+            
             while True:
                 email = get_valid_input("Enter your email: ", validate_email).lower()
                 if any(user['email'] == email for user in users):
@@ -29,7 +31,7 @@ class AuthSystem:
                 else:
                     break
 
-            # Secure password input using maskpass
+            
             while True:
                 password = maskpass.askpass("Enter a password (6+ characters): ", mask="*")
                 if validate_password(password):
@@ -60,11 +62,9 @@ class AuthSystem:
                 'date_of_birth': dob
             }
 
-            # Add the new user and save
             users.append(new_user)
             save_users(self.users_file, users)
 
-            # Display success message
             self.message_handler.signup_successful()
             break
 
@@ -73,10 +73,8 @@ class AuthSystem:
         while True:
             email = get_valid_input("Enter your email: ", validate_email).lower()
 
-            # Secure password input using maskpass
-            password = maskpass.askpass("Enter your password: ", mask="*")
+            password = maskpass.askpass(f"{Colors.RESET}Enter your password: ", mask="*")
 
-            # Check if the user exists with the provided credentials
             user = next((user for user in users if user['email'] == email and user['password'] == password), None)
             if user:
                 self.current_user = user
@@ -92,7 +90,7 @@ class AuthSystem:
         if self.current_user:
             return self.current_user['role']
         return None
-
+    # In AuthSystem class
     def show_all_staff(self):
         users = load_users(self.users_file)
         owner_exists = any(user['role'].capitalize() == "Owner" for user in users)
@@ -101,19 +99,15 @@ class AuthSystem:
             staff_members = [user for user in users if user['role'].capitalize() == "Staff"]
 
             if staff_members:
-                print("\n" + "*" * 60)
-                print("** List of All Staff Members **".center(60))
-                print("*" * 60)
-                print("-" * 115)
-                print(f"{'No.':<5} | {'ID':<15} | {'Name':<20} | {'Email':<25} | {'Phone':<15} | {'Date of Birth':<15} |")
-                print("-" * 115)
+                self.message_handler.staff_list_header()
                 for i, staff in enumerate(staff_members, start=1):
-                    print(f"{i:<5} | {staff['id']:<15} | {staff['name']:<20} | {staff['email']:<25} | {staff['phone']:<15} | {staff['date_of_birth']:<15} |")
-                print("-" * 115)
+                    self.message_handler.display_staff_member(i, staff)
+                self.message_handler.staff_list_footer()
             else:
-                print("No staff members found.")
+                self.message_handler.no_staff_members_found()
         else:
-            print("No owner exists in the system. Only an owner can add staff members.")
-    
+            self.message_handler.no_owner_exists()
+
+
     def welcome_system(self):
         self.message_handler.welcome_message()       
