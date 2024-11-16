@@ -1,9 +1,9 @@
 import uuid
-import getpass
+import maskpass  # Secure password input
 from Src.Authentication.file_operation import load_users, save_users
 from Src.Utility.validation import (
     validate_name, validate_email, validate_password,
-    validate_phone_number, validate_role, validate_date_of_birth
+    validate_phone_number, validate_date_of_birth
 )
 from Src.Utility.user_input import get_valid_input
 from Src.Utility.path_manager import users_file
@@ -20,41 +20,51 @@ class AuthSystem:
 
         while True:
             name = get_valid_input("Enter your name: ", validate_name)
-            email = get_valid_input("Enter your email: ", validate_email).lower()
-            password = getpass.getpass("Enter a password (6+ characters): ", validate_password)
+
+            # Immediate email check for uniqueness
+            while True:
+                email = get_valid_input("Enter your email: ", validate_email).lower()
+                if any(user['email'] == email for user in users):
+                    print("This email ID is already taken. Please try a different email.")
+                else:
+                    break
+
+            # Secure password input using maskpass
+            while True:
+                password = maskpass.askpass("Enter a password (6+ characters): ", mask="*")
+                if validate_password(password):
+                    break
+                print("Invalid password. Please try again.")
+
             phone = get_valid_input("Enter your phone number (10 digits): ", validate_phone_number)
-            role = get_valid_input("Enter your role (Owner/Staff): ", validate_role)
             dob = get_valid_input("Enter your date of birth (YYYY-MM-DD): ", validate_date_of_birth)
 
-            if any(user['email'] == email for user in users):
-                self.message_handler.email_already_taken()
-                continue
-
+            # Automatically assign roles
             owner_count = sum(1 for user in users if user['role'].upper() == 'OWNER')
-            if role.upper() == 'OWNER' and owner_count >= 1:
-                self.message_handler.owner_exists()
-                return
+            if owner_count == 0:
+                role = "Owner"  # First user becomes the owner
+            else:
+                role = "Staff"  # All subsequent users become staff
 
-            # staff_count = self.count_roles(users, 'Staff')
-            # if role.upper() == 'STAFF' and staff_count >= 10:
-            #     self.message_handler.staff_limit_reached()
-            #     return
-
-            name_prefix = name[::2].upper()  
-            user_id = f"{name_prefix}-{str(uuid.uuid4())[:4]}"
+            # Generate a unique user ID
             user_id = str(uuid.uuid4()).replace("-", "")[:8].upper()
+
+            # Create new user object
             new_user = {
                 'id': user_id,
                 'name': name,
                 'email': email,
                 'password': password,
                 'phone': phone,
-                 'role': role.capitalize(),
+                'role': role,
                 'date_of_birth': dob
             }
 
+            # Add the new user and save
             users.append(new_user)
             save_users(self.users_file, users)
+
+            # Display success message
             self.message_handler.signup_successful()
             break
 
@@ -62,8 +72,11 @@ class AuthSystem:
         users = load_users(self.users_file)
         while True:
             email = get_valid_input("Enter your email: ", validate_email).lower()
-            password = getpass.getpass("Enter your password: ")
 
+            # Secure password input using maskpass
+            password = maskpass.askpass("Enter your password: ", mask="*")
+
+            # Check if the user exists with the provided credentials
             user = next((user for user in users if user['email'] == email and user['password'] == password), None)
             if user:
                 self.current_user = user
@@ -79,17 +92,17 @@ class AuthSystem:
         if self.current_user:
             return self.current_user['role']
         return None
-    
+
     def show_all_staff(self):
         users = load_users(self.users_file)
         owner_exists = any(user['role'].capitalize() == "Owner" for user in users)
 
         if owner_exists:
             staff_members = [user for user in users if user['role'].capitalize() == "Staff"]
-            
+
             if staff_members:
                 print("\n" + "*" * 60)
-                print("**** List of All Staff Members ****".center(60))
+                print("** List of All Staff Members **".center(60))
                 print("*" * 60)
                 print("-" * 115)
                 print(f"{'No.':<5} | {'ID':<15} | {'Name':<20} | {'Email':<25} | {'Phone':<15} | {'Date of Birth':<15} |")
@@ -101,6 +114,6 @@ class AuthSystem:
                 print("No staff members found.")
         else:
             print("No owner exists in the system. Only an owner can add staff members.")
-
+    
     def welcome_system(self):
-        self.message_handler.welcome_message()        
+        self.message_handler.welcome_message()       

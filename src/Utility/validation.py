@@ -12,7 +12,7 @@ def validate_name(name):
 def validate_password(password):
     if not password.strip():
         return "Password cannot be blank."
-    if len(password) < 6:
+    if len(password) > 6:
         return "Password must be at least 6 characters long."
     return None
 
