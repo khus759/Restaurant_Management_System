@@ -132,7 +132,6 @@ class OwnerDashboard:
         self.booking_system.welcome_system()
         display_table_booking_management()
         
-        
         choice = input("Choose an action in Table Booking Management: ")
 
         if choice == "1":
@@ -153,6 +152,7 @@ class OwnerDashboard:
             print("Invalid choice in Table Booking Management.")
     
     def handle_stock_management(self):
+        
         display_stock_management()
 
         choice = input("Choose an action in Reports Management: ")
@@ -169,6 +169,7 @@ class OwnerDashboard:
             print("Invalid choice in Reports Management.")
     
     def handle_staff_management(self):
+        self.staff.welcome_system()
         display_staff_management()
 
         choice = input("Choose an action in Staff Management: ")
@@ -183,6 +184,8 @@ class OwnerDashboard:
             self.staff.delete_employee()
         elif choice == "5":
             self.staff.display_all_profiles()
+        elif choice == "6":
+            self.staff.exit_system()
         else:
             print("Invalid choice in Staff Management.")
     

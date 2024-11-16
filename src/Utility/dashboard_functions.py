@@ -13,7 +13,7 @@ class Colors:
 
 def display_main_menu():
     print(f"{Colors.CYAN}{'-'*50}")
-    print("============ 🗂️  Owner Dashboard ⚙️  ============")
+    print("============ Owner Dashboard ============")
     print(f"{'-'*50}{Colors.RESET}")
     print(f"\n{Colors.YELLOW}1. Menu Management")
     print("2. Order Management")
@@ -26,7 +26,7 @@ def display_main_menu():
 
 def display_staff_menu():
     print(f"{Colors.CYAN}{'-'*50}")
-    print("============ 🔍 Staff Dashboard 📋 ============")
+    print("============ Staff Dashboard ============")
     print(f"{'-'*50}{Colors.RESET}")
     print(f"\n{Colors.YELLOW}1. Order Management")
     print("2. Invoice Management")
@@ -100,5 +100,6 @@ def display_staff_management():
     print("2. Display Profile")
     print("3. Update Profile")
     print("4. Delete Employee")
-    print(f"5. Display All Profiles{Colors.RESET}")
+    print("5. Display All Profiles")
+    print(f"6. EXIT {Colors.RESET}")
          

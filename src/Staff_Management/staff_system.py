@@ -7,7 +7,10 @@ from Src.Messages.staff import (
     employee_deleted,
     no_employees_found,
     display_profile,
-    display_all_profiles
+    display_all_profiles,
+    profile_updated,
+    welcome_message,
+    exit_message
 )
 from Src.Staff_Management.utils import load_data, save_data, users_file, employee_file
 from Src.Staff_Management.employee import Employee
@@ -68,6 +71,33 @@ class StaffManagementSystem:
 
         employee_not_found()
 
+    def update_profile(self):
+        user = self.authenticate_user()
+        if not user:
+            return
+
+        employees = load_data(employee_file)
+        for emp in employees:
+            if emp['email'] == user['email']:
+                print("Leave a field blank to keep the current value.")
+
+                emp['name'] = input(f"Enter new name (current: {emp['name']}): ") or emp['name']
+                emp['phone'] = input(f"Enter new phone (current: {emp['phone']}): ") or emp['phone']
+                emp['designation'] = input(f"Enter new designation (current: {emp['designation']}): ") or emp['designation']
+                emp['country'] = input(f"Enter new country (current: {emp['country']}): ") or emp['country']
+                emp['state'] = input(f"Enter new state (current: {emp['state']}): ") or emp['state']
+                emp['district'] = input(f"Enter new district (current: {emp['district']}): ") or emp['district']
+                emp['city_village'] = input(f"Enter new city/village (current: {emp['city_village']}): ") or emp['city_village']
+                emp['pincode'] = input(f"Enter new pincode (current: {emp['pincode']}): ") or emp['pincode']
+                emp['salary'] = input(f"Enter new salary (current: {emp['salary']}): ") or emp['salary']
+
+                # Save updated employee list back to file
+                save_data(employee_file, employees)
+                profile_updated()
+                return
+
+        employee_not_found()
+
     def delete_employee(self):
         email = input("Enter the email of the employee to delete: ")
         employees = load_data(employee_file)
@@ -83,4 +113,9 @@ class StaffManagementSystem:
 
         for i, emp in enumerate(employees, start=1):
             display_all_profiles(emp, i)
-
+    
+    def exit_system(self):
+        exit_message()
+    
+    def welcome_system(self):
+        welcome_message()

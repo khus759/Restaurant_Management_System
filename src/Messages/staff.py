@@ -1,6 +1,4 @@
-# messages.py
 
-# Define colors for formatted output
 BRIGHT_RED = "\033[91m"
 BRIGHT_GREEN = "\033[92m"
 BRIGHT_YELLOW = "\033[93m"
@@ -10,7 +8,8 @@ BRIGHT_CYAN = "\033[96m"
 BRIGHT_WHITE = "\033[97m"
 RESET = "\033[0m"
 
-# Functions for various messages
+def profile_updated():
+    print(f"{BRIGHT_GREEN} ✔️ Profile updated successfully.{RESET}")
 
 def invalid_credentials():
     print(f"{BRIGHT_RED}❌ Invalid credentials.{RESET}")
@@ -62,3 +61,9 @@ def display_all_profiles(emp, index):
     print(f"{BRIGHT_YELLOW}       Employee {index}{RESET}")
     print("--------------------------------")
     display_profile(emp)
+
+def welcome_message():
+    print(f"{BRIGHT_BLUE} 😀 Welcome to the Staff Management System! Please follow the prompts to continue.😜{RESET}")
+
+def exit_message():
+    print(f"{BRIGHT_BLUE} 😀 Thank you for using the Staff Management System. Goodbye!{RESET}")
