@@ -54,6 +54,12 @@ class OrderManagementSystem:
             })
             total_order_price += total_price
 
+        # Check if order_items is empty before proceeding
+        if not order_items:
+            self.output_handler.no_items_in_order()
+            return
+
+        # Create order if items are added
         order = {
             'order_id': order_id,
             'customer_name': customer_name,
@@ -219,17 +225,8 @@ class OrderManagementSystem:
                     ingredients = ', '.join(ingredients)
                 self.output_handler.show_menu_item(item_id, item_name, price_details, ingredients)
 
-    # def show_menu(self):
-    #     self.output_handler.show_menu_item( item_id, item_name, price_details, ingredients)
-    #     for category, items in self.menu.items():
-    #         print(f"\nCategory: {category}")
-    #         for item in items:
-    #             item_id = item['item id']
-    #             item_name = item['item name']
-    #             prices = item['prices']
-    #             price_details = ', '.join([f"{size}: {price}" for size, price in prices.items()])
-    #             ingredients = item.get('ingredients', 'No ingredients listed')
-    #             if isinstance(ingredients, list):
-    #                 ingredients = ', '.join(ingredients)
-    #             self.output_handler.show_menu_item(item_id, item_name, price_details, ingredients)
+    def exit_system(self):
+        self.output_handler.exit_message()
     
+    def welcome_system(self):
+        self.output_handler.welcome_message()

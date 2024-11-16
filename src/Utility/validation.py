@@ -47,14 +47,14 @@ def validate_price(price):
     return None
 
 
-def validate_item_id(item_id):
-    if not item_id.strip():
-        return "Item ID cannot be blank."
-    # if any(char.isalpha() for char in item_id):
-    #     return "Item ID cannot contain letters."
-    # if any(not char.isdigit() for char in item_id):
-    #     return "Item ID must be numeric."
-    return None  
+# def validate_item_id(item_id):
+#     if not item_id.strip():
+#         return "Item ID cannot be blank."
+#     # if any(char.isalpha() for char in item_id):
+#     #     return "Item ID cannot contain letters."
+#     # if any(not char.isdigit() for char in item_id):
+#     #     return "Item ID must be numeric."
+#     return None  
 
 
 def validate_phone_number(phone_number):

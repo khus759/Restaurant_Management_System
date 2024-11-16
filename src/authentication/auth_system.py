@@ -40,8 +40,8 @@ class AuthSystem:
             #     self.message_handler.staff_limit_reached()
             #     return
 
-            #name_prefix = name[::2].upper()  
-            # user_id = f"{name_prefix}-{str(uuid.uuid4())[:4]}"
+            name_prefix = name[::2].upper()  
+            user_id = f"{name_prefix}-{str(uuid.uuid4())[:4]}"
             user_id = str(uuid.uuid4()).replace("-", "")[:8].upper()
             new_user = {
                 'id': user_id,
@@ -101,3 +101,6 @@ class AuthSystem:
                 print("No staff members found.")
         else:
             print("No owner exists in the system. Only an owner can add staff members.")
+
+    def welcome_system(self):
+        self.message_handler.welcome_message()        
