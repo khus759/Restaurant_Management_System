@@ -1,90 +1,85 @@
+from Src.Utility.color import Colors
 class OrderOutputHandler:
-    # Define color codes
-    GREEN = "\033[92m"
-    RED = "\033[91m"
-    BLUE = "\033[94m"
-    YELLOW = "\033[93m"
-    RESET = "\033[0m"
-    BRIGHT_MAGENTA = "\033[95m"
-    BRIGHT_CYAN = "\033[96m"
+    def __init__(self):
+        self.color = Colors()
 
     def show_order_placed(self, order_id, total_order_price):
-        print(f"{self.GREEN}✔️ Order placed successfully with ID: {order_id} and Total Price: ₹{total_order_price} 😊 {self.RESET}")
+        print(f"{Colors.GREEN}✔️ Order placed successfully with ID: {order_id} and Total Price: ₹{total_order_price} 😊 {Colors.RESET}")
 
     def item_not_found(self):
-        print(f"{self.RED}❌ Item not found.{self.RESET}")
+        print(f"{Colors.RED}❌ Item not found.{Colors.RESET}")
 
     def invalid_size(self):
-        print(f"{self.RED}❌ Invalid size. Please select a valid option.{self.RESET}")
+        print(f"{Colors.RED}❌ Invalid size. Please select a valid option.{Colors.RESET}")
 
     def insufficient_stock(self):
-        print(f"{self.RED}❌ Insufficient stock available for this item.{self.RESET}")
+        print(f"{Colors.RED}❌ Insufficient stock available for this item.{Colors.RESET}")
 
     def show_order_details(self, order):
-        print(f"\n{self.BLUE}Order Details{self.RESET}")
-        print("=" * 50)
+        print(f"\n{Colors.BLUE}Order Details{Colors.RESET}")
+        print(f"{Colors.GREEN}={Colors.RESET}" * 50)
         print(f"Order ID      : {order['order_id']}")
         print(f"Customer Name : {order['customer_name']}")
         print(f"Mobile Number : {order['mobile_number']}")
         print(f"Order Date    : {order['order_date']}")
         print(f"Status        : {order['status']}")
         print("Order Items:")
-        print("-" * 50)
+        print(f"{Colors.RED}-{Colors.RESET}" * 50)
         for item in order['order_items']:
             print(f"  - {item['item_name']} (ID: {item['item_id']}, Size: {item['size']})")
             print(f"    Quantity: {item['quantity']}")
             print(f"    Total Price: ₹{item['total_price']}")
             print("-" * 50)
-        print("=" * 50)
+        print(f"{Colors.GREEN}={Colors.RESET}" * 50)
 
     def show_menu_item(self, item_id, item_name, price_details, ingredients):
-        print(f"{self.BRIGHT_MAGENTA}{item_id:<10}{item_name:<30}{price_details:<40}{ingredients:<50}{self.RESET}")
+        print(f"{Colors.BRIGHT_MAGENTA}{item_id:<10}{item_name:<30}{price_details:<40}{ingredients:<50}{Colors.RESET}")
 
     def order_update_success(self, order_id):
-        print(f"{self.GREEN}✔️ Order with ID {order_id} has been successfully updated.{self.RESET}")
+        print(f"{Colors.GREEN}✔️ Order with ID {order_id} has been successfully updated.{Colors.RESET}")
 
     def order_cancel_success(self, order_id):
-        print(f"{self.GREEN}✔️ Order with ID {order_id} has been successfully canceled.{self.RESET}")
+        print(f"{Colors.GREEN}✔️ Order with ID {order_id} has been successfully canceled.{Colors.RESET}")
 
     def order_not_found(self, order_id):
-        print(f"{self.RED}❌ No order found with ID {order_id}.{self.RESET}")
+        print(f"{Colors.RED}❌ No order found with ID {order_id}.{Colors.RESET}")
 
     def order_status(self, order_id, status):
-        print(f"{self.BLUE}Order ID: {order_id} - Current Status: {status}{self.RESET}")
+        print(f"{Colors.BLUE}Order ID: {order_id} - Current Status: {status}{Colors.RESET}")
 
     def invalid_input(self, field):
-        print(f"{self.RED}❌ Invalid input for {field}. Please try again.{self.RESET}")
+        print(f"{self.RED}❌ Invalid input for {field}. Please try again.{Colors.RESET}")
 
     def order_save_error(self, exception):
-        print(f"{self.RED}❌ An error occurred while saving the order: {exception}{self.RESET}")
+        print(f"{Colors.RED}❌ An error occurred while saving the order: {exception}{Colors.RESET}")
 
     def no_orders_found(self):
-        print(f"{self.RED}❌ No orders found.{self.RESET}")
+        print(f"{Colors.RED}❌ No orders found.{Colors.RESET}")
 
     def display_inventory(self, inventory):
-        print(f"\n{self.BLUE}Inventory Details{self.RESET}")
-        print("=" * 50)
+        print(f"\n{Colors.BLUE}Inventory Details{Colors.RESET}")
+        print(f"{Colors.YELLOW}={Colors.RED}" * 50)
         for item in inventory:
             print(f"Item ID: {item['id']} - Name: {item['name']}, Stock: {item['stock']} {item['unit']}")
-        print("=" * 50)
+        print(f"{Colors.YELLOW}={Colors.RESET}" * 50)
 
     def inventory_update_success(self, item_name):
-        print(f"{self.GREEN}✔️ Inventory updated successfully for {item_name}.{self.RESET}")
+        print(f"{Colors.GREEN}✔️ Inventory updated successfully for {item_name}.{Colors.RESET}")
 
     def invalid_quantity(self):
-        print(f"{self.RED}❌ Invalid quantity entered. Please enter a valid number.{self.RESET}")
+        print(f"{Colors.RED}❌ Invalid quantity entered. Please enter a valid number.{Colors.RESET}")
 
     def welcome_message(self):
-        print(f"{self.BLUE} 😀 Welcome to the Order Management System! Please follow the prompts to continue.😜{self.RESET}")
+        print(f"{Colors.BLUE} 😀 Welcome to the Order Management System! Please follow the prompts to continue.😜{Colors.RESET}")
 
     def exit_message(self):
-        print(f"{self.BLUE} 😀 Thank you for using the Order Management System. Goodbye!{self.RESET}")
+        print(f"{Colors.BLUE} 😀 Thank you for using the Order Management System. Goodbye!{Colors.RESET}")
 
     def generate_message(self, e):
-        print(f"{self.RED}❌ Error generating order ID: {e}{self.RESET}")
+        print(f"{Colors.RED}❌ Error generating order ID: {e}{Colors.RESET}")
     
     def no_items_in_order(self):
-        print(f"{self.RED} ❌ No items were added to the order. Order cannot be placed.{self.RESET}")
+        print(f"{Colors.RED} ❌ No items were added to the order. Order cannot be placed.{Colors.RESET}")
 
     
     
