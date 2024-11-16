@@ -32,19 +32,22 @@ def validate_quantity( quantity):
     return None
 
 def validate_price(price):
+    # Check if price is empty or blank
     if not price.strip():
         return "Price cannot be blank."
-    if any(char.isalpha() for char in price):
-        return "Price cannot contain letters."
-    if any(not char.isdigit() and char != '.' for char in price):
-        return "Price cannot contain special characters."
-    try:
-        price_value = float(price)
-        if price_value < 0:
-            return "Price cannot be negative."
-    except ValueError:
-        return "Price must be a valid number."
-    return None
+    
+    # Check if price contains only digits
+    if not price.isdigit():
+        return "Price must be a positive integer."
+    
+    # Convert to integer and check if it's non-negative
+    price_value = int(price)
+    if price_value < 0:
+        return "Price cannot be negative."
+    
+    # If valid, return the integer price value
+    return price_value
+
 
 
 # def validate_item_id(item_id):
@@ -82,6 +85,7 @@ def validate_email( email):
     # Ensure at least one character between "@" and "."
     if dot_index - at_index < 2:
         return "Invalid email format."
+    
     return None
 
 def validate_date_of_birth(dob):

@@ -21,13 +21,13 @@ class Menu_Message:
 
     def print_menu_header(self):
         print(f"\n{Colors.BLUE}Menu:{Colors.RESET}")
-        header = f"{'ID':<10}{'Name':<30}{'Prices':<40}{'Ingredients':<50}"
+        header = f"{Colors.CYAN}{'ID':<10}{'Name':<30}{'Prices':<40}{'Ingredients':<50{Colors.RESET}}"
         print(f"{Colors.BRIGHT_CYAN}{header}{Colors.RESET}")
         print(f"{Colors.BLUE}{'=' * 130}{Colors.RESET}")
 
     def print_category_header(self, category):
         print(f"\n{Colors.YELLOW}Category: {category}{Colors.RESET}")
-        print(f"{Colors.YELLOW}{'-' * 130}{Colors.RESET}")
+        print(f"{Colors.BRIGHT_MAGENTA}{'-' * 130}{Colors.RESET}")
 
     def print_item_details(self, item_id, item_name, price_details, ingredients):
         print(f"{Colors.YELLOW}{item_id:<10}{item_name:<30}{price_details:<40}{ingredients:<50}{Colors.RESET}")

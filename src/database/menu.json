@@ -280,7 +280,7 @@
                 "item id": "DR01",
                 "item name": "Mango Lassi",
                 "prices": {
-                    "price": ""
+                    "price": "40"
                 },
                 "ingredients": [
                     "mango",
@@ -362,7 +362,8 @@
                 "item id": "RI01",
                 "item name": "Steamed Rice",
                 "prices": {
-                    "price": ""
+                    "half": 70,
+                    "full": 120
                 },
                 "ingredients": [
                     "rice"
@@ -445,10 +446,12 @@
                 "item id": "RI06",
                 "item name": "Carrot Rice",
                 "prices": {
-                    "half": "60",
-                    "full": "100"
+                    "half": 60,
+                    "full": 80
                 },
-                "ingredients": []
+                "ingredients": [
+                    "carrot"
+                ]
             }
         ],
         "Roti": [
@@ -539,9 +542,9 @@
                 "item id": "RO06",
                 "item name": "Rumali Roti",
                 "prices": {
-                    "price": ""
+                    "single": 80
                 },
-                "ingredients": []
+                "ingredients": "------------"
             }
         ],
         "Paratha": [

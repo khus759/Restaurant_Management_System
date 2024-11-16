@@ -1,8 +1,8 @@
-
+from Src.Utility.color import Colors
 def ask_for_dashboard():
     while True:
-        print('\n1 BACK TO  DASHBOARD')
-        print('2 LOGOUT')
+        print(f'\n{Colors.BRIGHT_MAGENTA}1 BACK TO  DASHBOARD')
+        print(f'2 LOGOUT{Colors.RESET}')
         choise = input('please choose a option : ')
         if(choise == '1'):
             return True 

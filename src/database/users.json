@@ -1,118 +1,47 @@
 [
     {
-        "id": "03FEB83F",
-        "name": "Anand Soni",
-        "email": "anand123@gmail.com",
-        "password": "An2003",
-        "phone": "8541067731",
-        "role": "Staff",
-        "date_of_birth": "2003-01-15"
-    },
-    {
-        "id": "E73CA31A",
-        "name": "Khushi Gupta",
-        "email": "khushi123@gmail.com",
-        "password": "Kh2004",
+        "id": "C51D2CE7",
+        "name": "khushi",
+        "email": "khus123@gmail.com",
+        "password": "khus2004",
         "phone": "8541067761",
         "role": "Owner",
-        "date_of_birth": "2004-02-25"
+        "date_of_birth": "2005-2-25"
     },
     {
-        "id": "622292E2",
-        "name": "Nisha Modi",
-        "email": "nisha123@gmail.com",
-        "password": "Ni2004",
-        "phone": "8292009486",
+        "id": "9835A6B8",
+        "name": "anand",
+        "email": "and123@gmail.com",
+        "password": "ana2003",
+        "phone": "8541067731",
         "role": "Staff",
-        "date_of_birth": "2004-03-08"
+        "date_of_birth": "2003-1-15"
     },
     {
-        "id": "A4B92456",
-        "name": "Roshni Singh",
-        "email": "roshni123@gmail.com",
-        "password": "Ro2002",
-        "phone": "8797640473",
+        "id": "AF7C0EA6",
+        "name": "nisha",
+        "email": "nish123@gmail.com",
+        "password": "nisha2004",
+        "phone": "8765432215",
         "role": "Staff",
-        "date_of_birth": "2002-12-05"
+        "date_of_birth": "2004-3-11"
     },
     {
-        "id": "EE6DAB48",
-        "name": "Mazda",
-        "email": "mazda123@gmail.com",
-        "password": "Ma2001",
-        "phone": "8409990229",
-        "role": "Staff",
-        "date_of_birth": "2001-05-04"
-    },
-    {
-        "id": "8F9C8BE1",
-        "name": "Amit Singh",
-        "email": "amit123@gmail.com",
-        "password": "Am2000",
-        "phone": "6363546418",
-        "role": "Staff",
-        "date_of_birth": "2000-09-09"
-    },
-    {
-        "id": "444C76EC",
-        "name": "Indramani",
-        "email": "mani123@gmail.com",
-        "password": "Ma2001",
-        "phone": "6207547440",
-        "role": "Staff",
-        "date_of_birth": "2001-06-07"
-    },
-    {
-        "id": "81BA01EA",
-        "name": "Faiz",
-        "email": "faiz123@gmail.com",
-        "password": "Fa2006",
-        "phone": "9431255424",
-        "role": "Staff",
-        "date_of_birth": "2006-04-18"
-    },
-    {
-        "id": "33FE3B91",
-        "name": "Zaib Khan",
-        "email": "zaib123@gmail.com",
-        "password": "Za1998",
-        "phone": "9801948741",
-        "role": "Staff",
-        "date_of_birth": "1998-08-15"
-    },
-    {
-        "id": "4869327A",
-        "name": "Priyanshu Rajput",
-        "email": "priyanshu123@gmail.com",
-        "password": "Pr2004",
-        "phone": "7255965594",
-        "role": "Staff",
-        "date_of_birth": "2004-06-20"
-    },
-    {
-        "id": "714C4C8D",
-        "name": "Vimal",
-        "email": "vimal123@gmail.com",
-        "password": "Vi2000",
-        "phone": "8923273908",
-        "role": "Staff",
-        "date_of_birth": "2000-08-14"
-    },
-    {
-        "id": "1327782C",
-        "name": "Aastha",
-        "email": "aashtha123@gmail.com",
-        "password": "202020",
+        "id": "DD0150DD",
+        "name": "khushi",
+        "email": "kani123@gmail.com",
+        "password": "khus2004",
         "phone": "9876543321",
         "role": "Staff",
-        "date_of_birth": "2000-2-2"
+        "date_of_birth": "2000-1-2"
     },
     {
-        "id": "D5FFD3C5",
-        "name": "sita",
-        "email": "sita123@gmail.com",
-        "password": "9990000",
-        "phone": "8765432215",
-        "date_of_birth": "2000-2-4"
+        "id": "CAE5343B",
+        "name": "roshni",
+        "email": "rosh123@gmail.com",
+        "password": "rosh123",
+        "phone": "8765432214",
+        "role": "Staff",
+        "date_of_birth": "2000-3-14"
     }
 ]

@@ -28,9 +28,9 @@ def main():
     auth_system = AuthSystem()
     
     while True:
-        print(f"{Colors.BRIGHT_MAGENTA}{'-'*80}")
-        print(f"🍕☕👩‍🍳 {Colors.YELLOW}********* Welcome to the Taste of Tradition Restaurant *********{Colors.RESET}🍽️ 🍔🍲🍝")
-        print(f"{Colors.BRIGHT_MAGENTA}{'-'*80}{Colors.RESET}")
+        print(f"{Colors.BRIGHT_MAGENTA}{'='*80}")
+        print(f"{Colors.YELLOW}********* Welcome to the Taste of Tradition Restaurant *********{Colors.RESET}")
+        print(f"{Colors.BRIGHT_MAGENTA}{'='*80}{Colors.RESET}")
         auth_system.welcome_system()
         print(f"\n{Colors.GREEN}1. Signup")
         print("2. Login")

@@ -32,3 +32,23 @@ class AuthHandler:
     
     def welcome_message(self):
         print(f"{Colors.BLUE} 😀 Welcome to the Authentication Management System! Please follow the prompts to continue.😜{Colors.RESET}")
+
+    def no_staff_members_found(self):
+        print(f"{Colors.YELLOW}No staff members found.{Colors.RESET}")
+
+    def no_owner_exists(self):
+        print(f"{Colors.RED}No owner exists in the system. Only an owner can add staff members.{Colors.RESET}")
+
+    def staff_list_header(self):
+        print("\n" + "*" * 60)
+        print(f"{Colors.BLUE}** List of All Staff Members **".center(60) + Colors.RESET)
+        print("*" * 60)
+        print("-" * 115)
+        print(f"{Colors.CYAN}{'No.':<5} | {'ID':<15} | {'Name':<20} | {'Email':<25} | {'Phone':<15} | {'Date of Birth':<15} |{Colors.RESET}")
+        print("-" * 115)
+
+    def display_staff_member(self, index, staff):
+        print(f"{Colors.GREEN}{index:<5} | {staff['id']:<15} | {staff['name']:<20} | {staff['email']:<25} | {staff['phone']:<15} | {staff['date_of_birth']:<15} |{Colors.RESET}")
+
+    def staff_list_footer(self):
+        print("-" * 115)

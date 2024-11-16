@@ -1,15 +1,5 @@
-# Define color codes
-class Colors:
-    HEADER = "\033[95m"
-    CYAN = "\033[96m"
-    GREEN = "\033[92m"
-    YELLOW = "\033[93m"
-    RED = "\033[91m"
-    BLUE = "\033[94m"
-    RESET = "\033[0m"
-    BRIGHT_MAGENTA = "\033[95m"
-    BRIGHT_CYAN = "\033[96m"
-    BRIGHT_BLUE = "\033[94m"
+from Src.Utility.color import Colors
+color = Colors()
 
 def display_main_menu():
     print(f"{Colors.CYAN}{'-'*50}")
@@ -22,7 +12,7 @@ def display_main_menu():
     print("5. Staff Management")
     print("6. Reports")
     print("7. Show All Staff")
-    print(f"{Colors.RED}{'='*4}7. Logout{'='*4}{Colors.RESET}")
+    print(f"{Colors.RED}{'='*4}8. Logout{'='*4}{Colors.RESET}")
 
 def display_staff_menu():
     print(f"{Colors.CYAN}{'-'*50}")
@@ -37,7 +27,7 @@ def display_staff_menu():
 
 def display_menu_management():
     print(f"{Colors.BRIGHT_BLUE}{'-'*40}")
-    print(f"{'*'*5}🍜 🥂MENU MANAGEMENT🍟 🥘{'*'*5}")
+    print(f"{'*'*5}MENU MANAGEMENT{'*'*5}")
     print(f"{'-'*40}{Colors.RESET}")
     print(f"\n{Colors.BRIGHT_CYAN}1. Add Item")
     print("2. Update Item")
@@ -49,7 +39,7 @@ def display_menu_management():
 
 def display_order_management():
     print(f"{Colors.BRIGHT_MAGENTA}{'-'*40}")
-    print(f"{'*'*5}🌭 🌮 ORDER MANAGEMENT{'*'*5}🍱 🍹")
+    print(f"{'*'*5} ORDER MANAGEMENT{'*'*5}")
     print(f"{'-'*40}{Colors.RESET}")
     print(f"\n{Colors.CYAN}1. Show Menu")
     print("2. Take New Order")
@@ -62,7 +52,7 @@ def display_order_management():
 
 def display_invoice_management():
     print(f"{Colors.BRIGHT_BLUE}{'-'*40}")
-    print(f"{'*'*5}💳 💵INVOICE MANAGEMENT🎫 🧾{'*'*5}")
+    print(f"{'*'*5}INVOICE MANAGEMENT{'*'*5}")
     print(f"{'-'*40}{Colors.RESET}")
     print(f"\n{Colors.CYAN}1. Generate Bill")
     print("2. Check Bill")
@@ -73,7 +63,7 @@ def display_invoice_management():
 
 def display_table_booking_management():
     print(f"{Colors.CYAN}{'-'*45}")
-    print(f"{'*'*5}🪑📅TABLE BOOKING MANAGEMENT 🍽️ 🕒{'*'*5}")
+    print(f"{'*'*5}TABLE BOOKING MANAGEMENT {'*'*5}")
     print(f"{'-'*45}{Colors.RESET}")
     print(f"\n{Colors.GREEN}1. Reserve a Table")
     print("2. Cancel a Reservation")
@@ -85,7 +75,7 @@ def display_table_booking_management():
 
 def display_stock_management():
     print(f"{Colors.CYAN}{'-'*40}")
-    print(f"{'*'*5}🍅 🥦 📊 Reports 🌽🥕 {'*'*5}")
+    print(f"{'*'*5} Reports {'*'*5}")
     print(f"{'-'*40}{Colors.RESET}")
     print(f"\n{Colors.BRIGHT_MAGENTA}1. Soon_Stockout_Ingredients")
     print("2. Show Reservation By Date")
@@ -94,7 +84,7 @@ def display_stock_management():
 
 def display_staff_management():
     print(f"{Colors.BRIGHT_BLUE}{'-'*40}")
-    print(f"{'*'*5}👨‍🍳 🛎️ Staff Management 👩‍🍳 🍽️ {'*'*5}")
+    print(f"{'*'*5} Staff Management  {'*'*5}")
     print(f"{'-'*40}{Colors.RESET}")
     print(f"\n{Colors.BRIGHT_CYAN}1. Add Employee  ")
     print("2. Display Profile")
