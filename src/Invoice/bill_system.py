@@ -9,7 +9,7 @@ from Src.Utility.validation import *
 from Src.Utility.user_input import get_valid_input
 
 class BillingSystem:
-    def _init_(self):
+    def __init__(self):
         self.orders = self.load_orders()
         self.bills = self.load_bills()
         self.bill_handler = BillingHandler()
