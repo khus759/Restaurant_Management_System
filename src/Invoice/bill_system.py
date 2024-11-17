@@ -1,4 +1,3 @@
-
 import json
 import datetime
 from Src.Invoice.order import Order
@@ -10,7 +9,7 @@ from Src.Utility.validation import *
 from Src.Utility.user_input import get_valid_input
 
 class BillingSystem:
-    def __init__(self):
+    def _init_(self):
         self.orders = self.load_orders()
         self.bills = self.load_bills()
         self.bill_handler = BillingHandler()
@@ -41,7 +40,7 @@ class BillingSystem:
             json.dump(self.bills, file, indent=4)
 
     def generate_bill(self):
-        order_id = get_valid_input("Enter Order ID to generate bill: ",validate_order_id).capitalize()
+        order_id = get_valid_input("Enter Order ID to generate bill: ", validate_order_id)
         order = next((order for order in self.orders if order.order_id == order_id), None)
         if not order:
             self.bill_handler.display_order_not_found(order_id)
@@ -58,7 +57,7 @@ class BillingSystem:
         return bill.to_dict()
 
     def check_bill(self):
-        billing_id = get_valid_input("Enter Billing ID to check bill: ",validate_billing_id).upper()
+        billing_id = get_valid_input("Enter Billing ID to check bill: ", validate_billing_id)
         bill = next((bill for bill in self.bills if bill["billing_id"] == billing_id), None)
         if not bill:
             self.bill_handler.display_billing_id_not_found(billing_id)
@@ -73,7 +72,7 @@ class BillingSystem:
             self.bill_handler.print_bill(bill)
 
     def mark_as_paid(self):
-        billing_id = get_valid_input("Enter Billing ID to mark as paid: ",validate_billing_id).upper()
+        billing_id = get_valid_input("Enter Billing ID to mark as paid: ", validate_billing_id)
         bill = next((bill for bill in self.bills if bill["billing_id"] == billing_id), None)
         if not bill:
             self.bill_handler.display_billing_id_not_found(billing_id)
@@ -81,17 +80,31 @@ class BillingSystem:
         if bill["status"] == "Paid":
             self.bill_handler.display_bill_paid_already()
             return
+        
+        # Display the total amount due for the bill
+        print(f"Total Amount for Billing ID {billing_id}: ₹{bill['total']:.2f}")
+        
+        # Prompt for payment type
         payment_type = input("Enter Payment Type (Online/Cash): ").capitalize()
         if payment_type not in ["Online", "Cash"]:
             self.bill_handler.display_invalid_payment_type()
             return
+        
+        # Display the required payment amount
+        print(f"Payment Amount Required: ₹{bill['total']:.2f}")
+        
+        # Prompt for payment amount and validate it
         payment_amount = float(input("Enter Payment Amount: ₹"))
         if payment_amount != bill["total"]:
             self.bill_handler.display_payment_amount_mismatch()
             return
+        
+        # Mark the bill as paid
         bill["status"] = "Paid"
         bill["payment_type"] = payment_type
-        bill["payment_date"] = datetime.datetime.now().strftime("%d-%b-%Y %I:%M:%p")
+        #bill["payment_date"] = datetime.datetime.now().strftime("%d-%b-%Y %I:%M:%p")
+        bill["payment_date"] = datetime.now().strftime("%d-%b-%Y %I:%M:%p")
+
         self.save_bills()
         self.bill_handler.display_payment_success(billing_id)
 

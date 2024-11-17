@@ -3,7 +3,7 @@ color = Colors()
 
 def display_main_menu():
     print(f"{Colors.LIGHT_CORAL}{'-'*50}")
-    print("\t============ Owner Dashboard ============")
+    print("============ Owner Dashboard ============")
     print(f"{'-'*50}{Colors.RESET}")
     print(f"\n{Colors.LIGHT_TEAL}1. Menu Management")
     print("2. Order Management")
@@ -16,7 +16,7 @@ def display_main_menu():
 
 def display_staff_menu():
     print(f"{Colors.LIGHT_TEAL}{'-'*50}")
-    print("\t============ Staff Dashboard ============")
+    print("============ Staff Dashboard ============")
     print(f"{'-'*50}{Colors.RESET}")
     print(f"\n{Colors.LIGHT_ORANGE}1. Order Management")
     print("2. Invoice Management")
@@ -54,7 +54,7 @@ def display_invoice_management():
     print(f"{Colors.LIGHT_ORANGE}{'-'*40}")
     print(f"\t{'*'*5}INVOICE MANAGEMENT{'*'*5}")
     print(f"{'-'*40}{Colors.RESET}")
-    print(f"\n{Colors.LIGHT_BLUE}1. Generate Bill")
+    print(f"\n{Colors.LIGHT_PEACH}1. Generate Bill")
     print("2. Check Bill")
     print("3. Show All Bills")
     print("4. Mark Bill as Paid")
@@ -87,10 +87,10 @@ def display_staff_management():
     print(f"{Colors.LIGHT_SKY_BLUE}{'-'*40}")
     print(f"\t{'*'*5} Staff Management  {'*'*5}")
     print(f"{'-'*40}{Colors.RESET}")
-    print(f"\n{Colors.LIGHT_GREEN}1. Add Employee  ")
+    print(f"\n{Colors.LIGHT_VIOLET}1. Add Employee  ")
     print("2. Display Profile")
     print("3. Update Profile")
     print("4. Delete Employee")
-    print(f"{Colors.LIGHT_PEACH}5. Display All Profiles")
+    print(f"5. Display All Profiles{Colors.RESET}")
     print(f"{Colors.LIGHT_VIOLET}6. EXIT {Colors.RESET}")
          

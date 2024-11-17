@@ -1,5 +1,3 @@
-
-
 from Src.Messages.staff import (
     invalid_credentials,
     employee_added,
@@ -29,11 +27,28 @@ class StaffManagementSystem:
         return None
 
     def add_employee(self):
-        user = self.authenticate_user()
+        user_id = input("Enter User ID: ").strip()
+
+        # Check if user ID exists in user.json
+        users = load_data(users_file)
+        user = next((u for u in users if u['id'] == user_id), None)
         if not user:
+            print("User ID not found. Please try again.")
             return
 
-        gender = input("Enter gender (Male/Female/Other): ").strip().capitalize()
+        # Check if user ID already exists in employee.json
+        employees = load_data(employee_file)
+        if any(emp['id'] == user_id for emp in employees):
+            print("Employee with this User ID already exists.")
+            return
+
+        while True:
+            gender = input("Enter gender (Male/Female/Other): ").strip().capitalize()
+            if gender in ["Male", "Female", "Other"]:
+                break
+            else:
+                print("Invalid input. Please enter 'Male', 'Female', or 'Other'.")
+
         employee = Employee(
             id=user['id'],
             name=user['name'],
@@ -44,6 +59,7 @@ class StaffManagementSystem:
             role=user['role'],
             gender=gender
         )
+
         employee.designation = input("Enter designation: ").title()
         employee.country = input("Enter country: ").title()
         employee.state = input("Enter state: ").title()
@@ -53,7 +69,6 @@ class StaffManagementSystem:
         employee.joining_date = get_valid_input("Enter joining date (YYYY-MM-DD): ", validate_date_of_birth)
         employee.salary = input("Enter salary: ")
 
-        employees = load_data(employee_file)
         employees.append(employee.to_dict())
         save_data(employee_file, employees)
         employee_added()
@@ -113,9 +128,9 @@ class StaffManagementSystem:
 
         for i, emp in enumerate(employees, start=1):
             display_all_profiles(emp, i)
-    
+
     def exit_system(self):
         exit_message()
-    
+
     def welcome_system(self):
         welcome_message()

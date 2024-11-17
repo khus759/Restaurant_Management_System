@@ -218,5 +218,25 @@
         "salary": "30000",
         "status": "active",
         "resign_date": null
+    },
+    {
+        "id": "CAE5343B",
+        "name": "roshni",
+        "email": "rosh123@gmail.com",
+        "password": "rosh123",
+        "phone": "8765432214",
+        "date_of_birth": "2000-3-14",
+        "role": "Staff",
+        "gender": "Female",
+        "designation": "Chef",
+        "country": "India",
+        "state": "Bihar",
+        "district": "Gopalganj",
+        "city_village": "Thave",
+        "pincode": "841438",
+        "joining_date": "2004-12-21",
+        "salary": "20000",
+        "status": "active",
+        "resign_date": null
     }
 ]
