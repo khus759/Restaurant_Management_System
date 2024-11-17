@@ -75,8 +75,8 @@ class BookingHandler:
             print(f"{Colors.YELLOW}No canceled reservations found for the specified date or month.{Colors.RESET}")
     
     def welcome_message(self):
-        print(f"{Colors.BLUE} 😀 Welcome to the Booking Management System! Please follow the prompts to continue.😜{Colors.RESET}")
+        print(f"{Colors.LIGHT_CORAL} 😀 Welcome to the Booking Management System! Please follow the prompts to continue.😜{Colors.RESET}")
 
     def exit_message(self):
-        print(f"{Colors.BLUE} 😀 Thank you for using the Booking Management System. Goodbye!{Colors.RESET}")
+        print(f"{Colors.LIGHT_VIOLET} 😀 Thank you for using the Booking Management System. Goodbye!{Colors.RESET}")
  

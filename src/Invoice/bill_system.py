@@ -1,10 +1,9 @@
 import json
-import datetime
+from datetime import datetime
 from Src.Invoice.order import Order
 from Src.Invoice.bill import Bill
 from Src.Messages.invoice import BillingHandler
-from Src.Utility.path_manager import order_file
-from Src.Utility.path_manager import bill_file
+from Src.Utility.path_manager import order_file, bill_file
 from Src.Utility.validation import *
 from Src.Utility.user_input import get_valid_input
 
@@ -82,28 +81,35 @@ class BillingSystem:
             return
         
         # Display the total amount due for the bill
-        print(f"Total Amount for Billing ID {billing_id}: ₹{bill['total']:.2f}")
-        
-        # Prompt for payment type
-        payment_type = input("Enter Payment Type (Online/Cash): ").capitalize()
-        if payment_type not in ["Online", "Cash"]:
-            self.bill_handler.display_invalid_payment_type()
-            return
+        self.bill_handler.display_required_payment_amount(bill["total"])
+
+
+        # Loop to ensure a valid payment type
+        while True:
+            payment_type = input("Enter Payment Type (Online/Cash): ").capitalize()
+            if payment_type in ["Online", "Cash"]:
+                break
+            else:
+                self.bill_handler.display_invalid_payment_type()
         
         # Display the required payment amount
-        print(f"Payment Amount Required: ₹{bill['total']:.2f}")
+        self.bill_handler.display_required_payment_amount(bill["total"])
         
-        # Prompt for payment amount and validate it
-        payment_amount = float(input("Enter Payment Amount: ₹"))
-        if payment_amount != bill["total"]:
-            self.bill_handler.display_payment_amount_mismatch()
-            return
-        
+        # Loop to ensure correct payment amount
+        while True:
+            try:
+                payment_amount = float(input("Enter Payment Amount: ₹"))
+                if payment_amount == bill["total"]:
+                    break
+                else:
+                    self.bill_handler.display_invalid_payment_amount()
+            except ValueError:
+                self.bill_handler.display_invalid_amount_input()
+
         # Mark the bill as paid
         bill["status"] = "Paid"
         bill["payment_type"] = payment_type
-        #bill["payment_date"] = datetime.datetime.now().strftime("%d-%b-%Y %I:%M:%p")
-        bill["payment_date"] = datetime.now().strftime("%d-%b-%Y %I:%M:%p")
+        bill["payment_date"] = datetime.now().strftime("%d-%b-%Y %I:%M %p")
 
         self.save_bills()
         self.bill_handler.display_payment_success(billing_id)

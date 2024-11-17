@@ -52,7 +52,6 @@ class Report:
         print(f"❌ No orders found for the specified date: {date_input}")
     
     
-
     def show_expiring_ingredients_header(self,days_until_expiration):
         print(f"Ingredients Nearing Expiration in the Next {days_until_expiration} Days:")
 
@@ -87,7 +86,7 @@ class Report:
         print("No ingredients nearing expiration or low in stock to display in the summary.")
     
     def welcome_message(self):
-        print(f"{Colors.BLUE} 😀 Welcome to the Reports Management ! Please follow the prompts to continue.😜{Colors.RESET}")
+        print(f"{Colors.LIGHT_PINK} 😀 Welcome to the Reports Management ! Please follow the prompts to continue.😜{Colors.RESET}")
 
     def exit_message(self):
-        print(f"{Colors.BLUE} 😀 Thank you for using the Reports Management. Goodbye!{Colors.RESET}")
+        print(f"{Colors.LIGHT_PEACH} 😀 Thank you for using the Reports Management. Goodbye!{Colors.RESET}")

@@ -31,7 +31,7 @@ class AuthHandler:
         print(f"{Colors.RED}An error occurred while saving users: {exception}{Colors.RESET}")
     
     def welcome_message(self):
-        print(f"{Colors.BLUE} 😀 Welcome to the Authentication Management System! Please follow the prompts to continue.😜{Colors.RESET}")
+        print(f"{Colors.LIGHT_SKY_BLUE} 😀 Welcome to the Authentication Management System! Please follow the prompts to continue.😜{Colors.RESET}")
 
     def no_staff_members_found(self):
         print(f"{Colors.YELLOW}No staff members found.{Colors.RESET}")

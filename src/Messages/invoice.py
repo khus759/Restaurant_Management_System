@@ -85,7 +85,23 @@ class BillingHandler:
         print(f"{Colors.YELLOW}-{Colors.RESET}" * 50)
     
     def welcome_message(self):
-        print(f"{Colors.BLUE} 😀 Welcome to the Invoice System! Please follow the prompts to continue.{Colors.RESET}")
+        print(f"{Colors.LIGHT_CORAL} 😀 Welcome to the Invoice System! Please follow the prompts to continue.{Colors.RESET}")
 
     def exit_message(self):
-        print(f"{Colors.BLUE} 😀 Thank you for using the Invoice System. Goodbye!{Colors.RESET}")
+        print(f"{Colors.LIGHT_LIME} 😀 Thank you for using the Invoice System. Goodbye!{Colors.RESET}")
+    
+    def display_required_payment_amount(self, total):
+        print(f"Payment Amount Required: ₹{total:.2f}")
+    
+    def display_total_amount(self, billing_id, total):
+        print(f"Total Amount for Billing ID {billing_id}: ₹{total:.2f} Only")
+
+    def display_invalid_payment_amount(self):
+        print("❌ Payment amount mismatch. Please enter the exact amount.")
+
+    def display_invalid_amount_input(self):
+        print("❌ Invalid amount. Please enter a numeric value.")
+
+    def prompt_payment_type(self):
+        return input("Enter Payment Type (Online/Cash): ").capitalize()
+

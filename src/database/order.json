@@ -21,7 +21,8 @@
         ],
         "total_order_price": 450.0,
         "order_date": "11-Nov-2024 10:27:PM",
-        "status": "Billed"
+        "status": "Billed",
+        "user_email": null
     },
     {
         "order_id": "8824ff",
@@ -59,7 +60,8 @@
         ],
         "total_order_price": 450.0,
         "order_date": "12-Nov-2024 12:03:PM",
-        "status": "Billed"
+        "status": "Billed",
+        "user_email": null
     },
     {
         "order_id": "7a0140",
@@ -76,7 +78,8 @@
         ],
         "total_order_price": 220.0,
         "order_date": "12-Nov-2024 04:08:PM",
-        "status": "Processing"
+        "status": "Processing",
+        "user_email": null
     },
     {
         "order_id": "da6852",
@@ -100,7 +103,8 @@
         ],
         "total_order_price": 305.0,
         "order_date": "12-Nov-2024 04:13:PM",
-        "status": "Billed"
+        "status": "Billed",
+        "user_email": null
     },
     {
         "order_id": "628add",
@@ -124,7 +128,8 @@
         ],
         "total_order_price": 585.0,
         "order_date": "12-Nov-2024 04:16:PM",
-        "status": "Billed"
+        "status": "Billed",
+        "user_email": null
     },
     {
         "order_id": "eddc56",
@@ -155,7 +160,8 @@
         ],
         "total_order_price": 775.0,
         "order_date": "12-Nov-2024 04:17:PM",
-        "status": "Billed"
+        "status": "Billed",
+        "user_email": null
     },
     {
         "order_id": "798f8b",
@@ -164,7 +170,8 @@
         "order_items": [],
         "total_order_price": 0,
         "order_date": "14-Nov-2024 04:25:PM",
-        "status": "Processing"
+        "status": "Processing",
+        "user_email": null
     },
     {
         "order_id": "ee5ca2",
@@ -173,7 +180,8 @@
         "order_items": [],
         "total_order_price": 0,
         "order_date": "15-Nov-2024 07:30:PM",
-        "status": "Processing"
+        "status": "Processing",
+        "user_email": null
     },
     {
         "order_id": "e3a1b0",
@@ -190,7 +198,8 @@
         ],
         "total_order_price": 120,
         "order_date": "16-Nov-2024 09:06:AM",
-        "status": "Processing"
+        "status": "Processing",
+        "user_email": null
     },
     {
         "order_id": "0a7820",
@@ -221,7 +230,8 @@
         ],
         "total_order_price": 490,
         "order_date": "17-Nov-2024 06:45:AM",
-        "status": "Billed"
+        "status": "Billed",
+        "user_email": null
     },
     {
         "order_id": "5d3d93",
@@ -238,13 +248,13 @@
         ],
         "total_order_price": 60,
         "order_date": "17-Nov-2024 12:13:PM",
-        "status": "Billed"
+        "status": "Billed",
+        "user_email": null
     },
     {
         "order_id": "2dcc26",
         "customer_name": "sweta",
         "mobile_number": "8765432219",
-        "user_email": "khus123@gmail.com",
         "order_items": [
             {
                 "item_id": "DR03",
@@ -256,7 +266,8 @@
         ],
         "total_order_price": 60,
         "order_date": "17-Nov-2024 05:22:PM",
-        "status": "Processing"
+        "status": "Billed",
+        "user_email": "khus123@gmail.com"
     },
     {
         "order_id": "8131b3",
@@ -280,7 +291,7 @@
         ],
         "total_order_price": 160,
         "order_date": "17-Nov-2024 06:01:PM",
-        "status": "Processing",
+        "status": "Billed",
         "user_email": "khus123@gmail.com"
     }
 ]

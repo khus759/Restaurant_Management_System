@@ -156,9 +156,9 @@
         "subtotal": 775.0,
         "gst": 139.5,
         "total": 914.5,
-        "status": "Billed",
-        "payment_type": null,
-        "payment_date": null
+        "status": "Paid",
+        "payment_type": "Online",
+        "payment_date": "17-Nov-2024 09:14 PM"
     },
     {
         "billing_id": "c634b9",
@@ -191,9 +191,9 @@
         "subtotal": 490,
         "gst": 88.2,
         "total": 578.2,
-        "status": "Billed",
-        "payment_type": null,
-        "payment_date": null
+        "status": "Paid",
+        "payment_type": "Cash",
+        "payment_date": "17-Nov-2024 09:44 PM"
     },
     {
         "billing_id": "e1cba4",
@@ -215,5 +215,55 @@
         "status": "Paid",
         "payment_type": "Cash",
         "payment_date": "17-Nov-2024 12:43:PM"
+    },
+    {
+        "billing_id": "1673a5",
+        "order_id": "8131b3",
+        "customer_name": "anandiii",
+        "billing_date": "17-Nov-2024 08:30:PM",
+        "items": [
+            {
+                "item_id": "RO01",
+                "item_name": "Tandoori Roti",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 40
+            },
+            {
+                "item_id": "DR06",
+                "item_name": "Orange Juice",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 120
+            }
+        ],
+        "subtotal": 160,
+        "gst": 28.799999999999997,
+        "total": 188.8,
+        "status": "Paid",
+        "payment_type": "Cash",
+        "payment_date": "17-Nov-2024 08:32:PM"
+    },
+    {
+        "billing_id": "5e8208",
+        "order_id": "2dcc26",
+        "customer_name": "sweta",
+        "billing_date": "17-Nov-2024 08:55:PM",
+        "items": [
+            {
+                "item_id": "DR03",
+                "item_name": "Masala Chai",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 60
+            }
+        ],
+        "subtotal": 60,
+        "gst": 10.799999999999999,
+        "total": 70.8,
+        "status": "Billed",
+        "payment_type": null,
+        "payment_date": null,
+        "user_email": null
     }
 ]
