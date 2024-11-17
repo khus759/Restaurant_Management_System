@@ -90,3 +90,13 @@ class Report:
 
     def exit_message(self):
         print(f"{Colors.LIGHT_PEACH} 😀 Thank you for using the Reports Management. Goodbye!{Colors.RESET}")
+    
+    # def show_most_least_ordered(self, most_ordered_item, least_ordered_item):
+    #     print("\nMost Ordered Item:")
+    #     print(f"  Item: {most_ordered_item['item_name']} - Ordered {most_ordered_item['quantity']} times")
+
+    #     print("\nLeast Ordered Item:")
+    #     print(f"  Item: {least_ordered_item['item_name']} - Ordered {least_ordered_item['quantity']} times")
+
+    def show_most_least_ordered(self, item_name, quantity):
+     print(f"  Item: {item_name} - Ordered {quantity} times")
