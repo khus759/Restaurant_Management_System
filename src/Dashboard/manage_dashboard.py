@@ -18,13 +18,13 @@ def main():
     auth_system = AuthSystem()
     
     while True:
-        print(f"{Colors.BRIGHT_MAGENTA}{'='*80}")
+        print(f"{Colors.LIGHT_MAGENTA}{'='*80}{Colors.RESET}")
         print(f"{Colors.YELLOW}********* Welcome to the Taste of Tradition Restaurant *********{Colors.RESET}")
         print(f"{Colors.BRIGHT_MAGENTA}{'='*80}{Colors.RESET}")
         auth_system.welcome_system()
-        print(f"\n{Colors.GREEN}1. Signup")
-        print("2. Login")
-        print(f"3. Exit{Colors.RESET}")
+        print(f"\n{Colors.LIGHT_PINK}1. Signup{Colors.RESET}")
+        print(f"{Colors.LIGHT_PINK}2. Login{Colors.RESET}")
+        print(f"{Colors.LIGHT_PINK}3. Exit{Colors.RESET}")
 
         try:
             option = input(f"{Colors.CYAN}Choose an option: {Colors.RESET}")

@@ -32,20 +32,15 @@ def validate_quantity( quantity):
     return None
 
 def validate_price(price):
-    # Check if price is empty or blank
     if not price.strip():
         return "Price cannot be blank."
-    
-    # Check if price contains only digits
     if not price.isdigit():
         return "Price must be a positive integer."
     
-    # Convert to integer and check if it's non-negative
     price_value = int(price)
     if price_value < 0:
         return "Price cannot be negative."
     
-    # If valid, return the integer price value
     return price_value
 
 
@@ -114,9 +109,12 @@ def parse_date_time(date_time_str):
         return datetime.strptime(date_time_str, '%Y-%m-%d %I:%M %p')
     except ValueError:
         return None
-
+    
 def validate_booking_date_time(date_time_str):
     """Validate the reservation date and time."""
+    if not date_time_str.strip():
+        return "Date-time input cannot be blank."
+    
     reservation_time = parse_date_time(date_time_str)
     if not reservation_time:
         return "Invalid date-time format. Please use 'YYYY-MM-DD HH:MM AM/PM'."
@@ -127,39 +125,52 @@ def validate_booking_date_time(date_time_str):
 
     if reservation_time.strftime('%A') in HOLIDAYS:
         return "Restaurant is closed on the selected day."
-
+    
     if not (OPENING_TIME <= reservation_time.hour < CLOSING_TIME):
         return "Reservation time must be between 10 AM and 10 PM."
     
     return None
 
 def validate_seats(seats):
-    try:
-        seats = int(seats)
-        if seats <= 0:
-            return "Seats must be a positive number."  # Ensures only positive numbers are valid
-        return seats
-    except ValueError:
-        return "Invalid input. Please enter a valid number of seats."
+    if not seats.strip():
+        return "Seats input cannot be blank."
+    if not seats.isdigit():
+        return "Invalid input. Please enter a valid number of seats without letters or special characters."
+    seats = int(seats)
+    if seats <= 0:
+        return "Seats must be a positive number."
+    return seats
 
 def validate_booking_id(booking_id):
     """Validate that the booking ID is not blank."""
     if not booking_id.strip():  
         return "Booking ID cannot be blank."
-    return None  
+    if not all(char.isalnum() for char in booking_id):
+        return "Booking ID can only contain letters and numbers, no special characters."
+    return None
 
+def validate_billing_id(billing_id):
+    if not billing_id.strip():  
+        return "Billing ID cannot be blank."
+    if not all(char.isalnum() for char in billing_id):
+        return "Billing ID can only contain letters and numbers, no special characters."
+    return None
+
+def validate_order_id(order_id):
+    if not order_id.strip():  
+        return "Order ID cannot be blank."
+    if not all(char.isalnum() for char in order_id):
+        return "Order ID can only contain letters and numbers, no special characters."
+    return None      
 
 def validate_category(value, menu_data):
     # Convert input to title case to match expected category format in menu_data
     value = value.title()
-
     if not value:
         return "Category cannot be blank"
     if value not in menu_data[0]:
         return "Category does not exist in menu. Please enter a valid category."
-
     return None  # No error
-
 
 def validate_item_id(item_id, menu_data, category):
     if not item_id:
@@ -181,14 +192,14 @@ def validate_ingredient_input(value):
         raise ValueError("Ingredient input cannot be blank.")
     
     # Split the ingredients by commas and strip spaces
-    ingredients = [ingredient.strip() for ingredient in value.split(',')]
+    # ingredients = [ingredient.strip() for ingredient in value.split(',')]
 
-    for ingredient in ingredients:
-        # Check if each ingredient is alphabetic and doesn't contain special characters
-        if not ingredient.isalpha():
-            raise ValueError(f"Invalid ingredient: '{ingredient}'. Ingredients should only contain letters.")
+    # for ingredient in ingredients:
+    #     # Check if each ingredient is alphabetic and doesn't contain special characters
+    #     if not ingredient.isalpha():
+    #         raise ValueError(f"Invalid ingredient: '{ingredient}'. Ingredients should only contain letters.")
     
-    return ingredients
+    return value
 
 def validate_has_portion_sizes(value):
     """Validate if the input for portion sizes is 'yes' or 'no' and reject blank or special characters."""

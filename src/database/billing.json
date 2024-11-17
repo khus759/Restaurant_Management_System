@@ -194,5 +194,26 @@
         "status": "Billed",
         "payment_type": null,
         "payment_date": null
+    },
+    {
+        "billing_id": "e1cba4",
+        "order_id": "5d3d93",
+        "customer_name": "isha",
+        "billing_date": "17-Nov-2024 12:42:PM",
+        "items": [
+            {
+                "item_id": "RO02",
+                "item_name": "Butter Roti",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 60
+            }
+        ],
+        "subtotal": 60,
+        "gst": 10.799999999999999,
+        "total": 70.8,
+        "status": "Paid",
+        "payment_type": "Cash",
+        "payment_date": "17-Nov-2024 12:43:PM"
     }
 ]

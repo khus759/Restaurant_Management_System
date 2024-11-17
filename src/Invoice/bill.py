@@ -18,6 +18,8 @@ class Bill:
         self.payment_type = None
         self.payment_date = None
 
+
+
     def to_dict(self):
         return {
             "billing_id": self.billing_id,

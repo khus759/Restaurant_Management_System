@@ -1,14 +1,17 @@
 from datetime import datetime
-from Src.Order_management.order_data import load_menu, load_orders, save_orders, generate_order_id
+from Src.Order_management.order_data import (
+    load_menu, load_orders, save_orders, generate_order_id, load_current_user
+)
 from Src.Utility.validation import *
 from Src.Utility.user_input import get_valid_input
-from Src.Messages.order import OrderOutputHandler  
+from Src.Messages.order import OrderOutputHandler
 
 class OrderManagementSystem:
     def __init__(self):
         self.menu = load_menu()
         self.orders = load_orders()
-        self.output_handler = OrderOutputHandler()  
+        self.output_handler = OrderOutputHandler()
+        self.current_user_email = load_current_user().get('email')  # Load email of current logged-in user
 
     def take_order(self):
         customer_name = get_valid_input("Enter customer name: ", validate_name)
@@ -28,21 +31,28 @@ class OrderManagementSystem:
                 self.output_handler.item_not_found()
                 continue
 
-            # Handle size selection based on available sizes
-            size = 'single' if 'single' in item['prices'] else None
-            if 'half' in item['prices'] or 'full' in item['prices']:
+            # Handle size selection
+            if 'single' in item['prices']:
+                size = 'single'
+            elif 'half' in item['prices'] or 'full' in item['prices']:
                 size = input("Enter size (half/full): ").lower()
                 if size not in item['prices']:
                     self.output_handler.invalid_size()
                     continue
-
-            # Get price based on size
-            price = item['prices'][size] if size in item['prices'] else None
-            if price is None:
-                self.output_handler.invalid_size()
+            else:
+                print("Error: Invalid price configuration.")
                 continue
 
-            quantity = int(input("Enter quantity: "))
+            price = item['prices'][size]
+            try:
+                quantity = int(input("Enter quantity: "))
+                if quantity <= 0:
+                    print("Error: Quantity must be a positive integer.")
+                    continue
+            except ValueError:
+                print("Error: Please enter a valid integer for quantity.")
+                continue
+
             total_price = price * quantity
 
             if not self.check_stock(item, quantity):
@@ -66,10 +76,12 @@ class OrderManagementSystem:
             'order_id': order_id,
             'customer_name': customer_name,
             'mobile_number': mobile_number,
+            # 'user_email': self.current_user_email,
             'order_items': order_items,
             'total_order_price': total_order_price,
             'order_date': datetime.now().strftime('%d-%b-%Y %I:%M:%p'),
-            'status': 'Processing'
+            'status': 'Processing',
+            'user_email': self.current_user_email
         }
 
         self.orders.append(order)
@@ -155,7 +167,7 @@ class OrderManagementSystem:
                         self.output_handler.invalid_size()
                         continue
 
-                price = item['prices'].get(size, 0)
+                price = item['prices'][size]
                 quantity = int(input("Enter quantity: "))
                 total_price = price * quantity
 

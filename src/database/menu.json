@@ -280,7 +280,7 @@
                 "item id": "DR01",
                 "item name": "Mango Lassi",
                 "prices": {
-                    "price": "40"
+                    "single": 40
                 },
                 "ingredients": [
                     "mango",
@@ -355,6 +355,43 @@
                     "single": "70"
                 },
                 "ingredients": []
+            },
+            {
+                "item id": "DR07",
+                "item name": "Betroot Juice",
+                "prices": {
+                    "single": 50
+                },
+                "ingredients": [
+                    ""
+                ]
+            },
+            {
+                "item id": "DR08",
+                "item name": "Almond Milk",
+                "prices": {
+                    "single": 69
+                },
+                "ingredients": [
+                    "milk",
+                    "almond"
+                ]
+            },
+            {
+                "item id": "DR09",
+                "item name": "Grape Juice",
+                "prices": {
+                    "single": 70
+                },
+                "ingredients": "------------"
+            },
+            {
+                "item id": "DR10",
+                "item name": "Coconut Milk",
+                "prices": {
+                    "single": 80
+                },
+                "ingredients": "------------"
             }
         ],
         "Rice": [
@@ -543,6 +580,30 @@
                 "item name": "Rumali Roti",
                 "prices": {
                     "single": 80
+                },
+                "ingredients": "------------"
+            },
+            {
+                "item id": "RO07",
+                "item name": "Moti Roti",
+                "prices": {
+                    "single": 50
+                },
+                "ingredients": "------------"
+            },
+            {
+                "item id": "RO08",
+                "item name": "Moti Roti",
+                "prices": {
+                    "single": 20
+                },
+                "ingredients": "------------"
+            },
+            {
+                "item id": "RO09",
+                "item name": "Moti Roti",
+                "prices": {
+                    "single": 20
                 },
                 "ingredients": "------------"
             }

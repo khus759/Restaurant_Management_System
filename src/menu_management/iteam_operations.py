@@ -2,7 +2,7 @@ import json
 from Src.Utility.user_input import get_valid_input
 from Src.Utility.validation import (
     validate_category, validate_name, validate_price,
-    validate_ingredient_input, validate_has_portion_sizes, validate_item_id
+     validate_item_id
 )
 from Src.Messages.menu import Menu_Message
 
@@ -18,21 +18,23 @@ class ItemOperations:
         count = len(self.menu_data[0].get(category, [])) + 1
         return f"{prefix}{count:02d}"
 
+    def get_yes_no_input(self, prompt):
+        # Helper function to validate yes/no input
+        while True:
+            response = input(prompt).strip().lower()
+            if response in ['yes', 'no']:
+                return response
+            else:
+                print("Invalid input. Please enter 'yes' or 'no'.")
+
     def add_item(self):
         # Adds a new item to the menu
         category = get_valid_input("Enter category: ", lambda value: validate_category(value, self.menu_data)).title()
         item_id = self.generate_item_id(category).upper()
         name = get_valid_input("Enter item name: ", validate_name).title()
 
-        while True:
-            try:
-                has_portion_sizes = input("Does this item have half and full portions? (yes/no): ").strip().lower()
-                if has_portion_sizes in ['yes', 'no']:
-                    break
-                else:
-                    print("Invalid input. Please enter 'yes' or 'no'.")
-            except ValueError as e:
-                print(f"Error: {e}")
+        # Prompt for portion sizes with validation for "yes" or "no"
+        has_portion_sizes = self.get_yes_no_input("Does this item have half and full portions? (yes/no): ")
 
         prices = {}
         if has_portion_sizes == 'yes':
@@ -41,11 +43,12 @@ class ItemOperations:
         else:
             prices["single"] = int(get_valid_input("Enter item price (integer): ", validate_price))
 
-        add_ingredients = input("Would you like to add ingredients? (yes/no): ").strip().lower()
+        # Prompt for adding ingredients with validation
+        add_ingredients = self.get_yes_no_input("Would you like to add ingredients? (yes/no): ")
         ingredients = []
         if add_ingredients == 'yes':
-            ingredients_input = get_valid_input("Enter ingredients (comma-separated): ", validate_ingredient_input).strip()
-            ingredients = [ingredient.strip() for ingredient in ingredients_input.split(',')]
+            ingredients_input = input("Enter ingredients (comma-separated): ").strip()
+            ingredients = [ingredient.strip() for ingredient in ingredients_input.split(',') if ingredient.strip()]
 
         # Set ingredients to "------------" if the list is empty
         new_item = {
@@ -55,11 +58,13 @@ class ItemOperations:
             "ingredients": ingredients if ingredients else "------------"
         }
 
+        # Append the new item to the menu data
         if category in self.menu_data[0]:
             self.menu_data[0][category].append(new_item)
         else:
             self.menu_data[0][category] = [new_item]
 
+        # Save the updated menu to the JSON file
         with open(self.json_file, 'w') as file:
             json.dump(self.menu_data, file, indent=4)
 

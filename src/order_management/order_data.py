@@ -1,7 +1,8 @@
 import json
 import uuid
-from Src.Utility.path_manager import menu_file, order_file
-from Src.Messages.order import OrderOutputHandler  
+from Src.Utility.path_manager import menu_file, order_file, users_file
+from Src.Messages.order import OrderOutputHandler
+
 handle = OrderOutputHandler()
 
 def load_menu():
@@ -25,5 +26,13 @@ def generate_order_id():
         return f"{str(uuid.uuid4().hex[:6])}"
     except Exception as e:
         handle.generate_message()
-        # print("Error generating order ID:", e)
         return None
+
+def load_current_user():
+    try:
+        with open(users_file, 'r') as file:
+            users = json.load(file)
+            # Assume the first user in users.json is the current logged-in user for this example
+            return users[0] if users else {}
+    except FileNotFoundError:
+        return {}

@@ -33,17 +33,7 @@ class Colors:
     NAVY = "\033[38;5;19m"
     TEAL = "\033[38;5;37m"
 
-####################
-    #Background Colors
-    BG_BLACK = "\033[40m"
-    BG_RED = "\033[41m"
-    BG_GREEN = "\033[42m"
-    BG_YELLOW = "\033[43m"
-    BG_BLUE = "\033[44m"
-    BG_MAGENTA = "\033[45m"
-    BG_CYAN = "\033[46m"
-    BG_WHITE = "\033[47m"
-########################
+
     LIGHT_CYAN = "\033[96m"
     LIGHT_GREEN = "\033[92m"
     LIGHT_YELLOW = "\033[93m"
@@ -67,13 +57,4 @@ class Colors:
     LIGHT_IVORY = "\033[38;5;230m"
     LIGHT_TEAL = "\033[38;5;159m"
 
-    # Light Background Colors
-    BG_LIGHT_AQUA = "\033[48;5;122m"
-    BG_LIGHT_MINT = "\033[48;5;120m"
-    BG_LIGHT_CORAL = "\033[48;5;210m"
-    BG_LIGHT_VIOLET = "\033[48;5;177m"
-    BG_LIGHT_BEIGE = "\033[48;5;230m"
-    BG_LIGHT_TAN = "\033[48;5;223m"
-    BG_LIGHT_IVORY = "\033[48;5;230m"
-    BG_LIGHT_TEAL = "\033[48;5;159m"
-
+    

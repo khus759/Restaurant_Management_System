@@ -6,7 +6,8 @@ from Src.Invoice.bill import Bill
 from Src.Messages.invoice import BillingHandler
 from Src.Utility.path_manager import order_file
 from Src.Utility.path_manager import bill_file
-
+from Src.Utility.validation import *
+from Src.Utility.user_input import get_valid_input
 
 class BillingSystem:
     def __init__(self):
@@ -40,7 +41,7 @@ class BillingSystem:
             json.dump(self.bills, file, indent=4)
 
     def generate_bill(self):
-        order_id = input("Enter Order ID to generate bill: ")
+        order_id = get_valid_input("Enter Order ID to generate bill: ",validate_order_id).upper()
         order = next((order for order in self.orders if order.order_id == order_id), None)
         if not order:
             self.bill_handler.display_order_not_found(order_id)
@@ -57,7 +58,7 @@ class BillingSystem:
         return bill.to_dict()
 
     def check_bill(self):
-        billing_id = input("Enter Billing ID to check bill: ")
+        billing_id = get_valid_input("Enter Billing ID to check bill: ",validate_billing_id).upper()
         bill = next((bill for bill in self.bills if bill["billing_id"] == billing_id), None)
         if not bill:
             self.bill_handler.display_billing_id_not_found(billing_id)
@@ -72,7 +73,7 @@ class BillingSystem:
             self.bill_handler.print_bill(bill)
 
     def mark_as_paid(self):
-        billing_id = input("Enter Billing ID to mark as paid: ")
+        billing_id = get_valid_input("Enter Billing ID to mark as paid: ",validate_billing_id).upper()
         bill = next((bill for bill in self.bills if bill["billing_id"] == billing_id), None)
         if not bill:
             self.bill_handler.display_billing_id_not_found(billing_id)

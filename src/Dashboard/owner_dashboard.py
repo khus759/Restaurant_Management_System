@@ -17,6 +17,7 @@ from Src.Reports.order_report import OrderReport
 from Src.Invoice.bill_system import BillingSystem
 from Src.Authentication.auth_system import AuthSystem
 from Src.Staff_Management.staff_system import StaffManagementSystem
+from Src.Messages.reports import Report
 
 
 
@@ -31,6 +32,7 @@ class OwnerDashboard:
         self.bill_system = BillingSystem()
         self.auth = AuthSystem()
         self.staff = StaffManagementSystem()
+        self.report = Report()
         
     
     def display_dashboard(self):
@@ -152,7 +154,7 @@ class OwnerDashboard:
             print("Invalid choice in Table Booking Management.")
     
     def handle_stock_management(self):
-        
+        self.report.welcome_message()
         display_stock_management()
 
         choice = input("Choose an action in Reports Management: ")
@@ -165,6 +167,8 @@ class OwnerDashboard:
             self.reserve_table.show_canceled_reservations()
         elif choice == "4":
             self.order_reports.show_ordered_items_summary()
+        elif choice == "5":
+            self.report.exit_message()
         else:
             print("Invalid choice in Reports Management.")
     

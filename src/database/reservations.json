@@ -129,9 +129,18 @@
         "reservation_id": "8765ba63",
         "name": "raj",
         "phone": "8765432216",
-        "date_time": "2024-12-20 9:00 pm",
+        "date_time": "2024-12-11 9:00 pm",
         "seats": 6,
         "table_id": "T10",
         "status": "Reserved"
+    },
+    {
+        "reservation_id": "9876bc11",
+        "name": "anjali",
+        "phone": "9876543321",
+        "date_time": "2024-12-2 6:00 pm",
+        "seats": 2,
+        "table_id": "T1",
+        "status": "Canceled"
     }
 ]
