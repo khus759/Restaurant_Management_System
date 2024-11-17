@@ -41,7 +41,7 @@ class BillingSystem:
             json.dump(self.bills, file, indent=4)
 
     def generate_bill(self):
-        order_id = get_valid_input("Enter Order ID to generate bill: ",validate_order_id).upper()
+        order_id = get_valid_input("Enter Order ID to generate bill: ",validate_order_id).capitalize()
         order = next((order for order in self.orders if order.order_id == order_id), None)
         if not order:
             self.bill_handler.display_order_not_found(order_id)
