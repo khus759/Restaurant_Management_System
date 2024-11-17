@@ -159,5 +159,40 @@
         "status": "Billed",
         "payment_type": null,
         "payment_date": null
+    },
+    {
+        "billing_id": "c634b9",
+        "order_id": "0a7820",
+        "customer_name": "zaib",
+        "billing_date": "17-Nov-2024 06:56:AM",
+        "items": [
+            {
+                "item_id": "RO03",
+                "item_name": "Garlic Roti",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 70
+            },
+            {
+                "item_id": "DR03",
+                "item_name": "Masala Chai",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 60
+            },
+            {
+                "item_id": "ST04",
+                "item_name": "Paneer Samosa",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 360
+            }
+        ],
+        "subtotal": 490,
+        "gst": 88.2,
+        "total": 578.2,
+        "status": "Billed",
+        "payment_type": null,
+        "payment_date": null
     }
 ]

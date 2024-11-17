@@ -69,22 +69,25 @@ class ExpirationReport:
         else:
             print(f"No ingredients are low in stock (below {self.low_stock_threshold} units).")
 
-        # Summary of soon-expiring and low-stock ingredients
-        print("\nSummary of Ingredients Nearing Expiration and Low Stock:")
-        summary = {}
-        for entry in expiring_ingredients + low_stock_ingredients:
-            category = entry['category']
-            item_name = entry['item_name']
-            ingredient = entry['ingredient']
+        # Display summary only if there are expiring or low-stock ingredients
+        if expiring_ingredients or low_stock_ingredients:
+            print("\nSummary of Ingredients Nearing Expiration and Low Stock:")
+            summary = {}
+            for entry in expiring_ingredients + low_stock_ingredients:
+                category = entry['category']
+                item_name = entry['item_name']
+                ingredient = entry['ingredient']
 
-            if category not in summary:
-                summary[category] = {}
-            if item_name not in summary[category]:
-                summary[category][item_name] = []
-            summary[category][item_name].append(ingredient)
+                if category not in summary:
+                    summary[category] = {}
+                if item_name not in summary[category]:
+                    summary[category][item_name] = []
+                summary[category][item_name].append(ingredient)
 
-        for category, items in summary.items():
-            print(f"\nCategory: {category}")
-            for item_name, ingredients in items.items():
-                ingredients_list = ', '.join(ingredients)
-                print(f"  Item: {item_name}, Ingredients: {ingredients_list}")
+            for category, items in summary.items():
+                print(f"\nCategory: {category}")
+                for item_name, ingredients in items.items():
+                    ingredients_list = ', '.join(ingredients)
+                    print(f"  Item: {item_name}, Ingredients: {ingredients_list}")
+        else:
+            print("No ingredients nearing expiration or low in stock to display in the summary.")

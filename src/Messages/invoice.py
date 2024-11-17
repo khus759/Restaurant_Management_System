@@ -65,7 +65,7 @@ class BillingHandler:
     def print_bill(self, bill):
         print("\n" )
         print(f"{Colors.BRIGHT_MAGENTA}               BILL DETAILS                {Colors.RESET}")
-        print(f"{Colors.YELLOW}={self.RESET}" * 50)
+        print(f"{Colors.YELLOW}={Colors.RESET}" * 50)
         print(f"{Colors.GREEN}Billing ID: {bill['billing_id']}{Colors.RESET}")
         print(f"Order ID: {bill['order_id']}")
         print(f"Customer Name: {bill['customer_name']}")

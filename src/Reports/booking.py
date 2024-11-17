@@ -14,9 +14,8 @@ class ReservationReport:
             return json.load(file)
 
     def show_reservations_by_date(self):
-        
-        date_input = input("Enter date (YYYY-MM-DD) or month (YYYY-MM): ")
-        is_specific_date = len(date_input) == 10  # Checking if the input is for a specific date
+        date_input = input("Enter date (YYYY-MM-DD) or month (YYYY-MM): ").strip()
+        is_specific_date = len(date_input) == 10
 
         reservations_on_date = []
         
@@ -32,13 +31,20 @@ class ReservationReport:
                     "phone": reservation["phone"],
                     "time": reservation_date.strftime('%I:%M %p'),
                     "table_id": reservation["table_id"],
-                    "status": reservation["status"]
+                    "status": reservation["status"],
+                    "booking_date": formatted_date  # Adds the booking date
                 })
 
-        self.booking_handler.display_reservations_on_date(date_input, reservations_on_date)
+        # Display reservations on the specified date or month
+        if reservations_on_date:
+            print(f"\nReservations on {date_input}:")
+            for res in reservations_on_date:
+                print(f"Name: {res['name']}, Phone: {res['phone']}, Booking Date: {res['booking_date']}, Time: {res['time']}, Table: {res['table_id']}, Status: {res['status']}")
+        else:
+            print(f"No reservations found for {date_input}.")
 
     def show_canceled_reservations(self):
-        date_input = input("Enter date (YYYY-MM-DD) or month (YYYY-MM) to filter, or leave empty to show all: ").strip()
+        date_input = input("Enter date (YYYY-MM-DD) or month (YYYY-MM) to filter, or leave empty to show all canceled reservations: ").strip()
         is_specific_date = len(date_input) == 10
 
         canceled_reservations = []
@@ -55,8 +61,14 @@ class ReservationReport:
                         "phone": reservation["phone"],
                         "time": reservation_date.strftime('%I:%M %p'),
                         "table_id": reservation["table_id"],
-                        "date": formatted_date
+                        "date": formatted_date,      # Adds the booking date
+                        "cancellation_date": formatted_date  # Adds the cancellation date
                     })
 
-        
-        self.booking_handler.display_canceled_reservations(canceled_reservations)
+        # Display canceled reservations
+        if canceled_reservations:
+            print(f"\nCanceled Reservations:")
+            for res in canceled_reservations:
+                print(f"Name: {res['name']}, Phone: {res['phone']}, Cancellation Date: {res['cancellation_date']}, Time: {res['time']}, Table: {res['table_id']}")
+        else:
+            print("No canceled reservations found for the specified date or month.")

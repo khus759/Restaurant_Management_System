@@ -28,15 +28,19 @@ class OrderManagementSystem:
                 self.output_handler.item_not_found()
                 continue
 
-            size = 'single'
+            # Handle size selection based on available sizes
+            size = 'single' if 'single' in item['prices'] else None
             if 'half' in item['prices'] or 'full' in item['prices']:
                 size = input("Enter size (half/full): ").lower()
                 if size not in item['prices']:
                     self.output_handler.invalid_size()
                     continue
-                price = item['prices'][size]
-            else:
-                price = item['prices']['single']
+
+            # Get price based on size
+            price = item['prices'][size] if size in item['prices'] else None
+            if price is None:
+                self.output_handler.invalid_size()
+                continue
 
             quantity = int(input("Enter quantity: "))
             total_price = price * quantity
@@ -54,12 +58,10 @@ class OrderManagementSystem:
             })
             total_order_price += total_price
 
-        # Check if order_items is empty before proceeding
         if not order_items:
             self.output_handler.no_items_in_order()
             return
 
-        # Create order if items are added
         order = {
             'order_id': order_id,
             'customer_name': customer_name,
@@ -131,11 +133,8 @@ class OrderManagementSystem:
                     if item['item_id'] == item_id:
                         new_quantity = int(input("Enter new quantity: "))
                         item['quantity'] = new_quantity
-                        if 'half' in self.find_item_by_id(item_id)['prices'] or 'full' in self.find_item_by_id(item_id)['prices']:
-                            size = item.get('size')
-                            price = self.find_item_by_id(item_id)['prices'][size]
-                        else:
-                            price = self.find_item_by_id(item_id)['prices']['single']
+                        size = item.get('size', 'single')
+                        price = self.find_item_by_id(item_id)['prices'].get(size, 0)
                         item['total_price'] = new_quantity * price
                         print("Item quantity updated.")
                         break
@@ -149,16 +148,14 @@ class OrderManagementSystem:
                     self.output_handler.item_not_found()
                     continue
 
-                size = 'single'
+                size = 'single' if 'single' in item['prices'] else None
                 if 'half' in item['prices'] or 'full' in item['prices']:
                     size = input("Enter size (half/full): ").lower()
                     if size not in item['prices']:
                         self.output_handler.invalid_size()
                         continue
-                    price = item['prices'][size]
-                else:
-                    price = item['prices']['single']
 
+                price = item['prices'].get(size, 0)
                 quantity = int(input("Enter quantity: "))
                 total_price = price * quantity
 

@@ -1,18 +1,8 @@
 from Src.Authentication.auth_system import AuthSystem
 from Src.Dashboard.owner_dashboard import OwnerDashboard
 from Src.Dashboard.staff_dashboard import StaffDashboard
+from Src.Utility.color import Colors
 
-# Define color codes
-class Colors:
-    HEADER = "\033[95m"
-    CYAN = "\033[96m"
-    GREEN = "\033[92m"
-    YELLOW = "\033[93m"
-    RED = "\033[91m"
-    BLUE = "\033[94m"
-    RESET = "\033[0m"
-    BRIGHT_MAGENTA = "\033[95m"
-    BG_CYAN = "\033[46m"
 
 def show_dashboard(user_role):
     if user_role == "Owner":
