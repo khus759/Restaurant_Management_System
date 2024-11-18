@@ -76,9 +76,6 @@ def employee_deleted():
 def no_employees_found():
     print(f"{Colors.LIGHT_CORAL}No employees found.{Colors.RESET}")
 
-def display_profile():
-    print(f"\n{Colors.AQUA}=== Employee Profile ==={Colors.RESET}")
-
 def salary_paid_success(name, payment_date, total_payment):
     print(f"✔️{Colors.LIGHT_GREEN}Salary of {total_payment} paid successfully to {name} on {payment_date}.{Colors.RESET}")
 
