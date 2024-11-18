@@ -215,3 +215,19 @@ def validate_has_portion_sizes(value):
         raise ValueError("Input must be 'yes' or 'no' for portion sizes.")
     
     return value
+
+def get_valid_float_input(prompt):
+    while True:
+        try:
+            value = float(input(prompt).strip())
+            return value
+        except ValueError:
+            print("Invalid input. Please enter a valid number.")
+
+def get_valid_int_input(prompt):
+    while True:
+        try:
+            value = int(input(prompt).strip())
+            return value
+        except ValueError:
+            print("Invalid input. Please enter a valid integer.")

@@ -80,8 +80,9 @@ def display_stock_management():
     print(f"\n{Colors.LIGHT_CORAL}1. Soon_Stockout_Ingredients")
     print("2. Show Reservation By Date")
     print("3. Show Cancel Reservations")
-    print(f"4. Order Report{Colors.RESET}")
-    print(f"{Colors.LIGHT_TEAL}5. EXIT {Colors.RESET}")
+    print("4. Order Report")
+    print(f"5. Bill Report{Colors.RESET}")
+    print(f"{Colors.LIGHT_TEAL}6. EXIT {Colors.RESET}")
 
 def display_staff_management():
     print(f"{Colors.LIGHT_SKY_BLUE}{'-'*40}")
@@ -91,6 +92,8 @@ def display_staff_management():
     print("2. Display Profile")
     print("3. Update Profile")
     print("4. Delete Employee")
-    print(f"5. Display All Profiles{Colors.RESET}")
-    print(f"{Colors.LIGHT_VIOLET}6. EXIT {Colors.RESET}")
+    print("5. Display All Profiles")
+    print("6. Salary Payment")
+    print(f"7. Show Salary History{Colors.RESET}")
+    print(f"{Colors.LIGHT_AQUA}8. EXIT {Colors.RESET}")
          

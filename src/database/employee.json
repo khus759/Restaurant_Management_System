@@ -197,7 +197,21 @@
         "joining_date": "2020-03-08",
         "salary": "15000",
         "status": "active",
-        "resign_date": null
+        "resign_date": null,
+        "salary_payment_history": [
+            {
+                "date": "2024-11-18",
+                "amount": 14000.0,
+                "bonus": 0.0,
+                "reduction_days": 2
+            },
+            {
+                "date": "2024-11-18",
+                "amount": 0.0,
+                "bonus": 0.0,
+                "reduction_days": 30
+            }
+        ]
     },
     {
         "id": "714C4C8D",

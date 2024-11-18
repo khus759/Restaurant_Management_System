@@ -1,4 +1,3 @@
-
 from Src.Utility.color import Colors
 colour = Colors()
 
@@ -61,3 +60,39 @@ def welcome_message():
 
 def exit_message():
     print(f"{Colors.LIGHT_MAGENTA} 😀 Thank you for using the Staff Management System. Goodbye!{Colors.RESET}")
+
+def invalid_credentials():
+    print(f"{Colors.RED}❌ Invalid credentials, please try again.{Colors.RESET}")
+
+def employee_added():
+    print(f"{Colors.LIGHT_ORANGE}✔️ Employee added successfully.{Colors.RESET}")
+
+def employee_not_found():
+    print(f"{Colors.LIGHT_LIME}Employee not found.{Colors.RESET}")
+
+def employee_deleted():
+    print(f"{Colors.LIGHT_ORANGE}✔️Employee deleted successfully.{Colors.RESET}")
+
+def no_employees_found():
+    print(f"{Colors.LIGHT_CORAL}No employees found.{Colors.RESET}")
+
+def display_profile():
+    print(f"\n{Colors.AQUA}=== Employee Profile ==={Colors.RESET}")
+
+def salary_paid_success(name, payment_date, total_payment):
+    print(f"✔️{Colors.LIGHT_GREEN}Salary of {total_payment} paid successfully to {name} on {payment_date}.{Colors.RESET}")
+
+def employee_not_found():
+    print(f"{Colors.LIGHT_CORAL}Employee not found.{Colors.RESET}")
+
+def salary_paid_success(name, payment_date, total_payment):
+    """Prints a success message after paying an employee's salary."""
+    print(f"✔️{Colors.LIGHT_GREEN}Salary of {total_payment:.2f} has been successfully paid to {name} on {payment_date}.{Colors.RESET}")
+
+def employee_not_found():
+    """Prints a message if the specified employee is not found."""
+    print(f"{Colors.LIGHT_PEACH}Error: Employee not found. Please check the ID and try again.{Colors.RESET}")
+
+def inactive_employee():
+    """Prints a message if an inactive employee is selected for salary payment."""
+    print(f"{Colors.LIGHT_TEAL}Inactive employee. Cannot process salary.{Colors.RESET}")

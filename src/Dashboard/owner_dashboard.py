@@ -18,7 +18,8 @@ from Src.Invoice.bill_system import BillingSystem
 from Src.Authentication.auth_system import AuthSystem
 from Src.Staff_Management.staff_system import StaffManagementSystem
 from Src.Messages.reports import Report
-
+from Src.Reports.bill_report import BillReport
+from Src.Staff_Management.salary import SalaryManagement
 
 
 class OwnerDashboard:
@@ -33,6 +34,8 @@ class OwnerDashboard:
         self.auth = AuthSystem()
         self.staff = StaffManagementSystem()
         self.report = Report()
+        self.bill_report = BillReport()
+        self.salary = SalaryManagement()
         
     
     def display_dashboard(self):
@@ -168,6 +171,8 @@ class OwnerDashboard:
         elif choice == "4":
             self.order_reports.show_ordered_items_summary()
         elif choice == "5":
+            self.bill_report.generate_report()
+        elif choice == "6":
             self.report.exit_message()
         else:
             print("Invalid choice in Reports Management.")
@@ -189,6 +194,10 @@ class OwnerDashboard:
         elif choice == "5":
             self.staff.display_all_profiles()
         elif choice == "6":
+            self.salary.pay_salary()
+        elif choice == "7":
+            self.salary.show_salary_history()
+        elif choice == "8":
             self.staff.exit_system()
         else:
             print("Invalid choice in Staff Management.")
