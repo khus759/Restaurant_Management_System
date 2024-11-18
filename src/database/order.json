@@ -293,5 +293,30 @@
         "order_date": "17-Nov-2024 06:01:PM",
         "status": "Billed",
         "user_email": "khus123@gmail.com"
+    },
+    {
+        "order_id": "2b743c",
+        "customer_name": "saniya",
+        "mobile_number": "8765432214",
+        "order_items": [
+            {
+                "item_id": "DR03",
+                "item_name": "Masala Chai",
+                "size": "single",
+                "quantity": 3,
+                "total_price": 90
+            },
+            {
+                "item_id": "VE01",
+                "item_name": "Paneer Butter Masala",
+                "size": "full",
+                "quantity": 2,
+                "total_price": 360
+            }
+        ],
+        "total_order_price": 450,
+        "order_date": "18-Nov-2024 02:06:AM",
+        "status": "Processing",
+        "user_email": "khus123@gmail.com"
     }
 ]
