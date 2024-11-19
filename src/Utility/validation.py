@@ -185,21 +185,14 @@ def validate_item_id(item_id, menu_data, category):
         return f"Invalid item ID: '{item_id}' not found in '{category}' category."
     return None
 
-def validate_ingredient_input(value):
-    """Validate the ingredients input."""
-    # Ensure the ingredients are not blank and contain no special characters
-    if not value.strip():
-        raise ValueError("Ingredient input cannot be blank.")
-    
-    # Split the ingredients by commas and strip spaces
-    # ingredients = [ingredient.strip() for ingredient in value.split(',')]
+# def validate_ingredient_input(value):
+#     """Validate the ingredients input."""
+#     if not value.strip():
+#         raise ValueError("Ingredient input cannot be blank.")
+#     if not value.isalpha():
+#         raise ValueError("Ingredient names should only contain letters.")
+#     return value.strip()
 
-    # for ingredient in ingredients:
-    #     # Check if each ingredient is alphabetic and doesn't contain special characters
-    #     if not ingredient.isalpha():
-    #         raise ValueError(f"Invalid ingredient: '{ingredient}'. Ingredients should only contain letters.")
-    
-    return value
 
 def validate_has_portion_sizes(value):
     """Validate if the input for portion sizes is 'yes' or 'no' and reject blank or special characters."""
@@ -231,3 +224,5 @@ def get_valid_int_input(prompt):
             return value
         except ValueError:
             print("Invalid input. Please enter a valid integer.")
+
+

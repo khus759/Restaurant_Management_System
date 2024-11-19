@@ -87,8 +87,8 @@
                     "spices"
                 ],
                 "stock_ingredients": {
-                    "chickpeas": "2024-11-18",
-                    "onion": "2024-12-15",
+                    "chickpeas": "2024-11-25",
+                    "onion": "2024-12-25",
                     "tomato": "2024-11-26",
                     "spices": "2024-12-22"
                 }
@@ -108,9 +108,9 @@
                     "spices"
                 ],
                 "stock_ingredients": {
-                    "chicken": "2024-11-10",
-                    "rice": "2024-12-01",
-                    "spices": "2024-11-20"
+                    "chicken": "2024-11-25",
+                    "rice": "2024-12-25",
+                    "spices": "2024-11-25"
                 }
             },
             {
@@ -145,7 +145,7 @@
                     "spices"
                 ],
                 "stock_ingredients": {
-                    "chicken": "2024-11-16",
+                    "chicken": "2024-11-26",
                     "butter": "2024-11-25",
                     "tomato": "2024-11-25",
                     "spices": "2024-12-22"
@@ -166,7 +166,7 @@
                 "stock_ingredients": {
                     "fish": "2024-11-26",
                     "tomato": "2024-11-25",
-                    "spices": "2024-12-20"
+                    "spices": "2024-12-25"
                 }
             },
             {
@@ -184,7 +184,7 @@
                 "stock_ingredients": {
                     "chicken": "2024-11-25",
                     "spices": "2024-11-26",
-                    "oil": "2024-12-20"
+                    "oil": "2024-12-25"
                 }
             }
         ],
@@ -288,7 +288,7 @@
                     "sugar"
                 ],
                 "stock_ingredients": {
-                    "mango": "2024-11-25",
+                    "mango": "2024-11-26",
                     "yogurt": "2024-11-24",
                     "sugar": "2024-12-20"
                 }
@@ -361,10 +361,7 @@
                 "item name": "Betroot Juice",
                 "prices": {
                     "single": 50
-                },
-                "ingredients": [
-                    ""
-                ]
+                }
             },
             {
                 "item id": "DR08",
@@ -582,30 +579,6 @@
                     "single": 80
                 },
                 "ingredients": "------------"
-            },
-            {
-                "item id": "RO07",
-                "item name": "Moti Roti",
-                "prices": {
-                    "single": 50
-                },
-                "ingredients": "------------"
-            },
-            {
-                "item id": "RO08",
-                "item name": "Moti Roti",
-                "prices": {
-                    "single": 20
-                },
-                "ingredients": "------------"
-            },
-            {
-                "item id": "RO09",
-                "item name": "Moti Roti",
-                "prices": {
-                    "single": 20
-                },
-                "ingredients": "------------"
             }
         ],
         "Paratha": [
@@ -799,3 +772,4 @@
         ]
     }
 ]
+

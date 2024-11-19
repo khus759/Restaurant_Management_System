@@ -33,10 +33,10 @@ class BillReport:
             try:
                 if filter_type == "day":
                     date_str = input("Enter date (dd-mm-yyyy): ")
-                    filter_date = datetime.strptime(date_str, "%d-%m-%Y")
+                    filter_date = datetime.strptime(date_str, "%Y-%m-%d")
                     return {"type": "day", "value": filter_date}
                 elif filter_type == "month":
-                    year = int(input("Enter year (e.g., 2023): "))
+                    year = int(input("Enter year (e.g., 2024): "))
                     month = int(input("Enter month (1-12): "))
                     filter_date = datetime(year, month, 1)
                     return {"type": "month", "value": filter_date}

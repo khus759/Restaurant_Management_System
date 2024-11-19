@@ -66,7 +66,7 @@ class StaffManagementSystem:
         employee.district = input("Enter district: ").title()
         employee.city_village = input("Enter city/village: ").title()
         employee.pincode = input("Enter pincode: ")
-        employee.joining_date = get_valid_input("Enter joining date (YYYY-MM-DD): ", validate_date_of_birth)
+        employee.joining_date = input("Enter joining date (YYYY-MM-DD): ")
         employee.salary = input("Enter salary: ")
 
         employees.append(employee.to_dict())
