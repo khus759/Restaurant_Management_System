@@ -97,17 +97,18 @@ class OwnerDashboard:
 
         if choice == "1":
             self.order_management.show_menu()
-        elif choice == "2":
             self.order_management.take_order()
-        elif choice == "3":
+        # elif choice == "2":
+        #     self.order_management.take_order()
+        elif choice == "2":
             self.order_management.update_order()
-        elif choice == "4":
+        elif choice == "3":
             self.order_management.cancel_order()
-        elif choice == "5":
+        elif choice == "4":
             self.order_management.check_order()
-        elif choice == "6":
+        elif choice == "5":
             self.order_management.show_all_orders()
-        elif choice == "7":
+        elif choice == "6":
             self.order_management.exit_system()
         else:
             print("Invalid choice in Order Management.")

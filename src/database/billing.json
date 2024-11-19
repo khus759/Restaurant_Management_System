@@ -1,177 +1,218 @@
 [
     {
-        "billing_id": "c58626",
-        "order_id": "8ccc7b",
-        "customer_name": "aman",
-        "billing_date": "12-Nov-2024 04:38:PM",
-        "items": [
-            {
-                "item_id": "VE01",
-                "item_name": "Paneer Butter Masala",
-                "size": "full",
-                "quantity": 2,
-                "total_price": 360.0
-            },
-            {
-                "item_id": "VE01",
-                "item_name": "Paneer Butter Masala",
-                "size": "half",
-                "quantity": 1,
-                "total_price": 90.0
-            }
-        ],
-        "subtotal": 450.0,
-        "gst": 81.0,
-        "total": 531.0,
-        "status": "Billed",
-        "payment_type": null,
-        "payment_date": null
-    },
-    {
-        "billing_id": "1e8d82",
-        "order_id": "8824ff",
+        "billing_id": "634de9",
+        "order_id": "eab708",
         "customer_name": "khushi",
-        "billing_date": "12-Nov-2024 04:39:PM",
+        "billing_date": "19-Nov-2024 08:25:PM",
         "items": [
             {
-                "item_id": "VE01",
-                "item_name": "Paneer Butter Masala",
-                "size": "half",
-                "quantity": 2,
-                "total_price": 180.0
-            },
-            {
-                "item_id": "CO01",
-                "item_name": "Espresso",
+                "item_id": "DR01",
+                "item_name": "Mango Lassi",
                 "size": "single",
                 "quantity": 2,
-                "total_price": 100.0
-            },
-            {
-                "item_id": "TE01",
-                "item_name": "Masala Tea",
-                "size": "single",
-                "quantity": 2,
-                "total_price": 60.0
-            },
-            {
-                "item_id": "RI02",
-                "item_name": "Jeera Rice",
-                "size": "half",
-                "quantity": 2,
-                "total_price": 110.0
-            }
-        ],
-        "subtotal": 450.0,
-        "gst": 81.0,
-        "total": 531.0,
-        "status": "Billed",
-        "payment_type": null,
-        "payment_date": null
-    },
-    {
-        "billing_id": "74353b",
-        "order_id": "628add",
-        "customer_name": "rishu",
-        "billing_date": "12-Nov-2024 06:06:PM",
-        "items": [
-            {
-                "item_id": "CO03",
-                "item_name": "Latte",
-                "size": "single",
-                "quantity": 3,
-                "total_price": 225.0
-            },
-            {
-                "item_id": "RI03",
-                "item_name": "Pulao",
-                "size": "full",
-                "quantity": 3,
-                "total_price": 360.0
-            }
-        ],
-        "subtotal": 585.0,
-        "gst": 105.3,
-        "total": 690.3,
-        "status": "Billed",
-        "payment_type": null,
-        "payment_date": null
-    },
-    {
-        "billing_id": "22d33e",
-        "order_id": "da6852",
-        "customer_name": "mani",
-        "billing_date": "13-Nov-2024 04:49:PM",
-        "items": [
-            {
-                "item_id": "VE03",
-                "item_name": "Palak Paneer",
-                "size": "half",
-                "quantity": 3,
-                "total_price": 225.0
-            },
-            {
-                "item_id": "TE02",
-                "item_name": "Green Tea",
-                "size": "single",
-                "quantity": 2,
-                "total_price": 80.0
-            }
-        ],
-        "subtotal": 305.0,
-        "gst": 54.9,
-        "total": 359.9,
-        "status": "Billed",
-        "payment_type": null,
-        "payment_date": null
-    },
-    {
-        "billing_id": "af4d05",
-        "order_id": "eddc56",
-        "customer_name": "baja",
-        "billing_date": "13-Nov-2024 07:37:PM",
-        "items": [
-            {
-                "item_id": "ST04",
-                "item_name": "Paneer Samosa",
-                "size": "single",
-                "quantity": 3,
-                "total_price": 540.0
+                "total_price": 80
             },
             {
                 "item_id": "ST03",
                 "item_name": "Paneer Tikka",
                 "size": "single",
-                "quantity": 1,
-                "total_price": 130.0
+                "quantity": 2,
+                "total_price": 260
             },
             {
-                "item_id": "RO03",
-                "item_name": "Garlic Roti",
-                "size": "single",
-                "quantity": 3,
-                "total_price": 105.0
+                "item_id": "RI01",
+                "item_name": "Steamed Rice",
+                "size": "half",
+                "quantity": 1,
+                "total_price": 70
             }
         ],
-        "subtotal": 775.0,
-        "gst": 139.5,
-        "total": 914.5,
-        "status": "Paid",
-        "payment_type": "Online",
-        "payment_date": "17-Nov-2024 09:14 PM"
+        "subtotal": 410,
+        "gst": 73.8,
+        "total": 483.8,
+        "status": "Billed",
+        "payment_type": null,
+        "payment_date": null,
+        "user_email": null
     },
     {
-        "billing_id": "c634b9",
-        "order_id": "0a7820",
-        "customer_name": "zaib",
-        "billing_date": "17-Nov-2024 06:56:AM",
+        "billing_id": "e621d7",
+        "order_id": "bb298c",
+        "customer_name": "saniya",
+        "billing_date": "19-Nov-2024 09:05:PM",
         "items": [
             {
-                "item_id": "RO03",
-                "item_name": "Garlic Roti",
+                "item_id": "ST04",
+                "item_name": "Paneer Samosa",
                 "size": "single",
                 "quantity": 2,
-                "total_price": 70
+                "total_price": 360
+            },
+            {
+                "item_id": "DR01",
+                "item_name": "Mango Lassi",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 80
+            },
+            {
+                "item_id": "VE01",
+                "item_name": "Paneer Butter Masala",
+                "size": "full",
+                "quantity": 2,
+                "total_price": 360
+            }
+        ],
+        "subtotal": 800,
+        "gst": 144.0,
+        "total": 944.0,
+        "status": "Billed",
+        "payment_type": null,
+        "payment_date": null,
+        "user_email": null
+    },
+    {
+        "billing_id": "1aca8d",
+        "order_id": "4a1d24",
+        "customer_name": "anjali",
+        "billing_date": "19-Nov-2024 09:12:PM",
+        "items": [
+            {
+                "item_id": "RI02",
+                "item_name": "Jeera Rice",
+                "size": "half",
+                "quantity": 2,
+                "total_price": 110
+            },
+            {
+                "item_id": "DR01",
+                "item_name": "Mango Lassi",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 80
+            }
+        ],
+        "subtotal": 190,
+        "gst": 34.199999999999996,
+        "total": 224.2,
+        "status": "Billed",
+        "payment_type": null,
+        "payment_date": null,
+        "user_email": null
+    },
+    {
+        "billing_id": "b27b4c",
+        "order_id": "c9929f",
+        "customer_name": "muskan",
+        "billing_date": "19-Nov-2024 09:13:PM",
+        "items": [
+            {
+                "item_id": "ST03",
+                "item_name": "Paneer Tikka",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 260
+            },
+            {
+                "item_id": "ST01",
+                "item_name": "Veg Spring Rolls",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 200
+            }
+        ],
+        "subtotal": 460,
+        "gst": 82.8,
+        "total": 542.8,
+        "status": "Billed",
+        "payment_type": null,
+        "payment_date": null,
+        "user_email": null
+    },
+    {
+        "billing_id": "59202a",
+        "order_id": "8075fd",
+        "customer_name": "roshni",
+        "billing_date": "19-Nov-2024 09:40:PM",
+        "items": [
+            {
+                "item_id": "ST03",
+                "item_name": "Paneer Tikka",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 260
+            },
+            {
+                "item_id": "ST01",
+                "item_name": "Veg Spring Rolls",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 200
+            }
+        ],
+        "subtotal": 460,
+        "gst": 82.8,
+        "total": 542.8,
+        "status": "Billed",
+        "payment_type": null,
+        "payment_date": null,
+        "user_email": null
+    },
+    {
+        "billing_id": "af2b2e",
+        "order_id": "9db7cf",
+        "customer_name": "riya",
+        "billing_date": "19-Nov-2024 10:10:PM",
+        "items": [
+            {
+                "item_id": "RI01",
+                "item_name": "Steamed Rice",
+                "size": "half",
+                "quantity": 2,
+                "total_price": 140
+            },
+            {
+                "item_id": "VE03",
+                "item_name": "Palak Paneer",
+                "size": "full",
+                "quantity": 2,
+                "total_price": 300
+            }
+        ],
+        "subtotal": 440,
+        "gst": 79.2,
+        "total": 519.2,
+        "status": "Billed",
+        "payment_type": null,
+        "payment_date": null,
+        "user_email": null
+    },
+    {
+        "billing_id": "cc1f2d",
+        "order_id": "023564",
+        "customer_name": "sweety",
+        "billing_date": "19-Nov-2024 10:12:PM",
+        "items": [
+            {
+                "item_id": "VE01",
+                "item_name": "Paneer Butter Masala",
+                "size": "full",
+                "quantity": 2,
+                "total_price": 360
+            },
+            {
+                "item_id": "ST01",
+                "item_name": "Veg Spring Rolls",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 200
+            },
+            {
+                "item_id": "DR01",
+                "item_name": "Mango Lassi",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 80
             },
             {
                 "item_id": "DR03",
@@ -179,76 +220,50 @@
                 "size": "single",
                 "quantity": 2,
                 "total_price": 60
-            },
-            {
-                "item_id": "ST04",
-                "item_name": "Paneer Samosa",
-                "size": "single",
-                "quantity": 2,
-                "total_price": 360
             }
         ],
-        "subtotal": 490,
-        "gst": 88.2,
-        "total": 578.2,
-        "status": "Paid",
-        "payment_type": "Cash",
-        "payment_date": "17-Nov-2024 09:44 PM"
+        "subtotal": 700,
+        "gst": 126.0,
+        "total": 826.0,
+        "status": "Billed",
+        "payment_type": null,
+        "payment_date": null,
+        "user_email": null
     },
     {
-        "billing_id": "e1cba4",
-        "order_id": "5d3d93",
-        "customer_name": "isha",
-        "billing_date": "17-Nov-2024 12:42:PM",
+        "billing_id": "438a7c",
+        "order_id": "cff474",
+        "customer_name": "sapna",
+        "billing_date": "19-Nov-2024 11:06:PM",
         "items": [
             {
-                "item_id": "RO02",
-                "item_name": "Butter Roti",
+                "item_id": "ST02",
+                "item_name": "Chicken Tikka",
                 "size": "single",
-                "quantity": 2,
-                "total_price": 60
-            }
-        ],
-        "subtotal": 60,
-        "gst": 10.799999999999999,
-        "total": 70.8,
-        "status": "Paid",
-        "payment_type": "Cash",
-        "payment_date": "17-Nov-2024 12:43:PM"
-    },
-    {
-        "billing_id": "1673a5",
-        "order_id": "8131b3",
-        "customer_name": "anandiii",
-        "billing_date": "17-Nov-2024 08:30:PM",
-        "items": [
-            {
-                "item_id": "RO01",
-                "item_name": "Tandoori Roti",
-                "size": "single",
-                "quantity": 2,
-                "total_price": 40
+                "quantity": 1,
+                "total_price": 150
             },
             {
-                "item_id": "DR06",
-                "item_name": "Orange Juice",
+                "item_id": "DR01",
+                "item_name": "Mango Lassi",
                 "size": "single",
                 "quantity": 2,
-                "total_price": 120
+                "total_price": 80
             }
         ],
-        "subtotal": 160,
-        "gst": 28.799999999999997,
-        "total": 188.8,
-        "status": "Paid",
-        "payment_type": "Cash",
-        "payment_date": "17-Nov-2024 08:32:PM"
+        "subtotal": 230,
+        "gst": 41.4,
+        "total": 271.4,
+        "status": "Billed",
+        "payment_type": null,
+        "payment_date": null,
+        "user_email": null
     },
     {
-        "billing_id": "5e8208",
-        "order_id": "2dcc26",
-        "customer_name": "sweta",
-        "billing_date": "17-Nov-2024 08:55:PM",
+        "billing_id": "5d132f",
+        "order_id": "ce1f3e",
+        "customer_name": "khushi",
+        "billing_date": "19-Nov-2024 11:14:PM",
         "items": [
             {
                 "item_id": "DR03",
@@ -264,6 +279,145 @@
         "status": "Billed",
         "payment_type": null,
         "payment_date": null,
+        "user_email": null
+    },
+    {
+        "billing_id": "f38e42",
+        "order_id": "3b08b3",
+        "customer_name": "sakshi",
+        "billing_date": "19-Nov-2024 11:17:PM",
+        "items": [
+            {
+                "item_id": "DR03",
+                "item_name": "Masala Chai",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 60
+            }
+        ],
+        "subtotal": 60,
+        "gst": 10.799999999999999,
+        "total": 70.8,
+        "status": "Billed",
+        "payment_type": null,
+        "payment_date": null,
+        "user_email": null
+    },
+    {
+        "billing_id": "a0db30",
+        "order_id": "44194a",
+        "customer_name": "nisha",
+        "billing_date": "19-Nov-2024 11:20:PM",
+        "items": [
+            {
+                "item_id": "DR03",
+                "item_name": "Masala Chai",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 60
+            }
+        ],
+        "subtotal": 60,
+        "gst": 10.799999999999999,
+        "total": 70.8,
+        "status": "Billed",
+        "payment_type": null,
+        "payment_date": null,
+        "user_email": null
+    },
+    {
+        "billing_id": "a0db30",
+        "order_id": "44194a",
+        "customer_name": "nisha",
+        "billing_date": "19-Nov-2024 11:25:PM",
+        "items": [
+            {
+                "item_id": "DR03",
+                "item_name": "Masala Chai",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 60
+            }
+        ],
+        "subtotal": 60,
+        "gst": 10.799999999999999,
+        "total": 70.8,
+        "status": "Billed",
+        "payment_type": null,
+        "payment_date": null,
+        "user_email": null
+    },
+    {
+        "billing_id": "19a6dd",
+        "order_id": "a4bc11",
+        "customer_name": "mansi",
+        "billing_date": "19-Nov-2024 11:26:PM",
+        "items": [
+            {
+                "item_id": "DR01",
+                "item_name": "Mango Lassi",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 80
+            }
+        ],
+        "subtotal": 80,
+        "gst": 14.399999999999999,
+        "total": 94.4,
+        "status": "Billed",
+        "payment_type": null,
+        "payment_date": null,
+        "user_email": null
+    },
+    {
+        "billing_id": "19a6dd",
+        "order_id": "a4bc11",
+        "customer_name": "mansi",
+        "billing_date": "19-Nov-2024 11:48:PM",
+        "items": [
+            {
+                "item_id": "DR01",
+                "item_name": "Mango Lassi",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 80
+            }
+        ],
+        "subtotal": 80,
+        "gst": 14.399999999999999,
+        "total": 94.4,
+        "status": "Billed",
+        "payment_type": null,
+        "payment_date": null,
+        "user_email": null
+    },
+    {
+        "billing_id": "9d7469",
+        "order_id": "8dd938",
+        "customer_name": "priya",
+        "billing_date": "19-Nov-2024 11:54:PM",
+        "items": [
+            {
+                "item_id": "ST03",
+                "item_name": "Paneer Tikka",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 260
+            },
+            {
+                "item_id": "RI01",
+                "item_name": "Steamed Rice",
+                "size": "full",
+                "quantity": 2,
+                "total_price": 240
+            }
+        ],
+        "subtotal": 500,
+        "gst": 90.0,
+        "total": 590.0,
+        "status": "Paid",
+        "payment_type": "Cash",
+        "payment_date": "19-Nov-2024 11:57 PM",
         "user_email": null
     }
 ]

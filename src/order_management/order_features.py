@@ -5,6 +5,7 @@ from Src.Order_management.order_data import (
 from Src.Utility.validation import *
 from Src.Utility.user_input import get_valid_input
 from Src.Messages.order import OrderOutputHandler
+from Src.Utility.color import Colors
 
 class OrderManagementSystem:
     def __init__(self):
@@ -223,7 +224,9 @@ class OrderManagementSystem:
 
     def show_menu(self):
         for category, items in self.menu.items():
-            print(f"\nCategory: {category}")
+            print(f"{Colors.LIGHT_AQUA}\nCategory: {category}{Colors.RESET}")
+            print(f"{Colors.LIGHT_TEAL}ITEM ID\t ITEM NAME\t\t\t PRICE\t\t\t\t\tINGREDIENTS{Colors.RESET}")
+            print(f"{Colors.LIGHT_PINK}-{Colors.RESET}"*110)
             for item in items:
                 item_id = item['item id']
                 item_name = item['item name']

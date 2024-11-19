@@ -1,9 +1,9 @@
 from Src.Utility.color import Colors
+
 class BillingHandler:
     def __init__(self):
         self.color = Colors()
     
-
     def display_warning_invalid_format(self):
         print(f"{Colors.YELLOW}⚠️ Warning: 'billing.json' is empty or has invalid format. Initializing with an empty list.{Colors.RESET}")
     
@@ -49,21 +49,23 @@ class BillingHandler:
             print(f"{Colors.RED}❌ No bills found.{Colors.RESET}")
 
     def display_single_bill(self, bill):
-        
-        print(f"{Colors.BLUE}Billing ID: {bill['billing_id']}{Colors.RESET}")
+        print("\n")
+        print(f"{Colors.BRIGHT_MAGENTA}               BILL DETAILS                {Colors.RESET}")
+        print(f"{Colors.LIGHT_SKY_BLUE}Billing ID: {bill['billing_id']}")
         print(f"Order ID: {bill['order_id']}")
-        print(f"Customer Name: {bill['customer_name']}")
-        print(f"Billing Date: {bill['billing_date']}")
-        print(f"Subtotal: ₹{bill['subtotal']}")
+        print(f"Customer Name: {bill['customer_name']} \tBilling Date: {bill['billing_date']}")
+        # print(f"Billing Date: {bill['billing_date']}")
+        print(f"{Colors.LIGHT_CORAL}-{Colors.RESET}"*50)
+        print(f"\n{Colors.LIGHT_CORAL}Subtotal: ₹{bill['subtotal']}")
         print(f"GST: ₹{bill['gst']}")
         print(f"Total: ₹{bill['total']}")
         print(f"Status: {bill['status']}")
         print(f"Payment Type: {bill['payment_type']}")
-        print(f"Payment Date: {bill['payment_date']}")
-        print(f"{Colors.GREEN}={Colors.RESET}" * 40)
+        print(f"Payment Date: {bill['payment_date']}{Colors.RESET}")
+        print(f"{Colors.LIGHT_PINK}={Colors.RESET}" * 50)
     
     def print_bill(self, bill):
-        print("\n" )
+        print("\n")
         print(f"{Colors.BRIGHT_MAGENTA}               BILL DETAILS                {Colors.RESET}")
         print(f"{Colors.YELLOW}={Colors.RESET}" * 50)
         print(f"{Colors.GREEN}Billing ID: {bill['billing_id']}{Colors.RESET}")
@@ -74,7 +76,7 @@ class BillingHandler:
         print("\nItems Purchased:")
         for i, item in enumerate(bill['items'], start=1):
             print(f"  {i}. {item['item_name']} (Size: {item['size']}) x{item['quantity']} = ₹{item['total_price']:.2f}")
-        print(f"{Colors.YELLOW}-{Colors.YELLOW}" * 50)
+        print(f"{Colors.YELLOW}-{Colors.RESET}" * 50)
         print(f"\nSubtotal: ₹{bill['subtotal']:.2f}")
         print(f"GST (18%): ₹{bill['gst']:.2f}")
         print(f"Total: ₹{bill['total']:.2f}")
@@ -105,3 +107,55 @@ class BillingHandler:
     def prompt_payment_type(self):
         return input("Enter Payment Type (Online/Cash): ").capitalize()
 
+    def display_bill_generation_start(self):
+        print(f"{self.color.YELLOW}Generating bill...{self.color.RESET}")
+
+    def display_available_orders(self, available_orders):
+        print(f"Available orders for billing: {available_orders}")
+
+    def display_no_orders_for_billing(self):
+        print(f"{self.color.RED}No orders available for billing.{self.color.RESET}")
+
+    def display_order_id(self, order_id):
+        print(f"Order ID entered: {order_id}")
+
+    def display_bill_check_start(self):
+        print(f"{self.color.YELLOW}Checking bill...{self.color.RESET}")
+
+    def display_paid_bills_start(self):
+        print(f"{self.color.YELLOW}Showing all paid bills...{self.color.RESET}")
+
+    def display_all_bills_start(self):
+        print(f"{self.color.YELLOW}Showing all bills...{self.color.RESET}")
+
+    def display_save_success(self, entity):
+        print(f"{self.color.GREEN}{entity} saved successfully.{self.color.RESET}")
+
+    def display_save_error(self, entity):
+        print(f"{self.color.RED}Error saving {entity}.{self.color.RESET}")
+
+    def display_billing_id(self, billing_id):
+        print(f"{Colors.LIGHT_CORAL}Billing ID entered:{Colors.RESET} {billing_id}")
+    
+    def display_bill_marking_start(self):
+        print(f"{self.color.YELLOW}Marking bill as paid...{self.color.RESET}")
+
+
+    def display_available_bills(self, available_bills):
+        """Display all available billing IDs and their amounts."""
+        if not available_bills:
+            print(f"{Colors.LIGHT_CORAL}No bills available for payment.{Colors.RESET}")
+            return
+
+        print("Available Bills to Mark as Paid:")
+        for billing_id, amount in available_bills:
+            print(f"{Colors.LIGHT_SKY_BLUE}Billing ID: {billing_id}  {Colors.RESET}, {Colors.LIGHT_PINK}Amount Due: ₹{amount}")
+
+
+    def display_payment_amount(self, amount):
+        """Display the amount that needs to be paid for a bill."""
+        print(f"{Colors.LIGHT_ORANGE}The amount to be paid is: ₹{Colors.RESET}{amount}")
+
+    def display_no_bills_for_payment(self):
+        """Display message when there are no bills available for payment."""
+        print(f"{Colors.LIGHT_CORAL}There are no bills available for payment.{Colors.RESET}")

@@ -41,13 +41,12 @@ def display_order_management():
     print(f"{Colors.LIGHT_PEACH}{'-'*40}")
     print(f"\t{'*'*5} ORDER MANAGEMENT{'*'*5}")
     print(f"{'-'*40}{Colors.RESET}")
-    print(f"\n{Colors.CYAN}1. Show Menu")
-    print("2. Take New Order")
-    print("3. Update Order")
-    print("4. Cancel Order")
-    print("5. Search Order")
-    print(f"6. See All Orders{Colors.RESET}")
-    print(f"{Colors.LIGHT_BLUE}7. EXIT{Colors.RESET}")
+    print(f"\n{Colors.CYAN}1. Take New Order")
+    print("2. Update Order")
+    print("3. Cancel Order")
+    print("4. Search Order")
+    print(f"5. See All Orders{Colors.RESET}")
+    print(f"{Colors.LIGHT_SKY_BLUE}6. EXIT{Colors.RESET}")
     
 
 def display_invoice_management():
@@ -62,16 +61,16 @@ def display_invoice_management():
     print(f"{Colors.LIGHT_PINK}6. EXIT{Colors.RESET}")
 
 def display_table_booking_management():
-    print(f"{Colors.CYAN}{'-'*45}")
+    print(f"{Colors.LIGHT_PINK}{'-'*45}")
     print(f"\t{'*'*5}TABLE BOOKING MANAGEMENT {'*'*5}")
     print(f"{'-'*45}{Colors.RESET}")
-    print(f"\n{Colors.GREEN}1. Reserve a Table")
+    print(f"\n{Colors.LIGHT_PEACH}1. Reserve a Table")
     print("2. Cancel a Reservation")
     print("3. Update a Reservation")
     print("4. View Table Availability")
     print("5. View Table Reservations")
     print(f"6. Search Reservation{Colors.RESET}")
-    print(f"{Colors.LIGHT_LIME}7. EXIT{Colors.RESET}")
+    print(f"{Colors.LIGHT_CORAL}7. EXIT{Colors.RESET}")
 
 def display_stock_management():
     print(f"{Colors.LIGHT_ORANGE}{'-'*40}")

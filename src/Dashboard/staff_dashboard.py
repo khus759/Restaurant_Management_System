@@ -62,17 +62,18 @@ class StaffDashboard:
 
         if choice == "1":
             self.order_management.show_menu()
-        elif choice == "2":
             self.order_management.take_order()
-        elif choice == "3":
+        # elif choice == "2":
+        #     self.order_management.take_order()
+        elif choice == "2":
             self.order_management.update_order()
-        elif choice == "4":
+        elif choice == "3":
             self.order_management.cancel_order()
-        elif choice == "5":
+        elif choice == "4":
             self.order_management.check_order()
-        elif choice == "6":
+        elif choice == "5":
             self.order_management.show_all_orders()
-        elif choice == "7":
+        elif choice == "6":
             self.order_management.exit_system()
         else:
             print("Invalid choice in Order Management.")
@@ -92,11 +93,11 @@ class StaffDashboard:
             self.bill_system.mark_as_paid()
         elif choice == "5":
             self.bill_system.show_all_paid_bills()
-        elif choice == "6":
-            self.bill_system.exit_system()
+        elif choice == "6": 
+            self.bill_system.exit_system() 
         else: 
             print("Invalid choice in Invoice Management.")
-
+            
     def handle_table_booking_management(self):
         self.booking_system.welcome_system()
         display_table_booking_management()
