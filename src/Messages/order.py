@@ -33,7 +33,7 @@ class OrderOutputHandler:
         print(f"{Colors.GREEN}={Colors.RESET}" * 50)
 
     def show_menu_item(self, item_id, item_name, price_details, ingredients):
-        print(f"{Colors.BRIGHT_MAGENTA}{item_id:<10}{item_name:<30}{price_details:<40}{ingredients:<50}{Colors.RESET}")
+        print(f"{Colors.LIGHT_CORAL}{item_id:<10}{item_name:<30}{price_details:<40}{ingredients:<50}{Colors.RESET}")
 
     def order_update_success(self, order_id):
         print(f"{Colors.GREEN}✔️ Order with ID {order_id} has been successfully updated.{Colors.RESET}")
@@ -48,7 +48,7 @@ class OrderOutputHandler:
         print(f"{Colors.BLUE}Order ID: {order_id} - Current Status: {status}{Colors.RESET}")
 
     def invalid_input(self, field):
-        print(f"{self.RED}❌ Invalid input for {field}. Please try again.{Colors.RESET}")
+        print(f"{Colors.RED}❌ Invalid input for {field}. Please try again.{Colors.RESET}")
 
     def order_save_error(self, exception):
         print(f"{Colors.RED}❌ An error occurred while saving the order: {exception}{Colors.RESET}")
