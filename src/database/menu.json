@@ -349,14 +349,6 @@
                 }
             },
             {
-                "item id": "DR06",
-                "item name": "Mixed Fruit Juice",
-                "prices": {
-                    "single": "70"
-                },
-                "ingredients": []
-            },
-            {
                 "item id": "DR07",
                 "item name": "Betroot Juice",
                 "prices": {

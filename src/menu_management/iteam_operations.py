@@ -5,6 +5,7 @@ from Src.Utility.validation import (
      validate_item_id
 )
 from Src.Messages.menu import Menu_Message
+from Src.Utility.color import Colors
 
 class ItemOperations:
     def __init__(self, menu_data, json_file):
@@ -144,5 +145,5 @@ class ItemOperations:
                 ingredients = item.get('ingredients', "------------")
                 if isinstance(ingredients, list):
                     ingredients = ', '.join(ingredients) if ingredients else "------------"
-                print(f"{item_id:<10}{item_name:<30}{price_details:<40}{ingredients:<50}")
-            print("=" * 130)
+                print(f"{Colors.LIGHT_CORAL}{item_id:<10}{Colors.RESET}{Colors.LIGHT_SKY_BLUE}{Colors.LIGHT_AQUA}{item_name:<30}{Colors.RESET}{Colors.LIGHT_ORANGE}{price_details:<40}{Colors.RESET}{Colors.LIGHT_PINK}{ingredients:<50}{Colors.RESET}")
+            print(f"{Colors.LIGHT_VIOLET}*" * 130)
