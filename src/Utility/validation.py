@@ -8,42 +8,27 @@ def validate_name(name):
         return "Name cannot contain special characters."
     return None
 
-# def validate_password(password):
-#     if not password.strip():
-#         return "Password cannot be blank."
-#     if len(password) < 6:
-#         return "Password must be at least 6 characters long."
-
-#     # Special characters to check
-#     special_characters = "!@#$%^&*(),.?\":{}|<>"
-    
-#     # Track the last character and consecutive repeats
-#     last_char = ''
-#     count = 1
-
-#     for char in password:
-#         if char == last_char:
-#             count += 1
-#         else:
-#             count = 1
-        
-#         # Check if the character repeats more than 3 times consecutively
-#         if count > 3:
-#             return "Password cannot contain the same character more than 3 times consecutively."
-        
-#         # Check if character is a special character, digit or letter
-#         if char.isdigit() or char.isalpha() or char in special_characters:
-#             last_char = char
-
-#     return None
-
-
 def validate_password(password):
     if not password.strip():
         return "Password cannot be blank."
-    if len(password) > 6:
+    if len(password) < 6:  # Minimum length validation
         return "Password must be at least 6 characters long."
-    return None
+    
+    # Manual counting of character occurrences
+    char_counts = {}
+    for char in password:
+        char_counts[char] = char_counts.get(char, 0) + 1
+        if char_counts[char] > 3:  # Check if any character repeats more than twice
+            return "Password cannot have any character repeated more than three times."
+
+    return None  # Password is valid
+
+# def validate_password(password):
+#     if not password.strip():
+#         return "Password cannot be blank."
+#     if len(password) > 6:
+#         return "Password must be at least 6 characters long."
+#     return None
 
 def validate_role(role):
     role = role.upper()

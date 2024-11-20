@@ -1,6 +1,6 @@
 import uuid
-import maskpass  # Secure password input
-import json  # Required to read/write employee.json
+import maskpass  
+import json  
 from Src.Authentication.file_operation import load_users, save_users
 from Src.Utility.validation import (
     validate_name, validate_email, validate_password,
@@ -38,24 +38,23 @@ class AuthSystem:
 
             while True:
                 password = maskpass.askpass("Enter a password (6+ characters): ", mask="*")
-                if validate_password(password):
+                error = validate_password(password)
+                if not error:
                     break
-                print(f"{Colors.RED}Invalid password. Please try again.{Colors.RESET}")
+                print(f"{Colors.RED}{error}{Colors.RESET}")
 
             phone = get_valid_input("Enter your phone number (10 digits): ", validate_phone_number)
             dob = get_valid_input("Enter your date of birth (YYYY-MM-DD): ", validate_date_of_birth)
 
-            # Automatically assign roles: First user is Owner, subsequent users are Staff
+    
             owner_count = sum(1 for user in users if user['role'].upper() == 'OWNER')
             if owner_count == 0:
-                role = "Owner"  # First user becomes the owner
+                role = "Owner"  
             else:
-                role = "Staff"  # All subsequent users become staff
+                role = "Staff"  
 
-            # Generate a unique user ID
             user_id = str(uuid.uuid4()).replace("-", "")[:8].upper()
 
-            # Create new user object
             new_user = {
                 'id': user_id,
                 'name': name,
@@ -65,17 +64,13 @@ class AuthSystem:
                 'role': role,
                 'date_of_birth': dob
             }
-
-            # Append to users list and save to file
             users.append(new_user)
             save_users(self.users_file, users)
 
-            # Notify user of successful signup
             self.message_handler.signup_successful()
             break
 
     def login(self):
-        # Load users from employee.json
         try:
             users = load_users(self.users_file)
         except FileNotFoundError:
@@ -86,11 +81,10 @@ class AuthSystem:
 
             password = maskpass.askpass(f"{Colors.RESET}Enter your password: ", mask="*")
 
-            # Check if the email and password match a user
             user = next((user for user in users if user['email'] == email and user['password'] == password), None)
             
             if user:
-                # Check if the user is an "Owner"
+                
                 if user['role'].lower() == 'owner':
                     self.current_user = user
                     self.message_handler.login_successful(user['role'], user['name'])
@@ -146,6 +140,5 @@ class AuthSystem:
         else:
             self.message_handler.no_owner_exists()
 
-    # Display the welcome message
     def welcome_system(self):
         self.message_handler.welcome_message()
