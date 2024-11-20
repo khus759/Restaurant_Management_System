@@ -106,7 +106,7 @@ class StaffManagementSystem:
 
         while True:
             pincode = input("Enter pincode: ").strip()
-            if pincode.isdigit() and len(pincode) == 6:  # Assuming a 6-digit pincode
+            if pincode.isdigit() and len(pincode) == 6: 
                 employee.pincode = pincode
                 break
             else:
@@ -114,16 +114,15 @@ class StaffManagementSystem:
 
         while True:
             joining_date = input("Enter joining date (YYYY-MM-DD): ").strip()
-            if validate_date_of_birth(joining_date):  # Assuming this method validates dates
+            if validate_date_of_birth(joining_date):  
                 employee.joining_date = joining_date
                 break
             else:
                 print("Invalid date format. Please use YYYY-MM-DD.")
 
-        # Validate salary
         while True:
             salary = input("Enter salary: ").strip()
-            if salary.replace('.', '', 1).isdigit():  # Allows decimal salaries
+            if salary.replace('.', '', 1).isdigit():  
                 employee.salary = float(salary)
                 break
             else:
@@ -167,7 +166,6 @@ class StaffManagementSystem:
                 emp['pincode'] = input(f"Enter new pincode (current: {emp['pincode']}): ") or emp['pincode']
                 emp['salary'] = input(f"Enter new salary (current: {emp['salary']}): ") or emp['salary']
 
-                # Save updated employee list back to file
                 save_data(employee_file, employees)
                 profile_updated()
                 return

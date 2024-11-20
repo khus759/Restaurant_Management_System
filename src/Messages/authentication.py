@@ -40,18 +40,18 @@ class AuthHandler:
         print(f"{Colors.RED}No owner exists in the system. Only an owner can add staff members.{Colors.RESET}")
 
     def staff_list_header(self):
-        print("\n" + "*" * 60)
-        print(f"{Colors.BLUE}** List of All Staff Members **".center(60) + Colors.RESET)
-        print("*" * 60)
-        print("-" * 115)
-        print(f"{Colors.CYAN}{'No.':<5} | {'ID':<15} | {'Name':<20} | {'Email':<25} | {'Phone':<15} | {'Date of Birth':<15} |{Colors.RESET}")
-        print("-" * 115)
+        print(f"{Colors.LIGHT_TEAL} *{Colors.RESET}" * 60)
+        print(f"\t\t{Colors.LIGHT_ORANGE}************* List of All Staff Members ************".center(60) + Colors.RESET)
+        print(f"{Colors.LIGHT_SKY_BLUE} *{Colors.RESET}" * 60)
+        print(f"-" * 115)
+        print(f"{Colors.LIGHT_PEACH}{'No.':<5} | {'ID':<15} | {'Name':<20} | {'Email':<25} | {'Phone':<15} | {'Date of Birth':<15} |{Colors.RESET}")
+        print(f"{Colors.LIGHT_TURQUOISE}-" * 115)
 
     def display_staff_member(self, index, staff):
-        print(f"{Colors.GREEN}{index:<5} | {staff['id']:<15} | {staff['name']:<20} | {staff['email']:<25} | {staff['phone']:<15} | {staff['date_of_birth']:<15} |{Colors.RESET}")
+        print(f"{Colors.LIGHT_VIOLET}{index:<5} | {staff['id']:<15} | {staff['name']:<20} | {staff['email']:<25} | {staff['phone']:<15} | {staff['date_of_birth']:<15} |{Colors.RESET}")
 
     def staff_list_footer(self):
-        print("-" * 115)
+        print(f"{Colors.AQUA}-{Colors.RESET}" * 115)
 
     def invalid_user_id(self):
         print(f"{Colors.RED}Invalid user ID. You are not authorized to log in.{Colors.RESET}")

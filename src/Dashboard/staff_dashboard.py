@@ -63,8 +63,6 @@ class StaffDashboard:
         if choice == "1":
             self.order_management.show_menu()
             self.order_management.take_order()
-        # elif choice == "2":
-        #     self.order_management.take_order()
         elif choice == "2":
             self.order_management.update_order()
         elif choice == "3":
