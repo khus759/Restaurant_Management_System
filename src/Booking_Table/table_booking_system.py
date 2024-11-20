@@ -1,4 +1,3 @@
-
 import json
 import uuid
 from Src.Booking_Table.table import Table
@@ -43,12 +42,40 @@ class TableBookingSystem:
     def find_available_table(self, seats, date_time):
         available_tables = [
             table for table in self.tables
-            if table.seats == seats and not any(
+            if table.seats >= seats and not any(
                 reservation.table_id == table.table_id and reservation.date_time == date_time and reservation.status == 'Reserved'
                 for reservation in self.reservations
             )
         ]
         return available_tables
+
+    def suggest_table(self, seats):
+        suggested_tables = sorted(
+            [table for table in self.tables if table.seats >= seats],
+            key=lambda x: x.seats
+        )
+        return suggested_tables
+
+    def split_table_reservation(self, total_seats):
+        tables_needed = []
+        remaining_seats = total_seats
+        available_tables = sorted(self.tables, key=lambda x: x.seats, reverse=True)  # Sort by largest first
+
+        for table in available_tables:
+            while remaining_seats >= table.seats:
+                tables_needed.append(table)
+                remaining_seats -= table.seats
+
+        if remaining_seats > 0:  # If there are remaining seats, suggest smaller tables
+            for table in available_tables:
+                if table.seats >= remaining_seats:
+                    tables_needed.append(table)
+                    remaining_seats = 0
+                    break
+
+        if remaining_seats > 0:
+            return None  # Could not split the reservation successfully
+        return tables_needed
 
     def reserve_table(self):
         while True:
@@ -57,26 +84,63 @@ class TableBookingSystem:
             date_time = get_valid_input("Enter reservation date and time (YYYY-MM-DD HH:MM AM/PM): ", validate_booking_date_time)
             seats = int(get_valid_input("Enter number of seats required: ", validate_seats))
 
-            available_tables = self.find_available_table(seats, date_time)
-            
-            if not available_tables:
-                self.messages.display_no_available_tables(seats, date_time)
+            if seats > 50:
+                self.messages.display_no_seats_available()
                 return
 
-            table = available_tables[0]
-            reserve_id = f"{phone[:4]}{str(uuid.uuid4())[:4]}"
-            reservation = Reservation(
-                reservation_id=reserve_id,
-                name=name,
-                phone=phone,
-                date_time=date_time,
-                seats=seats,
-                table_id=table.table_id
-            )
-            self.reservations.append(reservation)
-            self.save_reservations()
-            self.messages.display_reservation_success(reservation.reservation_id)
-            
+            # If the number of seats is less than or equal to 10, find available tables
+            if seats <= 10:
+                available_tables = self.find_available_table(seats, date_time)
+                if not available_tables:
+                    self.messages.display_no_available_tables(seats, date_time)
+                    suggested_tables = self.suggest_table(seats)
+                    if suggested_tables:
+                        self.messages.display_suggested_tables(suggested_tables)
+                    return
+                table = available_tables[0]
+                reserve_id = f"{phone[:4]}{str(uuid.uuid4())[:4]}"
+                reservation = Reservation(
+                    reservation_id=reserve_id,
+                    name=name,
+                    phone=phone,
+                    date_time=date_time,
+                    seats=seats,
+                    table_id=table.table_id
+                )
+                self.reservations.append(reservation)
+                self.save_reservations()
+                self.messages.display_reservation_success(reservation.reservation_id)
+            else:
+                # For more than 10 seats, suggest splitting the reservation
+                tables_needed = self.split_table_reservation(seats)
+                if tables_needed:
+                    self.messages.display_split_table_suggestion(tables_needed)
+                    user_response = input("Do you want to proceed with this split reservation? (yes/no): ").strip().lower()
+
+                    while user_response not in ['yes', 'no']:
+                        print("Please enter 'yes' or 'no'.")
+                        user_response = input("Do you want to proceed with this split reservation? (yes/no): ").strip().lower()
+
+                    if user_response == 'yes':
+                        reserve_id = f"{phone[:4]}{str(uuid.uuid4())[:4]}"
+                        for table in tables_needed:
+                            reservation = Reservation(
+                                reservation_id=reserve_id,
+                                name=name,
+                                phone=phone,
+                                date_time=date_time,
+                                seats=table.seats,
+                                table_id=table.table_id
+                            )
+                            self.reservations.append(reservation)
+                        self.save_reservations()
+                        self.messages.display_reservation_success(reserve_id)
+                    else:
+                        print("Reservation not booked.")
+                        return
+                else:
+                    self.messages.display_no_suitable_tables_for_split(seats)
+
             continue_prompt = input("Would you like to make another reservation? (yes/no): ").strip().lower()
             if continue_prompt != 'yes':
                 break
@@ -140,4 +204,4 @@ class TableBookingSystem:
         self.messages.exit_message()
 
     def welcome_system(self):
-        self.messages.welcome_message()    
+        self.messages.welcome_message()

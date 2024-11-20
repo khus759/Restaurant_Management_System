@@ -226,7 +226,7 @@ class OrderManagementSystem:
         for category, items in self.menu.items():
             print(f"{Colors.LIGHT_AQUA}\nCategory: {category}{Colors.RESET}")
             print(f"{Colors.LIGHT_TEAL}ITEM ID\t ITEM NAME\t\t\t PRICE\t\t\t\t\tINGREDIENTS{Colors.RESET}")
-            print(f"{Colors.LIGHT_PINK}-{Colors.RESET}"*110)
+            print(f"{Colors.LIGHT_PINK}-{Colors.RESET}"*120)
             for item in items:
                 item_id = item['item id']
                 item_name = item['item name']

@@ -34,7 +34,7 @@ class OrderOutputHandler:
 
     def show_menu_item(self, item_id, item_name, price_details, ingredients):
         print(f"{Colors.LIGHT_CORAL}{item_id:<10}{Colors.RESET}{Colors.LIGHT_TEAL}{item_name:<30}{Colors.RESET}{Colors.LIGHT_PINK}{price_details:<40}{Colors.RESET}{Colors.LIGHT_ORANGE}{ingredients:<50}{Colors.RESET}")
-        print(f"{Colors.LIGHT_VIOLET}*{Colors.RESET}"*110) 
+        print(f"{Colors.LIGHT_VIOLET}*{Colors.RESET}"*120) 
 
     def order_update_success(self, order_id):
         print(f"{Colors.GREEN}✔️ Order with ID {order_id} has been successfully updated.{Colors.RESET}")
@@ -71,10 +71,10 @@ class OrderOutputHandler:
         print(f"{Colors.RED}❌ Invalid quantity entered. Please enter a valid number.{Colors.RESET}")
 
     def welcome_message(self):
-        print(f"{Colors.LIGHT_PEACH} 😀 Welcome to the Order Management System! Please follow the prompts to continue.😜{Colors.RESET}")
+        print(f"{Colors.LIGHT_PEACH}  Welcome to the Order Management System! Please follow the prompts to continue.{Colors.RESET}")
 
     def exit_message(self):
-        print(f"{Colors.LIGHT_TURQUOISE} 😀 Thank you for using the Order Management System. Goodbye!{Colors.RESET}")
+        print(f"{Colors.LIGHT_TURQUOISE}  Thank you for using the Order Management System. Goodbye!{Colors.RESET}")
 
     def generate_message(self, e):
         print(f"{Colors.RED}❌ Error generating order ID: {e}{Colors.RESET}")

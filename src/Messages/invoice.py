@@ -44,53 +44,53 @@ class BillingHandler:
         if bills:
             print(f"{Colors.BLUE}All Bills:{Colors.RESET}")
             for bill in bills:
-                self.display_single_bill(bill)
+                self.print_bill(bill)
         else:
             print(f"{Colors.RED}❌ No bills found.{Colors.RESET}")
 
-    def display_single_bill(self, bill):
-        print("\n")
-        print(f"{Colors.LIGHT_PINK}               BILL DETAILS                {Colors.RESET}")
-        print(f"{Colors.LIGHT_SKY_BLUE}Billing ID: {bill['billing_id']}")
-        print(f"Order ID: {bill['order_id']}")
-        print(f"Customer Name: {bill['customer_name']} \tBilling Date: {bill['billing_date']}")
-        # print(f"Billing Date: {bill['billing_date']}")
-        print(f"{Colors.LIGHT_CORAL}-{Colors.RESET}"*50)
-        print(f"\n{Colors.LIGHT_CORAL}Subtotal: ₹{bill['subtotal']}")
-        print(f"GST: ₹{bill['gst']}")
-        print(f"Total: ₹{bill['total']}")
-        print(f"Status: {bill['status']}")
-        print(f"Payment Type: {bill['payment_type']}")
-        print(f"Payment Date: {bill['payment_date']}{Colors.RESET}")
-        print(f"{Colors.LIGHT_PINK}={Colors.RESET}" * 50)
+    # def display_single_bill(self, bill):
+    #     print("\n")
+    #     print(f"{Colors.LIGHT_PINK}               BILL DETAILS                {Colors.RESET}")
+    #     print(f"{Colors.LIGHT_SKY_BLUE}Billing ID: {bill['billing_id']}")
+    #     print(f"Order ID: {bill['order_id']}")
+    #     print(f"Customer Name: {bill['customer_name']} \tBilling Date: {bill['billing_date']}")
+    #     # print(f"Billing Date: {bill['billing_date']}")
+    #     print(f"{Colors.LIGHT_CORAL}-{Colors.RESET}"*50)
+    #     print(f"\n{Colors.LIGHT_CORAL}Subtotal: ₹{bill['subtotal']}")
+    #     print(f"GST: ₹{bill['gst']}")
+    #     print(f"Total: ₹{bill['total']}")
+    #     print(f"Status: {bill['status']}")
+    #     print(f"Payment Type: {bill['payment_type']}")
+    #     print(f"Payment Date: {bill['payment_date']}{Colors.RESET}")
+    #     print(f"{Colors.LIGHT_PINK}={Colors.RESET}" * 50)
     
     def print_bill(self, bill):
         print("\n")
-        print(f"{Colors.BRIGHT_MAGENTA}               BILL DETAILS                {Colors.RESET}")
-        print(f"{Colors.YELLOW}={Colors.RESET}" * 50)
-        print(f"{Colors.GREEN}Billing ID: {bill['billing_id']}{Colors.RESET}")
+        print(f"{Colors.LIGHT_TEAL}               BILL DETAILS                {Colors.RESET}")
+        print(f"{Colors.LIGHT_PEACH}={Colors.RESET}" * 50)
+        print(f"{Colors.LIGHT_ORANGE}Billing ID: {bill['billing_id']}")
         print(f"Order ID: {bill['order_id']}")
         print(f"Customer Name: {bill['customer_name']}")
-        print(f"Billing Date: {bill['billing_date']}")
-        print(f"{Colors.YELLOW}-{Colors.RESET}" * 50)
-        print("\nItems Purchased:")
+        print(f"Billing Date: {bill['billing_date']}{Colors.RESET}")
+        print(f"{Colors.LIGHT_PEACH}-{Colors.RESET}" * 50)
+        print(f"\n{Colors.LIGHT_AQUA}Items Purchased:")
         for i, item in enumerate(bill['items'], start=1):
-            print(f"  {i}. {item['item_name']} (Size: {item['size']}) x{item['quantity']} = ₹{item['total_price']:.2f}")
+            print(f"  {i}. {item['item_name']} (Size: {item['size']}) x{item['quantity']} = ₹{item['total_price']:.2f}{Colors.RESET}")
         print(f"{Colors.YELLOW}-{Colors.RESET}" * 50)
-        print(f"\nSubtotal: ₹{bill['subtotal']:.2f}")
+        print(f"\n{Colors.LIGHT_PINK}Subtotal: ₹{bill['subtotal']:.2f}")
         print(f"GST (18%): ₹{bill['gst']:.2f}")
         print(f"Total: ₹{bill['total']:.2f}")
         print(f"Status: {bill['status']}")
         if bill["status"] == "Paid":
             print(f"Payment Type: {bill['payment_type']}")
-            print(f"Payment Date: {bill['payment_date']}")
-        print(f"{Colors.YELLOW}-{Colors.RESET}" * 50)
+            print(f"Payment Date: {bill['payment_date']}{Colors.RESET}")
+        print(f"{Colors.LIGHT_ORANGE}-{Colors.RESET}" * 50)
     
     def welcome_message(self):
-        print(f"{Colors.LIGHT_CORAL} 😀 Welcome to the Invoice System! Please follow the prompts to continue.{Colors.RESET}")
+        print(f"{Colors.LIGHT_CORAL}  Welcome to the Invoice System! Please follow the prompts to continue.{Colors.RESET}")
 
     def exit_message(self):
-        print(f"{Colors.LIGHT_LIME} 😀 Thank you for using the Invoice System. Goodbye!{Colors.RESET}")
+        print(f"{Colors.LIGHT_LIME}  Thank you for using the Invoice System. Goodbye!{Colors.RESET}")
     
     def display_required_payment_amount(self, total):
         print(f"Payment Amount Required: ₹{total:.2f}")

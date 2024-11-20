@@ -86,10 +86,10 @@ class Report:
         print("No ingredients nearing expiration or low in stock to display in the summary.")
     
     def welcome_message(self):
-        print(f"{Colors.LIGHT_PINK} 😀 Welcome to the Reports Management ! Please follow the prompts to continue.😜{Colors.RESET}")
+        print(f"{Colors.LIGHT_PINK}  Welcome to the Reports Management ! Please follow the prompts to continue.{Colors.RESET}")
 
     def exit_message(self):
-        print(f"{Colors.LIGHT_PEACH} 😀 Thank you for using the Reports Management. Goodbye!{Colors.RESET}")
+        print(f"{Colors.LIGHT_PEACH}  Thank you for using the Reports Management. Goodbye!{Colors.RESET}")
     
     def show_order_summary_header(self, date_input):
         print(f"{Colors.LIGHT_ORANGE}Order Summary for Date: {date_input}{Colors.RESET}")

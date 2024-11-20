@@ -36,10 +36,10 @@ class Menu_Message:
         print(f"{Colors.RED}Error: {error_message}{Colors.RESET}")
 
     def exit_message(self):
-        print(f"{Colors.LIGHT_ORANGE} 😀 Thank you for using the Menu Management System. Goodbye!{Colors.RESET}")
+        print(f"{Colors.LIGHT_ORANGE}  Thank you for using the Menu Management System. Goodbye!{Colors.RESET}")
 
     def welcome_message(self):
-        print(f"{Colors.LIGHT_PEACH} 😀 Welcome to the Menu Management System! Please follow the prompts to continue.😜{Colors.RESET}")
+        print(f"{Colors.LIGHT_PEACH}  Welcome to the Menu Management System! Please follow the prompts to continue.{Colors.RESET}")
 
     def print_ingredient_added(self, ingredient, item_id):
         print(f"{Colors.GREEN}✔️ Ingredient '{ingredient}' added successfully to item '{item_id}'.{Colors.RESET}")

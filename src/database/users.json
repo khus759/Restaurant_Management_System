@@ -97,5 +97,41 @@
         "phone": "8923273908",
         "role": "Staff",
         "date_of_birth": "2000-08-14"
+    },
+    {
+        "id": "23422EBA",
+        "name": "khushi",
+        "email": "khus1234@gmail.com",
+        "password": "0000000",
+        "phone": "8541087731",
+        "role": "Staff",
+        "date_of_birth": "2004-2-6"
+    },
+    {
+        "id": "FC968590",
+        "name": "zaib",
+        "email": "zaib555@gmail.com",
+        "password": "8888999",
+        "phone": "8765432214",
+        "role": "Staff",
+        "date_of_birth": "2000-12-10"
+    },
+    {
+        "id": "EDF39F0A",
+        "name": "zaib",
+        "email": "zain456@gmail.com",
+        "password": "5556666",
+        "phone": "8765432216",
+        "role": "Staff",
+        "date_of_birth": "2000-1-2"
+    },
+    {
+        "id": "1677B46C",
+        "name": "zaib",
+        "email": "zain888999@gmail.com",
+        "password": "6666zaib",
+        "phone": "9876543321",
+        "role": "Staff",
+        "date_of_birth": "2000-1-1"
     }
 ]

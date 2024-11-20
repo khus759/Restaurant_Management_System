@@ -75,8 +75,20 @@ class BookingHandler:
             print(f"{Colors.YELLOW}No canceled reservations found for the specified date or month.{Colors.RESET}")
     
     def welcome_message(self):
-        print(f"{Colors.LIGHT_CORAL} 😀 Welcome to the Booking Management System! Please follow the prompts to continue.😜{Colors.RESET}")
+        print(f"{Colors.LIGHT_CORAL}  Welcome to the Booking Management System! Please follow the prompts to continue.{Colors.RESET}")
 
     def exit_message(self):
-        print(f"{Colors.LIGHT_VIOLET} 😀 Thank you for using the Booking Management System. Goodbye!{Colors.RESET}")
- 
+        print(f"{Colors.LIGHT_VIOLET}  Thank you for using the Booking Management System. Goodbye!{Colors.RESET}")
+    
+    def display_split_table_suggestion(self, tables):
+        print("Suggested tables for your reservation (split into multiple tables):")
+        for table in tables:
+            print(f"Table ID: {table.table_id}, Seats: {table.seats}")
+
+    def display_suggested_tables(self, tables):
+        print("Suggested tables available:")
+        for table in tables:
+            print(f"Table ID: {table.table_id} - Seats: {table.seats}")
+    
+    def display_no_seats_available(self):
+        print("Sorry, no seats are available for your request.")

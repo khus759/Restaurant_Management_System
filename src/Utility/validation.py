@@ -8,6 +8,35 @@ def validate_name(name):
         return "Name cannot contain special characters."
     return None
 
+# def validate_password(password):
+#     if not password.strip():
+#         return "Password cannot be blank."
+#     if len(password) < 6:
+#         return "Password must be at least 6 characters long."
+
+#     # Special characters to check
+#     special_characters = "!@#$%^&*(),.?\":{}|<>"
+    
+#     # Track the last character and consecutive repeats
+#     last_char = ''
+#     count = 1
+
+#     for char in password:
+#         if char == last_char:
+#             count += 1
+#         else:
+#             count = 1
+        
+#         # Check if the character repeats more than 3 times consecutively
+#         if count > 3:
+#             return "Password cannot contain the same character more than 3 times consecutively."
+        
+#         # Check if character is a special character, digit or letter
+#         if char.isdigit() or char.isalpha() or char in special_characters:
+#             last_char = char
+
+#     return None
+
 
 def validate_password(password):
     if not password.strip():

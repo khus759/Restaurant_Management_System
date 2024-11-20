@@ -56,10 +56,10 @@ def display_all_profiles(emp, index):
     display_profile(emp)
 
 def welcome_message():
-    print(f"{Colors.LIGHT_TEAL} 😀 Welcome to the Staff Management System! Please follow the prompts to continue.😜{Colors.RESET}")
+    print(f"{Colors.LIGHT_TEAL} Welcome to the Staff Management System! Please follow the prompts to continue.{Colors.RESET}")
 
 def exit_message():
-    print(f"{Colors.LIGHT_MAGENTA} 😀 Thank you for using the Staff Management System. Goodbye!{Colors.RESET}")
+    print(f"{Colors.LIGHT_MAGENTA}  Thank you for using the Staff Management System. Goodbye!{Colors.RESET}")
 
 def invalid_credentials():
     print(f"{Colors.RED}❌ Invalid credentials, please try again.{Colors.RESET}")

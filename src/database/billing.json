@@ -448,5 +448,63 @@
         "payment_type": null,
         "payment_date": null,
         "user_email": null
+    },
+    {
+        "billing_id": "15a906",
+        "order_id": "402d80",
+        "customer_name": "amayra",
+        "billing_date": "20-Nov-2024 01:57:PM",
+        "items": [
+            {
+                "item_id": "ST01",
+                "item_name": "Veg Spring Rolls",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 200
+            }
+        ],
+        "subtotal": 200,
+        "gst": 36.0,
+        "total": 236.0,
+        "status": "Billed",
+        "payment_type": null,
+        "payment_date": null,
+        "user_email": null
+    },
+    {
+        "billing_id": "745d81",
+        "order_id": "78c093",
+        "customer_name": "khushi",
+        "billing_date": "20-Nov-2024 03:49:PM",
+        "items": [
+            {
+                "item_id": "ST01",
+                "item_name": "Veg Spring Rolls",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 200
+            },
+            {
+                "item_id": "CO01",
+                "item_name": "Espresso",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 100
+            },
+            {
+                "item_id": "PA05",
+                "item_name": "Cheese Paratha",
+                "size": "single",
+                "quantity": 3,
+                "total_price": 165
+            }
+        ],
+        "subtotal": 465,
+        "gst": 83.7,
+        "total": 548.7,
+        "status": "Billed",
+        "payment_type": null,
+        "payment_date": null,
+        "user_email": null
     }
 ]
