@@ -50,7 +50,7 @@ class BillingHandler:
 
     def display_single_bill(self, bill):
         print("\n")
-        print(f"{Colors.BRIGHT_MAGENTA}               BILL DETAILS                {Colors.RESET}")
+        print(f"{Colors.LIGHT_PINK}               BILL DETAILS                {Colors.RESET}")
         print(f"{Colors.LIGHT_SKY_BLUE}Billing ID: {bill['billing_id']}")
         print(f"Order ID: {bill['order_id']}")
         print(f"Customer Name: {bill['customer_name']} \tBilling Date: {bill['billing_date']}")

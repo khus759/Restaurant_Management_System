@@ -6,7 +6,6 @@ from Src.Messages.staff import *
 
 class SalaryManagement:
     def __init__(self):
-        # Load employee data from file
         self.employees = load_data(employee_file)
         
     def pay_salary(self):
@@ -30,7 +29,7 @@ class SalaryManagement:
                 return
 
             # Get additional details such as bonus and calculate total payment
-            bonus = get_valid_float_input(f"Enter the bonus amount for {emp['name']} (or 0 if none): ")
+            bonus = get_valid_int_input(f"Enter the bonus amount for {emp['name']} (or 0 if none): ")
             reduction_days = total_days_in_month - days_worked
             total_payment = salary_for_days_worked + bonus
             payment_date = datetime.now().strftime("%Y-%m-%d")

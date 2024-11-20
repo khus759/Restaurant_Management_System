@@ -1,4 +1,3 @@
-
 from Src.Messages.staff import (
     invalid_credentials,
     employee_added,
@@ -14,7 +13,7 @@ from Src.Messages.staff import (
 from Src.Staff_Management.utils import load_data, save_data, users_file, employee_file
 from Src.Staff_Management.employee import Employee
 from Src.Utility.validation import validate_date_of_birth
-from Src.Utility.user_input import get_valid_input
+
 
 class StaffManagementSystem:
     def authenticate_user(self):
@@ -43,6 +42,7 @@ class StaffManagementSystem:
             print("Employee with this User ID already exists.")
             return
 
+        # Validate gender
         while True:
             gender = input("Enter gender (Male/Female/Other): ").strip().capitalize()
             if gender in ["Male", "Female", "Other"]:
@@ -50,6 +50,7 @@ class StaffManagementSystem:
             else:
                 print("Invalid input. Please enter 'Male', 'Female', or 'Other'.")
 
+        # Create the Employee object
         employee = Employee(
             id=user['id'],
             name=user['name'],
@@ -61,15 +62,74 @@ class StaffManagementSystem:
             gender=gender
         )
 
-        employee.designation = input("Enter designation: ").title()
-        employee.country = input("Enter country: ").title()
-        employee.state = input("Enter state: ").title()
-        employee.district = input("Enter district: ").title()
-        employee.city_village = input("Enter city/village: ").title()
-        employee.pincode = input("Enter pincode: ")
-        employee.joining_date = input("Enter joining date (YYYY-MM-DD): ")
-        employee.salary = input("Enter salary: ")
+        # Validate designation
+        while True:
+            designation = input("Enter designation: ").strip().title()
+            if designation:
+                employee.designation = designation
+                break
+            else:
+                print("Designation cannot be empty.")
 
+        
+        while True:
+            country = input("Enter country: ").strip().title()
+            if country:
+                employee.country = country
+                break
+            else:
+                print("Country cannot be empty.")
+
+        while True:
+            state = input("Enter state: ").strip().title()
+            if state:
+                employee.state = state
+                break
+            else:
+                print("State cannot be empty.")
+
+        while True:
+            district = input("Enter district: ").strip().title()
+            if district:
+                employee.district = district
+                break
+            else:
+                print("District cannot be empty.")
+
+        while True:
+            city_village = input("Enter city/village: ").strip().title()
+            if city_village:
+                employee.city_village = city_village
+                break
+            else:
+                print("City/village cannot be empty.")
+
+        while True:
+            pincode = input("Enter pincode: ").strip()
+            if pincode.isdigit() and len(pincode) == 6:  # Assuming a 6-digit pincode
+                employee.pincode = pincode
+                break
+            else:
+                print("Invalid pincode. Please enter a 6-digit number.")
+
+        while True:
+            joining_date = input("Enter joining date (YYYY-MM-DD): ").strip()
+            if validate_date_of_birth(joining_date):  # Assuming this method validates dates
+                employee.joining_date = joining_date
+                break
+            else:
+                print("Invalid date format. Please use YYYY-MM-DD.")
+
+        # Validate salary
+        while True:
+            salary = input("Enter salary: ").strip()
+            if salary.replace('.', '', 1).isdigit():  # Allows decimal salaries
+                employee.salary = float(salary)
+                break
+            else:
+                print("Invalid salary. Please enter a numeric value.")
+
+        # Add employee to list and save
         employees.append(employee.to_dict())
         save_data(employee_file, employees)
         employee_added()

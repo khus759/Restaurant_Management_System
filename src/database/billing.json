@@ -419,5 +419,34 @@
         "payment_type": "Cash",
         "payment_date": "19-Nov-2024 11:57 PM",
         "user_email": null
+    },
+    {
+        "billing_id": "7d8670",
+        "order_id": "82b9a2",
+        "customer_name": "kritika",
+        "billing_date": "20-Nov-2024 09:24:AM",
+        "items": [
+            {
+                "item_id": "ST04",
+                "item_name": "Paneer Samosa",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 360
+            },
+            {
+                "item_id": "DR01",
+                "item_name": "Mango Lassi",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 80
+            }
+        ],
+        "subtotal": 440,
+        "gst": 79.2,
+        "total": 519.2,
+        "status": "Billed",
+        "payment_type": null,
+        "payment_date": null,
+        "user_email": null
     }
 ]
