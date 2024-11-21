@@ -159,3 +159,11 @@ class BillingHandler:
     def display_no_bills_for_payment(self):
         """Display message when there are no bills available for payment."""
         print(f"{Colors.LIGHT_CORAL}There are no bills available for payment.{Colors.RESET}")
+    
+    
+    def display_order_added_success(self, order_id):
+        print(f"✅ Order with ID '{order_id}' has been successfully added.")
+    
+
+    def display_add_order_start(self):
+        print("🔄 Starting the process to add a new order...")

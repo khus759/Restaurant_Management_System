@@ -26,6 +26,34 @@ class StaffManagementSystem:
         invalid_credentials()
         return None
 
+    def validate_text(self, field_name):
+        while True:
+            value = input(f"Enter {field_name}: ").strip().title()
+            if all(c.isalpha() or c.isspace() for c in value) and value:
+                return value
+            print(f"Invalid {field_name}. It must contain only alphabets and spaces.")
+
+    def validate_pincode(self):
+        while True:
+            pincode = input("Enter pincode: ").strip()
+            if pincode.isdigit() and len(pincode) == 6:
+                return pincode
+            print("Invalid pincode. Please enter a 6-digit number.")
+
+    def validate_salary(self):
+        while True:
+            salary = input("Enter salary: ").strip()
+            if salary.replace('.', '', 1).isdigit():
+                return float(salary)
+            print("Invalid salary. Please enter a numeric value.")
+
+    def validate_gender(self):
+        while True:
+            gender = input("Enter gender (Male/Female/Other): ").strip().capitalize()
+            if gender in ["Male", "Female", "Other"]:
+                return gender
+            print("Invalid gender. Please enter 'Male', 'Female', or 'Other'.")
+
     def add_employee(self):
         user_id = input("Enter User ID: ").strip()
 
@@ -42,13 +70,7 @@ class StaffManagementSystem:
             print("Employee with this User ID already exists.")
             return
 
-        # Validate gender
-        while True:
-            gender = input("Enter gender (Male/Female/Other): ").strip().capitalize()
-            if gender in ["Male", "Female", "Other"]:
-                break
-            else:
-                print("Invalid input. Please enter 'Male', 'Female', or 'Other'.")
+        gender = self.validate_gender()
 
         # Create the Employee object
         employee = Employee(
@@ -62,71 +84,21 @@ class StaffManagementSystem:
             gender=gender
         )
 
-        # Validate designation
-        while True:
-            designation = input("Enter designation: ").strip().title()
-            if designation:
-                employee.designation = designation
-                break
-            else:
-                print("Designation cannot be empty.")
-
-        
-        while True:
-            country = input("Enter country: ").strip().title()
-            if country:
-                employee.country = country
-                break
-            else:
-                print("Country cannot be empty.")
-
-        while True:
-            state = input("Enter state: ").strip().title()
-            if state:
-                employee.state = state
-                break
-            else:
-                print("State cannot be empty.")
-
-        while True:
-            district = input("Enter district: ").strip().title()
-            if district:
-                employee.district = district
-                break
-            else:
-                print("District cannot be empty.")
-
-        while True:
-            city_village = input("Enter city/village: ").strip().title()
-            if city_village:
-                employee.city_village = city_village
-                break
-            else:
-                print("City/village cannot be empty.")
-
-        while True:
-            pincode = input("Enter pincode: ").strip()
-            if pincode.isdigit() and len(pincode) == 6: 
-                employee.pincode = pincode
-                break
-            else:
-                print("Invalid pincode. Please enter a 6-digit number.")
+        employee.designation = self.validate_text("designation")
+        employee.country = self.validate_text("country")
+        employee.state = self.validate_text("state")
+        employee.district = self.validate_text("district")
+        employee.city_village = self.validate_text("city/village")
+        employee.pincode = self.validate_pincode()
 
         while True:
             joining_date = input("Enter joining date (YYYY-MM-DD): ").strip()
-            if validate_date_of_birth(joining_date):  
+            if validate_date_of_birth(joining_date):
                 employee.joining_date = joining_date
                 break
-            else:
-                print("Invalid date format. Please use YYYY-MM-DD.")
+            print("Invalid date format. Please use YYYY-MM-DD.")
 
-        while True:
-            salary = input("Enter salary: ").strip()
-            if salary.replace('.', '', 1).isdigit():  
-                employee.salary = float(salary)
-                break
-            else:
-                print("Invalid salary. Please enter a numeric value.")
+        employee.salary = self.validate_salary()
 
         # Add employee to list and save
         employees.append(employee.to_dict())

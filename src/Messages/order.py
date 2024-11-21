@@ -4,7 +4,7 @@ class OrderOutputHandler:
         self.color = Colors()
 
     def show_order_placed(self, order_id, total_order_price):
-        print(f"{Colors.GREEN}✔️ Order placed successfully with ID: {order_id} and Total Price: ₹{total_order_price} 😊 {Colors.RESET}")
+        print(f"{Colors.GREEN}✔️ Order placed successfully with ID: {order_id} and Total Price: ₹{total_order_price} Only {Colors.RESET}")
 
     def item_not_found(self):
         print(f"{Colors.RED}❌ Item not found.{Colors.RESET}")
