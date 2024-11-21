@@ -2,6 +2,7 @@ from Src.Authentication.auth_system import AuthSystem
 from Src.Dashboard.owner_dashboard import OwnerDashboard
 from Src.Dashboard.staff_dashboard import StaffDashboard
 from Src.Utility.color import Colors
+from Src.Error.log_exception import logging
 
 
 def show_dashboard(user_role):
@@ -29,6 +30,7 @@ def main():
         try:
             option = input(f"{Colors.CYAN}Choose an option: {Colors.RESET}")
         except ValueError:
+            logging.exception("exception details")
             print(f"{Colors.RED}Please enter valid input{Colors.RESET}")
             continue
 
@@ -43,3 +45,4 @@ def main():
             break
         else:
             print(f"{Colors.RED}Invalid option! Please try again.{Colors.RESET}")
+

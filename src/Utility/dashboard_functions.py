@@ -11,8 +11,9 @@ def display_main_menu():
     print("4. Table Booking Management")
     print("5. Staff Management")
     print("6. Reports")
-    print(f"7. Show All Staff{Colors.RESET}")
-    print(f"{Colors.LIGHT_ORANGE}{'='*4}8. Logout{'='*4}{Colors.RESET}")
+    print(F"7. Show All Staff {Colors.RESET}")
+    print(f"{Colors.RED}8. Show All Error{Colors.RESET}")
+    print(f"{Colors.LIGHT_ORANGE}{'='*4}9. Logout{'='*4}{Colors.RESET}")
 
 def display_staff_menu():
     print(f"{Colors.LIGHT_TEAL}{'-'*50}")
@@ -21,9 +22,8 @@ def display_staff_menu():
     print(f"\n{Colors.LIGHT_ORANGE}1. Order Management")
     print("2. Invoice Management")
     print("3. Table Booking Management")
-    print("4. Reports")
-    print(f"5. Display Profile{Colors.RESET}")
-    print(f"{Colors.LIGHT_PINK}{'='*4}6. Logout{'='*4}{Colors.RESET}")
+    print(f"4. Reports{Colors.RESET}")
+    print(f"{Colors.LIGHT_PINK}{'='*4}5. Logout{'='*4}{Colors.RESET}")
 
 def display_menu_management():
     print(f"{Colors.LIGHT_VIOLET}{'-'*40}")

@@ -10,7 +10,7 @@ from Src.Utility.user_input import get_valid_input
 from Src.Utility.path_manager import users_file, employee_file
 from Src.Messages.authentication import AuthHandler
 from Src.Utility.color import Colors
-
+from Src.Error.log_exception import logging
 class AuthSystem:
     def __init__(self):
         self.users_file = users_file  # Path for users file
@@ -24,6 +24,7 @@ class AuthSystem:
         try:
             users = load_users(self.users_file)
         except FileNotFoundError:
+            logging.exception("exception details")
             users = []
 
         while True:
@@ -74,6 +75,7 @@ class AuthSystem:
         try:
             users = load_users(self.users_file)
         except FileNotFoundError:
+            logging.exception("exception details")
             users = []
 
         while True:
@@ -108,6 +110,7 @@ class AuthSystem:
                 employees = json.load(f)
                 return any(emp['id'] == user_id for emp in employees)
         except FileNotFoundError:
+            logging.exception("exception details")
             return False
 
     def is_logged_in(self):
@@ -123,6 +126,7 @@ class AuthSystem:
         try:
             users = load_users(self.users_file)
         except FileNotFoundError:
+            logging.exception("exception details")
             users = []
             
         owner_exists = any(user['role'].capitalize() == "Owner" for user in users)
@@ -142,3 +146,4 @@ class AuthSystem:
 
     def welcome_system(self):
         self.message_handler.welcome_message()
+

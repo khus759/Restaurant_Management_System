@@ -44,9 +44,9 @@ class StaffDashboard:
                 self.handle_table_booking_management()
             elif main_choice == "4":
                 self.handle_stock_management()
+            # elif main_choice == "5":
+            #     self.staff.display_profile()
             elif main_choice == "5":
-                self.staff.display_profile()
-            elif main_choice == "6":
                 print("Logging out...")
                 break
             else:

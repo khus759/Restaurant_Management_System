@@ -4,7 +4,7 @@ import datetime
 class Bill:
     GST_RATE = 0.18
 
-    def __init__(self, order,user_email=None):
+    def __init__(self, order):
         # Using a predefined namespace and order ID to create a deterministic UUID
         self.billing_id = str(uuid.uuid5(uuid.NAMESPACE_DNS, str(order.order_id)))[:6]
         self.order_id = order.order_id
@@ -17,7 +17,7 @@ class Bill:
         self.status = "Billed"
         self.payment_type = None
         self.payment_date = None
-        self.user_email = user_email
+        self.user_email = order.user_email
 
 
 

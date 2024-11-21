@@ -3,6 +3,8 @@ from datetime import datetime
 from Src.Staff_Management.utils import load_data, save_data, employee_file
 from Src.Utility.validation import get_valid_float_input, get_valid_int_input
 from Src.Messages.staff import *
+from Src.Error.log_exception import logging
+
 
 class SalaryManagement:
     def __init__(self):
@@ -25,6 +27,7 @@ class SalaryManagement:
                 daily_salary = float(emp['salary']) / total_days_in_month
                 salary_for_days_worked = daily_salary * days_worked
             except ValueError:
+                logging.exception("exception details")
                 print("Invalid salary format.")
                 return
 

@@ -4,6 +4,7 @@ from Src.Menu_management.iteam_operations import ItemOperations
 from Src.Menu_management.stock_operations import StockOperations
 from Src.Utility.path_manager import menu_file
 from Src.Messages.menu import Menu_Message  
+from Src.Error.log_exception import logging
 
 class MenuManagement:
     def __init__(self, json_file=menu_file):
@@ -18,6 +19,7 @@ class MenuManagement:
             with open(self.json_file, 'r') as file:
                 return json.load(file)
         except FileNotFoundError:
+            logging.exception("exception details")
             self.message.print_invalid_input_error(f"{self.json_file} file not found.")
             return [{}]
 
@@ -27,6 +29,7 @@ class MenuManagement:
                 json.dump(self.menu_data, file, indent=4)
             self.message.print_item_updated("Data")  # Reuse print_item_updated for save confirmation
         except Exception as e:
+            logging.exception("exception details")
             self.message.print_invalid_input_error(f"An unexpected error occurred: {e}")
 
     def add_item(self):
@@ -52,3 +55,4 @@ class MenuManagement:
 
     def exit(self):
         self.message.exit_message()
+

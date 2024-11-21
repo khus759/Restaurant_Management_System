@@ -20,6 +20,7 @@ from Src.Staff_Management.staff_system import StaffManagementSystem
 from Src.Messages.reports import Report
 from Src.Reports.bill_report import BillReport
 from Src.Staff_Management.salary import SalaryManagement
+from Src.Error.log_read import parse_error_logs
 
 
 class OwnerDashboard:
@@ -36,6 +37,7 @@ class OwnerDashboard:
         self.report = Report()
         self.bill_report = BillReport()
         self.salary = SalaryManagement()
+        
         
     
     def display_dashboard(self):
@@ -58,6 +60,8 @@ class OwnerDashboard:
             elif main_choice == "7":
                 self.auth.show_all_staff()
             elif main_choice == "8":
+                parse_error_logs()
+            elif main_choice == "9":
                 print("Logging out...")
                 break
             else:
@@ -200,4 +204,5 @@ class OwnerDashboard:
             self.staff.exit_system()
         else:
             print("Invalid choice in Staff Management.")
-    
+     
+

@@ -2,7 +2,7 @@
 
 
 class Order:
-    def __init__(self, order_id, customer_name, mobile_number, order_items, total_order_price, order_date, status, user_email=None):
+    def __init__(self, order_id, customer_name, mobile_number, order_items, total_order_price, order_date, status, user_email):
         self.order_id = order_id
         self.customer_name = customer_name
         self.mobile_number = mobile_number

@@ -15,17 +15,8 @@ from Src.Staff_Management.employee import Employee
 from Src.Utility.validation import validate_date_of_birth
 
 
-class StaffManagementSystem:
-    def authenticate_user(self):
-        email = input("Enter email: ").strip()
-        password = input("Enter password: ").strip()
-        users = load_data(users_file)
-        for user in users:
-            if user['email'] == email and user['password'] == password:
-                return user
-        invalid_credentials()
-        return None
 
+class StaffManagementSystem:
     def validate_text(self, field_name):
         while True:
             value = input(f"Enter {field_name}: ").strip().title()
@@ -106,26 +97,22 @@ class StaffManagementSystem:
         employee_added()
 
     def display_profile(self):
-        user = self.authenticate_user()
-        if not user:
-            return
+        email = input("Enter your email: ").strip()
 
         employees = load_data(employee_file)
         for emp in employees:
-            if emp['email'] == user['email']:
+            if emp['email'] == email:
                 display_profile(emp)
                 return
 
         employee_not_found()
 
     def update_profile(self):
-        user = self.authenticate_user()
-        if not user:
-            return
+        email = input("Enter your email: ").strip()
 
         employees = load_data(employee_file)
         for emp in employees:
-            if emp['email'] == user['email']:
+            if emp['email'] == email:
                 print("Leave a field blank to keep the current value.")
 
                 emp['name'] = input(f"Enter new name (current: {emp['name']}): ") or emp['name']
@@ -145,10 +132,15 @@ class StaffManagementSystem:
         employee_not_found()
 
     def delete_employee(self):
-        email = input("Enter the email of the employee to delete: ")
+        email = input("Enter the email of the employee to delete: ").strip()
         employees = load_data(employee_file)
-        employees = [emp for emp in employees if emp['email'] != email]
-        save_data(employee_file, employees)
+        updated_employees = [emp for emp in employees if emp['email'] != email]
+
+        if len(employees) == len(updated_employees):
+            employee_not_found()
+            return
+
+        save_data(employee_file, updated_employees)
         employee_deleted()
 
     def display_all_profiles(self):
@@ -165,3 +157,5 @@ class StaffManagementSystem:
 
     def welcome_system(self):
         welcome_message()
+
+

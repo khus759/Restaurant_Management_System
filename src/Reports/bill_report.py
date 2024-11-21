@@ -1,6 +1,8 @@
 import json
 from datetime import datetime, timedelta
 from Src.Utility.path_manager import bill_file
+from Src.Error.log_exception import logging
+
 
 class BillReport:
     def __init__(self,bill_file=bill_file):
@@ -16,6 +18,7 @@ class BillReport:
                     raise ValueError
                 return data
         except (FileNotFoundError, json.JSONDecodeError, ValueError):
+            logging.exception("exception details")
             print("⚠️ Warning: 'billing.json' is empty or has invalid format. Initializing with an empty list.")
             return []
 
@@ -49,6 +52,7 @@ class BillReport:
                     start_date = current_date - timedelta(days=current_date.weekday() + 7)
                     return {"type": "last_week", "value": start_date}
             except ValueError:
+                logging.exception("exception details")
                 print("Invalid date. Please try again.")
 
     def display_bill_report(self, date_filter):
@@ -77,6 +81,7 @@ class BillReport:
                 # Attempt to parse the payment date
                 payment_date = datetime.strptime(payment_date_str, "%d-%b-%Y %I:%M %p")
             except ValueError:
+                logging.exception("exception details")
                 print(f"⚠️ Warning: Skipping invalid date format in bill with ID {bill.get('billing_id')}")
                 continue  # Skip this entry if the format is incorrect
 
@@ -96,3 +101,4 @@ class BillReport:
                     filtered_bills.append(bill)
 
         return filtered_bills
+
