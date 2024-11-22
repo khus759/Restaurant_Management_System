@@ -1,3 +1,6 @@
+from Src.Error.log_exception import logging
+
+
 from datetime import datetime
 def validate_name(name):
     if not name.strip():
@@ -117,6 +120,7 @@ def validate_date_of_birth(dob):
                 return "Maximum age requirement is 60 years."
             return None
         except ValueError:
+            logging.exception("exception details")
             return "Invalid date format. Please enter as YYYY-MM-DD."
         
 # table_booking
@@ -245,6 +249,7 @@ def get_valid_int_input(prompt):
             value = int(input(prompt).strip())
             return value
         except ValueError:
+            logging.exception("exception details")
             print("Invalid input. Please enter a valid integer.")
 
 

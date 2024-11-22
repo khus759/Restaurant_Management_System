@@ -1,0 +1,24 @@
+2024-11-21 14:30:08 - root - ERROR - exception Details
+Traceback (most recent call last):
+  File "c:\Users\DELL\OneDrive\Desktop\New folder\Restaurant_Management_System\Src\Order_management\order_features.py", line 50, in take_order
+    quantity = int(input("Enter quantity: "))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '@'
+2024-11-21 14:30:24 - root - ERROR - exception Details
+Traceback (most recent call last):
+  File "c:\Users\DELL\OneDrive\Desktop\New folder\Restaurant_Management_System\Src\Order_management\order_features.py", line 50, in take_order
+    quantity = int(input("Enter quantity: "))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '@'
+2024-11-21 15:16:47 - root - ERROR - exception Details
+Traceback (most recent call last):
+  File "c:\Users\DELL\OneDrive\Desktop\New folder\Restaurant_Management_System\Src\Order_management\order_features.py", line 50, in take_order
+    quantity = int(input("Enter quantity: "))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '@'
+2024-11-21 15:17:12 - root - ERROR - exception Details
+Traceback (most recent call last):
+  File "c:\Users\DELL\OneDrive\Desktop\New folder\Restaurant_Management_System\Src\Order_management\order_features.py", line 50, in take_order
+    quantity = int(input("Enter quantity: "))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '#'

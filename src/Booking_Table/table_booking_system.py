@@ -7,6 +7,10 @@ from Src.Utility.validation import (validate_name, validate_phone_number, valida
                                     parse_date_time, validate_seats, validate_booking_id)
 from Src.Utility.path_manager import reservations_file, table_file
 from Src.Messages.booking_table import BookingHandler
+from Src.Error.log_exception import logging
+
+
+
 
 class TableBookingSystem:
     def __init__(self):
@@ -21,6 +25,7 @@ class TableBookingSystem:
             with open(self.table_file, 'r') as file:
                 self.tables = [Table(**table) for table in json.load(file)['tables']]
         except (FileNotFoundError, json.JSONDecodeError):
+            logging.exception("exception details")
             self.messages.display_no_tables_found()
             self.tables = []
 
@@ -29,6 +34,7 @@ class TableBookingSystem:
             with open(self.reservations_file, 'r') as file:
                 self.reservations = [Reservation(**res) for res in json.load(file)]
         except (FileNotFoundError, json.JSONDecodeError):
+            logging.exception("exception details")
             self.messages.display_no_reservations()
             self.reservations = []
 
@@ -37,6 +43,7 @@ class TableBookingSystem:
             with open(self.reservations_file, 'w') as file:
                 json.dump([res.__dict__ for res in self.reservations], file, indent=4)
         except Exception as e:
+            logging.exception("exception details")
             self.messages.display_save_error(e)
 
     def find_available_table(self, seats, date_time):

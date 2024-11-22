@@ -10,6 +10,7 @@ from Src.Utility.user_input import get_valid_input
 from Src.Utility.path_manager import users_file, employee_file
 from Src.Messages.authentication import AuthHandler
 from Src.Utility.color import Colors
+from Src.Error.log_exception import logging
 
 class AuthSystem:
     def __init__(self):
@@ -24,6 +25,7 @@ class AuthSystem:
         try:
             users = load_users(self.users_file)
         except FileNotFoundError:
+            logging.exception("exception details")
             users = []
 
         while True:
@@ -46,7 +48,6 @@ class AuthSystem:
             phone = get_valid_input("Enter your phone number (10 digits): ", validate_phone_number)
             dob = get_valid_input("Enter your date of birth (YYYY-MM-DD): ", validate_date_of_birth)
 
-    
             owner_count = sum(1 for user in users if user['role'].upper() == 'OWNER')
             if owner_count == 0:
                 role = "Owner"  
@@ -74,6 +75,7 @@ class AuthSystem:
         try:
             users = load_users(self.users_file)
         except FileNotFoundError:
+            logging.exception("exception details")
             users = []
 
         while True:
@@ -108,6 +110,7 @@ class AuthSystem:
                 employees = json.load(f)
                 return any(emp['id'] == user_id for emp in employees)
         except FileNotFoundError:
+            logging.exception("exception details")
             return False
 
     def is_logged_in(self):
@@ -123,22 +126,26 @@ class AuthSystem:
         try:
             users = load_users(self.users_file)
         except FileNotFoundError:
+            logging.exception("exception details")
             users = []
-            
-        owner_exists = any(user['role'].capitalize() == "Owner" for user in users)
+        
+        try:
+            with open(self.employee_file, 'r') as f:
+                employees = json.load(f)
+        except FileNotFoundError:
+            logging.exception("exception details")
+            employees = []
 
-        if owner_exists:
-            staff_members = [user for user in users if user['role'].capitalize() == "Staff"]
+        employee_emails = {emp['email'] for emp in employees}
+        staff_members = [user for user in users if user['role'].capitalize() == "Staff" and user['email'] in employee_emails]
 
-            if staff_members:
-                self.message_handler.staff_list_header()
-                for i, staff in enumerate(staff_members, start=1):
-                    self.message_handler.display_staff_member(i, staff)
-                self.message_handler.staff_list_footer()
-            else:
-                self.message_handler.no_staff_members_found()
+        if staff_members:
+            self.message_handler.staff_list_header()
+            for i, staff in enumerate(staff_members, start=1):
+                self.message_handler.display_staff_member(i, staff)
+            self.message_handler.staff_list_footer()
         else:
-            self.message_handler.no_owner_exists()
+            self.message_handler.no_staff_members_found()
 
     def welcome_system(self):
         self.message_handler.welcome_message()

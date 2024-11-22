@@ -6,6 +6,7 @@ from Src.Utility.validation import (
 )
 from Src.Messages.menu import Menu_Message
 from Src.Utility.color import Colors
+from Src.Error.log_exception import logging
 
 class ItemOperations:
     def __init__(self, menu_data, json_file):
@@ -95,6 +96,7 @@ class ItemOperations:
                                 print(validated_price)
                                 new_prices[portion] = current_price
                         except ValueError as e:
+                            logging.exception("exception details")
                             print(f"Invalid price input: {e}. Keeping the current price for {portion}.")
                             new_prices[portion] = current_price
                     else:
@@ -147,3 +149,4 @@ class ItemOperations:
                     ingredients = ', '.join(ingredients) if ingredients else "------------"
                 print(f"{Colors.LIGHT_CORAL}{item_id:<10}{Colors.RESET}{Colors.LIGHT_SKY_BLUE}{Colors.LIGHT_AQUA}{item_name:<30}{Colors.RESET}{Colors.LIGHT_ORANGE}{price_details:<40}{Colors.RESET}{Colors.LIGHT_PINK}{ingredients:<50}{Colors.RESET}")
             print(f"{Colors.LIGHT_VIOLET}*" * 130)
+

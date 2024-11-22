@@ -6,6 +6,7 @@ from Src.Messages.invoice import BillingHandler
 from Src.Utility.path_manager import order_file, bill_file
 from Src.Utility.validation import *
 from Src.Utility.user_input import get_valid_input
+from Src.Error.log_exception import logging
 
 
 class BillingSystem:
@@ -23,6 +24,7 @@ class BillingSystem:
                 order_data = json.load(file)
                 return [Order(**data) for data in order_data]
         except (FileNotFoundError, json.JSONDecodeError):
+            logging.exception("exception details")
             self.bill_handler.display_warning_invalid_format()
             return []
 
@@ -33,6 +35,7 @@ class BillingSystem:
                 json.dump([order.to_dict() for order in self.orders], file, indent=4)
                 self.bill_handler.display_save_success("Orders")
         except Exception as e:
+            logging.exception("exception details")
             self.bill_handler.display_save_error("Orders")
 
     def reload_orders(self):
@@ -46,6 +49,7 @@ class BillingSystem:
                 bill_data = json.load(file)
                 return bill_data
         except (FileNotFoundError, json.JSONDecodeError):
+            logging.exception("exception details")
             self.bill_handler.display_warning_invalid_format()
             return []
 
@@ -56,6 +60,7 @@ class BillingSystem:
                 json.dump(self.bills, file, indent=4)
                 self.bill_handler.display_save_success("Bills")
         except Exception as e:
+            logging.exception("exception details")
             self.bill_handler.display_save_error("Bills")
 
     def reload_bills(self):
@@ -159,6 +164,7 @@ class BillingSystem:
                 else:
                     self.bill_handler.display_invalid_payment_amount()
             except ValueError:
+                logging.exception("exception details")
                 self.bill_handler.display_invalid_amount_input()
 
         bill["status"] = "Paid"
@@ -185,3 +191,4 @@ class BillingSystem:
     def welcome_system(self):
         """Display a welcome message."""
         self.bill_handler.welcome_message()
+

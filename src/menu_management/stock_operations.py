@@ -3,7 +3,8 @@ from datetime import datetime, timedelta
 import re
 from Src.Utility.user_input import get_valid_input
 from Src.Utility.validation import *
-from Src.Messages.menu import Menu_Message  
+from Src.Messages.menu import Menu_Message
+from Src.Error.log_exception import logging  
 
 class StockOperations:
     def __init__(self, menu_data, json_file):                                                                                                                       
@@ -25,6 +26,7 @@ class StockOperations:
                 validate_ingredient_input(ingredient)  # Validate the ingredient input
                 ingredients.append(ingredient)  # Collect valid ingredients
             except ValueError as e:
+                logging.exception("exception details")
                 print(e)  # Notify the user about validation errors
 
         if not ingredients:
@@ -95,3 +97,4 @@ def validate_ingredient_input(value):
         raise ValueError("Ingredient names should only contain letters, spaces, or hyphens.")
 
     return value
+

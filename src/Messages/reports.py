@@ -92,15 +92,22 @@ class Report:
         print(f"{Colors.LIGHT_PEACH}  Thank you for using the Reports Management. Goodbye!{Colors.RESET}")
     
     def show_order_summary_header(self, date_input):
-        print(f"{Colors.LIGHT_ORANGE}Order Summary for Date: {date_input}{Colors.RESET}")
+       print(f"{Colors.LIGHT_ORANGE}Order Summary for Date: {date_input}{Colors.RESET}")
 
     def show_item_summary(self, item_id, item_name, total_quantity):
-        print(f"\n{Colors.LIGHT_PINK}Item ID: {item_id}, Item Name: {item_name}, Total Quantity Ordered: {total_quantity}{Colors.RESET}")
+       print(f"\n{Colors.LIGHT_PINK}Item ID: {item_id}, Item Name: {item_name}, Total Quantity Ordered: {total_quantity}{Colors.RESET}")
 
     def show_order_details(self, detail):
-        print(f"{Colors.LIGHT_PEACH}  - Quantity: {detail['quantity']}, Date: {detail['order_date']}, {Colors.RESET}"
-              f"\n{Colors.LIGHT_CORAL}Time: {detail['order_time']}, Taken by: {detail['employee_name']}, Staff email: ({detail['employee_email']}){Colors.RESET}")
+       print(f"{Colors.LIGHT_PEACH}  - Quantity: {detail['quantity']}, Date: {detail['order_date']}, {Colors.RESET}"
+             f"\n{Colors.LIGHT_CORAL}Time: {detail['order_time']}, Taken by: {detail['employee_name']}, Staff email: ({detail['employee_email']}){Colors.RESET}")
 
     def no_orders_found(self, date_input):
-        print(f"{Colors.CORAL}No orders found for the date: {date_input}{Colors.RESET}")
- 
+       print(f"{Colors.CORAL}No orders found for the date: {date_input}{Colors.RESET}")
+
+
+
+
+
+    
+
+
