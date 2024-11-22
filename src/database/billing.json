@@ -524,9 +524,9 @@
         "subtotal": 200,
         "gst": 36.0,
         "total": 236.0,
-        "status": "Billed",
-        "payment_type": null,
-        "payment_date": null,
+        "status": "Paid",
+        "payment_type": "Online",
+        "payment_date": "21-Nov-2024 09:36 AM",
         "user_email": null
     },
     {
@@ -641,6 +641,28 @@
         "subtotal": 260,
         "gst": 46.8,
         "total": 306.8,
+        "status": "Billed",
+        "payment_type": null,
+        "payment_date": null,
+        "user_email": null
+    },
+    {
+        "billing_id": "a0e301",
+        "order_id": "8b9dd0",
+        "customer_name": "samaira",
+        "billing_date": "21-Nov-2024 08:55:AM",
+        "items": [
+            {
+                "item_id": "ST01",
+                "item_name": "Veg Spring Rolls",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 200
+            }
+        ],
+        "subtotal": 200,
+        "gst": 36.0,
+        "total": 236.0,
         "status": "Billed",
         "payment_type": null,
         "payment_date": null,

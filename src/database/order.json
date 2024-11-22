@@ -382,7 +382,7 @@
         ],
         "total_order_price": 200,
         "order_date": "19-Nov-2024 11:32:PM",
-        "status": "Processing",
+        "status": "Billed",
         "user_email": "anand123@gmail.com"
     },
     {
@@ -719,6 +719,24 @@
         ],
         "total_order_price": 300,
         "order_date": "21-Nov-2024 08:47:AM",
+        "status": "Processing",
+        "user_email": "anand123@gmail.com"
+    },
+    {
+        "order_id": "3dfd33",
+        "customer_name": "arun",
+        "mobile_number": "9876543321",
+        "order_items": [
+            {
+                "item_id": "DR01",
+                "item_name": "Mango Lassi",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 80
+            }
+        ],
+        "total_order_price": 80,
+        "order_date": "21-Nov-2024 08:54:AM",
         "status": "Processing",
         "user_email": "anand123@gmail.com"
     }

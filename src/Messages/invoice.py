@@ -162,8 +162,8 @@ class BillingHandler:
     
     
     def display_order_added_success(self, order_id):
-        print(f"✅ Order with ID '{order_id}' has been successfully added.")
+        print(f" Order with ID '{order_id}' has been successfully added.")
     
 
     def display_add_order_start(self):
-        print("🔄 Starting the process to add a new order...")
+        print(" Starting the process to add a new order...")

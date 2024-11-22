@@ -1,5 +1,5 @@
-import json
 from datetime import datetime, timedelta
+import json
 from Src.Utility.path_manager import reservations_file
 from Src.Messages.booking_table import BookingHandler
 from Src.Messages.reports import Report
@@ -16,6 +16,7 @@ class ReservationReport:
             return json.load(file)
 
     def get_last_week_date_range(self):
+        """Return start and end date for the last week."""
         today = datetime.today()
         start_of_week = today - timedelta(days=today.weekday())  # Start of this week
         start_of_last_week = start_of_week - timedelta(weeks=1)  # Start of last week
@@ -23,6 +24,7 @@ class ReservationReport:
         return start_of_last_week, end_of_last_week
 
     def show_reservations_by_date(self):
+        """Show reservations filtered by date input."""
         date_input = input("Enter date (YYYY-MM-DD), month (YYYY-MM), or 'last_week' for last week's reservations: ").strip()
         
         if date_input.lower() == "last_week":
@@ -55,6 +57,7 @@ class ReservationReport:
             self.report.no_reservations_found(date_input)
 
     def show_canceled_reservations(self):
+        """Show canceled reservations filtered by date input."""
         date_input = input("Enter date (YYYY-MM-DD), month (YYYY-MM), 'last_week' for last week's canceled reservations, or leave empty to show all canceled reservations: ").strip()
         
         if date_input.lower() == "last_week":
@@ -89,6 +92,7 @@ class ReservationReport:
             self.report.no_canceled_reservations_found()
 
     def filter_reservations_by_date_range(self, start_date, end_date):
+        """Filter reservations by the given date range."""
         reservations_in_range = []
         for reservation in self.reservations:
             reservation_date = datetime.strptime(reservation['date_time'], '%Y-%m-%d %I:%M %p')
@@ -104,6 +108,7 @@ class ReservationReport:
         return reservations_in_range
 
     def filter_canceled_reservations_by_date_range(self, start_date, end_date):
+        """Filter canceled reservations by the given date range."""
         canceled_reservations_in_range = []
         for reservation in self.reservations:
             if reservation['status'] == 'Canceled':

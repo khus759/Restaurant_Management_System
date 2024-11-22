@@ -12,8 +12,7 @@ from Src.Messages.staff import (
 )
 from Src.Staff_Management.utils import load_data, save_data, users_file, employee_file
 from Src.Staff_Management.employee import Employee
-from Src.Utility.validation import validate_date_of_birth
-
+from Src.Utility.validation import validate_joining_date
 
 class StaffManagementSystem:
     def authenticate_user(self):
@@ -31,7 +30,7 @@ class StaffManagementSystem:
             value = input(f"Enter {field_name}: ").strip().title()
             if all(c.isalpha() or c.isspace() for c in value) and value:
                 return value
-            print(f"Invalid {field_name}. It must contain only alphabets and spaces.")
+            print(f"Invalid {field_name}. It must contain only alphabets and spaces, and cannot be blank")
 
     def validate_pincode(self):
         while True:
@@ -93,7 +92,7 @@ class StaffManagementSystem:
 
         while True:
             joining_date = input("Enter joining date (YYYY-MM-DD): ").strip()
-            if validate_date_of_birth(joining_date):
+            if validate_joining_date(joining_date):
                 employee.joining_date = joining_date
                 break
             print("Invalid date format. Please use YYYY-MM-DD.")

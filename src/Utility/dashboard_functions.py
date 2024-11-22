@@ -11,8 +11,9 @@ def display_main_menu():
     print("4. Table Booking Management")
     print("5. Staff Management")
     print("6. Reports")
-    print(f"7. Show All Staff{Colors.RESET}")
-    print(f"{Colors.LIGHT_ORANGE}{'='*4}8. Logout{'='*4}{Colors.RESET}")
+    print("7. Show All Staff")
+    print(f"8. Show All Error {Colors.RESET}")
+    print(f"{Colors.LIGHT_ORANGE}{'='*4}9. Logout{'='*4}{Colors.RESET}")
 
 def display_staff_menu():
     print(f"{Colors.LIGHT_TEAL}{'-'*50}")
@@ -22,8 +23,9 @@ def display_staff_menu():
     print("2. Invoice Management")
     print("3. Table Booking Management")
     print("4. Reports")
-    print(f"5. Display Profile{Colors.RESET}")
-    print(f"{Colors.LIGHT_PINK}{'='*4}6. Logout{'='*4}{Colors.RESET}")
+    print("5. Display Profile")
+    print(f"6. Update Profile{Colors.RESET}")
+    print(f"{Colors.LIGHT_PINK}{'='*4}7. Logout{'='*4}{Colors.RESET}")
 
 def display_menu_management():
     print(f"{Colors.LIGHT_VIOLET}{'-'*40}")
@@ -38,10 +40,10 @@ def display_menu_management():
     print(f"{Colors.LIGHT_CORAL}7. EXIT{Colors.RESET}")
 
 def display_order_management():
-    print(f"{Colors.LIGHT_PEACH}{'-'*40}")
+    print(f"{Colors.LIGHT_ORANGE}{'-'*40}")
     print(f"\t{'*'*5} ORDER MANAGEMENT{'*'*5}")
     print(f"{'-'*40}{Colors.RESET}")
-    print(f"\n{Colors.CYAN}1. Take New Order")
+    print(f"\n{Colors.LIGHT_TURQUOISE}1. Take New Order")
     print("2. Update Order")
     print("3. Cancel Order")
     print("4. Search Order")
@@ -50,7 +52,7 @@ def display_order_management():
     
 
 def display_invoice_management():
-    print(f"{Colors.LIGHT_ORANGE}{'-'*40}")
+    print(f"{Colors.LIGHT_TEAL}{'-'*40}")
     print(f"\t{'*'*5}INVOICE MANAGEMENT{'*'*5}")
     print(f"{'-'*40}{Colors.RESET}")
     print(f"\n{Colors.LIGHT_PEACH}1. Generate Bill")

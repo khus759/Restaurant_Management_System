@@ -47,6 +47,8 @@ class StaffDashboard:
             elif main_choice == "5":
                 self.staff.display_profile()
             elif main_choice == "6":
+                self.staff.update_profile()
+            elif main_choice == "7":
                 print("Logging out...")
                 break
             else:
