@@ -1,0 +1,64 @@
+{
+    "tables": [
+        {
+            "table_id": "T1",
+            "seats": 2
+        },
+        {
+            "table_id": "T2",
+            "seats": 2
+        },
+        {
+            "table_id": "T3",
+            "seats": 2
+        },
+        {
+            "table_id": "T4",
+            "seats": 2
+        },
+        {
+            "table_id": "T5",
+            "seats": 4
+        },
+        {
+            "table_id": "T6",
+            "seats": 4
+        },
+        {
+            "table_id": "T7",
+            "seats": 4
+        },
+        {
+            "table_id": "T8",
+            "seats": 4
+        },
+        {
+            "table_id": "T9",
+            "seats": 4
+        },
+        {
+            "table_id": "T10",
+            "seats": 6
+        },
+        {
+            "table_id": "T11",
+            "seats": 6
+        },
+        {
+            "table_id": "T12",
+            "seats": 6
+        },
+        {
+            "table_id": "T13",
+            "seats": 6
+        },
+        {
+            "table_id": "T14",
+            "seats": 8
+        },
+        {
+            "table_id": "T15",
+            "seats": 8
+        }
+    ]
+}

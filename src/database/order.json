@@ -1,0 +1,550 @@
+[
+    {
+        "order_id": "c43586",
+        "customer_name": "rajan",
+        "mobile_number": "8002023947",
+        "order_items": [
+            {
+                "item_id": "VE02",
+                "item_name": "Aloo Gobi",
+                "size": "full",
+                "quantity": 2,
+                "total_price": 160
+            },
+            {
+                "item_id": "NO02",
+                "item_name": "Mutton Rogan Josh",
+                "size": "full",
+                "quantity": 2,
+                "total_price": 500
+            },
+            {
+                "item_id": "RO02",
+                "item_name": "Butter Roti",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 60
+            }
+        ],
+        "total_order_price": 720,
+        "order_date": "21-Nov-2024 03:48:PM",
+        "status": "Billed",
+        "user_email": "anand123@gmail.com"
+    },
+    {
+        "order_id": "d15936",
+        "customer_name": "khushi",
+        "mobile_number": "9876543321",
+        "order_items": [
+            {
+                "item_id": "TE01",
+                "item_name": "Masala Tea",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 60
+            }
+        ],
+        "total_order_price": 60,
+        "order_date": "21-Nov-2024 10:00:PM",
+        "status": "Billed",
+        "user_email": "anand123@gmail.com"
+<<<<<<< HEAD
+    },
+    {
+        "order_id": "3b08b3",
+        "customer_name": "sakshi",
+        "mobile_number": "0987654432",
+        "order_items": [
+            {
+                "item_id": "DR03",
+                "item_name": "Masala Chai",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 60
+            }
+        ],
+        "total_order_price": 60,
+        "order_date": "19-Nov-2024 09:36:PM",
+        "status": "Billed",
+        "user_email": "anand123@gmail.com"
+    },
+    {
+        "order_id": "44194a",
+        "customer_name": "nisha",
+        "mobile_number": "9876543321",
+        "order_items": [
+            {
+                "item_id": "DR03",
+                "item_name": "Masala Chai",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 60
+            }
+        ],
+        "total_order_price": 60,
+        "order_date": "19-Nov-2024 09:36:PM",
+        "status": "Billed",
+        "user_email": "anand123@gmail.com"
+    },
+    {
+        "order_id": "a4bc11",
+        "customer_name": "mansi",
+        "mobile_number": "9876545564",
+        "order_items": [
+            {
+                "item_id": "DR01",
+                "item_name": "Mango Lassi",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 80
+            }
+        ],
+        "total_order_price": 80,
+        "order_date": "19-Nov-2024 09:37:PM",
+        "status": "Billed",
+        "user_email": "anand123@gmail.com"
+    },
+    {
+        "order_id": "8dd938",
+        "customer_name": "priya",
+        "mobile_number": "9876543327",
+        "order_items": [
+            {
+                "item_id": "ST03",
+                "item_name": "Paneer Tikka",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 260
+            },
+            {
+                "item_id": "RI01",
+                "item_name": "Steamed Rice",
+                "size": "full",
+                "quantity": 2,
+                "total_price": 240
+            }
+        ],
+        "total_order_price": 500,
+        "order_date": "19-Nov-2024 11:22:PM",
+        "status": "Billed",
+        "user_email": "anand123@gmail.com"
+    },
+    {
+        "order_id": "82b9a2",
+        "customer_name": "kritika",
+        "mobile_number": "9876654430",
+        "order_items": [
+            {
+                "item_id": "ST04",
+                "item_name": "Paneer Samosa",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 360
+            },
+            {
+                "item_id": "DR01",
+                "item_name": "Mango Lassi",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 80
+            }
+        ],
+        "total_order_price": 440,
+        "order_date": "19-Nov-2024 11:23:PM",
+        "status": "Billed",
+        "user_email": "anand123@gmail.com"
+    },
+    {
+        "order_id": "402d80",
+        "customer_name": "amayra",
+        "mobile_number": "9876543321",
+        "order_items": [
+            {
+                "item_id": "ST01",
+                "item_name": "Veg Spring Rolls",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 200
+            }
+        ],
+        "total_order_price": 200,
+        "order_date": "19-Nov-2024 11:24:PM",
+        "status": "Billed",
+        "user_email": "anand123@gmail.com"
+    },
+    {
+        "order_id": "8b9dd0",
+        "customer_name": "samaira",
+        "mobile_number": "9876543321",
+        "order_items": [
+            {
+                "item_id": "ST01",
+                "item_name": "Veg Spring Rolls",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 200
+            }
+        ],
+        "total_order_price": 200,
+        "order_date": "19-Nov-2024 11:32:PM",
+        "status": "Billed",
+        "user_email": "anand123@gmail.com"
+    },
+    {
+        "order_id": "78c093",
+        "customer_name": "khushi",
+        "mobile_number": "8765432289",
+        "order_items": [
+            {
+                "item_id": "ST01",
+                "item_name": "Veg Spring Rolls",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 200
+            },
+            {
+                "item_id": "CO01",
+                "item_name": "Espresso",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 100
+            },
+            {
+                "item_id": "PA05",
+                "item_name": "Cheese Paratha",
+                "size": "single",
+                "quantity": 3,
+                "total_price": 165
+            }
+        ],
+        "total_order_price": 465,
+        "order_date": "20-Nov-2024 03:35:PM",
+        "status": "Billed",
+        "user_email": "anand123@gmail.com"
+    },
+    {
+        "order_id": "70581a",
+        "customer_name": "anand",
+        "mobile_number": "8541067754",
+        "order_items": [
+            {
+                "item_id": "ST03",
+                "item_name": "Paneer Tikka",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 260
+            },
+            {
+                "item_id": "DR01",
+                "item_name": "Mango Lassi",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 80
+            }
+        ],
+        "total_order_price": 340,
+        "order_date": "20-Nov-2024 10:02:PM",
+        "status": "Processing",
+        "user_email": "anand123@gmail.com"
+    },
+    {
+        "order_id": "98f7d8",
+        "customer_name": "fiza",
+        "mobile_number": "7654321123",
+        "order_items": [
+            {
+                "item_id": "ST01",
+                "item_name": "Veg Spring Rolls",
+                "size": "single",
+                "quantity": 1,
+                "total_price": 100
+            },
+            {
+                "item_id": "DR04",
+                "item_name": "Ice Tea",
+                "size": "single",
+                "quantity": 4,
+                "total_price": 240
+            }
+        ],
+        "total_order_price": 340,
+        "order_date": "20-Nov-2024 10:07:PM",
+        "status": "Billed",
+        "user_email": "anand123@gmail.com"
+    },
+    {
+        "order_id": "cccdc9",
+        "customer_name": "samridhi",
+        "mobile_number": "8765432215",
+        "order_items": [
+            {
+                "item_id": "ST02",
+                "item_name": "Chicken Tikka",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 300
+            },
+            {
+                "item_id": "DR01",
+                "item_name": "Mango Lassi",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 80
+            }
+        ],
+        "total_order_price": 380,
+        "order_date": "20-Nov-2024 10:20:PM",
+        "status": "Processing",
+        "user_email": "anand123@gmail.com"
+    },
+    {
+        "order_id": "5f5fad",
+        "customer_name": "ritika",
+        "mobile_number": "6543217765",
+        "order_items": [
+            {
+                "item_id": "ST01",
+                "item_name": "Veg Spring Rolls",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 200
+            },
+            {
+                "item_id": "DR03",
+                "item_name": "Masala Chai",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 60
+            }
+        ],
+        "total_order_price": 260,
+        "order_date": "20-Nov-2024 10:26:PM",
+        "status": "Processing",
+        "user_email": "anand123@gmail.com"
+    },
+    {
+        "order_id": "3ae8b5",
+        "customer_name": "ravi",
+        "mobile_number": "8765432215",
+        "order_items": [
+            {
+                "item_id": "ST01",
+                "item_name": "Veg Spring Rolls",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 200
+            }
+        ],
+        "total_order_price": 200,
+        "order_date": "20-Nov-2024 10:33:PM",
+        "status": "Processing",
+        "user_email": "anand123@gmail.com"
+    },
+    {
+        "order_id": "ecd455",
+        "customer_name": "rani",
+        "mobile_number": "8765432217",
+        "order_items": [
+            {
+                "item_id": "DR04",
+                "item_name": "Ice Tea",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 120
+            }
+        ],
+        "total_order_price": 120,
+        "order_date": "20-Nov-2024 10:38:PM",
+        "status": "Processing",
+        "user_email": "anand123@gmail.com"
+    },
+    {
+        "order_id": "2a9d8a",
+        "customer_name": "sita",
+        "mobile_number": "6754789987",
+        "order_items": [
+            {
+                "item_id": "ST03",
+                "item_name": "Paneer Tikka",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 260
+            }
+        ],
+        "total_order_price": 260,
+        "order_date": "20-Nov-2024 10:42:PM",
+        "status": "Processing",
+        "user_email": "anand123@gmail.com"
+    },
+    {
+        "order_id": "5eab31",
+        "customer_name": "siya",
+        "mobile_number": "9876786675",
+        "order_items": [
+            {
+                "item_id": "ST01",
+                "item_name": "Veg Spring Rolls",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 200
+            }
+        ],
+        "total_order_price": 200,
+        "order_date": "20-Nov-2024 10:48:PM",
+        "status": "Processing",
+        "user_email": "anand123@gmail.com"
+    },
+    {
+        "order_id": "097370",
+        "customer_name": "yazz",
+        "mobile_number": "9876567786",
+        "order_items": [
+            {
+                "item_id": "ST01",
+                "item_name": "Veg Spring Rolls",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 200
+            }
+        ],
+        "total_order_price": 200,
+        "order_date": "20-Nov-2024 10:57:PM",
+        "status": "Processing",
+        "user_email": "anand123@gmail.com"
+    },
+    {
+        "order_id": "185d1e",
+        "customer_name": "radha",
+        "mobile_number": "9999977765",
+        "order_items": [
+            {
+                "item_id": "DR01",
+                "item_name": "Mango Lassi",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 80
+            }
+        ],
+        "total_order_price": 80,
+        "order_date": "20-Nov-2024 11:09:PM",
+        "status": "Processing",
+        "user_email": "anand123@gmail.com"
+    },
+    {
+        "order_id": "62f579",
+        "customer_name": "razza",
+        "mobile_number": "4565456678",
+        "order_items": [
+            {
+                "item_id": "DR01",
+                "item_name": "Mango Lassi",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 80
+            },
+            {
+                "item_id": "ST01",
+                "item_name": "Veg Spring Rolls",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 200
+            }
+        ],
+        "total_order_price": 280,
+        "order_date": "20-Nov-2024 11:23:PM",
+        "status": "Processing",
+        "user_email": "anand123@gmail.com"
+    },
+    {
+        "order_id": "b6ca13",
+        "customer_name": "niya",
+        "mobile_number": "8877665543",
+        "order_items": [
+            {
+                "item_id": "ST02",
+                "item_name": "Chicken Tikka",
+                "size": "single",
+                "quantity": 5,
+                "total_price": 750
+            }
+        ],
+        "total_order_price": 750,
+        "order_date": "20-Nov-2024 11:32:PM",
+        "status": "Billed",
+        "user_email": "anand123@gmail.com"
+    },
+    {
+        "order_id": "867472",
+        "customer_name": "vaishnvi",
+        "mobile_number": "8888866664",
+        "order_items": [
+            {
+                "item_id": "DR01",
+                "item_name": "Mango Lassi",
+                "size": "single",
+                "quantity": 1,
+                "total_price": 40
+            }
+        ],
+        "total_order_price": 40,
+        "order_date": "21-Nov-2024 08:09:AM",
+        "status": "Processing",
+        "user_email": "anand123@gmail.com"
+    },
+    {
+        "order_id": "51bf57",
+        "customer_name": "ziya",
+        "mobile_number": "8765432266",
+        "order_items": [
+            {
+                "item_id": "ST03",
+                "item_name": "Paneer Tikka",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 260
+            }
+        ],
+        "total_order_price": 260,
+        "order_date": "21-Nov-2024 08:46:AM",
+        "status": "Processing",
+        "user_email": "anand123@gmail.com"
+    },
+    {
+        "order_id": "8e801a",
+        "customer_name": "himashshi",
+        "mobile_number": "8765434456",
+        "order_items": [
+            {
+                "item_id": "ST02",
+                "item_name": "Chicken Tikka",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 300
+            }
+        ],
+        "total_order_price": 300,
+        "order_date": "21-Nov-2024 08:47:AM",
+        "status": "Processing",
+        "user_email": "anand123@gmail.com"
+    },
+    {
+        "order_id": "3dfd33",
+        "customer_name": "arun",
+        "mobile_number": "9876543321",
+        "order_items": [
+            {
+                "item_id": "DR01",
+                "item_name": "Mango Lassi",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 80
+            }
+        ],
+        "total_order_price": 80,
+        "order_date": "21-Nov-2024 08:54:AM",
+        "status": "Processing",
+        "user_email": "anand123@gmail.com"
+=======
+>>>>>>> 597947d82c3e954d75a4aeac3fd5bef5c55f8eab
+    }
+]

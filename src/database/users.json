@@ -1,0 +1,165 @@
+[
+    {
+        "id": "03FEB83F",
+        "name": "Anand Soni",
+        "email": "anand123@gmail.com",
+        "password": "An2003",
+        "phone": "8541067731",
+        "role": "Staff",
+        "date_of_birth": "2003-01-15"
+    },
+    {
+        "id": "E73CA31A",
+        "name": "Khushi Gupta",
+        "email": "khushi123@gmail.com",
+        "password": "Kh2004",
+        "phone": "8541067761",
+        "role": "Owner",
+        "date_of_birth": "2004-02-25"
+    },
+    {
+        "id": "622292E2",
+        "name": "Nisha Modi",
+        "email": "nisha123@gmail.com",
+        "password": "Ni2004",
+        "phone": "8292009486",
+        "role": "Staff",
+        "date_of_birth": "2004-03-08"
+    },
+    {
+        "id": "A4B92456",
+        "name": "Roshni Singh",
+        "email": "roshni123@gmail.com",
+        "password": "Ro2002",
+        "phone": "8797640473",
+        "role": "Staff",
+        "date_of_birth": "2002-12-05"
+    },
+    {
+        "id": "EE6DAB48",
+        "name": "Rani",
+        "email": "rani123@gmail.com",
+        "password": "Ra2001",
+        "phone": "8409990229",
+        "role": "Staff",
+        "date_of_birth": "2001-05-04"
+    },
+    {
+        "id": "8F9C8BE1",
+        "name": "Amit Singh",
+        "email": "amit123@gmail.com",
+        "password": "Am2000",
+        "phone": "6363546418",
+        "role": "Staff",
+        "date_of_birth": "2000-09-09"
+    },
+    {
+        "id": "444C76EC",
+        "name": "Sachin",
+        "email": "sachin123@gmail.com",
+        "password": "Sa2001",
+        "phone": "6207547440",
+        "role": "Staff",
+        "date_of_birth": "2001-06-07"
+    },
+    {
+        "id": "81BA01EA",
+        "name": "Rajan",
+        "email": "rajan123@gmail.com",
+        "password": "Ra2006",
+        "phone": "9431255424",
+        "role": "Staff",
+        "date_of_birth": "2006-04-18"
+    },
+    {
+        "id": "33FE3B91",
+        "name": "Zaib Khan",
+        "email": "zaib123@gmail.com",
+        "password": "Za1998",
+        "phone": "9801948741",
+        "role": "Staff",
+        "date_of_birth": "1998-08-15"
+    },
+    {
+        "id": "4869327A",
+        "name": "Priyanshu",
+        "email": "priyanshu123@gmail.com",
+        "password": "Pr2004",
+        "phone": "7255965594",
+        "role": "Staff",
+        "date_of_birth": "2004-06-20"
+    },
+    {
+        "id": "714C4C8D",
+        "name": "Vimal",
+        "email": "vimal123@gmail.com",
+        "password": "Vi2000",
+        "phone": "8923273908",
+        "role": "Staff",
+        "date_of_birth": "2000-08-14"
+    },
+    {
+        "id": "23422EBA",
+        "name": "khushi",
+        "email": "khus1234@gmail.com",
+        "password": "0034fgh",
+        "phone": "8541087731",
+        "role": "Staff",
+        "date_of_birth": "2004-2-6"
+    },
+    {
+        "id": "FC968590",
+        "name": "zaib",
+        "email": "zaib555@gmail.com",
+        "password": "8888999",
+        "phone": "8765432214",
+        "role": "Staff",
+        "date_of_birth": "2000-12-10"
+    },
+    {
+        "id": "EDF39F0A",
+        "name": "zaib",
+        "email": "zain456@gmail.com",
+        "password": "5556666",
+        "phone": "8765432216",
+        "role": "Staff",
+        "date_of_birth": "2000-1-2"
+    },
+    {
+        "id": "1677B46C",
+        "name": "zaib",
+        "email": "zain888999@gmail.com",
+        "password": "6666zaib",
+        "phone": "9876543321",
+        "role": "Staff",
+        "date_of_birth": "2000-1-1"
+    },
+    {
+<<<<<<< HEAD
+        "id": "44048101",
+        "name": "ziya",
+        "email": "ziya123@gmail.com",
+        "password": "111234",
+        "phone": "9877654432",
+        "role": "Staff",
+        "date_of_birth": "2000-1-2"
+=======
+        "id": "9F58FB68",
+        "name": "ziya",
+        "email": "ziya123@gmail.com",
+        "password": "777888",
+        "phone": "8765432214",
+        "role": "Staff",
+        "date_of_birth": "2004-2-25"
+    },
+    {
+        "id": "7DDD1BD9",
+        "name": "ritika",
+        "email": "ritika123@gmail.com",
+        "password": "666777",
+        "phone": "6543217789",
+        "role": "Staff",
+        "date_of_birth": "2000-3-5"
+>>>>>>> 597947d82c3e954d75a4aeac3fd5bef5c55f8eab
+    }
+]

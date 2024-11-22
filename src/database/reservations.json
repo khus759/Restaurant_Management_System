@@ -1,0 +1,209 @@
+[
+    {
+        "reservation_id": "9876d3da",
+        "name": "balaji",
+        "phone": "9876567789",
+        "date_time": "2024-12-25 6:00 pm",
+        "seats": 2,
+        "table_id": "T1",
+        "status": "Canceled"
+    },
+    {
+        "reservation_id": "98764342",
+        "name": "saniya",
+        "phone": "9876543345",
+        "date_time": "2024-11-20 8:00 pm",
+        "seats": 4,
+        "table_id": "T5",
+        "status": "Canceled"
+    },
+    {
+        "reservation_id": "8541a31b",
+        "name": "anand",
+        "phone": "8541067731",
+        "date_time": "2025-1-15 1:30 pm",
+        "seats": 2,
+        "table_id": "T1",
+        "status": "Reserved"
+    },
+    {
+        "reservation_id": "85417bab",
+        "name": "khushi",
+        "phone": "8541067761",
+        "date_time": "2024-11-14 4:00 pm",
+        "seats": 8,
+        "table_id": "T14",
+        "status": "Reserved"
+    },
+    {
+        "reservation_id": "9876a9f7",
+        "name": "nisha",
+        "phone": "9876567786",
+        "date_time": "2024-12-2 7:00 pm",
+        "seats": 2,
+        "table_id": "T1",
+        "status": "Reserved"
+    },
+    {
+        "reservation_id": "87653d50",
+        "name": "roshni",
+        "phone": "8765456671",
+        "date_time": "2024-11-23 2:00 pm",
+        "seats": 2,
+        "table_id": "T1",
+        "status": "Reserved"
+    },
+    {
+        "reservation_id": "9876bc72",
+        "name": "riya",
+        "phone": "9876543345",
+        "date_time": "2024-12-4 6:00 pm",
+        "seats": 2,
+        "table_id": "T1",
+        "status": "Reserved"
+    },
+    {
+        "reservation_id": "987630c8",
+        "name": "saurabh",
+        "phone": "9876567783",
+        "date_time": "2024-12-4 6:00 pm",
+        "seats": 2,
+        "table_id": "T2",
+        "status": "Reserved"
+    },
+    {
+        "reservation_id": "4532f1b9",
+        "name": "gaurav",
+        "phone": "4532123345",
+        "date_time": "2024-12-4 6:00 pm",
+        "seats": 2,
+        "table_id": "T3",
+        "status": "Canceled"
+    },
+    {
+        "reservation_id": "7654f885",
+        "name": "sweety",
+        "phone": "7654321145",
+        "date_time": "2024-12-4 6:00 pm",
+        "seats": 2,
+        "table_id": "T4",
+        "status": "Reserved"
+    },
+    {
+        "reservation_id": "453248d3",
+        "name": "anand",
+        "phone": "4532123345",
+        "date_time": "2024-11-15 9:00 pm",
+        "seats": 8,
+        "table_id": "T14",
+        "status": "Reserved"
+    },
+    {
+        "reservation_id": "8765fa65",
+        "name": "sachin",
+        "phone": "8765456678",
+        "date_time": "2024-11-15 9:00 pm",
+        "seats": 8,
+        "table_id": "T15",
+        "status": "Reserved"
+    },
+    {
+        "reservation_id": "87654284",
+        "name": "anand",
+        "phone": "8765457753",
+        "date_time": "2024-11-11 6:00 pm",
+        "seats": 4,
+        "table_id": "T5",
+        "status": "Reserved"
+    },
+    {
+        "reservation_id": "9876686d",
+        "name": "amit",
+        "phone": "9876543321",
+        "date_time": "2024-11-13 8:00 pm",
+        "seats": 2,
+        "table_id": "T1",
+        "status": "Reserved"
+    },
+    {
+        "reservation_id": "8765ba63",
+        "name": "raj",
+        "phone": "8765432216",
+        "date_time": "2024-12-11 9:00 pm",
+        "seats": 6,
+        "table_id": "T10",
+        "status": "Reserved"
+    },
+    {
+        "reservation_id": "9876bc11",
+        "name": "anjali",
+        "phone": "9876543321",
+        "date_time": "2024-12-2 6:00 pm",
+        "seats": 2,
+        "table_id": "T1",
+        "status": "Canceled"
+    },
+    {
+        "reservation_id": "8765f948",
+        "name": "kailash",
+        "phone": "8765438896",
+        "date_time": "2024-11-21 9:00 pm",
+        "seats": 3,
+        "table_id": "T5",
+        "status": "Reserved"
+    },
+    {
+        "reservation_id": "98761d3d",
+        "name": "smriti",
+        "phone": "9876546678",
+        "date_time": "2024-11-21 8:00 pm",
+        "seats": 5,
+        "table_id": "T10",
+        "status": "Reserved"
+    },
+    {
+        "reservation_id": "8765d13b",
+        "name": "riya",
+        "phone": "8765432256",
+        "date_time": "2024-11-21 8:00 pm",
+        "seats": 7,
+        "table_id": "T14",
+        "status": "Reserved"
+    },
+    {
+        "reservation_id": "8765787b",
+        "name": "zaib",
+        "phone": "8765432214",
+        "date_time": "2024-11-21 7:00 pm",
+        "seats": 8,
+        "table_id": "T14",
+        "status": "Reserved"
+    },
+    {
+        "reservation_id": "8765787b",
+        "name": "zaib",
+        "phone": "8765432214",
+        "date_time": "2024-11-21 7:00 pm",
+        "seats": 8,
+        "table_id": "T14",
+        "status": "Reserved"
+    },
+    {
+        "reservation_id": "8765787b",
+        "name": "zaib",
+        "phone": "8765432214",
+        "date_time": "2024-11-21 7:00 pm",
+        "seats": 8,
+        "table_id": "T14",
+        "status": "Reserved"
+    },
+    {
+        "reservation_id": "8765787b",
+        "name": "zaib",
+        "phone": "8765432214",
+        "date_time": "2024-11-21 7:00 pm",
+        "seats": 6,
+        "table_id": "T10",
+        "status": "Reserved"
+    }
+]
