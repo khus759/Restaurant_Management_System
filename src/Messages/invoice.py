@@ -166,7 +166,7 @@ class BillingHandler:
     
 
     def display_add_order_start(self):
-<<<<<<< HEAD
+
         print("🔄 Starting the process to add a new order...")
     
     # class BillingHandler:
@@ -199,6 +199,4 @@ class BillingHandler:
     
     def display_total_sales(self, total):
         print(f"Total Sales: {total:.2f}")
-=======
         print(" Starting the process to add a new order...")
->>>>>>> 7a7915d88f14a53bf57ec3d6caf4b5de3c1e2eb1

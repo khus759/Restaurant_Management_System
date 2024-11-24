@@ -5,12 +5,10 @@ from Src.Error.log_exception import logging
 
 
 class BillReport:
-<<<<<<< HEAD
-    def __init__(self,bill_file=bill_file):
-=======
+
     def __init__(self, bill_file=bill_file):
         # Load billing data from JSON file
->>>>>>> 7a7915d88f14a53bf57ec3d6caf4b5de3c1e2eb1
+
         self.bill_file = bill_file
         self.bills = self.load_billing_data()
 
