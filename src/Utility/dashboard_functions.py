@@ -11,10 +11,21 @@ def display_main_menu():
     print("4. Table Booking Management")
     print("5. Staff Management")
     print("6. Reports")
+<<<<<<< HEAD
     print(f"7. Show All Staff {Colors.RESET}")
     print(f"{Colors.RED}8. Show All Error{Colors.RESET}")
     print(f"{Colors.LIGHT_TEAL}9. Bill Report{Colors.RESET}")
     print(f"{Colors.LIGHT_ORANGE}{'='*4}10. Logout{'='*4}{Colors.RESET}")
+=======
+<<<<<<< HEAD
+    print("7. Show All Staff")
+    print(f"8. Show All Error {Colors.RESET}")
+=======
+    print(F"7. Show All Staff {Colors.RESET}")
+    print(f"{Colors.RED}8. Show All Error{Colors.RESET}")
+>>>>>>> 597947d82c3e954d75a4aeac3fd5bef5c55f8eab
+    print(f"{Colors.LIGHT_ORANGE}{'='*4}9. Logout{'='*4}{Colors.RESET}")
+>>>>>>> 7a7915d88f14a53bf57ec3d6caf4b5de3c1e2eb1
 
 def display_staff_menu():
     print(f"{Colors.LIGHT_TEAL}{'-'*50}")
@@ -23,8 +34,15 @@ def display_staff_menu():
     print(f"\n{Colors.LIGHT_ORANGE}1. Order Management")
     print("2. Invoice Management")
     print("3. Table Booking Management")
+<<<<<<< HEAD
+    print("4. Reports")
+    print("5. Display Profile")
+    print(f"6. Update Profile{Colors.RESET}")
+    print(f"{Colors.LIGHT_PINK}{'='*4}7. Logout{'='*4}{Colors.RESET}")
+=======
     print(f"4. Reports{Colors.RESET}")
     print(f"{Colors.LIGHT_PINK}{'='*4}5. Logout{'='*4}{Colors.RESET}")
+>>>>>>> 597947d82c3e954d75a4aeac3fd5bef5c55f8eab
 
 def display_menu_management():
     print(f"{Colors.LIGHT_VIOLET}{'-'*40}")
@@ -39,10 +57,10 @@ def display_menu_management():
     print(f"{Colors.LIGHT_CORAL}7. EXIT{Colors.RESET}")
 
 def display_order_management():
-    print(f"{Colors.LIGHT_PEACH}{'-'*40}")
+    print(f"{Colors.LIGHT_ORANGE}{'-'*40}")
     print(f"\t{'*'*5} ORDER MANAGEMENT{'*'*5}")
     print(f"{'-'*40}{Colors.RESET}")
-    print(f"\n{Colors.CYAN}1. Take New Order")
+    print(f"\n{Colors.LIGHT_TURQUOISE}1. Take New Order")
     print("2. Update Order")
     print("3. Cancel Order")
     print("4. Search Order")
@@ -51,7 +69,7 @@ def display_order_management():
     
 
 def display_invoice_management():
-    print(f"{Colors.LIGHT_ORANGE}{'-'*40}")
+    print(f"{Colors.LIGHT_TEAL}{'-'*40}")
     print(f"\t{'*'*5}INVOICE MANAGEMENT{'*'*5}")
     print(f"{'-'*40}{Colors.RESET}")
     print(f"\n{Colors.LIGHT_PEACH}1. Generate Bill")

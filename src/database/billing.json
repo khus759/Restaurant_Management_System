@@ -55,6 +55,171 @@
         "status": "Billed",
         "payment_type": null,
         "payment_date": null,
+<<<<<<< HEAD
+        "user_email": null
+    },
+    {
+        "billing_id": "a0e301",
+        "order_id": "8b9dd0",
+        "customer_name": "samaira",
+        "billing_date": "20-Nov-2024 10:02:PM",
+        "items": [
+            {
+                "item_id": "ST01",
+                "item_name": "Veg Spring Rolls",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 200
+            }
+        ],
+        "subtotal": 200,
+        "gst": 36.0,
+        "total": 236.0,
+        "status": "Paid",
+        "payment_type": "Online",
+        "payment_date": "21-Nov-2024 09:36 AM",
+        "user_email": null
+    },
+    {
+        "billing_id": "f3bce1",
+        "order_id": "98f7d8",
+        "customer_name": "fiza",
+        "billing_date": "20-Nov-2024 10:17:PM",
+        "items": [
+            {
+                "item_id": "ST01",
+                "item_name": "Veg Spring Rolls",
+                "size": "single",
+                "quantity": 1,
+                "total_price": 100
+            },
+            {
+                "item_id": "DR04",
+                "item_name": "Ice Tea",
+                "size": "single",
+                "quantity": 4,
+                "total_price": 240
+            }
+        ],
+        "subtotal": 340,
+        "gst": 61.199999999999996,
+        "total": 401.2,
+        "status": "Billed",
+        "payment_type": null,
+        "payment_date": null,
+        "user_email": null
+    },
+    {
+        "billing_id": "24e263",
+        "order_id": "185d1e",
+        "customer_name": "radha",
+        "billing_date": "20-Nov-2024 11:22:PM",
+        "items": [
+            {
+                "item_id": "DR01",
+                "item_name": "Mango Lassi",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 80
+            }
+        ],
+        "subtotal": 80,
+        "gst": 14.399999999999999,
+        "total": 94.4,
+        "status": "Billed",
+        "payment_type": null,
+        "payment_date": null,
+        "user_email": null
+    },
+    {
+        "billing_id": "a0e301",
+        "order_id": "8b9dd0",
+        "customer_name": "samaira",
+        "billing_date": "20-Nov-2024 11:22:PM",
+        "items": [
+            {
+                "item_id": "ST01",
+                "item_name": "Veg Spring Rolls",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 200
+            }
+        ],
+        "subtotal": 200,
+        "gst": 36.0,
+        "total": 236.0,
+        "status": "Billed",
+        "payment_type": null,
+        "payment_date": null,
+        "user_email": null
+    },
+    {
+        "billing_id": "d5eb60",
+        "order_id": "b6ca13",
+        "customer_name": "niya",
+        "billing_date": "21-Nov-2024 08:00:AM",
+        "items": [
+            {
+                "item_id": "ST02",
+                "item_name": "Chicken Tikka",
+                "size": "single",
+                "quantity": 5,
+                "total_price": 750
+            }
+        ],
+        "subtotal": 750,
+        "gst": 135.0,
+        "total": 885.0,
+        "status": "Billed",
+        "payment_type": null,
+        "payment_date": null,
+        "user_email": null
+    },
+    {
+        "billing_id": "130d43",
+        "order_id": "51bf57",
+        "customer_name": "ziya",
+        "billing_date": "21-Nov-2024 08:46:AM",
+        "items": [
+            {
+                "item_id": "ST03",
+                "item_name": "Paneer Tikka",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 260
+            }
+        ],
+        "subtotal": 260,
+        "gst": 46.8,
+        "total": 306.8,
+        "status": "Billed",
+        "payment_type": null,
+        "payment_date": null,
+        "user_email": null
+    },
+    {
+        "billing_id": "a0e301",
+        "order_id": "8b9dd0",
+        "customer_name": "samaira",
+        "billing_date": "21-Nov-2024 08:55:AM",
+        "items": [
+            {
+                "item_id": "ST01",
+                "item_name": "Veg Spring Rolls",
+                "size": "single",
+                "quantity": 2,
+                "total_price": 200
+            }
+        ],
+        "subtotal": 200,
+        "gst": 36.0,
+        "total": 236.0,
+        "status": "Billed",
+        "payment_type": null,
+        "payment_date": null,
+        "user_email": null
+=======
         "user_email": "anand123@gmail.com"
+>>>>>>> 597947d82c3e954d75a4aeac3fd5bef5c55f8eab
     }
 ]

@@ -20,9 +20,9 @@ def no_employees_found():
     print("No employees found.")
 
 def display_profile(emp):
-    print(f"\n{Colors.CYAN}=== Employee Profile ==={Colors.RESET}")
+    print(f"\n{Colors.LIGHT_TURQUOISE}=== Employee Profile ==={Colors.RESET}")
     print("--------------------------------")
-    print(f"{Colors.BRIGHT_MAGENTA}   Personal Information {Colors.RESET}")
+    print(f"{Colors.LIGHT_ORANGE}   Personal Information {Colors.RESET}")
     print("   --------------------")
     print(f"   Name           : {emp.get('name', 'N/A')}")
     print(f"   Gender         : {emp.get('gender', 'N/A')}")
@@ -30,7 +30,7 @@ def display_profile(emp):
     print(f"   Email          : {emp.get('email', 'N/A')}")
     print(f"   Phone          : {emp.get('phone', 'N/A')}")
     
-    print(f"\n{Colors.BRIGHT_MAGENTA}   Job Information {Colors.RESET}")
+    print(f"\n{Colors.LIGHT_CORAL}   Job Information {Colors.RESET}")
     print("   --------------------")
     print(f"   Role           : {emp.get('role', 'N/A')}")
     print(f"   Designation    : {emp.get('designation', 'N/A')}")
@@ -40,7 +40,7 @@ def display_profile(emp):
     if emp.get('status') == 'inactive':
         print(f"   Resign Date    : {emp.get('resign_date', 'N/A')}")
 
-    print(f"\n{Colors.BRIGHT_MAGENTA}   Address Information {Colors.RESET}")
+    print(f"\n{Colors.LIGHT_ORANGE}   Address Information {Colors.RESET}")
     print("   --------------------")
     print(f"   Country        : {emp.get('country', 'N/A')}")
     print(f"   State          : {emp.get('state', 'N/A')}")
@@ -51,7 +51,7 @@ def display_profile(emp):
 
 def display_all_profiles(emp, index):
     print("\n--------------------------------")
-    print(f"{Colors.YELLOW}       Employee {index}{Colors.RESET}")
+    print(f"{Colors.LIGHT_PINK}       Employee {index}{Colors.RESET}")
     print("--------------------------------")
     display_profile(emp)
 

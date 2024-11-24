@@ -7,7 +7,7 @@ from Src.Error.log_exception import logging
 
 
 class OrderReport:
-    def __init__(self, order_file=order_file):
+    def _init_(self, order_file=order_file):
         self.order_file = order_file
         self.orders = self.load_orders()
         self.report = Report()
@@ -33,7 +33,10 @@ class OrderReport:
                 start_date = datetime.strptime(start_date_str, "%Y-%m-%d")
                 end_date = datetime.strptime(end_date_str, "%Y-%m-%d")
             except ValueError:
+<<<<<<< HEAD
+=======
                 logging.exception("exception details")
+>>>>>>> 597947d82c3e954d75a4aeac3fd5bef5c55f8eab
                 print("Invalid date range format. Use YYYY-MM-DD to YYYY-MM-DD.")
                 return
         else:
@@ -85,5 +88,9 @@ class OrderReport:
                 for detail in order_details[(item_id, item_name)]:
                     self.report.show_order_details(detail)
         else:
+<<<<<<< HEAD
+            self.report.no_orders_found(date_input)
+=======
             self.report.no_orders_found(date_input)
 
+>>>>>>> 597947d82c3e954d75a4aeac3fd5bef5c55f8eab

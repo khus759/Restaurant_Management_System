@@ -16,21 +16,21 @@ class OrderOutputHandler:
         print(f"{Colors.RED}❌ Insufficient stock available for this item.{Colors.RESET}")
 
     def show_order_details(self, order):
-        print(f"\n{Colors.BLUE}Order Details{Colors.RESET}")
-        print(f"{Colors.GREEN}={Colors.RESET}" * 50)
+        print(f"\n{Colors.LIGHT_VIOLET}Order Details{Colors.RESET}")
+        print(f"{Colors.LIGHT_BEIGE}={Colors.RESET}" * 50)
         print(f"Order ID      : {order['order_id']}")
         print(f"Customer Name : {order['customer_name']}")
         print(f"Mobile Number : {order['mobile_number']}")
         print(f"Order Date    : {order['order_date']}")
         print(f"Status        : {order['status']}")
         print("Order Items:")
-        print(f"{Colors.RED}-{Colors.RESET}" * 50)
+        print(f"{Colors.LIGHT_ORANGE}-{Colors.RESET}" * 50)
         for item in order['order_items']:
             print(f"  - {item['item_name']} (ID: {item['item_id']}, Size: {item['size']})")
             print(f"    Quantity: {item['quantity']}")
             print(f"    Total Price: ₹{item['total_price']}")
             print("-" * 50)
-        print(f"{Colors.GREEN}={Colors.RESET}" * 50)
+        print(f"{Colors.LIGHT_BEIGE}={Colors.RESET}" * 50)
 
     def show_menu_item(self, item_id, item_name, price_details, ingredients):
         print(f"{Colors.LIGHT_CORAL}{item_id:<10}{Colors.RESET}{Colors.LIGHT_TEAL}{item_name:<30}{Colors.RESET}{Colors.LIGHT_PINK}{price_details:<40}{Colors.RESET}{Colors.LIGHT_ORANGE}{ingredients:<50}{Colors.RESET}")

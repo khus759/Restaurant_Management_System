@@ -1,11 +1,16 @@
 import json
-from datetime import datetime, timedelta
+from datetime import datetime
 from Src.Utility.path_manager import bill_file
 from Src.Error.log_exception import logging
 
 
 class BillReport:
+<<<<<<< HEAD
     def __init__(self,bill_file=bill_file):
+=======
+    def __init__(self, bill_file=bill_file):
+        # Load billing data from JSON file
+>>>>>>> 7a7915d88f14a53bf57ec3d6caf4b5de3c1e2eb1
         self.bill_file = bill_file
         self.bills = self.load_billing_data()
 
@@ -27,15 +32,15 @@ class BillReport:
 
     def get_date_filter(self):
         while True:
-            filter_type = input("Select Date Filter: Year, Month, Day, Last Week\nEnter filter (year/month/day/last_week): ").strip().lower()
-            if filter_type not in ["year", "month", "day", "last_week"]:
-                print("Invalid filter type. Please enter 'year', 'month', 'day', or 'last_week'.")
+            filter_type = input("Select Date Filter: Year, Month, Day\nEnter filter (year/month/day): ").strip().lower()
+            if filter_type not in ["year", "month", "day"]:
+                print("Invalid filter type. Please enter 'year', 'month', or 'day'.")
                 continue
 
             try:
                 if filter_type == "day":
                     date_str = input("Enter date (dd-mm-yyyy): ")
-                    filter_date = datetime.strptime(date_str, "%Y-%m-%d")
+                    filter_date = datetime.strptime(date_str, "%d-%m-%Y")
                     return {"type": "day", "value": filter_date}
                 elif filter_type == "month":
                     year = int(input("Enter year (e.g., 2024): "))
@@ -43,13 +48,9 @@ class BillReport:
                     filter_date = datetime(year, month, 1)
                     return {"type": "month", "value": filter_date}
                 elif filter_type == "year":
-                    year = int(input("Enter year (e.g., 2023): "))
+                    year = int(input("Enter year (e.g., 2024): "))
                     filter_date = datetime(year, 1, 1)
                     return {"type": "year", "value": filter_date}
-                elif filter_type == "last_week":
-                    current_date = datetime.now()
-                    start_date = current_date - timedelta(days=current_date.weekday() + 7)
-                    return {"type": "last_week", "value": start_date}
             except ValueError:
                 logging.exception("exception details")
                 print("Invalid date. Please try again.")
@@ -92,11 +93,6 @@ class BillReport:
                     filtered_bills.append(bill)
             elif date_filter["type"] == "year":
                 if payment_date.year == date_filter["value"].year:
-                    filtered_bills.append(bill)
-            elif date_filter["type"] == "last_week":
-                start_date = date_filter["value"]
-                end_date = start_date + timedelta(days=7)
-                if start_date <= payment_date < end_date:
                     filtered_bills.append(bill)
 
         return filtered_bills

@@ -26,12 +26,20 @@ def validate_password(password):
 
     return None  # Password is valid
 
-# def validate_password(password):
-#     if not password.strip():
-#         return "Password cannot be blank."
-#     if len(password) > 6:
-#         return "Password must be at least 6 characters long."
-#     return None
+from datetime import datetime
+
+def validate_joining_date(joining_date):
+    """Validate that the joining date is after September 2024."""
+    try:
+        date_obj = datetime.strptime(joining_date, "%Y-%m-%d")
+        cutoff_date = datetime(2024, 9, 30)
+        if date_obj > cutoff_date:
+            return True
+        print("Joining date must be after September 2024.")
+        return False
+    except ValueError:
+        print("Invalid date format. Please use YYYY-MM-DD.")
+        return False
 
 def validate_role(role):
     role = role.upper()
