@@ -6,7 +6,8 @@ from Src.Utility.dashboard_functions import (
     display_invoice_management,
     display_table_booking_management,
     display_staff_menu,
-    display_stock_management  
+    display_report_management
+  
 )
 from Src.Order_management.order_features import OrderManagementSystem
 from Src.Reports.soon_stock_out import ExpirationReport
@@ -120,7 +121,7 @@ class StaffDashboard:
             print("Invalid choice in Table Booking Management.")
 
     def handle_stock_management(self):
-        display_stock_management()
+        display_report_management()
 
         choice = input("Choose an action in Reports: ")
 

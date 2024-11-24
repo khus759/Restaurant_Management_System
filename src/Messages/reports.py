@@ -105,6 +105,8 @@ class Report:
        print(f"{Colors.CORAL}No orders found for the date: {date_input}{Colors.RESET}")
 
 
+    
+
 
 
 

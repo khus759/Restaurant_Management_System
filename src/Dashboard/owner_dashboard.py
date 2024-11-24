@@ -7,8 +7,9 @@ from Src.Utility.dashboard_functions import (
     display_order_management,
     display_invoice_management,
     display_table_booking_management,
-    display_stock_management,
-    display_staff_management   
+    display_report_management,
+    display_staff_management,
+    display_bill_reports   
 )
 from Src.Order_management.order_features import OrderManagementSystem
 from Src.Reports.soon_stock_out import ExpirationReport
@@ -21,6 +22,7 @@ from Src.Messages.reports import Report
 from Src.Reports.bill_report import BillReport
 from Src.Staff_Management.salary import SalaryManagement
 from Src.Error.log_read import parse_error_logs
+from Src.Reports.invoice_report import BillReport
 
 
 class OwnerDashboard:
@@ -37,6 +39,7 @@ class OwnerDashboard:
         self.report = Report()
         self.bill_report = BillReport()
         self.salary = SalaryManagement()
+        self.invoice_report = BillReport()
         
         
     
@@ -56,12 +59,14 @@ class OwnerDashboard:
             elif main_choice == "5":
                 self.handle_staff_management()
             elif main_choice == "6":
-                self.handle_stock_management()
+                self.handle_reports_management()
             elif main_choice == "7":
                 self.auth.show_all_staff()
             elif main_choice == "8":
                 parse_error_logs()
-            elif main_choice == "9":
+            elif main_choice =="9":
+                self.handle_report_management()
+            elif main_choice == "10":
                 print("Logging out...")
                 break
             else:
@@ -159,9 +164,9 @@ class OwnerDashboard:
         else:
             print("Invalid choice in Table Booking Management.")
     
-    def handle_stock_management(self):
+    def handle_reports_management(self):
         self.report.welcome_message()
-        display_stock_management()
+        display_report_management()
 
         choice = input("Choose an action in Reports Management: ")
 
@@ -205,4 +210,22 @@ class OwnerDashboard:
         else:
             print("Invalid choice in Staff Management.")
      
+    def handle_report_management(self):
+        display_bill_reports()
+        while True:
+            
+            choice = input("Choose an action in Reports Management: ")
+            if choice == "1":
+                self.invoice_report.generate_report()
+            elif choice == "2":
+                self.invoice_report.total_sales()
+            elif choice == "3":
+                self.invoice_report.sales_by_payment_type()
+            elif choice == "4":
+                self.invoice_report.sales_summary()
+            elif choice == "5":
+                pass
+                break
+            else:
+                print("Invalid choice in Staff Management.")
 

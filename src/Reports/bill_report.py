@@ -6,7 +6,6 @@ from Src.Error.log_exception import logging
 
 class BillReport:
     def __init__(self,bill_file=bill_file):
-        # Load billing data from JSON file
         self.bill_file = bill_file
         self.bills = self.load_billing_data()
 

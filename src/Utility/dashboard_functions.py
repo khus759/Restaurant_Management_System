@@ -11,9 +11,10 @@ def display_main_menu():
     print("4. Table Booking Management")
     print("5. Staff Management")
     print("6. Reports")
-    print(F"7. Show All Staff {Colors.RESET}")
+    print(f"7. Show All Staff {Colors.RESET}")
     print(f"{Colors.RED}8. Show All Error{Colors.RESET}")
-    print(f"{Colors.LIGHT_ORANGE}{'='*4}9. Logout{'='*4}{Colors.RESET}")
+    print(f"{Colors.LIGHT_TEAL}9. Bill Report{Colors.RESET}")
+    print(f"{Colors.LIGHT_ORANGE}{'='*4}10. Logout{'='*4}{Colors.RESET}")
 
 def display_staff_menu():
     print(f"{Colors.LIGHT_TEAL}{'-'*50}")
@@ -72,7 +73,7 @@ def display_table_booking_management():
     print(f"6. Search Reservation{Colors.RESET}")
     print(f"{Colors.LIGHT_CORAL}7. EXIT{Colors.RESET}")
 
-def display_stock_management():
+def display_report_management():
     print(f"{Colors.LIGHT_ORANGE}{'-'*40}")
     print(f"\t{'*'*5} Reports {'*'*5}")
     print(f"{'-'*40}{Colors.RESET}")
@@ -96,3 +97,12 @@ def display_staff_management():
     print(f"7. Show Salary History{Colors.RESET}")
     print(f"{Colors.LIGHT_AQUA}8. EXIT {Colors.RESET}")
          
+def display_bill_reports():
+    print(f"{Colors.LIGHT_TURQUOISE}{'-'*40}")
+    print(f"\t{'*'*5} Bill Report  {'*'*5}")
+    print(f"{'-'*40}{Colors.RESET}")
+    print(f"\n{Colors.LIGHT_TEAL}1. Generate Report  ")
+    print("2. See Total Sales")
+    print("3. sales_by_payment_type")
+    print(f"4. sales_summary{Colors.RESET}")
+    print(f"{Colors.LIGHT_PINK}5. EXIT {Colors.RESET}")

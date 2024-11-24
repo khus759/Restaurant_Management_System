@@ -167,3 +167,34 @@ class BillingHandler:
 
     def display_add_order_start(self):
         print("🔄 Starting the process to add a new order...")
+    
+    # class BillingHandler:
+    def display_report_start(self):
+        print("Starting report generation...")
+
+    def display_invalid_date_format(self):
+        print("Error: Invalid date format. Please use 'DD-MMM-YYYY HH:MM AM/PM'.")
+
+    def display_no_bills_found_in_report(self):
+        print("No bills found for the specified date range.")
+
+    def display_report_success(self, count):
+        print(f"Report generated successfully. Total bills: {count}.")
+
+    def display_sales_by_payment_type(self, breakdown):
+        print("Sales Breakdown by Payment Type:")
+        for payment_type, total in breakdown.items():
+            print(f"{payment_type}: {total:.2f}")
+
+    def display_sales_summary_start(self):
+        print("Generating sales summary report...")
+
+    def display_sales_summary(self, summary):
+        print("\nSales Summary:")
+        print(f"Total Sales: {summary['total_sales']:.2f}")
+        print("Breakdown by Payment Type:")
+        for payment_type, amount in summary['breakdown_by_payment'].items():
+            print(f"{payment_type}: {amount:.2f}")
+    
+    def display_total_sales(self, total):
+        print(f"Total Sales: {total:.2f}")
