@@ -135,7 +135,6 @@
         "date_of_birth": "2000-1-1"
     },
     {
-<<<<<<< HEAD
         "id": "44048101",
         "name": "ziya",
         "email": "ziya123@gmail.com",
@@ -143,23 +142,5 @@
         "phone": "9877654432",
         "role": "Staff",
         "date_of_birth": "2000-1-2"
-=======
-        "id": "9F58FB68",
-        "name": "ziya",
-        "email": "ziya123@gmail.com",
-        "password": "777888",
-        "phone": "8765432214",
-        "role": "Staff",
-        "date_of_birth": "2004-2-25"
-    },
-    {
-        "id": "7DDD1BD9",
-        "name": "ritika",
-        "email": "ritika123@gmail.com",
-        "password": "666777",
-        "phone": "6543217789",
-        "role": "Staff",
-        "date_of_birth": "2000-3-5"
->>>>>>> 597947d82c3e954d75a4aeac3fd5bef5c55f8eab
     }
 ]

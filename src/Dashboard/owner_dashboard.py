@@ -60,11 +60,7 @@ class OwnerDashboard:
             elif main_choice == "7":
                 self.auth.show_all_staff()
             elif main_choice == "8":
-<<<<<<< HEAD
                 self
-=======
-                parse_error_logs()
->>>>>>> 597947d82c3e954d75a4aeac3fd5bef5c55f8eab
             elif main_choice == "9":
                 print("Logging out...")
                 break

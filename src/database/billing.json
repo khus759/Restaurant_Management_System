@@ -55,7 +55,6 @@
         "status": "Billed",
         "payment_type": null,
         "payment_date": null,
-<<<<<<< HEAD
         "user_email": null
     },
     {
@@ -218,8 +217,5 @@
         "payment_type": null,
         "payment_date": null,
         "user_email": null
-=======
-        "user_email": "anand123@gmail.com"
->>>>>>> 597947d82c3e954d75a4aeac3fd5bef5c55f8eab
     }
 ]

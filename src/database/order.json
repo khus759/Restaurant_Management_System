@@ -48,7 +48,6 @@
         "order_date": "21-Nov-2024 10:00:PM",
         "status": "Billed",
         "user_email": "anand123@gmail.com"
-<<<<<<< HEAD
     },
     {
         "order_id": "3b08b3",
@@ -544,7 +543,5 @@
         "order_date": "21-Nov-2024 08:54:AM",
         "status": "Processing",
         "user_email": "anand123@gmail.com"
-=======
->>>>>>> 597947d82c3e954d75a4aeac3fd5bef5c55f8eab
     }
 ]

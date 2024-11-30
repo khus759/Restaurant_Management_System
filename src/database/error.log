@@ -22,3 +22,6 @@ Traceback (most recent call last):
     quantity = int(input("Enter quantity: "))
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: invalid literal for int() with base 10: '#'
+2024-11-30 13:12:07 - root - ERROR - Error occurred while loading data: Failed to load the required database file.
+2024-11-30 13:12:30 - root - ERROR - Error occurred while loading data: Failed to load the required database file.
+2024-11-30 13:12:39 - root - ERROR - Error occurred while loading data: Failed to load the required database file.
